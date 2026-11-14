@@ -1,0 +1,152 @@
+{
+  "source_day": "2025-12-06",
+  "extracted_events": [
+    {
+      "事件": "帮沈心怡拍摄店内圣诞宣传照",
+      "时间": "2025-12-13-全"
+    },
+    {
+      "事件": "每年6月到社区举办防诈骗讲座",
+      "时间": "2026-06-01-全"
+    },
+    {
+      "事件": "每年12月到社区举办防诈骗讲座",
+      "时间": "2026-12-01-全"
+    },
+    {
+      "事件": "周日岳麓山晨跑",
+      "时间": "2025-12-07-早"
+    }
+  ],
+  "extracted_people": [
+    "沈心怡",
+    "冯先生",
+    "小周",
+    "刘主任",
+    "冯欣然",
+    "母亲"
+  ],
+  "event_results": [
+    {
+      "info": null,
+      "prefix": "<事件安排正确>",
+      "text": "周日岳麓山晨跑确实在预测时间2025-12-07发生"
+    }
+  ],
+  "person_results": [
+    {
+      "info": {
+        "name": "沈心怡",
+        "relation": "咖啡店老板",
+        "social circle": "手冲咖啡圈",
+        "gender": "女",
+        "age": 32,
+        "birth_date": "1992-05-18",
+        "home_address": {
+          "province": "湖南省",
+          "city": "长沙市",
+          "district": "芙蓉区",
+          "street_name": "解放西路",
+          "street_number": "233号"
+        },
+        "birth_place": {
+          "province": "云南省",
+          "city": "普洱市"
+        },
+        "personality": "ISFP",
+        "economic_level": "中产",
+        "occupation": "独立咖啡店主",
+        "organization": "心怡手冲咖啡馆",
+        "nickname": "沈老板",
+        "relation_description": "冯浩然是沈心怡咖啡馆的常客，因对手冲咖啡的共同爱好相识。沈心怡的咖啡馆位于冯浩然公司附近，他每周会光顾2-3次品尝新品咖啡。两人经常交流咖啡豆产地和冲泡技巧，偶尔会一起参加本地咖啡品鉴活动。沈心怡会为冯浩然预留限量咖啡豆，而冯浩然也会推荐客户到她的咖啡馆洽谈业务。"
+      },
+      "prefix": "<人物正确>",
+      "text": "沈心怡的个人信息是{'name': '沈心怡', 'relation': '咖啡店老板', 'social circle': '手冲咖啡圈', 'gender': '女', 'age': 32, 'birth_date': '1992-05-18', 'home_address': {'province': '湖南省', 'city': '长沙市', 'district': '芙蓉区', 'street_name': '解放西路', 'street_number': '233号'}, 'birth_place': {'province': '云南省', 'city': '普洱市'}, 'personality': 'ISFP', 'economic_level': '中产', 'occupation': '独立咖啡店主', 'organization': '心怡手冲咖啡馆', 'nickname': '沈老板', 'relation_description': '冯浩然是沈心怡咖啡馆的常客，因对手冲咖啡的共同爱好相识。沈心怡的咖啡馆位于冯浩然公司附近，他每周会光顾2-3次品尝新品咖啡。两人经常交流咖啡豆产地和冲泡技巧，偶尔会一起参加本地咖啡品鉴活动。沈心怡会为冯浩然预留限量咖啡豆，而冯浩然也会推荐客户到她的咖啡馆洽谈业务。'}"
+    },
+    {
+      "info": null,
+      "prefix": "<人物错误>",
+      "text": "冯先生人物无法找到，请检查"
+    },
+    {
+      "info": null,
+      "prefix": "<人物错误>",
+      "text": "小周人物无法找到，请检查"
+    },
+    {
+      "info": null,
+      "prefix": "<人物错误>",
+      "text": "刘主任人物无法找到，请检查"
+    },
+    {
+      "info": {
+        "name": "冯欣然",
+        "relation": "妹妹",
+        "social circle": "家庭圈",
+        "gender": "女",
+        "age": 24,
+        "birth_date": "1999-05-18",
+        "home_address": {
+          "province": "上海市",
+          "city": "浦东新区",
+          "district": "陆家嘴街道",
+          "street_name": "世纪大道",
+          "street_number": "100号"
+        },
+        "birth_place": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "江岸区"
+        },
+        "personality": "ENFP",
+        "economic_level": "中产",
+        "occupation": "市场营销专员",
+        "organization": "上海某互联网公司",
+        "nickname": "小然",
+        "relation_description": "冯浩然的妹妹，现居上海从事互联网营销工作。兄妹俩关系亲密，每周通过微信保持联系，经常分享工作生活见闻。每年春节和国庆假期会一起回武汉团聚，平时会互寄当地特产，冯浩然会指导妹妹进行理财规划。"
+      },
+      "prefix": "<人物正确>",
+      "text": "冯欣然的个人信息是{'name': '冯欣然', 'relation': '妹妹', 'social circle': '家庭圈', 'gender': '女', 'age': 24, 'birth_date': '1999-05-18', 'home_address': {'province': '上海市', 'city': '浦东新区', 'district': '陆家嘴街道', 'street_name': '世纪大道', 'street_number': '100号'}, 'birth_place': {'province': '湖北省', 'city': '武汉市', 'district': '江岸区'}, 'personality': 'ENFP', 'economic_level': '中产', 'occupation': '市场营销专员', 'organization': '上海某互联网公司', 'nickname': '小然', 'relation_description': '冯浩然的妹妹，现居上海从事互联网营销工作。兄妹俩关系亲密，每周通过微信保持联系，经常分享工作生活见闻。每年春节和国庆假期会一起回武汉团聚，平时会互寄当地特产，冯浩然会指导妹妹进行理财规划。'}"
+    },
+    {
+      "info": {
+        "name": "李秀英",
+        "relation": "母亲",
+        "social circle": "家庭圈",
+        "gender": "女",
+        "age": 56,
+        "birth_date": "1967-08-25",
+        "home_address": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "江岸区",
+          "street_name": "解放大道",
+          "street_number": "368号"
+        },
+        "birth_place": {
+          "province": "湖北省",
+          "city": "黄石市"
+        },
+        "personality": "ISFJ",
+        "economic_level": "小康",
+        "occupation": "退休教师",
+        "organization": "武汉市江岸区实验小学",
+        "nickname": "妈妈",
+        "relation_description": "冯浩然的母亲，原小学语文教师，现已退休。与丈夫同住武汉，每周与儿子视频通话一次，关心其生活起居和婚姻大事。擅长烹饪湖北家常菜，每次冯浩然回家都会准备他爱吃的排骨藕汤。"
+      },
+      "prefix": "<人物正确>",
+      "text": "母亲的个人信息是{'name': '李秀英', 'relation': '母亲', 'social circle': '家庭圈', 'gender': '女', 'age': 56, 'birth_date': '1967-08-25', 'home_address': {'province': '湖北省', 'city': '武汉市', 'district': '江岸区', 'street_name': '解放大道', 'street_number': '368号'}, 'birth_place': {'province': '湖北省', 'city': '黄石市'}, 'personality': 'ISFJ', 'economic_level': '小康', 'occupation': '退休教师', 'organization': '武汉市江岸区实验小学', 'nickname': '妈妈', 'relation_description': '冯浩然的母亲，原小学语文教师，现已退休。与丈夫同住武汉，每周与儿子视频通话一次，关心其生活起居和婚姻大事。擅长烹饪湖北家常菜，每次冯浩然回家都会准备他爱吃的排骨藕汤。'}"
+    }
+  ],
+  "event_prefixes": [
+    "<事件安排正确>"
+  ],
+  "person_prefixes": [
+    "<人物正确>",
+    "<人物错误>",
+    "<人物错误>",
+    "<人物错误>",
+    "<人物正确>",
+    "<人物正确>"
+  ]
+}

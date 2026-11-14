@@ -1,0 +1,302 @@
+[
+  {
+    "name": "岳麓机关金星住宅小区",
+    "location": "112.937966,28.221552",
+    "formatted_address": "湖南省长沙市岳麓区双塘路99号",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "双塘路",
+    "streetNumber": "99号",
+    "description": "日常居住的小区"
+  },
+  {
+    "name": "长沙万达总部国际写字楼",
+    "location": "112.971045,28.199120",
+    "formatted_address": "湖南省长沙市开福区",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "",
+    "streetNumber": "",
+    "description": "日常工作的证券公司办公楼"
+  },
+  {
+    "name": "岳麓山",
+    "location": "112.936763,28.187549",
+    "formatted_address": "湖南省长沙市岳麓区",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "",
+    "streetNumber": "",
+    "description": "日常晨跑和户外锻炼的常去地点"
+  },
+  {
+    "name": "英才园生鲜超市",
+    "location": "112.944356,28.217853",
+    "formatted_address": "湖南省长沙市岳麓区英才园路英才园·丰颐苑",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "英才园路英才园·丰颐苑",
+    "streetNumber": "",
+    "description": "居住小区附近的生鲜超市，用于日常食材和家庭用品采购"
+  },
+  {
+    "name": "郡原广场便利店",
+    "location": "112.936288,28.222360",
+    "formatted_address": "湖南省长沙市岳麓区银双路344号",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "银双路344号",
+    "streetNumber": "",
+    "description": "居住小区周边的便利店，用于临时购买饮料、早餐和日用品"
+  },
+  {
+    "name": "建新安置小区农家菜馆",
+    "location": "112.938237,28.220296",
+    "formatted_address": "湖南省长沙市岳麓区西湖街道第二管区建新安置小区物业楼",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "西湖街道第二管区建新安置小区物业楼",
+    "streetNumber": "",
+    "description": "居住小区附近常去的湘菜餐厅，适合与朋友聚餐和品尝家乡口味"
+  },
+  {
+    "name": "万象城日料餐厅",
+    "location": "112.951013,28.218355",
+    "formatted_address": "湖南省长沙市岳麓区万象城四楼L463",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "万象城四楼L463",
+    "streetNumber": "",
+    "description": "居住小区周边的日式拉面店，符合其喜欢日式拉面的日常用餐习惯"
+  },
+  {
+    "name": "保利时光汇咖啡厅",
+    "location": "112.959986,28.225518",
+    "formatted_address": "湖南省长沙市岳麓区岳麓大道11号",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "岳麓大道11号",
+    "streetNumber": "",
+    "description": "居住小区附近的手冲咖啡馆，用于周末休闲、阅读和与朋友交流"
+  },
+  {
+    "name": "银杉城市广场",
+    "location": "112.953177,28.230149",
+    "formatted_address": "湖南省长沙市岳麓区银杉大道2号(观沙岭地铁站3号口步行300米)",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "银杉大道2号(观沙岭地铁站3号口步行300米)",
+    "streetNumber": "",
+    "description": "居住小区附近的城市公园，适合晨跑、散步和周末放松"
+  },
+  {
+    "name": "岳麓书院景区",
+    "location": "112.940805,28.180397",
+    "formatted_address": "湖南省长沙市岳麓区麓山路273号",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "麓山路273号",
+    "streetNumber": "",
+    "description": "居住小区附近的岳麓山登山步道，用于日常晨跑和户外锻炼"
+  },
+  {
+    "name": "长沙河西王府井健身中心",
+    "location": "112.933377,28.218778",
+    "formatted_address": "湖南省长沙市岳麓区河西王府井商业广场六楼空中花园",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "河西王府井商业广场六楼空中花园",
+    "streetNumber": "",
+    "description": "居住小区周边的健身中心，用于雨天或夜间进行力量训练"
+  },
+  {
+    "name": "长沙金星中路银行营业厅",
+    "location": "112.933755,28.222464",
+    "formatted_address": "湖南省长沙市岳麓区金星中路473号",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "金星中路473号",
+    "streetNumber": "",
+    "description": "居住小区附近的银行网点，用于个人账户业务和理财咨询"
+  },
+  {
+    "name": "桐梓坡路邮局",
+    "location": "112.932715,28.218136",
+    "formatted_address": "湖南省长沙市岳麓区咸嘉新村嘉和苑南门旁(白鸽咀地铁站4号口步行80米)",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "咸嘉新村嘉和苑南门旁(白鸽咀地铁站4号口步行80米)",
+    "streetNumber": "",
+    "description": "居住小区附近的邮局，用于邮票收藏寄递和信件包裹业务"
+  },
+  {
+    "name": "金星路地铁站",
+    "location": "112.928603,28.206047",
+    "formatted_address": "湖南省长沙市岳麓区2号线",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "2号线",
+    "streetNumber": "",
+    "description": "居住小区附近的地铁站，用于日常通勤和市区出行"
+  },
+  {
+    "name": "银双路汽车维修养护店",
+    "location": "112.942025,28.222375",
+    "formatted_address": "湖南省长沙市岳麓区银双路108号科技公寓2栋101房",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "银双路108号科技公寓2栋101房",
+    "streetNumber": "",
+    "description": "居住小区附近的汽车保养店，用于家用汽车日常保养和自驾游前检查"
+  },
+  {
+    "name": "长沙王府井FAMILY PARK体育用品店",
+    "location": "112.933898,28.218759",
+    "formatted_address": "湖南省长沙市岳麓区金星中路383号长沙王府井FAMILY PARK购物中心(河西店)4F层",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "金星中路383号长沙王府井FAMILY PARK购物中心(河西店)4F层",
+    "streetNumber": "",
+    "description": "居住小区周边的户外用品店，用于购买露营和户外活动装备"
+  },
+  {
+    "name": "开福摄影器材店",
+    "location": "112.976839,28.205338",
+    "formatted_address": "湖南省长沙市开福区望麓园街道黄兴北路112号华润置地商业中心1栋2307室",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "望麓园街道黄兴北路112号华润置地商业中心1栋2307室",
+    "streetNumber": "",
+    "description": "居住小区附近的摄影器材店，用于街拍设备维护和配件购买"
+  },
+  {
+    "name": "湘腾城市广场烟酒专卖店",
+    "location": "112.936024,28.219815",
+    "formatted_address": "湖南省长沙市岳麓区金星中路438号湘腾城市广场F1层",
+    "city": "长沙市",
+    "district": "岳麓区",
+    "streetName": "金星中路438号湘腾城市广场F1层",
+    "streetNumber": "",
+    "description": "居住小区附近有特色的商业街区，适合周末进行街头摄影和休闲散步"
+  },
+  {
+    "name": "蒲外脱壳馆咖啡厅",
+    "location": "112.971798,28.203278",
+    "formatted_address": "湖南省长沙市开福区潮宗街233号",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "潮宗街233号",
+    "streetNumber": "",
+    "description": "工作楼附近的手冲咖啡馆，用于工作间隙品尝咖啡和与客户洽谈"
+  },
+  {
+    "name": "开福万达绿茶餐厅",
+    "location": "112.970920,28.198376",
+    "formatted_address": "湖南省长沙市开福区通泰街街道中山路589号开福万达B区商业综合体1001号室内步行街AF层4019A",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "通泰街街道中山路589号开福万达B区商业综合体1001号室内步行街AF层4019A",
+    "streetNumber": "",
+    "description": "工作地附近常去的湘菜餐厅，适合午休时与同事聚餐"
+  },
+  {
+    "name": "中山路日式料理餐厅",
+    "location": "112.977716,28.200314",
+    "formatted_address": "湖南省长沙市开福区中山路252号",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "中山路252号",
+    "streetNumber": "",
+    "description": "工作楼附近的日式拉面店，用于工作日快捷午餐"
+  },
+  {
+    "name": "西长街便利店",
+    "location": "112.972654,28.200189",
+    "formatted_address": "湖南省长沙市开福区西长街308号1楼101(仟店超市)",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "西长街308号1楼101(仟店超市)",
+    "streetNumber": "",
+    "description": "工作楼下的便利店，用于购买早餐、饮料和应急办公用品"
+  },
+  {
+    "name": "长沙开福万达快餐厅",
+    "location": "112.970640,28.199573",
+    "formatted_address": "湖南省长沙市开福区开福万达内1061A,2001号商铺",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "开福万达内1061A,2001号商铺",
+    "streetNumber": "",
+    "description": "工作地附近的快餐厅，用于工作繁忙时的简餐"
+  },
+  {
+    "name": "万达公馆健身中心",
+    "location": "112.971425,28.196525",
+    "formatted_address": "湖南省长沙市开福区万达公馆三栋物业三楼",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "万达公馆三栋物业三楼",
+    "streetNumber": "",
+    "description": "工作地附近的健身中心，用于下班后进行日常锻炼"
+  },
+  {
+    "name": "开福万达湘菜馆",
+    "location": "112.971318,28.199527",
+    "formatted_address": "湖南省长沙市开福区万达广场4层(湘江中路地铁站出入口步行70米)",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "万达广场4层(湘江中路地铁站出入口步行70米)",
+    "streetNumber": "",
+    "description": "工作地周边的商务餐厅，用于宴请客户和团队商务聚餐"
+  },
+  {
+    "name": "开福万达银行营业厅",
+    "location": "112.971176,28.202561",
+    "formatted_address": "湖南省长沙市开福区中山路598号开福万达广场C区3栋109-113号",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "中山路598号开福万达广场C区3栋109-113号",
+    "streetNumber": "",
+    "description": "工作楼附近的银行网点，用于办理客户资金相关业务和个人金融事务"
+  },
+  {
+    "name": "黄兴广场地铁站",
+    "location": "112.976431,28.189421",
+    "formatted_address": "湖南省长沙市天心区1号线",
+    "city": "长沙市",
+    "district": "天心区",
+    "streetName": "1号线",
+    "streetNumber": "",
+    "description": "工作地附近的地铁站，用于日常通勤和外出拜访客户"
+  },
+  {
+    "name": "开福万达广场地下停车场",
+    "location": "112.971280,28.199767",
+    "formatted_address": "湖南省长沙市开福区西长街125号万达广场(长沙开福店)",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "西长街125号万达广场(长沙开福店)",
+    "streetNumber": "",
+    "description": "工作楼附近的停车场，用于驾车通勤和客户来访停车"
+  },
+  {
+    "name": "腾跃图文快印店",
+    "location": "112.970152,28.196532",
+    "formatted_address": "湖南省长沙市开福区万达公馆A区4栋113号门面",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "万达公馆A区4栋113号门面",
+    "streetNumber": "",
+    "description": "工作楼附近的图文快印店，用于打印投资方案、合同和会议资料"
+  },
+  {
+    "name": "开福万达广场服装店",
+    "location": "112.970342,28.199188",
+    "formatted_address": "湖南省长沙市开福区通泰街街道中山路589号开福万达广场B区商业综合体10912号门区F层",
+    "city": "长沙市",
+    "district": "开福区",
+    "streetName": "通泰街街道中山路589号开福万达广场B区商业综合体10912号门区F层",
+    "streetNumber": "",
+    "description": "工作地附近的商业街区，适合午休时进行街头摄影和短暂散步"
+  }
+]

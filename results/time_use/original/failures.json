@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2025-03-15",
+    "error": "ValueError: Model response truncated; increase max_output_tokens"
+  },
+  {
+    "date": "2025-06-15",
+    "error": "ValueError: Model response truncated; increase max_output_tokens"
+  },
+  {
+    "date": "2025-08-05",
+    "error": "ValueError: No unambiguous time to classify; unknown days are not zero-activity observations"
+  },
+  {
+    "date": "2025-09-19",
+    "error": "ValueError: Model response truncated; increase max_output_tokens"
+  },
+  {
+    "date": "2025-10-01",
+    "error": "ValueError: Model response truncated; increase max_output_tokens"
+  },
+  {
+    "date": "2025-12-25",
+    "error": "ValueError: No unambiguous time to classify; unknown days are not zero-activity observations"
+  }
+]

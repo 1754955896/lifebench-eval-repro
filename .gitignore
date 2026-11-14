@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environments
+.venv/
+venv/
+.env
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 本地密钥配置（保留 config.example.json 入库）
+config/config.json
+
+# 评测产物
+output/
+*.log
+
+# 本地数据（lifebench_10people 与 lifebench_5p_beijing，约 240MB）
+data/
+
+# 本地 OmniBehavior 用户行为抽样数据
+evaluation/interest_stats/eval/datasets/omni_input/
+
+# 地理评估套件的重资产（参照数据 / 评估结果，约 13GB）
+evaluation/geolocation/data/
+evaluation/geolocation/results/

@@ -1,0 +1,20 @@
+{
+  "version": "baseline",
+  "selected_days": 90,
+  "completed_days": 90,
+  "failed_days": [],
+  "event_counts": {
+    "<事件安排错误>": 144,
+    "<事件安排疑似错误>": 32,
+    "<事件安排正确>": 166
+  },
+  "person_counts": {
+    "<人物错误>": 127,
+    "<人物正确>": 451
+  },
+  "event_consistency_rate": 0.535483870967742,
+  "event_denominator": 310,
+  "person_consistency_rate": 0.7802768166089965,
+  "person_denominator": 578,
+  "note": "Unmodified legacy checker semantics; suspected events are outside the event denominator."
+}

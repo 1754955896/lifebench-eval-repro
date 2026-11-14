@@ -1,0 +1,1344 @@
+{
+  "protocol": {
+    "lifebench_days": 295,
+    "lifebench_entities": 5,
+    "worldmove_days_available": 165328,
+    "reference_name": "chinamobile",
+    "reference_source": "ChinaMobile Beijing",
+    "reference_days_available": 56261,
+    "copb_days_available": 200000,
+    "requested_sample_size": 242,
+    "equal_sample_size": 242,
+    "lifebench_min_observed_slots": 48,
+    "repeats": 50,
+    "seeds": [
+      100,
+      149
+    ],
+    "reference_min_observed_slots": 4,
+    "copb_min_observed_slots": 4
+  },
+  "equal_sample_comparison": {
+    "lifebench": {
+      "jump_distance_km.jsd_base2": {
+        "mean": 0.06669851645794513,
+        "std": 0.007635131724797177
+      },
+      "jump_distance_km.ks_statistic": {
+        "mean": 0.18641826747821072,
+        "std": 0.02081541857988127
+      },
+      "daily_distance_km.jsd_base2": {
+        "mean": 0.14975812533210375,
+        "std": 0.019235128222669887
+      },
+      "daily_distance_km.ks_statistic": {
+        "mean": 0.32545454545454544,
+        "std": 0.03578197455268709
+      },
+      "radius_gyration_km.jsd_base2": {
+        "mean": 0.18439775869328423,
+        "std": 0.022205073924806567
+      },
+      "radius_gyration_km.ks_statistic": {
+        "mean": 0.24867768595041323,
+        "std": 0.031390710121318284
+      },
+      "dwell_minutes.jsd_base2": {
+        "mean": 0.1681837412168246,
+        "std": 0.0037892150368125654
+      },
+      "dwell_minutes.ks_statistic": {
+        "mean": 0.33291411419069783,
+        "std": 0.003942998010692685
+      },
+      "daily_locations.jsd_base2": {
+        "mean": 0.09741990531935414,
+        "std": 0.015391995058537455
+      },
+      "daily_locations.ks_statistic": {
+        "mean": 0.2301652892561983,
+        "std": 0.03435721182276995
+      },
+      "zipf_individual_rank.jsd_base2": {
+        "mean": 0.036574435246731964,
+        "std": 0.003722985310757865
+      }
+    },
+    "worldmove": {
+      "jump_distance_km.jsd_base2": {
+        "mean": 0.23200446375041014,
+        "std": 0.015441435206617228
+      },
+      "jump_distance_km.ks_statistic": {
+        "mean": 0.3783027481148096,
+        "std": 0.022410841169306542
+      },
+      "daily_distance_km.jsd_base2": {
+        "mean": 0.1779281447632768,
+        "std": 0.021511386799542464
+      },
+      "daily_distance_km.ks_statistic": {
+        "mean": 0.24553719008264466,
+        "std": 0.030456423683629517
+      },
+      "radius_gyration_km.jsd_base2": {
+        "mean": 0.21125734566455198,
+        "std": 0.030939547938866954
+      },
+      "radius_gyration_km.ks_statistic": {
+        "mean": 0.23272727272727273,
+        "std": 0.029317766844860812
+      },
+      "dwell_minutes.jsd_base2": {
+        "mean": 0.06249594181489549,
+        "std": 0.006033108784126998
+      },
+      "dwell_minutes.ks_statistic": {
+        "mean": 0.1750475034342479,
+        "std": 0.013467922840801621
+      },
+      "daily_locations.jsd_base2": {
+        "mean": 0.27061969695513616,
+        "std": 0.02986265369993222
+      },
+      "daily_locations.ks_statistic": {
+        "mean": 0.4099173553719009,
+        "std": 0.03326382115288944
+      },
+      "zipf_individual_rank.jsd_base2": {
+        "mean": 0.03339560622854415,
+        "std": 0.005146706069004158
+      }
+    },
+    "copb": {
+      "jump_distance_km.jsd_base2": {
+        "mean": 0.06325551431547258,
+        "std": 0.016425328366784175
+      },
+      "jump_distance_km.ks_statistic": {
+        "mean": 0.12025326586170744,
+        "std": 0.03819723168481389
+      },
+      "daily_distance_km.jsd_base2": {
+        "mean": 0.4097559859384682,
+        "std": 0.03869711456660175
+      },
+      "daily_distance_km.ks_statistic": {
+        "mean": 0.6932231404958678,
+        "std": 0.03358627252826274
+      },
+      "radius_gyration_km.jsd_base2": {
+        "mean": 0.0772497867188295,
+        "std": 0.014927695251405197
+      },
+      "radius_gyration_km.ks_statistic": {
+        "mean": 0.2223140495867769,
+        "std": 0.036532291083141065
+      },
+      "dwell_minutes.jsd_base2": {
+        "mean": 0.4085091205279746,
+        "std": 0.01611058172934232
+      },
+      "dwell_minutes.ks_statistic": {
+        "mean": 0.6242557364013427,
+        "std": 0.017070099586795187
+      },
+      "daily_locations.jsd_base2": {
+        "mean": 0.4624856497666376,
+        "std": 0.032511808561098664
+      },
+      "daily_locations.ks_statistic": {
+        "mean": 0.6751239669421487,
+        "std": 0.03238878719496392
+      },
+      "zipf_individual_rank.jsd_base2": {
+        "mean": 0.12924490701294597,
+        "std": 0.008310132282927265
+      }
+    }
+  },
+  "coverage_matched_comparison": {
+    "lifebench": {
+      "jump_distance_km.jsd_base2": {
+        "mean": 0.07580203807662556,
+        "std": 0.012118707482096796
+      },
+      "jump_distance_km.ks_statistic": {
+        "mean": 0.18877415886921436,
+        "std": 0.031197175602284157
+      },
+      "daily_distance_km.jsd_base2": {
+        "mean": 0.15454576932046027,
+        "std": 0.01965271832199573
+      },
+      "daily_distance_km.ks_statistic": {
+        "mean": 0.3577685950413223,
+        "std": 0.031143869024727527
+      },
+      "radius_gyration_km.jsd_base2": {
+        "mean": 0.1255271829889095,
+        "std": 0.02365656416470234
+      },
+      "radius_gyration_km.ks_statistic": {
+        "mean": 0.1828099173553719,
+        "std": 0.021208614786572478
+      },
+      "dwell_minutes.jsd_base2": {
+        "mean": 0.04837721619519313,
+        "std": 0.004558753257191314
+      },
+      "dwell_minutes.ks_statistic": {
+        "mean": 0.20080062405375695,
+        "std": 0.012331766135623099
+      },
+      "daily_locations.jsd_base2": {
+        "mean": 0.10831906093906969,
+        "std": 0.0181268711071901
+      },
+      "daily_locations.ks_statistic": {
+        "mean": 0.2562809917355372,
+        "std": 0.027103028264579214
+      }
+    },
+    "worldmove": {
+      "jump_distance_km.jsd_base2": {
+        "mean": 0.23935561491532473,
+        "std": 0.018700649323227837
+      },
+      "jump_distance_km.ks_statistic": {
+        "mean": 0.3724659967736943,
+        "std": 0.026953506577736458
+      },
+      "daily_distance_km.jsd_base2": {
+        "mean": 0.24457426516163128,
+        "std": 0.029420326704283
+      },
+      "daily_distance_km.ks_statistic": {
+        "mean": 0.4437190082644628,
+        "std": 0.03172832648798268
+      },
+      "radius_gyration_km.jsd_base2": {
+        "mean": 0.2069353084518209,
+        "std": 0.028767075738130966
+      },
+      "radius_gyration_km.ks_statistic": {
+        "mean": 0.2519834710743802,
+        "std": 0.03684402817830218
+      },
+      "dwell_minutes.jsd_base2": {
+        "mean": 0.02070122059119318,
+        "std": 0.0043345195052312685
+      },
+      "dwell_minutes.ks_statistic": {
+        "mean": 0.12270055764614857,
+        "std": 0.015173980832543133
+      },
+      "daily_locations.jsd_base2": {
+        "mean": 0.07820656476480892,
+        "std": 0.019643121926154705
+      },
+      "daily_locations.ks_statistic": {
+        "mean": 0.1332231404958678,
+        "std": 0.028456166856107187
+      }
+    },
+    "copb": {
+      "jump_distance_km.jsd_base2": {
+        "mean": 0.16300123472614086,
+        "std": 0.042121399296286485
+      },
+      "jump_distance_km.ks_statistic": {
+        "mean": 0.18004738758430552,
+        "std": 0.05513179723457403
+      },
+      "daily_distance_km.jsd_base2": {
+        "mean": 0.2084503917331818,
+        "std": 0.020900222765541
+      },
+      "daily_distance_km.ks_statistic": {
+        "mean": 0.6256269554858581,
+        "std": 0.033905207044390824
+      },
+      "radius_gyration_km.jsd_base2": {
+        "mean": 0.08275743192588697,
+        "std": 0.018252031365250318
+      },
+      "radius_gyration_km.ks_statistic": {
+        "mean": 0.2694766050088206,
+        "std": 0.036390415314809486
+      },
+      "dwell_minutes.jsd_base2": {
+        "mean": 0.09223416613803291,
+        "std": 0.009097742274876187
+      },
+      "dwell_minutes.ks_statistic": {
+        "mean": 0.30736744200475613,
+        "std": 0.017482827621452535
+      },
+      "daily_locations.jsd_base2": {
+        "mean": 0.2519064893588869,
+        "std": 0.02531018270046901
+      },
+      "daily_locations.ks_statistic": {
+        "mean": 0.48276511484485934,
+        "std": 0.033849743413322024
+      }
+    }
+  },
+  "full_dataset_descriptive": {
+    "lifebench": {
+      "jump_distance_km": {
+        "count": 2118,
+        "mean": 3.9347241158139465,
+        "std": 3.7691304772088854,
+        "min": 0.14968935572572686,
+        "q25": 1.535782261527525,
+        "median": 3.142336009872615,
+        "q75": 5.02885953018429,
+        "max": 61.43292907263099
+      },
+      "daily_distance_km": {
+        "count": 283,
+        "mean": 29.44786458407752,
+        "std": 21.708442965886846,
+        "min": 0.0,
+        "q25": 18.226395329284056,
+        "median": 24.2870981802603,
+        "q75": 39.9341930609595,
+        "max": 221.44901847201703
+      },
+      "radius_gyration_km": {
+        "count": 283,
+        "mean": 4.434751645796525,
+        "std": 3.030977625391921,
+        "min": 2.651190750650235e-12,
+        "q25": 2.5845058796857865,
+        "median": 4.634932517464256,
+        "q75": 5.290411217015166,
+        "max": 32.4765140964448
+      },
+      "dwell_minutes": {
+        "count": 2405,
+        "mean": 164.2079002079002,
+        "std": 225.79885079129122,
+        "min": 30.0,
+        "q25": 30.0,
+        "median": 30.0,
+        "q75": 240.0,
+        "max": 1440.0
+      },
+      "daily_locations": {
+        "count": 283,
+        "mean": 6.568904593639576,
+        "std": 2.9527530188268223,
+        "min": 1.0,
+        "q25": 5.0,
+        "median": 7.0,
+        "q75": 8.0,
+        "max": 19.0
+      },
+      "observed_slots": {
+        "count": 283,
+        "mean": 46.51590106007067,
+        "std": 5.993718279754731,
+        "min": 13.0,
+        "q25": 48.0,
+        "median": 48.0,
+        "q75": 48.0,
+        "max": 48.0
+      }
+    },
+    "worldmove": {
+      "jump_distance_km": {
+        "count": 2289383,
+        "mean": 5.358386981123857,
+        "std": 14.695166138961637,
+        "min": 0.012692191628302367,
+        "q25": 0.8427727653570448,
+        "median": 1.1535671906808764,
+        "q75": 1.5195723080975425,
+        "max": 161.86351061847253
+      },
+      "daily_distance_km": {
+        "count": 165328,
+        "mean": 74.2003778065801,
+        "std": 126.75092346356301,
+        "min": 0.0,
+        "q25": 6.176123773222075,
+        "median": 16.741490448839343,
+        "q75": 89.33416878737047,
+        "max": 1620.441335523676
+      },
+      "radius_gyration_km": {
+        "count": 165328,
+        "mean": 8.973926749076046,
+        "std": 12.102473284026821,
+        "min": 0.0,
+        "q25": 0.9101167689903498,
+        "median": 1.7703868607151947,
+        "q75": 14.674457699500103,
+        "max": 70.65083174110207
+      },
+      "dwell_minutes": {
+        "count": 2454711,
+        "mean": 96.98588550749966,
+        "std": 176.0553233299904,
+        "min": 30.0,
+        "q25": 30.0,
+        "median": 30.0,
+        "q75": 90.0,
+        "max": 1440.0
+      },
+      "daily_locations": {
+        "count": 165328,
+        "mean": 11.283309542243298,
+        "std": 8.0026809871982,
+        "min": 1.0,
+        "q25": 5.0,
+        "median": 10.0,
+        "q75": 16.0,
+        "max": 48.0
+      },
+      "observed_slots": {
+        "count": 165328,
+        "mean": 48.0,
+        "std": 0.0,
+        "min": 48.0,
+        "q25": 48.0,
+        "median": 48.0,
+        "q75": 48.0,
+        "max": 48.0
+      }
+    },
+    "chinamobile": {
+      "jump_distance_km": {
+        "count": 331082,
+        "mean": 4.163306359793976,
+        "std": 5.203506568536062,
+        "min": 0.06131815629752551,
+        "q25": 1.1909932981963902,
+        "median": 1.892086015575678,
+        "q75": 5.200262311447711,
+        "max": 93.22051623790075
+      },
+      "daily_distance_km": {
+        "count": 56261,
+        "mean": 24.50002303928671,
+        "std": 29.468107351124814,
+        "min": 0.0,
+        "q25": 5.8749613337210675,
+        "median": 16.21870713152257,
+        "q75": 33.8776278050565,
+        "max": 1647.0351408027955
+      },
+      "radius_gyration_km": {
+        "count": 56261,
+        "mean": 4.609977563257819,
+        "std": 4.709152748216895,
+        "min": 0.0,
+        "q25": 1.0338833668035616,
+        "median": 3.1681380087646427,
+        "q75": 6.624798145470263,
+        "max": 43.33373276360326
+      },
+      "dwell_minutes": {
+        "count": 614848,
+        "mean": 41.34426720099927,
+        "std": 30.608276153549085,
+        "min": 30.0,
+        "q25": 30.0,
+        "median": 30.0,
+        "q75": 30.0,
+        "max": 930.0
+      },
+      "daily_locations": {
+        "count": 56261,
+        "mean": 5.780220756829776,
+        "std": 3.045192712669798,
+        "min": 1.0,
+        "q25": 4.0,
+        "median": 5.0,
+        "q75": 8.0,
+        "max": 25.0
+      },
+      "observed_slots": {
+        "count": 56261,
+        "mean": 15.061019178471765,
+        "std": 7.242016424344825,
+        "min": 4.0,
+        "q25": 9.0,
+        "median": 14.0,
+        "q75": 20.0,
+        "max": 47.0
+      }
+    },
+    "copb": {
+      "jump_distance_km": {
+        "count": 81745,
+        "mean": 4.423341738149854,
+        "std": 4.828244295822182,
+        "min": 0.07115062894369588,
+        "q25": 1.2443274205231858,
+        "median": 2.285551857327715,
+        "q75": 5.810961668357344,
+        "max": 38.24783171083042
+      },
+      "daily_distance_km": {
+        "count": 200000,
+        "mean": 1.8079303519252996,
+        "std": 4.049362643068259,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 1.5366722155777024,
+        "max": 63.679913523467036
+      },
+      "radius_gyration_km": {
+        "count": 200000,
+        "mean": 2.623640251308328,
+        "std": 2.522537961406875,
+        "min": 0.0,
+        "q25": 0.7612162768159503,
+        "median": 1.7400533131738056,
+        "q75": 3.7664489420398275,
+        "max": 19.066339270206043
+      },
+      "dwell_minutes": {
+        "count": 701932,
+        "mean": 222.54258247237624,
+        "std": 171.30418401895724,
+        "min": 30.0,
+        "q25": 60.0,
+        "median": 180.0,
+        "q75": 420.0,
+        "max": 1440.0
+      },
+      "daily_locations": {
+        "count": 200000,
+        "mean": 2.404485,
+        "std": 0.7571042760247759,
+        "min": 1.0,
+        "q25": 2.0,
+        "median": 2.0,
+        "q75": 3.0,
+        "max": 8.0
+      },
+      "observed_slots": {
+        "count": 200000,
+        "mean": 26.03496,
+        "std": 7.142689115340245,
+        "min": 13.0,
+        "q25": 20.0,
+        "median": 25.0,
+        "q75": 31.0,
+        "max": 48.0
+      }
+    }
+  },
+  "lifebench_per_entity": {
+    "beijing-chaoyang-002\\sim\\intermediate": {
+      "days": 58,
+      "complete_beijing_days": 56,
+      "partial_beijing_days": 2,
+      "outside_beijing_days": 0,
+      "daily_distance_km": {
+        "count": 58,
+        "mean": 29.820168020369838,
+        "std": 16.463042224047843,
+        "min": 0.0,
+        "q25": 20.680129171272515,
+        "median": 28.715561520421225,
+        "q75": 38.48041216871321,
+        "max": 84.23159564111296
+      },
+      "radius_gyration_km": {
+        "count": 58,
+        "mean": 4.384913114239735,
+        "std": 1.7476827257595433,
+        "min": 3.972004656153305e-12,
+        "q25": 4.165053011349761,
+        "median": 4.763568416387695,
+        "q75": 5.0686611121014415,
+        "max": 8.17144416900352
+      },
+      "daily_locations": {
+        "count": 58,
+        "mean": 6.517241379310345,
+        "std": 3.035658079596381,
+        "min": 1.0,
+        "q25": 4.0,
+        "median": 6.0,
+        "q75": 9.0,
+        "max": 14.0
+      },
+      "movement_transition_share": 0.1618798955613577
+    },
+    "beijing-fengtai-student-005\\sim\\intermediate": {
+      "days": 57,
+      "complete_beijing_days": 53,
+      "partial_beijing_days": 3,
+      "outside_beijing_days": 1,
+      "daily_distance_km": {
+        "count": 56,
+        "mean": 24.849340451480998,
+        "std": 14.328110137836159,
+        "min": 0.0,
+        "q25": 20.682912024867242,
+        "median": 24.20352429346243,
+        "q75": 36.82737802324649,
+        "max": 48.734499770094
+      },
+      "radius_gyration_km": {
+        "count": 56,
+        "mean": 3.35508030323493,
+        "std": 1.9539398963198944,
+        "min": 2.651190750650235e-12,
+        "q25": 2.395791233500732,
+        "median": 3.8172507817296983,
+        "q75": 4.513279480994868,
+        "max": 9.749648534116501
+      },
+      "daily_locations": {
+        "count": 56,
+        "mean": 6.446428571428571,
+        "std": 3.116314460436644,
+        "min": 1.0,
+        "q25": 5.0,
+        "median": 6.5,
+        "q75": 9.0,
+        "max": 12.0
+      },
+      "movement_transition_share": 0.16509803921568628
+    },
+    "beijing-haidian-001\\sim\\intermediate": {
+      "days": 59,
+      "complete_beijing_days": 46,
+      "partial_beijing_days": 5,
+      "outside_beijing_days": 8,
+      "daily_distance_km": {
+        "count": 51,
+        "mean": 25.820325487930567,
+        "std": 14.174976826887024,
+        "min": 0.0,
+        "q25": 19.657021687837922,
+        "median": 21.892776364803126,
+        "q75": 32.991874965170595,
+        "max": 60.01300685756151
+      },
+      "radius_gyration_km": {
+        "count": 51,
+        "mean": 4.222618072618318,
+        "std": 1.7579832603349603,
+        "min": 1.1143808345656119e-11,
+        "q25": 4.161122204463034,
+        "median": 4.68362101664494,
+        "q75": 4.845210572051306,
+        "max": 8.820641799424095
+      },
+      "daily_locations": {
+        "count": 51,
+        "mean": 6.96078431372549,
+        "std": 2.9369904852318087,
+        "min": 1.0,
+        "q25": 5.0,
+        "median": 7.0,
+        "q75": 8.5,
+        "max": 13.0
+      },
+      "movement_transition_share": 0.17713787085514834
+    },
+    "beijing-tongzhou-004\\sim\\intermediate": {
+      "days": 61,
+      "complete_beijing_days": 55,
+      "partial_beijing_days": 4,
+      "outside_beijing_days": 2,
+      "daily_distance_km": {
+        "count": 59,
+        "mean": 36.924979619672676,
+        "std": 21.568379798988165,
+        "min": 0.0,
+        "q25": 22.536572464170042,
+        "median": 34.219955952968014,
+        "q75": 44.99512878726093,
+        "max": 85.14162551496642
+      },
+      "radius_gyration_km": {
+        "count": 59,
+        "mean": 6.459530071938458,
+        "std": 4.479242314292238,
+        "min": 4.812668420401796e-12,
+        "q25": 5.1852578420811515,
+        "median": 5.680451566639599,
+        "q75": 7.190350936348368,
+        "max": 32.4765140964448
+      },
+      "daily_locations": {
+        "count": 59,
+        "mean": 6.440677966101695,
+        "std": 2.3381231531604607,
+        "min": 1.0,
+        "q25": 5.5,
+        "median": 7.0,
+        "q75": 8.0,
+        "max": 13.0
+      },
+      "movement_transition_share": 0.15318027850959728
+    },
+    "beijing-xicheng-003\\sim\\intermediate": {
+      "days": 60,
+      "complete_beijing_days": 55,
+      "partial_beijing_days": 4,
+      "outside_beijing_days": 1,
+      "daily_distance_km": {
+        "count": 59,
+        "mean": 29.10512659973568,
+        "std": 32.75137428476605,
+        "min": 0.0,
+        "q25": 13.341482092815097,
+        "median": 18.063035135818296,
+        "q75": 35.74958154018097,
+        "max": 221.44901847201703
+      },
+      "radius_gyration_km": {
+        "count": 59,
+        "mean": 3.667109528905974,
+        "std": 2.9778208513007574,
+        "min": 8.190305946369968e-12,
+        "q25": 2.2064595372980675,
+        "median": 2.3683587094530876,
+        "q75": 4.274321229799851,
+        "max": 12.992555760317689
+      },
+      "daily_locations": {
+        "count": 59,
+        "mean": 6.52542372881356,
+        "std": 3.2330702845007395,
+        "min": 1.0,
+        "q25": 5.0,
+        "median": 6.0,
+        "q75": 8.0,
+        "max": 19.0
+      },
+      "movement_transition_share": 0.1668520578420467
+    }
+  },
+  "daily_distance_band_shares": {
+    "lifebench": {
+      "low_0_10_km": 0.127208480565371,
+      "routine_10_30_km": 0.46996466431095407,
+      "urban_30_80_km": 0.38869257950530034,
+      "long_80_plus_km": 0.014134275618374558
+    },
+    "worldmove": {
+      "low_0_10_km": 0.3545678892867512,
+      "routine_10_30_km": 0.24880238072195876,
+      "urban_30_80_km": 0.12863519790960998,
+      "long_80_plus_km": 0.26799453208168006
+    },
+    "chinamobile": {
+      "low_0_10_km": 0.3641243490161924,
+      "routine_10_30_km": 0.3448214571372709,
+      "urban_30_80_km": 0.2507776257087503,
+      "long_80_plus_km": 0.040276568137786385
+    },
+    "copb": {
+      "low_0_10_km": 0.944515,
+      "routine_10_30_km": 0.054515,
+      "urban_30_80_km": 0.00097,
+      "long_80_plus_km": 0.0
+    }
+  },
+  "movement_transition_share": {
+    "lifebench": {
+      "mean": 0.16441005802707934,
+      "std": 2.7755575615628914e-17
+    },
+    "worldmove": {
+      "mean": 0.29507473184455774,
+      "std": 0.013729097528664087
+    },
+    "copb": {
+      "mean": 0.017745229230230853,
+      "std": 0.0016502840529251204
+    },
+    "chinamobile": {
+      "mean": 0.5886104240105766,
+      "std": 0.015769831895606504
+    }
+  },
+  "coverage_matched_movement_transition_share": {
+    "lifebench": {
+      "mean": 0.22574752106965382,
+      "std": 0.008977679879663178
+    },
+    "worldmove": {
+      "mean": 0.35070896782315125,
+      "std": 0.020020614448135916
+    },
+    "copb": {
+      "mean": 0.029469540731064132,
+      "std": 0.0048248369780380185
+    }
+  },
+  "coverage_matched_mean_joint_observed_slots": {
+    "lifebench": {
+      "mean": 15.139917355371903,
+      "std": 0.5428601020177115
+    },
+    "worldmove": {
+      "mean": 15.139917355371903,
+      "std": 0.5428601020177115
+    },
+    "copb": {
+      "mean": 6.765867768595041,
+      "std": 0.3862463781052356
+    }
+  },
+  "movement_time_jsd_base2": {
+    "lifebench": {
+      "mean": 0.06277385937737243,
+      "std": 0.005553072003086656
+    },
+    "worldmove": {
+      "mean": 0.02916009037007207,
+      "std": 0.006150723335615386
+    },
+    "copb": {
+      "mean": 0.36045399980813075,
+      "std": 0.043520719654230273
+    }
+  },
+  "coverage_matched_movement_time_jsd_base2": {
+    "lifebench": {
+      "mean": 0.0844834216808344,
+      "std": 0.008957979562572611
+    },
+    "worldmove": {
+      "mean": 0.01666195217022542,
+      "std": 0.004161635191761498
+    },
+    "copb": {
+      "mean": 0.4128111575831225,
+      "std": 0.05866248845673347
+    }
+  },
+  "day_structure_descriptive": {
+    "lifebench": {
+      "normalized_visit_entropy": {
+        "count": 283,
+        "mean": 0.5243430969964549,
+        "std": 0.1863122148860665,
+        "min": 0.0,
+        "q25": 0.4784553196248438,
+        "median": 0.5744052743748373,
+        "q75": 0.6368711128932669,
+        "max": 0.8479836109346182
+      },
+      "within_day_exploration_rate": {
+        "count": 283,
+        "mean": 0.7938203662534691,
+        "std": 0.11744799335451407,
+        "min": 0.5333333333333333,
+        "q25": 0.7142857142857143,
+        "median": 0.8,
+        "q75": 0.8708333333333333,
+        "max": 1.0
+      },
+      "stay_locations_60m": {
+        "count": 283,
+        "mean": 2.5265017667844525,
+        "std": 0.9371621638622476,
+        "min": 1.0,
+        "q25": 2.0,
+        "median": 3.0,
+        "q75": 3.0,
+        "max": 5.0
+      },
+      "stay_runs_60m": {
+        "count": 283,
+        "mean": 3.8975265017667846,
+        "std": 1.5839614298129587,
+        "min": 1.0,
+        "q25": 3.0,
+        "median": 4.0,
+        "q75": 5.0,
+        "max": 9.0
+      }
+    },
+    "worldmove": {
+      "normalized_visit_entropy": {
+        "count": 165328,
+        "mean": 0.7118298321727476,
+        "std": 0.2745802727864791,
+        "min": 0.0,
+        "q25": 0.7082050886832286,
+        "median": 0.809591801815166,
+        "q75": 0.8712567547307334,
+        "max": 1.0
+      },
+      "within_day_exploration_rate": {
+        "count": 165328,
+        "mean": 0.7930287278767622,
+        "std": 0.15250470685649217,
+        "min": 0.2222222222222222,
+        "q25": 0.6842105263157895,
+        "median": 0.8,
+        "q75": 0.9166666666666666,
+        "max": 1.0
+      },
+      "stay_locations_60m": {
+        "count": 165328,
+        "mean": 4.984261589083519,
+        "std": 2.363245318864685,
+        "min": 0.0,
+        "q25": 3.0,
+        "median": 5.0,
+        "q75": 7.0,
+        "max": 14.0
+      },
+      "stay_runs_60m": {
+        "count": 165328,
+        "mean": 5.707024823381399,
+        "std": 2.7347318616878624,
+        "min": 0.0,
+        "q25": 4.0,
+        "median": 6.0,
+        "q75": 8.0,
+        "max": 16.0
+      }
+    },
+    "chinamobile": {
+      "normalized_visit_entropy": {
+        "count": 56261,
+        "mean": 0.8117076444803307,
+        "std": 0.19681497094084194,
+        "min": 0.0,
+        "q25": 0.7671316904273878,
+        "median": 0.8649735207179272,
+        "q75": 0.9311066102039655,
+        "max": 1.0000000000000002
+      },
+      "within_day_exploration_rate": {
+        "count": 56261,
+        "mean": 0.711491267665761,
+        "std": 0.22662980676453665,
+        "min": 0.08,
+        "q25": 0.5555555555555556,
+        "median": 0.75,
+        "q75": 0.8888888888888888,
+        "max": 1.0
+      },
+      "stay_locations_60m": {
+        "count": 56261,
+        "mean": 1.5224222818648798,
+        "std": 1.0144523999876296,
+        "min": 0.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 2.0,
+        "max": 7.0
+      },
+      "stay_runs_60m": {
+        "count": 56261,
+        "mean": 2.329979915038837,
+        "std": 1.7491446458217708,
+        "min": 0.0,
+        "q25": 1.0,
+        "median": 2.0,
+        "q75": 3.0,
+        "max": 13.0
+      }
+    },
+    "copb": {
+      "normalized_visit_entropy": {
+        "count": 200000,
+        "mean": 0.762400324640817,
+        "std": 0.24678423053230658,
+        "min": 0.0,
+        "q25": 0.6790681957683443,
+        "median": 0.814255499619725,
+        "q75": 0.9568886656798214,
+        "max": 1.0
+      },
+      "within_day_exploration_rate": {
+        "count": 200000,
+        "mean": 0.9333117683982685,
+        "std": 0.1292396607833477,
+        "min": 0.2222222222222222,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0,
+        "max": 1.0
+      },
+      "stay_locations_60m": {
+        "count": 200000,
+        "mean": 2.128975,
+        "std": 0.6750336653641801,
+        "min": 1.0,
+        "q25": 2.0,
+        "median": 2.0,
+        "q75": 2.0,
+        "max": 8.0
+      },
+      "stay_runs_60m": {
+        "count": 200000,
+        "mean": 2.868795,
+        "std": 1.1140288362403372,
+        "min": 1.0,
+        "q25": 2.0,
+        "median": 3.0,
+        "q75": 3.0,
+        "max": 9.0
+      }
+    }
+  },
+  "spatial_multiscale": {
+    "lifebench": {
+      "1": {
+        "visit_jsd_base2": {
+          "mean": 0.8121985302446858,
+          "std": 0.01428526333171702
+        },
+        "visit_cpc": {
+          "mean": 0.10650511491934138,
+          "std": 0.009556775174206712
+        },
+        "od_jsd_base2": {
+          "mean": 0.9781923182658039,
+          "std": 0.005345435116648739
+        },
+        "od_cpc": {
+          "mean": 0.01564897146695927,
+          "std": 0.003775820783608123
+        }
+      },
+      "2": {
+        "visit_jsd_base2": {
+          "mean": 0.6976305768883145,
+          "std": 0.019052885172014245
+        },
+        "visit_cpc": {
+          "mean": 0.17632226888500532,
+          "std": 0.013267337518768553
+        },
+        "od_jsd_base2": {
+          "mean": 0.9074195208083894,
+          "std": 0.01183566936145161
+        },
+        "od_cpc": {
+          "mean": 0.062479905406816194,
+          "std": 0.007999807028188526
+        }
+      },
+      "4": {
+        "visit_jsd_base2": {
+          "mean": 0.5544557071323089,
+          "std": 0.024867912048460394
+        },
+        "visit_cpc": {
+          "mean": 0.2844017569546381,
+          "std": 0.020193999435019934
+        },
+        "od_jsd_base2": {
+          "mean": 0.7324141555053255,
+          "std": 0.025040043623410554
+        },
+        "od_cpc": {
+          "mean": 0.16885114449378633,
+          "std": 0.017266385803358233
+        }
+      }
+    },
+    "worldmove": {
+      "1": {
+        "visit_jsd_base2": {
+          "mean": 0.6525955967715007,
+          "std": 0.02190795134415917
+        },
+        "visit_cpc": {
+          "mean": 0.22486335144624175,
+          "std": 0.016842759684041368
+        },
+        "od_jsd_base2": {
+          "mean": 0.9470906778870986,
+          "std": 0.007268222450367927
+        },
+        "od_cpc": {
+          "mean": 0.036295346562225245,
+          "std": 0.004968012818890366
+        }
+      },
+      "2": {
+        "visit_jsd_base2": {
+          "mean": 0.460760722428125,
+          "std": 0.023817829957375247
+        },
+        "visit_cpc": {
+          "mean": 0.37051694872964336,
+          "std": 0.02275995479531498
+        },
+        "od_jsd_base2": {
+          "mean": 0.8552001226344694,
+          "std": 0.014003679442773203
+        },
+        "od_cpc": {
+          "mean": 0.10621504675591101,
+          "std": 0.010568346337335648
+        }
+      },
+      "4": {
+        "visit_jsd_base2": {
+          "mean": 0.29839963942580644,
+          "std": 0.021270124601415415
+        },
+        "visit_cpc": {
+          "mean": 0.5161306193528641,
+          "std": 0.022660118120052867
+        },
+        "od_jsd_base2": {
+          "mean": 0.7251063916913665,
+          "std": 0.023665168653013824
+        },
+        "od_cpc": {
+          "mean": 0.20229458852687038,
+          "std": 0.019162010263348638
+        }
+      }
+    },
+    "copb": {
+      "1": {
+        "visit_jsd_base2": {
+          "mean": 0.6031122084505992,
+          "std": 0.022939278136470564
+        },
+        "visit_cpc": {
+          "mean": 0.27000061663196784,
+          "std": 0.019510016891214302
+        },
+        "od_jsd_base2": {
+          "mean": 0.9921293866121765,
+          "std": 0.0048824479029555366
+        },
+        "od_cpc": {
+          "mean": 0.0033962151110679935,
+          "std": 0.0022221853687963396
+        }
+      },
+      "2": {
+        "visit_jsd_base2": {
+          "mean": 0.3831070019662777,
+          "std": 0.022468976979980737
+        },
+        "visit_cpc": {
+          "mean": 0.44623767581116836,
+          "std": 0.024669018465930365
+        },
+        "od_jsd_base2": {
+          "mean": 0.9594655219166972,
+          "std": 0.011885420141519528
+        },
+        "od_cpc": {
+          "mean": 0.018968035758553964,
+          "std": 0.006490894214431991
+        }
+      },
+      "4": {
+        "visit_jsd_base2": {
+          "mean": 0.24603940994115858,
+          "std": 0.02216201434949269
+        },
+        "visit_cpc": {
+          "mean": 0.5847804188714231,
+          "std": 0.027323794202027137
+        },
+        "od_jsd_base2": {
+          "mean": 0.8510172455200257,
+          "std": 0.021096522198661042
+        },
+        "od_cpc": {
+          "mean": 0.08178143529003798,
+          "std": 0.014889627409436456
+        }
+      }
+    }
+  },
+  "coverage_matched_spatial_multiscale": {
+    "lifebench": {
+      "1": {
+        "visit_jsd_base2": {
+          "mean": 0.794946471074819,
+          "std": 0.01674242453545462
+        },
+        "visit_cpc": {
+          "mean": 0.12170251624642534,
+          "std": 0.01093291859086762
+        },
+        "od_jsd_base2": {
+          "mean": 0.9837111760274445,
+          "std": 0.005733926710338652
+        },
+        "od_cpc": {
+          "mean": 0.010531432654459305,
+          "std": 0.0037982445462942573
+        }
+      },
+      "2": {
+        "visit_jsd_base2": {
+          "mean": 0.66065173152588,
+          "std": 0.021958578780643927
+        },
+        "visit_cpc": {
+          "mean": 0.20180250144353856,
+          "std": 0.015202947620408244
+        },
+        "od_jsd_base2": {
+          "mean": 0.926503804881117,
+          "std": 0.01205761972613878
+        },
+        "od_cpc": {
+          "mean": 0.04654472124240584,
+          "std": 0.00823836181563155
+        }
+      },
+      "4": {
+        "visit_jsd_base2": {
+          "mean": 0.5001170764848873,
+          "std": 0.02568556175428535
+        },
+        "visit_cpc": {
+          "mean": 0.32436891504111803,
+          "std": 0.021218944485896094
+        },
+        "od_jsd_base2": {
+          "mean": 0.7647790156849242,
+          "std": 0.024586950491382376
+        },
+        "od_cpc": {
+          "mean": 0.14932199774858287,
+          "std": 0.017673604266506857
+        }
+      }
+    },
+    "worldmove": {
+      "1": {
+        "visit_jsd_base2": {
+          "mean": 0.6853620452502206,
+          "std": 0.024302387413019027
+        },
+        "visit_cpc": {
+          "mean": 0.2090125243874054,
+          "std": 0.018075962697810293
+        },
+        "od_jsd_base2": {
+          "mean": 0.9679852436268361,
+          "std": 0.0074178097463618985
+        },
+        "od_cpc": {
+          "mean": 0.024945543440168198,
+          "std": 0.005712696068413163
+        }
+      },
+      "2": {
+        "visit_jsd_base2": {
+          "mean": 0.48637778348516625,
+          "std": 0.02538873712207881
+        },
+        "visit_cpc": {
+          "mean": 0.35405834055732177,
+          "std": 0.02345342031172759
+        },
+        "od_jsd_base2": {
+          "mean": 0.9088807321090112,
+          "std": 0.014484704464879757
+        },
+        "od_cpc": {
+          "mean": 0.06726942169374482,
+          "std": 0.011005243443038206
+        }
+      },
+      "4": {
+        "visit_jsd_base2": {
+          "mean": 0.3130001049473482,
+          "std": 0.02377568421873299
+        },
+        "visit_cpc": {
+          "mean": 0.5045314424588159,
+          "std": 0.025497746882806194
+        },
+        "od_jsd_base2": {
+          "mean": 0.8090908506804962,
+          "std": 0.029343998260604357
+        },
+        "od_cpc": {
+          "mean": 0.141261093603128,
+          "std": 0.023383063202700893
+        }
+      }
+    },
+    "copb": {
+      "1": {
+        "visit_jsd_base2": {
+          "mean": 0.6746164760068705,
+          "std": 0.025175285846304893
+        },
+        "visit_cpc": {
+          "mean": 0.22157857779126858,
+          "std": 0.021632492139561005
+        },
+        "od_jsd_base2": {
+          "mean": 0.9981367442939519,
+          "std": 0.0032931866369247022
+        },
+        "od_cpc": {
+          "mean": 0.0006906074474985223,
+          "std": 0.0012545323326768254
+        }
+      },
+      "2": {
+        "visit_jsd_base2": {
+          "mean": 0.4341016253955102,
+          "std": 0.026409501397721045
+        },
+        "visit_cpc": {
+          "mean": 0.4022312099970195,
+          "std": 0.028247507597796595
+        },
+        "od_jsd_base2": {
+          "mean": 0.9888782658405713,
+          "std": 0.009781783182754284
+        },
+        "od_cpc": {
+          "mean": 0.004190313463079438,
+          "std": 0.003831641703658294
+        }
+      },
+      "4": {
+        "visit_jsd_base2": {
+          "mean": 0.268336556495015,
+          "std": 0.028295069915236358
+        },
+        "visit_cpc": {
+          "mean": 0.5607879245088603,
+          "std": 0.03528889622067459
+        },
+        "od_jsd_base2": {
+          "mean": 0.9467087230381385,
+          "std": 0.02699115590236847
+        },
+        "od_cpc": {
+          "mean": 0.0220907069718272,
+          "std": 0.012729707179394235
+        }
+      }
+    }
+  },
+  "limitations": [
+    "ChinaMobile Beijing is an observational proxy with missing slots; daily distance is adjacent observed-slot displacement, not complete daily mileage.",
+    "WorldMove has no stable cross-day user identifiers in the released Beijing file.",
+    "LifeBench has 300 person-days but only five independent personas, limiting city-level spatial coverage.",
+    "CoPB released trajectories contain no stable user/date identifiers; rows are independent generated daily schedules.",
+    "CoPB activity-interval gaps are retained as missing slots, so raw temporal metrics also reflect its output coverage; coverage-matched metrics use the CoPB/chinamobile slot intersection.",
+    "The CoPB repository contains training/evaluation pipelines for chinamobile; results against this reference are not an independent held-out generalization test."
+  ]
+}

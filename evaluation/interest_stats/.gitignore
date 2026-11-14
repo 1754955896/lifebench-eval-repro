@@ -1,0 +1,7 @@
+# 含 API 密钥，不要提交
+config/config.json
+
+# 大体积输入数据（如需版本管理请改用 Git LFS）
+eval/datasets/mempal/data_synthesis_v2/data/input.json
+eval/datasets/locomo/data/locomo10.json
+life_bench_data/version2/data/fenghaoran/daily_event.json

@@ -1,0 +1,429 @@
+"""LLM 调用工具。
+
+参考 LifeBench 主仓库 src/lifebench/utils/llm_call.py 实现，保留其核心约定：
+OpenAI 兼容接口、配置文件驱动、线程安全单例客户端、token 用量统计、
+可选去除 <think> 内容；去掉了主仓库依赖的 locale 本地化逻辑，便于独立运行。
+
+配置读取顺序：config/config.json（本地，含密钥，不入库）>
+config/config.example.json；环境变量 LLM_API_KEY / LLM_BASE_URL /
+LLM_DEFAULT_MODEL / LLM_REASON_MODEL 可覆盖同名配置项。
+"""
+
+from __future__ import annotations
+
+import atexit
+import json
+import os
+import re
+import threading
+import time
+from dataclasses import dataclass
+from pathlib import Path
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:  # 仅类型检查时导入，模块导入不要求已安装 openai
+    from openai import OpenAI
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+CONFIG_PATH = REPO_ROOT / "config" / "config.json"
+EXAMPLE_CONFIG_PATH = REPO_ROOT / "config" / "config.example.json"
+
+
+def _load_llm_config() -> dict:
+    path = CONFIG_PATH if CONFIG_PATH.exists() else EXAMPLE_CONFIG_PATH
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f).get("llm", {})
+
+
+_LLM_CONFIG = _load_llm_config()
+
+API_KEY = os.environ.get("LLM_API_KEY") or _LLM_CONFIG.get("api_key", "")
+BASE_URL = os.environ.get("LLM_BASE_URL") or _LLM_CONFIG.get("base_url", "https://api.deepseek.com")
+DEFAULT_MODEL = os.environ.get("LLM_DEFAULT_MODEL") or _LLM_CONFIG.get("default_model", "deepseek-v4-flash")
+REASON_MODEL = os.environ.get("LLM_REASON_MODEL") or _LLM_CONFIG.get("reason_model", "deepseek-v4-pro")
+STRIP_THINK = bool(_LLM_CONFIG.get("strip_think", False))
+
+DEFAULT_CONTEXT = "你是一名严谨的数据评测专家，擅长依据事实与规则核对并评估模型输出。"
+
+_client: OpenAI | None = None
+_client_lock = threading.Lock()
+
+
+def get_client() -> OpenAI:
+    """返回全局唯一的 OpenAI 客户端实例（线程安全），避免连接与 SSL FD 泄漏。
+
+    凭据只在第一次真正需要调用模型时检查；仅导入本模块不需要密钥。
+    """
+    global _client
+    if _client is None:
+        with _client_lock:
+            if _client is None:
+                if not API_KEY:
+                    raise RuntimeError(
+                        "未配置 LLM API key：请在 config/config.json 的 llm.api_key "
+                        "中填写，或设置环境变量 LLM_API_KEY")
+                try:
+                    from openai import OpenAI
+                except ImportError as exc:  # pragma: no cover
+                    raise RuntimeError(
+                        "缺少 openai 依赖，请先安装 requirements.txt") from exc
+                _client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
+    return _client
+
+
+def reset_client() -> None:
+    """关闭并清空全局客户端（主要供测试隔离使用）。"""
+    global _client
+    with _client_lock:
+        _client = None
+
+
+def _strip_think_text(text: str) -> str:
+    """无条件去除文本中的 <think>...</think> 内容。"""
+    return re.sub(r"<think>[\s\S]*?</think>", "", text).strip()
+
+
+def strip_think_content(text: str) -> str:
+    """按配置去除文本中的 <think>...</think> 内容。"""
+    if not STRIP_THINK:
+        return text
+    return _strip_think_text(text)
+
+
+# ==================== Token 统计 ====================
+# 可选：设置环境变量 LIFEBENCH_EVAL_TOKEN_DIR 后，每次调用都会把本进程累计
+# 用量增量写入该目录下的 token_<pid>.json，便于多进程运行时聚合。
+_token_usage_lock = threading.Lock()
+_token_usage = {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cache_hit_tokens": 0,
+    "cache_miss_tokens": 0,
+    "call_count": 0,
+    "models": {},
+}
+_token_dump_path: str | None = None
+
+
+def _get_token_dump_path() -> str | None:
+    global _token_dump_path
+    if _token_dump_path is None:
+        token_dir = os.environ.get("LIFEBENCH_EVAL_TOKEN_DIR")
+        if token_dir:
+            os.makedirs(token_dir, exist_ok=True)
+            _token_dump_path = os.path.join(token_dir, f"token_{os.getpid()}.json")
+        else:
+            _token_dump_path = ""
+    return _token_dump_path or None
+
+
+def _flush_token_usage_locked() -> None:
+    """在已持有 _token_usage_lock 的前提下，原子写入本进程的用量快照。"""
+    path = _get_token_dump_path()
+    if not path:
+        return
+    snapshot = json.loads(json.dumps(_token_usage))
+    snapshot["pid"] = os.getpid()
+    snapshot["updated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    tmp_path = path + ".tmp"
+    try:
+        with open(tmp_path, "w", encoding="utf-8") as f:
+            json.dump(snapshot, f, ensure_ascii=False, indent=2)
+        os.replace(tmp_path, path)
+    except OSError:
+        pass
+
+
+def _record_usage(response) -> None:
+    """从一次 chat.completions 响应中提取并累计 token 用量。"""
+    usage = getattr(response, "usage", None)
+    if usage is None:
+        return
+
+    prompt = getattr(usage, "prompt_tokens", 0) or 0
+    completion = getattr(usage, "completion_tokens", 0) or 0
+    total = getattr(usage, "total_tokens", 0) or 0
+    cache_hit = getattr(usage, "prompt_cache_hit_tokens", None)
+    cache_miss = getattr(usage, "prompt_cache_miss_tokens", None)
+    model = getattr(response, "model", None) or "unknown"
+
+    with _token_usage_lock:
+        _token_usage["prompt_tokens"] += prompt
+        _token_usage["completion_tokens"] += completion
+        _token_usage["total_tokens"] += total
+        if cache_hit:
+            _token_usage["cache_hit_tokens"] += cache_hit
+        if cache_miss:
+            _token_usage["cache_miss_tokens"] += cache_miss
+        _token_usage["call_count"] += 1
+
+        model_stats = _token_usage["models"].setdefault(model, {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "cache_hit_tokens": 0,
+            "cache_miss_tokens": 0,
+            "call_count": 0,
+        })
+        model_stats["prompt_tokens"] += prompt
+        model_stats["completion_tokens"] += completion
+        model_stats["total_tokens"] += total
+        if cache_hit:
+            model_stats["cache_hit_tokens"] += cache_hit
+        if cache_miss:
+            model_stats["cache_miss_tokens"] += cache_miss
+        model_stats["call_count"] += 1
+
+        _flush_token_usage_locked()
+
+
+def get_token_usage() -> dict:
+    """返回当前进程累计的 token 用量快照（线程安全）。"""
+    with _token_usage_lock:
+        return json.loads(json.dumps(_token_usage))
+
+
+def reset_token_usage() -> None:
+    """清空当前进程累计的 token 用量。"""
+    global _token_usage
+    with _token_usage_lock:
+        _token_usage = {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "cache_hit_tokens": 0,
+            "cache_miss_tokens": 0,
+            "call_count": 0,
+            "models": {},
+        }
+
+
+def _flush_on_exit() -> None:
+    if not os.environ.get("LIFEBENCH_EVAL_TOKEN_DIR"):
+        return
+    with _token_usage_lock:
+        _flush_token_usage_locked()
+
+
+atexit.register(_flush_on_exit)
+
+
+# ==================== 调用接口 ====================
+
+@dataclass
+class ChatCompletionResult:
+    """一次 chat.completions 调用的完整适配结果。
+
+    - content: 原始文本内容（默认不做 strip_think 改写）
+    - model_returned: 服务端返回的模型名
+    - finish_reason: stop / length 等
+    - usage: prompt/completion/total 与缓存命中 token 统计
+    """
+
+    content: str
+    model_returned: str | None
+    finish_reason: str | None
+    usage: dict[str, Any] | None
+    raw_response: Any = None
+
+    def to_dict(self) -> dict:
+        return {
+            "content": self.content,
+            "model_returned": self.model_returned,
+            "finish_reason": self.finish_reason,
+            "usage": self.usage,
+        }
+
+
+def _usage_to_dict(usage) -> dict | None:
+    if usage is None:
+        return None
+    if hasattr(usage, "model_dump"):
+        try:
+            raw = usage.model_dump()
+        except Exception:  # pragma: no cover - 兼容不同 SDK 版本
+            raw = None
+    elif isinstance(usage, dict):
+        raw = dict(usage)
+    else:
+        raw = None
+    return {
+        "prompt_tokens": getattr(usage, "prompt_tokens", None),
+        "completion_tokens": getattr(usage, "completion_tokens", None),
+        "total_tokens": getattr(usage, "total_tokens", None),
+        "cache_hit_tokens": getattr(usage, "prompt_cache_hit_tokens", None),
+        "cache_miss_tokens": getattr(usage, "prompt_cache_miss_tokens", None),
+        "raw": raw,
+    }
+
+
+def chat_completion(
+    messages,
+    *,
+    model: str | None = None,
+    temperature: float | None = None,
+    max_tokens: int | None = None,
+    response_format=None,
+    extra_body=None,
+    timeout: float | None = None,
+    sdk_max_retries: int | None = None,
+    strip_think: bool = False,
+) -> ChatCompletionResult:
+    """完整消息接口：接收 system/user/assistant 序列并返回可适配的原始结果。
+
+    与 ``llm_call`` 的便捷接口不同，这里默认不改写原始 content；
+    调用方如需去除 ``<think>`` 内容，显式传 ``strip_think=True``。
+
+    ``sdk_max_retries`` 用于按调用关闭 SDK 内部隐式重试。旧评估适配器
+    需要保证一次逻辑调用只对应一次 HTTP 请求，因此传入 0。
+    """
+    messages = list(messages)
+    model = model or DEFAULT_MODEL
+    kwargs: dict[str, Any] = {
+        "model": model,
+        "messages": messages,
+        "stream": False,
+    }
+    if temperature is not None:
+        kwargs["temperature"] = temperature
+    if max_tokens is not None:
+        kwargs["max_tokens"] = max_tokens
+    if response_format is not None:
+        kwargs["response_format"] = response_format
+    if extra_body is not None:
+        kwargs["extra_body"] = extra_body
+
+    client = get_client()
+    if timeout is not None or sdk_max_retries is not None:
+        overrides = {}
+        if timeout is not None:
+            overrides["timeout"] = timeout
+        if sdk_max_retries is not None:
+            overrides["max_retries"] = sdk_max_retries
+        client = client.with_options(**overrides)
+
+    response = client.chat.completions.create(**kwargs)
+    _record_usage(response)
+    choice = response.choices[0]
+    content = choice.message.content or ""
+    if strip_think:
+        content = _strip_think_text(content)
+    return ChatCompletionResult(
+        content=content,
+        model_returned=getattr(response, "model", None),
+        finish_reason=getattr(choice, "finish_reason", None),
+        usage=_usage_to_dict(getattr(response, "usage", None)),
+        raw_response=response,
+    )
+
+
+def _chat(prompt: str, context: str, model: str, json_mode: bool = False) -> str:
+    messages = [
+        {"role": "system", "content": context},
+        {"role": "user", "content": prompt},
+    ]
+    result = chat_completion(
+        messages,
+        model=model,
+        response_format={"type": "json_object"} if json_mode else None,
+    )
+    # 高层便捷接口保持原行为：是否去除 <think> 由 strip_think 配置决定。
+    return strip_think_content(result.content)
+
+
+def llm_call(prompt: str, context: str = DEFAULT_CONTEXT) -> str:
+    """调用默认聊天模型（不保留对话历史）。"""
+    return _chat(prompt, context, DEFAULT_MODEL)
+
+
+def llm_call_reason(prompt: str, context: str = DEFAULT_CONTEXT) -> str:
+    """调用推理模型（不保留对话历史）。"""
+    return _chat(prompt, context, REASON_MODEL)
+
+
+def llm_call_j(prompt: str, context: str = DEFAULT_CONTEXT) -> str:
+    """调用默认聊天模型，要求返回 JSON 字符串（不保留对话历史）。"""
+    return _chat(prompt, context, DEFAULT_MODEL, json_mode=True)
+
+
+def llm_call_reason_j(prompt: str, context: str = DEFAULT_CONTEXT) -> str:
+    """调用推理模型，要求返回 JSON 字符串（不保留对话历史）。"""
+    return _chat(prompt, context, REASON_MODEL, json_mode=True)
+
+
+def llm_agent(messages, tools, dispatch, model: str | None = None, max_turns: int = 12):
+    """带 function calling 的 agent 循环：执行工具直到模型不再请求工具。
+
+    :param messages: 对话消息列表（与 chat.completions 的 messages 一致）
+    :param tools: OpenAI function-calling 的 tools 列表
+    :param dispatch: callable(tool_name, args_dict) -> str | dict | list
+    :param model: 覆盖默认模型；缺省用 DEFAULT_MODEL
+    :param max_turns: 工具循环最大轮数，防止失控
+    :return: 模型最终文本内容；超轮数未收敛时返回 None
+    """
+    client = get_client()
+    model = model or DEFAULT_MODEL
+    transcript = list(messages)
+
+    for _ in range(max(int(max_turns), 1)):
+        response = client.chat.completions.create(
+            model=model,
+            messages=transcript,
+            tools=tools,
+            stream=False,
+        )
+        _record_usage(response)
+        message = response.choices[0].message
+        tool_calls = getattr(message, "tool_calls", None) or []
+        if not tool_calls:
+            return strip_think_content(getattr(message, "content", None) or "")
+
+        transcript.append({
+            "role": "assistant",
+            "content": getattr(message, "content", None) or "",
+            "tool_calls": [
+                {
+                    "id": tc.id,
+                    "type": "function",
+                    "function": {
+                        "name": tc.function.name,
+                        "arguments": tc.function.arguments or "{}",
+                    },
+                }
+                for tc in tool_calls
+            ],
+        })
+        for tc in tool_calls:
+            try:
+                args = json.loads(tc.function.arguments or "{}")
+            except (json.JSONDecodeError, TypeError):
+                args = {}
+            result = dispatch(tc.function.name, args)
+            if not isinstance(result, str):
+                result = json.dumps(result, ensure_ascii=False)
+            transcript.append({
+                "role": "tool",
+                "tool_call_id": tc.id,
+                "content": result,
+            })
+    return None
+
+
+__all__ = [
+    "DEFAULT_CONTEXT",
+    "DEFAULT_MODEL",
+    "REASON_MODEL",
+    "ChatCompletionResult",
+    "chat_completion",
+    "get_client",
+    "reset_client",
+    "strip_think_content",
+    "get_token_usage",
+    "reset_token_usage",
+    "llm_call",
+    "llm_call_reason",
+    "llm_call_j",
+    "llm_call_reason_j",
+    "llm_agent",
+]

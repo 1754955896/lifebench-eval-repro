@@ -1,0 +1,130 @@
+{
+  "source_day": "2025-10-12",
+  "extracted_events": [
+    {
+      "事件": "复查血脂",
+      "时间": "2026-01-12-全"
+    },
+    {
+      "事件": "再试一次促销并记录时段单量",
+      "时间": "2025-10-19-全"
+    }
+  ],
+  "extracted_people": [
+    "彭雨晴",
+    "李秀英",
+    "沈心怡",
+    "冯浩然"
+  ],
+  "event_results": [
+    {
+      "info": null,
+      "prefix": "<事件安排错误>",
+      "text": "再试一次促销并记录时段单量在预测时间2025-10-19附近均未发生"
+    }
+  ],
+  "person_results": [
+    {
+      "info": {
+        "name": "彭雨晴",
+        "relation": "好友",
+        "social circle": "密友圈",
+        "gender": "女",
+        "age": 26,
+        "birth_date": "1995-08-14",
+        "home_address": {
+          "province": "湖南省",
+          "city": "长沙市",
+          "district": "雨花区",
+          "street_name": "韶山南路",
+          "street_number": "233号"
+        },
+        "birth_place": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "洪山区"
+        },
+        "personality": "ENFP",
+        "economic_level": "中产",
+        "occupation": "新媒体运营经理",
+        "organization": "湖南日报新媒体中心",
+        "nickname": "小雨",
+        "relation_description": "冯浩然的大学校友，两人在武汉读本科时因社团活动相识。毕业后都选择到长沙发展，经常周末一起聚餐或户外活动。彭雨晴性格开朗活泼，常组织朋友聚会，与冯浩然保持每周2-3次的联系频率，主要通过微信交流投资心得和生活趣事。"
+      },
+      "prefix": "<人物正确>",
+      "text": "彭雨晴的个人信息是{'name': '彭雨晴', 'relation': '好友', 'social circle': '密友圈', 'gender': '女', 'age': 26, 'birth_date': '1995-08-14', 'home_address': {'province': '湖南省', 'city': '长沙市', 'district': '雨花区', 'street_name': '韶山南路', 'street_number': '233号'}, 'birth_place': {'province': '湖北省', 'city': '武汉市', 'district': '洪山区'}, 'personality': 'ENFP', 'economic_level': '中产', 'occupation': '新媒体运营经理', 'organization': '湖南日报新媒体中心', 'nickname': '小雨', 'relation_description': '冯浩然的大学校友，两人在武汉读本科时因社团活动相识。毕业后都选择到长沙发展，经常周末一起聚餐或户外活动。彭雨晴性格开朗活泼，常组织朋友聚会，与冯浩然保持每周2-3次的联系频率，主要通过微信交流投资心得和生活趣事。'}"
+    },
+    {
+      "info": {
+        "name": "李秀英",
+        "relation": "母亲",
+        "social circle": "家庭圈",
+        "gender": "女",
+        "age": 56,
+        "birth_date": "1967-08-25",
+        "home_address": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "江岸区",
+          "street_name": "解放大道",
+          "street_number": "368号"
+        },
+        "birth_place": {
+          "province": "湖北省",
+          "city": "黄石市"
+        },
+        "personality": "ISFJ",
+        "economic_level": "小康",
+        "occupation": "退休教师",
+        "organization": "武汉市江岸区实验小学",
+        "nickname": "妈妈",
+        "relation_description": "冯浩然的母亲，原小学语文教师，现已退休。与丈夫同住武汉，每周与儿子视频通话一次，关心其生活起居和婚姻大事。擅长烹饪湖北家常菜，每次冯浩然回家都会准备他爱吃的排骨藕汤。"
+      },
+      "prefix": "<人物正确>",
+      "text": "李秀英的个人信息是{'name': '李秀英', 'relation': '母亲', 'social circle': '家庭圈', 'gender': '女', 'age': 56, 'birth_date': '1967-08-25', 'home_address': {'province': '湖北省', 'city': '武汉市', 'district': '江岸区', 'street_name': '解放大道', 'street_number': '368号'}, 'birth_place': {'province': '湖北省', 'city': '黄石市'}, 'personality': 'ISFJ', 'economic_level': '小康', 'occupation': '退休教师', 'organization': '武汉市江岸区实验小学', 'nickname': '妈妈', 'relation_description': '冯浩然的母亲，原小学语文教师，现已退休。与丈夫同住武汉，每周与儿子视频通话一次，关心其生活起居和婚姻大事。擅长烹饪湖北家常菜，每次冯浩然回家都会准备他爱吃的排骨藕汤。'}"
+    },
+    {
+      "info": {
+        "name": "沈心怡",
+        "relation": "咖啡店老板",
+        "social circle": "手冲咖啡圈",
+        "gender": "女",
+        "age": 32,
+        "birth_date": "1992-05-18",
+        "home_address": {
+          "province": "湖南省",
+          "city": "长沙市",
+          "district": "芙蓉区",
+          "street_name": "解放西路",
+          "street_number": "233号"
+        },
+        "birth_place": {
+          "province": "云南省",
+          "city": "普洱市"
+        },
+        "personality": "ISFP",
+        "economic_level": "中产",
+        "occupation": "独立咖啡店主",
+        "organization": "心怡手冲咖啡馆",
+        "nickname": "沈老板",
+        "relation_description": "冯浩然是沈心怡咖啡馆的常客，因对手冲咖啡的共同爱好相识。沈心怡的咖啡馆位于冯浩然公司附近，他每周会光顾2-3次品尝新品咖啡。两人经常交流咖啡豆产地和冲泡技巧，偶尔会一起参加本地咖啡品鉴活动。沈心怡会为冯浩然预留限量咖啡豆，而冯浩然也会推荐客户到她的咖啡馆洽谈业务。"
+      },
+      "prefix": "<人物正确>",
+      "text": "沈心怡的个人信息是{'name': '沈心怡', 'relation': '咖啡店老板', 'social circle': '手冲咖啡圈', 'gender': '女', 'age': 32, 'birth_date': '1992-05-18', 'home_address': {'province': '湖南省', 'city': '长沙市', 'district': '芙蓉区', 'street_name': '解放西路', 'street_number': '233号'}, 'birth_place': {'province': '云南省', 'city': '普洱市'}, 'personality': 'ISFP', 'economic_level': '中产', 'occupation': '独立咖啡店主', 'organization': '心怡手冲咖啡馆', 'nickname': '沈老板', 'relation_description': '冯浩然是沈心怡咖啡馆的常客，因对手冲咖啡的共同爱好相识。沈心怡的咖啡馆位于冯浩然公司附近，他每周会光顾2-3次品尝新品咖啡。两人经常交流咖啡豆产地和冲泡技巧，偶尔会一起参加本地咖啡品鉴活动。沈心怡会为冯浩然预留限量咖啡豆，而冯浩然也会推荐客户到她的咖啡馆洽谈业务。'}"
+    },
+    {
+      "info": null,
+      "prefix": "<人物错误>",
+      "text": "冯浩然人物无法找到，请检查"
+    }
+  ],
+  "event_prefixes": [
+    "<事件安排错误>"
+  ],
+  "person_prefixes": [
+    "<人物正确>",
+    "<人物正确>",
+    "<人物正确>",
+    "<人物错误>"
+  ]
+}

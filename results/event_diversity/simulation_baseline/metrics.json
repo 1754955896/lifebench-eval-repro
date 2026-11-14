@@ -1,0 +1,131 @@
+{
+  "method": "event_diversity",
+  "status": "complete",
+  "source": "data/ablation_fenghaoran_2025/simulation_baseline/fenghaoran/daily_event.json",
+  "total_entries": 5776,
+  "typed_entries": 5776,
+  "total_events": 5776,
+  "num_types": 9,
+  "normalized_entropy": 0.7998,
+  "simpson_index": 0.7882,
+  "effective_num_types": 5.8,
+  "type_distribution": {
+    "Personal Life": {
+      "count": 1908,
+      "ratio": 0.3303
+    },
+    "Health": {
+      "count": 1140,
+      "ratio": 0.1974
+    },
+    "Relationships": {
+      "count": 258,
+      "ratio": 0.0447
+    },
+    "Education": {
+      "count": 423,
+      "ratio": 0.0732
+    },
+    "Career": {
+      "count": 1273,
+      "ratio": 0.2204
+    },
+    "Family&Living Situation": {
+      "count": 467,
+      "ratio": 0.0809
+    },
+    "Other": {
+      "count": 154,
+      "ratio": 0.0267
+    },
+    "Unexpected Events": {
+      "count": 24,
+      "ratio": 0.0042
+    },
+    "Finance": {
+      "count": 129,
+      "ratio": 0.0223
+    }
+  },
+  "official_event_types": [
+    "Career",
+    "Education",
+    "Relationships",
+    "Family&Living Situation",
+    "Personal Life",
+    "Finance",
+    "Health",
+    "Unexpected Events",
+    "Other"
+  ],
+  "raw_type_distribution": {
+    "Career": 1273,
+    "Education": 423,
+    "Family & Living Situation": 10,
+    "Family&Living Situation": 457,
+    "Finance": 129,
+    "Health": 1140,
+    "Other": 154,
+    "Personal Life": 1908,
+    "Relationships": 258,
+    "Unexpected Events": 24
+  },
+  "normalized_variant_events": 10,
+  "normalized_variant_labels": [
+    "Family & Living Situation"
+  ],
+  "variant_events": [
+    {
+      "event_index": 700,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 701,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 2869,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 2871,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 3410,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 3505,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 3691,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 3694,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 3695,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 5595,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    }
+  ],
+  "invalid_type_event_count": 0,
+  "input_diagnostics": []
+}

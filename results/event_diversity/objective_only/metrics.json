@@ -1,0 +1,92 @@
+{
+  "method": "event_diversity",
+  "status": "complete",
+  "source": "data/ablation_fenghaoran_2025/objective_only/fenghaoran/daily_event.json",
+  "total_entries": 3401,
+  "typed_entries": 3401,
+  "total_events": 3401,
+  "num_types": 9,
+  "normalized_entropy": 0.8026,
+  "simpson_index": 0.7871,
+  "effective_num_types": 5.83,
+  "type_distribution": {
+    "Personal Life": {
+      "count": 1183,
+      "ratio": 0.3478
+    },
+    "Relationships": {
+      "count": 262,
+      "ratio": 0.077
+    },
+    "Family&Living Situation": {
+      "count": 320,
+      "ratio": 0.0941
+    },
+    "Health": {
+      "count": 555,
+      "ratio": 0.1632
+    },
+    "Education": {
+      "count": 167,
+      "ratio": 0.0491
+    },
+    "Other": {
+      "count": 82,
+      "ratio": 0.0241
+    },
+    "Career": {
+      "count": 736,
+      "ratio": 0.2164
+    },
+    "Unexpected Events": {
+      "count": 12,
+      "ratio": 0.0035
+    },
+    "Finance": {
+      "count": 84,
+      "ratio": 0.0247
+    }
+  },
+  "official_event_types": [
+    "Career",
+    "Education",
+    "Relationships",
+    "Family&Living Situation",
+    "Personal Life",
+    "Finance",
+    "Health",
+    "Unexpected Events",
+    "Other"
+  ],
+  "raw_type_distribution": {
+    "Career": 736,
+    "Education": 167,
+    "Family & Living Situation": 2,
+    "Family&Living Situation": 318,
+    "Finance": 84,
+    "Health": 555,
+    "Other": 82,
+    "Personal Life": 1183,
+    "Relationships": 262,
+    "Unexpected Events": 12
+  },
+  "normalized_variant_events": 2,
+  "normalized_variant_labels": [
+    "Family & Living Situation"
+  ],
+  "variant_events": [
+    {
+      "event_index": 787,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    },
+    {
+      "event_index": 790,
+      "raw": "Family & Living Situation",
+      "normalized": "Family&Living Situation"
+    }
+  ],
+  "invalid_type_event_count": 0,
+  "input_diagnostics": [],
+  "person": "fenghaoran"
+}

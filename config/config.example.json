@@ -1,0 +1,29 @@
+{
+  "llm": {
+    "api_key": "",
+    "base_url": "https://api.deepseek.com",
+    "default_model": "deepseek-v4-flash",
+    "reason_model": "deepseek-v4-pro",
+    "strip_think": false
+  },
+  "geo": {
+    "gaode_api_key": "",
+    "geocode_qps": 3
+  },
+  "evaluation": {
+    "event_diversity": {},
+    "time_use": {
+      "max_workers": 8,
+      "attempts": 3,
+      "timeout": 180,
+      "sleep_policy": "none",
+      "resume": true,
+      "dry_run": false
+    },
+    "logic_consistency": {
+      "model": "deepseek-chat",
+      "num_workers": 10,
+      "dry_run": false
+    }
+  }
+}

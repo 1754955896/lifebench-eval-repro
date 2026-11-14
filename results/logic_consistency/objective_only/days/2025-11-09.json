@@ -1,0 +1,232 @@
+{
+  "source_day": "2025-11-09",
+  "extracted_events": [
+    {
+      "事件": "冯浩然帮父母在社区卫生服务中心APP预约老年人体检",
+      "时间": "2025-11-10-早"
+    },
+    {
+      "事件": "冯浩然与沈心怡一起布置影展",
+      "时间": "2025-11-10-中"
+    }
+  ],
+  "extracted_people": [
+    "高云飞",
+    "冯浩然",
+    "沈心怡",
+    "彭雨晴",
+    "母亲",
+    "父亲",
+    "冯欣然"
+  ],
+  "event_results": [
+    {
+      "info": null,
+      "prefix": "<事件安排错误>",
+      "text": "冯浩然帮父母在社区卫生服务中心APP预约老年人体检在预测时间2025-11-10附近均未发生"
+    },
+    {
+      "info": null,
+      "prefix": "<事件安排正确>",
+      "text": "冯浩然与沈心怡一起布置影展确实在预测时间2025-11-10发生"
+    }
+  ],
+  "person_results": [
+    {
+      "info": {
+        "name": "高云飞",
+        "relation": "跑友",
+        "social circle": "晨跑圈",
+        "gender": "男",
+        "age": 28,
+        "birth_date": "1995-03-12",
+        "home_address": {
+          "province": "湖南省",
+          "city": "长沙市",
+          "district": "雨花区",
+          "street_name": "韶山南路",
+          "street_number": "233号"
+        },
+        "birth_place": {
+          "province": "广东省",
+          "city": "深圳市",
+          "district": "福田区"
+        },
+        "personality": "ISTJ",
+        "economic_level": "中产",
+        "occupation": "IT项目经理",
+        "organization": "腾讯科技（长沙）分公司",
+        "nickname": "云飞",
+        "relation_description": "高云飞是冯浩然在岳麓山晨跑时认识的跑友，两人因坚持清晨锻炼而结缘。作为IT项目经理的他工作节奏规律，每周三和周六早晨都会与冯浩然相约麓山南路慢跑，途中常交流投资理财和科技行业动态。虽然高云飞出生于深圳，但因工作调动已在长沙定居三年，两人居住地相距约6公里，除晨跑外每月还会约一次湘菜馆聚餐。"
+      },
+      "prefix": "<人物正确>",
+      "text": "高云飞的个人信息是{'name': '高云飞', 'relation': '跑友', 'social circle': '晨跑圈', 'gender': '男', 'age': 28, 'birth_date': '1995-03-12', 'home_address': {'province': '湖南省', 'city': '长沙市', 'district': '雨花区', 'street_name': '韶山南路', 'street_number': '233号'}, 'birth_place': {'province': '广东省', 'city': '深圳市', 'district': '福田区'}, 'personality': 'ISTJ', 'economic_level': '中产', 'occupation': 'IT项目经理', 'organization': '腾讯科技（长沙）分公司', 'nickname': '云飞', 'relation_description': '高云飞是冯浩然在岳麓山晨跑时认识的跑友，两人因坚持清晨锻炼而结缘。作为IT项目经理的他工作节奏规律，每周三和周六早晨都会与冯浩然相约麓山南路慢跑，途中常交流投资理财和科技行业动态。虽然高云飞出生于深圳，但因工作调动已在长沙定居三年，两人居住地相距约6公里，除晨跑外每月还会约一次湘菜馆聚餐。'}"
+    },
+    {
+      "info": null,
+      "prefix": "<人物错误>",
+      "text": "冯浩然人物无法找到，请检查"
+    },
+    {
+      "info": {
+        "name": "沈心怡",
+        "relation": "咖啡店老板",
+        "social circle": "手冲咖啡圈",
+        "gender": "女",
+        "age": 32,
+        "birth_date": "1992-05-18",
+        "home_address": {
+          "province": "湖南省",
+          "city": "长沙市",
+          "district": "芙蓉区",
+          "street_name": "解放西路",
+          "street_number": "233号"
+        },
+        "birth_place": {
+          "province": "云南省",
+          "city": "普洱市"
+        },
+        "personality": "ISFP",
+        "economic_level": "中产",
+        "occupation": "独立咖啡店主",
+        "organization": "心怡手冲咖啡馆",
+        "nickname": "沈老板",
+        "relation_description": "冯浩然是沈心怡咖啡馆的常客，因对手冲咖啡的共同爱好相识。沈心怡的咖啡馆位于冯浩然公司附近，他每周会光顾2-3次品尝新品咖啡。两人经常交流咖啡豆产地和冲泡技巧，偶尔会一起参加本地咖啡品鉴活动。沈心怡会为冯浩然预留限量咖啡豆，而冯浩然也会推荐客户到她的咖啡馆洽谈业务。"
+      },
+      "prefix": "<人物正确>",
+      "text": "沈心怡的个人信息是{'name': '沈心怡', 'relation': '咖啡店老板', 'social circle': '手冲咖啡圈', 'gender': '女', 'age': 32, 'birth_date': '1992-05-18', 'home_address': {'province': '湖南省', 'city': '长沙市', 'district': '芙蓉区', 'street_name': '解放西路', 'street_number': '233号'}, 'birth_place': {'province': '云南省', 'city': '普洱市'}, 'personality': 'ISFP', 'economic_level': '中产', 'occupation': '独立咖啡店主', 'organization': '心怡手冲咖啡馆', 'nickname': '沈老板', 'relation_description': '冯浩然是沈心怡咖啡馆的常客，因对手冲咖啡的共同爱好相识。沈心怡的咖啡馆位于冯浩然公司附近，他每周会光顾2-3次品尝新品咖啡。两人经常交流咖啡豆产地和冲泡技巧，偶尔会一起参加本地咖啡品鉴活动。沈心怡会为冯浩然预留限量咖啡豆，而冯浩然也会推荐客户到她的咖啡馆洽谈业务。'}"
+    },
+    {
+      "info": {
+        "name": "彭雨晴",
+        "relation": "好友",
+        "social circle": "密友圈",
+        "gender": "女",
+        "age": 26,
+        "birth_date": "1995-08-14",
+        "home_address": {
+          "province": "湖南省",
+          "city": "长沙市",
+          "district": "雨花区",
+          "street_name": "韶山南路",
+          "street_number": "233号"
+        },
+        "birth_place": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "洪山区"
+        },
+        "personality": "ENFP",
+        "economic_level": "中产",
+        "occupation": "新媒体运营经理",
+        "organization": "湖南日报新媒体中心",
+        "nickname": "小雨",
+        "relation_description": "冯浩然的大学校友，两人在武汉读本科时因社团活动相识。毕业后都选择到长沙发展，经常周末一起聚餐或户外活动。彭雨晴性格开朗活泼，常组织朋友聚会，与冯浩然保持每周2-3次的联系频率，主要通过微信交流投资心得和生活趣事。"
+      },
+      "prefix": "<人物正确>",
+      "text": "彭雨晴的个人信息是{'name': '彭雨晴', 'relation': '好友', 'social circle': '密友圈', 'gender': '女', 'age': 26, 'birth_date': '1995-08-14', 'home_address': {'province': '湖南省', 'city': '长沙市', 'district': '雨花区', 'street_name': '韶山南路', 'street_number': '233号'}, 'birth_place': {'province': '湖北省', 'city': '武汉市', 'district': '洪山区'}, 'personality': 'ENFP', 'economic_level': '中产', 'occupation': '新媒体运营经理', 'organization': '湖南日报新媒体中心', 'nickname': '小雨', 'relation_description': '冯浩然的大学校友，两人在武汉读本科时因社团活动相识。毕业后都选择到长沙发展，经常周末一起聚餐或户外活动。彭雨晴性格开朗活泼，常组织朋友聚会，与冯浩然保持每周2-3次的联系频率，主要通过微信交流投资心得和生活趣事。'}"
+    },
+    {
+      "info": {
+        "name": "李秀英",
+        "relation": "母亲",
+        "social circle": "家庭圈",
+        "gender": "女",
+        "age": 56,
+        "birth_date": "1967-08-25",
+        "home_address": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "江岸区",
+          "street_name": "解放大道",
+          "street_number": "368号"
+        },
+        "birth_place": {
+          "province": "湖北省",
+          "city": "黄石市"
+        },
+        "personality": "ISFJ",
+        "economic_level": "小康",
+        "occupation": "退休教师",
+        "organization": "武汉市江岸区实验小学",
+        "nickname": "妈妈",
+        "relation_description": "冯浩然的母亲，原小学语文教师，现已退休。与丈夫同住武汉，每周与儿子视频通话一次，关心其生活起居和婚姻大事。擅长烹饪湖北家常菜，每次冯浩然回家都会准备他爱吃的排骨藕汤。"
+      },
+      "prefix": "<人物正确>",
+      "text": "母亲的个人信息是{'name': '李秀英', 'relation': '母亲', 'social circle': '家庭圈', 'gender': '女', 'age': 56, 'birth_date': '1967-08-25', 'home_address': {'province': '湖北省', 'city': '武汉市', 'district': '江岸区', 'street_name': '解放大道', 'street_number': '368号'}, 'birth_place': {'province': '湖北省', 'city': '黄石市'}, 'personality': 'ISFJ', 'economic_level': '小康', 'occupation': '退休教师', 'organization': '武汉市江岸区实验小学', 'nickname': '妈妈', 'relation_description': '冯浩然的母亲，原小学语文教师，现已退休。与丈夫同住武汉，每周与儿子视频通话一次，关心其生活起居和婚姻大事。擅长烹饪湖北家常菜，每次冯浩然回家都会准备他爱吃的排骨藕汤。'}"
+    },
+    {
+      "info": {
+        "name": "冯建国",
+        "relation": "父亲",
+        "social circle": "家庭圈",
+        "gender": "男",
+        "age": 58,
+        "birth_date": "1965-03-12",
+        "home_address": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "江岸区",
+          "street_name": "解放大道",
+          "street_number": "368号"
+        },
+        "birth_place": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "江岸区"
+        },
+        "personality": "ISTJ",
+        "economic_level": "小康",
+        "occupation": "高级工程师",
+        "organization": "武汉铁路局",
+        "nickname": "老冯",
+        "relation_description": "冯浩然的父亲，退休铁路工程师，现与妻子居住在武汉老家。每月通过视频通话联系2-3次，节假日冯浩然会回武汉探望。父子关系融洽，经常交流投资理财话题，父亲会以过来人身份给予职业发展建议。"
+      },
+      "prefix": "<人物正确>",
+      "text": "父亲的个人信息是{'name': '冯建国', 'relation': '父亲', 'social circle': '家庭圈', 'gender': '男', 'age': 58, 'birth_date': '1965-03-12', 'home_address': {'province': '湖北省', 'city': '武汉市', 'district': '江岸区', 'street_name': '解放大道', 'street_number': '368号'}, 'birth_place': {'province': '湖北省', 'city': '武汉市', 'district': '江岸区'}, 'personality': 'ISTJ', 'economic_level': '小康', 'occupation': '高级工程师', 'organization': '武汉铁路局', 'nickname': '老冯', 'relation_description': '冯浩然的父亲，退休铁路工程师，现与妻子居住在武汉老家。每月通过视频通话联系2-3次，节假日冯浩然会回武汉探望。父子关系融洽，经常交流投资理财话题，父亲会以过来人身份给予职业发展建议。'}"
+    },
+    {
+      "info": {
+        "name": "冯欣然",
+        "relation": "妹妹",
+        "social circle": "家庭圈",
+        "gender": "女",
+        "age": 24,
+        "birth_date": "1999-05-18",
+        "home_address": {
+          "province": "上海市",
+          "city": "浦东新区",
+          "district": "陆家嘴街道",
+          "street_name": "世纪大道",
+          "street_number": "100号"
+        },
+        "birth_place": {
+          "province": "湖北省",
+          "city": "武汉市",
+          "district": "江岸区"
+        },
+        "personality": "ENFP",
+        "economic_level": "中产",
+        "occupation": "市场营销专员",
+        "organization": "上海某互联网公司",
+        "nickname": "小然",
+        "relation_description": "冯浩然的妹妹，现居上海从事互联网营销工作。兄妹俩关系亲密，每周通过微信保持联系，经常分享工作生活见闻。每年春节和国庆假期会一起回武汉团聚，平时会互寄当地特产，冯浩然会指导妹妹进行理财规划。"
+      },
+      "prefix": "<人物正确>",
+      "text": "冯欣然的个人信息是{'name': '冯欣然', 'relation': '妹妹', 'social circle': '家庭圈', 'gender': '女', 'age': 24, 'birth_date': '1999-05-18', 'home_address': {'province': '上海市', 'city': '浦东新区', 'district': '陆家嘴街道', 'street_name': '世纪大道', 'street_number': '100号'}, 'birth_place': {'province': '湖北省', 'city': '武汉市', 'district': '江岸区'}, 'personality': 'ENFP', 'economic_level': '中产', 'occupation': '市场营销专员', 'organization': '上海某互联网公司', 'nickname': '小然', 'relation_description': '冯浩然的妹妹，现居上海从事互联网营销工作。兄妹俩关系亲密，每周通过微信保持联系，经常分享工作生活见闻。每年春节和国庆假期会一起回武汉团聚，平时会互寄当地特产，冯浩然会指导妹妹进行理财规划。'}"
+    }
+  ],
+  "event_prefixes": [
+    "<事件安排错误>",
+    "<事件安排正确>"
+  ],
+  "person_prefixes": [
+    "<人物正确>",
+    "<人物错误>",
+    "<人物正确>",
+    "<人物正确>",
+    "<人物正确>",
+    "<人物正确>",
+    "<人物正确>"
+  ]
+}
