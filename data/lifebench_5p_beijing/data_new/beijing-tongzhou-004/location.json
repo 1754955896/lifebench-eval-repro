@@ -1,0 +1,2486 @@
+{
+  "schema_version": "persona_locations_v2",
+  "home_city": "北京市",
+  "anchors": [
+    {
+      "name": "居住地·润枫领尚",
+      "location": "116.554981,39.824871",
+      "formatted_address": "北京市通州区兴光三街218号",
+      "city": "北京市",
+      "district": "通州区",
+      "streetName": "兴光三街",
+      "streetNumber": "218号",
+      "description": "人物的日常居住地",
+      "location_role": "anchor",
+      "anchor_role": "home",
+      "location_id": "loc_ff1de701dd48",
+      "source": "persona_catalog"
+    }
+  ],
+  "familiar_places": [
+    {
+      "name": "工作地·北京市朝阳区劲松第二社区卫生服务中心",
+      "location": "116.456672,39.881726",
+      "formatted_address": "北京市朝阳区劲松南路9号楼",
+      "city": "北京市",
+      "district": "朝阳区",
+      "streetName": "劲松南路",
+      "streetNumber": "9号楼",
+      "description": "人物的日常工作地",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_9a5090d97a36",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·山姆会员商店(北京亦庄店)(装修中)",
+      "location": "116.505642,39.810549",
+      "formatted_address": "北京市大兴区文化园东路6号亦庄创意生活广场F1层",
+      "city": "北京市",
+      "district": "大兴区",
+      "streetName": "文化园东路6号亦庄创意生活广场F1层",
+      "streetNumber": "",
+      "description": "每周日到居住地附近的大型超市采购一周果蔬、肉蛋和烘焙全麦粉、无糖酸奶等食材",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_243199446a43",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·京东便利店(董村店)",
+      "location": "116.551880,39.831678",
+      "formatted_address": "北京市通州区台湖镇潞西路董村136号",
+      "city": "北京市",
+      "district": "通州区",
+      "streetName": "台湖镇潞西路董村136号",
+      "streetNumber": "",
+      "description": "夜班下班或晚归时顺路购买无糖饮料、坚果等补给",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_c45247cffd43",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·家福便利店",
+      "location": "116.461704,39.881321",
+      "formatted_address": "北京市朝阳区北京城区农光里甲20号楼底商(劲松地铁站D西南口步行320米)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "streetName": "北京城区农光里甲20号楼底商(劲松地铁站D西南口步行320米)",
+      "streetNumber": "",
+      "description": "工作间隙购买无糖咖啡或绿茶及低GI零食",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_7af65600d2a8",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·中国国家图书馆",
+      "location": "116.323321,39.943940",
+      "formatted_address": "北京市海淀区中关村南大街33号(近西直门外大街)",
+      "city": "北京市",
+      "district": "海淀区",
+      "streetName": "中关村南大街33号(近西直门外大街)",
+      "streetNumber": "",
+      "description": "借阅急诊护理和专科考试参考书",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_20330c22e032",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·首都博物馆",
+      "location": "116.342067,39.906412",
+      "formatted_address": "北京市西城区复兴门外大街16号",
+      "city": "北京市",
+      "district": "西城区",
+      "streetName": "复兴门外大街",
+      "streetNumber": "16号",
+      "description": "轮休时观看主题展览，短途文化休闲",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_7ad65787f103",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·温泉公园",
+      "location": "116.181369,40.049400",
+      "formatted_address": "北京市海淀区",
+      "city": "北京市",
+      "district": "海淀区",
+      "streetName": "",
+      "streetNumber": "",
+      "description": "天气好的周末与朋友家庭郊游或徒步",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_629633868a87",
+      "source": "persona_familiar"
+    }
+  ],
+  "city_reference_pois": [
+    {
+      "location_id": "cityref:B0GUJBN4ID",
+      "name": "城市绿心森林公园",
+      "location": "116.724872,39.873655",
+      "formatted_address": "北京市通州区张辛庄路与通怀路交叉路口",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州大型城市公园，适合周末散步、骑行，扩大短途出行选项",
+      "distance_from_home_km": 15.48
+    },
+    {
+      "location_id": "cityref:B0MDX90D57",
+      "name": "城市绿心森林公园·京宛友谊月季园",
+      "location": "116.721770,39.880278",
+      "formatted_address": "北京市通州区城市绿心森林公园",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州大型城市公园，适合周末散步、骑行，扩大短途出行选项",
+      "distance_from_home_km": 15.51
+    },
+    {
+      "location_id": "cityref:B0KUBRW03L",
+      "name": "城市绿心森林公园-欢游园",
+      "location": "116.717472,39.866308",
+      "formatted_address": "北京市通州区城市绿心森林公园(西南角)",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州大型城市公园，适合周末散步、骑行，扩大短途出行选项",
+      "distance_from_home_km": 14.62
+    },
+    {
+      "location_id": "cityref:B0GKRCC4S1",
+      "name": "城市绿心森林公园健身广场",
+      "location": "116.734203,39.861795",
+      "formatted_address": "北京市通州区梧桐路通州城市绿心公园",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州大型城市公园，适合周末散步、骑行，扩大短途出行选项",
+      "distance_from_home_km": 15.84
+    },
+    {
+      "location_id": "cityref:B0G23OFJ6P",
+      "name": "城市绿心森林公园运动场",
+      "location": "116.722562,39.869074",
+      "formatted_address": "北京市通州区城市绿心森林公园",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州大型城市公园，适合周末散步、骑行，扩大短途出行选项",
+      "distance_from_home_km": 15.13
+    },
+    {
+      "location_id": "cityref:B0G3A7GC4V",
+      "name": "城市绿心森林公园-观景台",
+      "location": "116.737274,39.868821",
+      "formatted_address": "北京市通州区滨河南路城市绿心森林公园内(东侧)",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州大型城市公园，适合周末散步、骑行，扩大短途出行选项",
+      "distance_from_home_km": 16.31
+    },
+    {
+      "location_id": "cityref:B0I64H3DDF",
+      "name": "北京大运河博物馆(首都博物馆东馆)",
+      "location": "116.716660,39.880877",
+      "formatted_address": "北京市通州区滨河南路城市绿心森林公园(西北角)",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文博场馆，可安排半天文化观展",
+      "distance_from_home_km": 15.14
+    },
+    {
+      "location_id": "cityref:B0L11MKT78",
+      "name": "北京大运河博物馆文保中心",
+      "location": "116.716661,39.880821",
+      "formatted_address": "北京市通州区北京大运河博物馆1层",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文博场馆，可安排半天文化观展",
+      "distance_from_home_km": 15.14
+    },
+    {
+      "location_id": "cityref:B0KRMR4AJ9",
+      "name": "北京大运河博物馆停车场",
+      "location": "116.716187,39.880969",
+      "formatted_address": "北京市通州区北京大运河博物馆(首都博物馆东馆)",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文博场馆，可安排半天文化观展",
+      "distance_from_home_km": 15.11
+    },
+    {
+      "location_id": "cityref:BV09536818",
+      "name": "大运河博物馆(公交站)",
+      "location": "116.709234,39.888061",
+      "formatted_address": "北京市通州区定制快巴天津站-通州;定制快巴天津站线;定制快巴通州-天津站",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文博场馆，可安排半天文化观展",
+      "distance_from_home_km": 14.92
+    },
+    {
+      "location_id": "cityref:B0LRLKLQIJ",
+      "name": "北京大运河博物馆-共享大厅",
+      "location": "116.716768,39.881453",
+      "formatted_address": "北京市通州区北京大运河博物馆(首都博物馆东馆)文物保护中心西南侧",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文博场馆，可安排半天文化观展",
+      "distance_from_home_km": 15.18
+    },
+    {
+      "location_id": "cityref:B0KRAA75HW",
+      "name": "北京大运河博物馆地下停车场(F区出入口)(装修中)",
+      "location": "116.719108,39.880080",
+      "formatted_address": "北京市通州区北京大运河博物馆停车场",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文博场馆，可安排半天文化观展",
+      "distance_from_home_km": 15.3
+    },
+    {
+      "location_id": "cityref:B0FFHMS3CA",
+      "name": "北京环球度假区",
+      "location": "116.681212,39.852698",
+      "formatted_address": "北京市通州区梨园镇环球大道",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文旅地标，适合假日或休息日一日游",
+      "distance_from_home_km": 11.21
+    },
+    {
+      "location_id": "cityref:B0K264WN9F",
+      "name": "环球国际影城",
+      "location": "116.721375,39.854775",
+      "formatted_address": "北京市通州区张凤路与凤桐路交叉口北160米",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文旅地标，适合假日或休息日一日游",
+      "distance_from_home_km": 14.59
+    },
+    {
+      "location_id": "cityref:B0HG1HRPH8",
+      "name": "北京环球影城vip体验",
+      "location": "116.679373,39.853381",
+      "formatted_address": "北京市通州区北京环球度假区",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文旅地标，适合假日或休息日一日游",
+      "distance_from_home_km": 11.08
+    },
+    {
+      "location_id": "cityref:BV09123312",
+      "name": "北京环球影城(公交站)",
+      "location": "116.674483,39.849313",
+      "formatted_address": "北京市通州区环球影城直通车",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文旅地标，适合假日或休息日一日游",
+      "distance_from_home_km": 10.56
+    },
+    {
+      "location_id": "cityref:B0G0TAEIJV",
+      "name": "环球城市大道电影院",
+      "location": "116.676813,39.850734",
+      "formatted_address": "北京市通州区北京环球度假区",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文旅地标，适合假日或休息日一日游",
+      "distance_from_home_km": 10.79
+    },
+    {
+      "location_id": "cityref:B0FFKW0P29",
+      "name": "环球影城大酒店",
+      "location": "116.678987,39.853636",
+      "formatted_address": "北京市通州区日出巷2号院",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "通州文旅地标，适合假日或休息日一日游",
+      "distance_from_home_km": 11.06
+    },
+    {
+      "location_id": "cityref:B000A7CA07",
+      "name": "朝阳公园",
+      "location": "116.482276,39.944093",
+      "formatted_address": "北京市朝阳区朝阳公园南路1号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "工作区附近的绿地，可利用白班前后快走或放松",
+      "distance_from_home_km": 14.64
+    },
+    {
+      "location_id": "cityref:BV10416593",
+      "name": "朝阳公园(地铁站)",
+      "location": "116.478291,39.933492",
+      "formatted_address": "北京市朝阳区14号线;3号线",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "工作区附近的绿地，可利用白班前后快走或放松",
+      "distance_from_home_km": 13.74
+    },
+    {
+      "location_id": "cityref:B0L21HT4O4",
+      "name": "朝阳公园·水上滚筒",
+      "location": "116.483371,39.939651",
+      "formatted_address": "北京市朝阳区朝阳公园南路1号朝阳公园内(南侧)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "工作区附近的绿地，可利用白班前后快走或放松",
+      "distance_from_home_km": 14.15
+    },
+    {
+      "location_id": "cityref:B000A80G17",
+      "name": "朝阳公园游乐场",
+      "location": "116.481206,39.939083",
+      "formatted_address": "北京市朝阳区朝阳公园南路15号索尼探梦北侧",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "工作区附近的绿地，可利用白班前后快走或放松",
+      "distance_from_home_km": 14.17
+    },
+    {
+      "location_id": "cityref:B0FFILICR9",
+      "name": "朝阳公园-沙岛",
+      "location": "116.483814,39.940054",
+      "formatted_address": "北京市朝阳区农展南路1号朝阳公园内(南侧)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "工作区附近的绿地，可利用白班前后快走或放松",
+      "distance_from_home_km": 14.17
+    },
+    {
+      "location_id": "cityref:B0LDF5WTKS",
+      "name": "朝阳公园-方舟湖",
+      "location": "116.481265,39.941955",
+      "formatted_address": "北京市朝阳区农展南路1号朝阳公园内",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "工作区附近的绿地，可利用白班前后快走或放松",
+      "distance_from_home_km": 14.46
+    },
+    {
+      "location_id": "cityref:B0FFFT5A1C",
+      "name": "三里屯太古里",
+      "location": "116.453990,39.934871",
+      "formatted_address": "北京市朝阳区三里屯路11、19号院(工人体育场地铁站D口步行240米)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "朝阳区综合商圈，满足购物和社交外食需求",
+      "distance_from_home_km": 14.96
+    },
+    {
+      "location_id": "cityref:B000A88EG4",
+      "name": "三里屯太古里南区",
+      "location": "116.454338,39.934875",
+      "formatted_address": "北京市朝阳区三里屯路19号院地下一层",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "朝阳区综合商圈，满足购物和社交外食需求",
+      "distance_from_home_km": 14.95
+    },
+    {
+      "location_id": "cityref:B0HRGU9ZM7",
+      "name": "三里屯太古里地下停车场",
+      "location": "116.454097,39.934858",
+      "formatted_address": "北京市朝阳区三里屯路11号院1号楼三里屯太古里",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "朝阳区综合商圈，满足购物和社交外食需求",
+      "distance_from_home_km": 14.96
+    },
+    {
+      "location_id": "cityref:B000A85N3Y",
+      "name": "三里屯太古里北区",
+      "location": "116.454490,39.938193",
+      "formatted_address": "北京市朝阳区三里屯路11号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "朝阳区综合商圈，满足购物和社交外食需求",
+      "distance_from_home_km": 15.24
+    },
+    {
+      "location_id": "cityref:B0KRFCRYPL",
+      "name": "北京三里屯太古里桔子水晶酒店",
+      "location": "116.463114,39.934198",
+      "formatted_address": "北京市朝阳区农展馆南路12号1号楼1层",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "朝阳区综合商圈，满足购物和社交外食需求",
+      "distance_from_home_km": 14.46
+    },
+    {
+      "location_id": "cityref:B0G0LHGW7N",
+      "name": "三里屯太古里南区地下停车场",
+      "location": "116.453548,39.934617",
+      "formatted_address": "北京市朝阳区三里屯太古里南区(工人体育场地铁站D口步行260米)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "朝阳区综合商圈，满足购物和社交外食需求",
+      "distance_from_home_km": 14.96
+    },
+    {
+      "location_id": "cityref:B0LKUHY4DM",
+      "name": "鑫帜羽毛球馆",
+      "location": "116.401575,39.891425",
+      "formatted_address": "北京市东城区珠市口东大街16号天鼎218文化金融园区K2单元",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "突破单一固定球场，临时检索其他城区可约羽毛球场地",
+      "distance_from_home_km": 15.04
+    },
+    {
+      "location_id": "cityref:B000A9UIJT",
+      "name": "东单体育馆羽毛球馆",
+      "location": "116.416577,39.906588",
+      "formatted_address": "北京市东城区崇文门内大街108号东单体育馆(东方广场对面)",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "突破单一固定球场，临时检索其他城区可约羽毛球场地",
+      "distance_from_home_km": 14.9
+    },
+    {
+      "location_id": "cityref:B0IGC5BCR8",
+      "name": "新心羽毛球(北京站校区)",
+      "location": "116.431248,39.904184",
+      "formatted_address": "北京市东城区盈城中心C座1层116室",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "突破单一固定球场，临时检索其他城区可约羽毛球场地",
+      "distance_from_home_km": 13.76
+    },
+    {
+      "location_id": "cityref:B0LG0L6Q7X",
+      "name": "日坛羽毛球馆(日坛国际贸易中心B座店)",
+      "location": "116.442221,39.919206",
+      "formatted_address": "北京市朝阳区雅宝路17号日坛国际贸易中心B座B1层",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "突破单一固定球场，临时检索其他城区可约羽毛球场地",
+      "distance_from_home_km": 14.23
+    },
+    {
+      "location_id": "cityref:B000A83YK9",
+      "name": "北京汇文中学主校区羽毛球馆",
+      "location": "116.434925,39.891579",
+      "formatted_address": "北京市东城区培新街6号北京汇文中学主校区",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "突破单一固定球场，临时检索其他城区可约羽毛球场地",
+      "distance_from_home_km": 12.65
+    },
+    {
+      "location_id": "cityref:B0I1XX26SE",
+      "name": "璀璨世纪羽毛球学院",
+      "location": "116.383167,39.903787",
+      "formatted_address": "北京市西城区北新华路29号昌盛大厦6A",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "突破单一固定球场，临时检索其他城区可约羽毛球场地",
+      "distance_from_home_km": 17.09
+    },
+    {
+      "location_id": "cityref:B0GR4SIJ9D",
+      "name": "亚太瑜伽普拉提培训学院(北京朝阳校区)",
+      "location": "116.482575,39.885599",
+      "formatted_address": "北京市朝阳区劲松街道西大望路27号北化机爱工场C3栋三楼",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "匹配每周轻量运动和睡眠改善需求，寻找通勤沿途馆址",
+      "distance_from_home_km": 9.15
+    },
+    {
+      "location_id": "cityref:B0K1R5YJG6",
+      "name": "禧跃Flow&Grow运动中心",
+      "location": "116.456693,39.918129",
+      "formatted_address": "北京市朝阳区北京城区朝阳门外大街6号院8号楼-1至3层",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "匹配每周轻量运动和睡眠改善需求，寻找通勤沿途馆址",
+      "distance_from_home_km": 13.34
+    },
+    {
+      "location_id": "cityref:B0FFLFCAJ2",
+      "name": "北京阻尼运动中心",
+      "location": "116.329709,39.769542",
+      "formatted_address": "北京市大兴区高米店双高路与兴华大街交汇处西南角",
+      "city": "北京市",
+      "district": "大兴区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "匹配每周轻量运动和睡眠改善需求，寻找通勤沿途馆址",
+      "distance_from_home_km": 20.21
+    },
+    {
+      "location_id": "cityref:B0KGZDZ0RH",
+      "name": "格莱美游泳健身(沙河店)",
+      "location": "116.293847,40.143826",
+      "formatted_address": "北京市昌平区沙河1983创意产业园(于辛庄南街北)",
+      "city": "北京市",
+      "district": "昌平区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "匹配每周轻量运动和睡眠改善需求，寻找通勤沿途馆址",
+      "distance_from_home_km": 41.87
+    },
+    {
+      "location_id": "cityref:B0K2KCTAY4",
+      "name": "乐刻运动健身(瑞士公寓店)",
+      "location": "116.436866,39.932238",
+      "formatted_address": "北京市东城区北京城区工体北路66号瑞士公寓B1层",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "匹配每周轻量运动和睡眠改善需求，寻找通勤沿途馆址",
+      "distance_from_home_km": 15.62
+    },
+    {
+      "location_id": "cityref:B0KDJRDYM8",
+      "name": "爱尚游泳馆健身房(牡丹园辰茂店)",
+      "location": "116.374062,39.982380",
+      "formatted_address": "北京市海淀区北京城区龙翔路15号辰茂鸿翔酒店",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "匹配每周轻量运动和睡眠改善需求，寻找通勤沿途馆址",
+      "distance_from_home_km": 23.34
+    },
+    {
+      "location_id": "cityref:B0L2ZR479K",
+      "name": "天月侍迹",
+      "location": "116.295187,39.930903",
+      "formatted_address": "北京市海淀区北京城区西八里庄北路3号玲珑公园西侧1号院(南侧四合院)",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "提供低GI健康餐食，方便白班后外食选择",
+      "distance_from_home_km": 25.11
+    },
+    {
+      "location_id": "cityref:B0I11S4OSX",
+      "name": "Wagas沃歌斯(北京元中心)",
+      "location": "116.314470,40.049884",
+      "formatted_address": "北京市海淀区西二旗中路29号中关村移动智能服务创新园6号楼一层101室",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "提供低GI健康餐食，方便白班后外食选择",
+      "distance_from_home_km": 32.35
+    },
+    {
+      "location_id": "cityref:B0MA7O3QKW",
+      "name": "Shiso紫苏Poke",
+      "location": "116.452590,39.942858",
+      "formatted_address": "北京市朝阳区三里屯西五街5号105",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "提供低GI健康餐食，方便白班后外食选择",
+      "distance_from_home_km": 15.76
+    },
+    {
+      "location_id": "cityref:B0JBH5V2DP",
+      "name": "赛百味 SUBWAY(盈科中心店)",
+      "location": "116.458974,39.932654",
+      "formatted_address": "北京市朝阳区北京城区工人体育场北路甲2号盈科中心B1层",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "提供低GI健康餐食，方便白班后外食选择",
+      "distance_from_home_km": 14.52
+    },
+    {
+      "location_id": "cityref:B0FFJBXUK0",
+      "name": "Green Option(官舍店)",
+      "location": "116.464028,39.952250",
+      "formatted_address": "北京市朝阳区北京城区东方东路19号1号楼会所41号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "提供低GI健康餐食，方便白班后外食选择",
+      "distance_from_home_km": 16.15
+    },
+    {
+      "location_id": "cityref:B000A87JQO",
+      "name": "安妮意大利餐厅(三里屯店)",
+      "location": "116.450764,39.932445",
+      "formatted_address": "北京市朝阳区工体东路丙2号中国红街3号楼1层105室",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "提供低GI健康餐食，方便白班后外食选择",
+      "distance_from_home_km": 14.91
+    },
+    {
+      "location_id": "cityref:B000A8UIN8",
+      "name": "故宫博物院",
+      "location": "116.397029,39.917839",
+      "formatted_address": "北京市东城区景山前街4号",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "经典文化地标，作为周期性文化活动备选",
+      "distance_from_home_km": 16.99
+    },
+    {
+      "location_id": "cityref:B0FFKL520U",
+      "name": "故宫博物院检票处",
+      "location": "116.396952,39.913619",
+      "formatted_address": "北京市东城区景山前街4号故宫博物院内(南侧)",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "经典文化地标，作为周期性文化活动备选",
+      "distance_from_home_km": 16.71
+    },
+    {
+      "location_id": "cityref:B0FFFT7UKC",
+      "name": "故宫博物院-文华殿",
+      "location": "116.399345,39.915573",
+      "formatted_address": "北京市东城区景山前街4号故宫博物院内(东南角)",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "经典文化地标，作为周期性文化活动备选",
+      "distance_from_home_km": 16.68
+    },
+    {
+      "location_id": "cityref:B000A84GDN",
+      "name": "故宫博物院-午门",
+      "location": "116.397228,39.913582",
+      "formatted_address": "北京市东城区东华门街道景山前街4号故宫博物院内(南侧)",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "经典文化地标，作为周期性文化活动备选",
+      "distance_from_home_km": 16.69
+    },
+    {
+      "location_id": "cityref:B000A9PISW",
+      "name": "故宫博物院-神武门",
+      "location": "116.396786,39.922305",
+      "formatted_address": "北京市东城区景山前街4号北京故宫博物馆",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "经典文化地标，作为周期性文化活动备选",
+      "distance_from_home_km": 17.31
+    },
+    {
+      "location_id": "cityref:B000A7VMK9",
+      "name": "故宫博物院-端门",
+      "location": "116.397413,39.910396",
+      "formatted_address": "北京市东城区景山前街4号故宫博物院内(南侧)",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "经典文化地标，作为周期性文化活动备选",
+      "distance_from_home_km": 16.47
+    },
+    {
+      "location_id": "cityref:B000A7O5PK",
+      "name": "什刹海",
+      "location": "116.385121,39.941893",
+      "formatted_address": "北京市西城区地安门西大街49号",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "老城水域与胡同景观，适合休息日散步",
+      "distance_from_home_km": 19.48
+    },
+    {
+      "location_id": "cityref:BV10013462",
+      "name": "什刹海(地铁站)",
+      "location": "116.396219,39.937583",
+      "formatted_address": "北京市西城区8号线",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "老城水域与胡同景观，适合休息日散步",
+      "distance_from_home_km": 18.46
+    },
+    {
+      "location_id": "cityref:B0KUN7NH1I",
+      "name": "什刹海",
+      "location": "116.386203,39.940596",
+      "formatted_address": "北京市西城区西城区",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "老城水域与胡同景观，适合休息日散步",
+      "distance_from_home_km": 19.31
+    },
+    {
+      "location_id": "cityref:B0FFF4PQW2",
+      "name": "什刹海摇橹船",
+      "location": "116.392977,39.934949",
+      "formatted_address": "北京市西城区什刹海前海南沿好梦江南码头(地安门西)",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "老城水域与胡同景观，适合休息日散步",
+      "distance_from_home_km": 18.46
+    },
+    {
+      "location_id": "cityref:B0FFFFL13J",
+      "name": "什刹海-赏荷区",
+      "location": "116.391032,39.936321",
+      "formatted_address": "北京市西城区羊房胡同什刹海公园内(北海北地铁站B东北口步行490米)",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "老城水域与胡同景观，适合休息日散步",
+      "distance_from_home_km": 18.69
+    },
+    {
+      "location_id": "cityref:B000A81CG7",
+      "name": "什刹海-前海",
+      "location": "116.393076,39.936167",
+      "formatted_address": "北京市西城区地安门西大街49号什刹海(东南角)",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "老城水域与胡同景观，适合休息日散步",
+      "distance_from_home_km": 18.55
+    }
+  ],
+  "social_locations": [
+    {
+      "location_id": "social_home_fda9269916d8",
+      "name": "方屿住所",
+      "location": "116.554981,39.824871",
+      "formatted_address": "北京市通州区台湖镇兴光三街9号院",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "social_location",
+      "category": "home",
+      "related_person": "方屿",
+      "relationship": "配偶",
+      "access_policy": "contact_or_invitation_required",
+      "knowledge_state": "known_location",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "plausible_relation_address",
+      "map_verified": false
+    },
+    {
+      "location_id": "social_home_a4cfd1e9c1f5",
+      "name": "谢明远住所",
+      "location": "116.555410,39.823189",
+      "formatted_address": "北京市通州区637路;986路;专182路;专187路",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "social_location",
+      "category": "home",
+      "related_person": "谢明远",
+      "relationship": "夫妻共同朋友/同小区邻居",
+      "access_policy": "contact_or_invitation_required",
+      "knowledge_state": "known_location",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "plausible_relation_address",
+      "map_verified": false
+    },
+    {
+      "location_id": "social_home_14228c18244f",
+      "name": "任采薇住所",
+      "location": "116.557156,39.826014",
+      "formatted_address": "北京市通州区T11路;专182路;专187路;专187路延长线",
+      "city": "北京市",
+      "district": "通州区",
+      "location_role": "social_location",
+      "category": "home",
+      "related_person": "任采薇",
+      "relationship": "夫妻共同朋友/同小区邻居",
+      "access_policy": "contact_or_invitation_required",
+      "knowledge_state": "known_location",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "plausible_relation_address",
+      "map_verified": false
+    }
+  ],
+  "asset_manifest": {
+    "schema_version": "location_opportunity_manifest_v1",
+    "persona_hash": "e20ec8f433a81c7ab7eaaac6dacd434c2a2d441eeecb8c5a219f5ad9ead12a41",
+    "base_location_hash": "55e8efd6e267e0f5b21beea0722d9f13a8eb4f4b3ae068f0c4bfa8ee7ef4d81d",
+    "generator_version": "location-opportunity-builder-v1",
+    "prompt_hash": "714871c7a4e9cd204f44c82b3426f594d64d8169471fe5dec4a4a5322ed58f72",
+    "map_provider": "amap",
+    "home_city": "北京市",
+    "simulation_start": "2025-07-01",
+    "poi_count_by_category": {
+      "nature": 12,
+      "culture": 12,
+      "entertainment": 6,
+      "shopping": 6,
+      "fitness": 12,
+      "meal": 6,
+      "scenic": 6
+    },
+    "poi_count_by_distance_band": {
+      "0-3": 0,
+      "3-10": 1,
+      "10-20": 54,
+      "20+": 5
+    },
+    "partial_failures": []
+  }
+}

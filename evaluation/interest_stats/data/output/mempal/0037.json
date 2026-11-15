@@ -1,0 +1,6624 @@
+{
+  "schema_version": 1,
+  "method": {
+    "name": "Mem-PAL consecutive-day interest drift",
+    "formula": "1 - |C_t intersection C_(t-1)| / |C_t union C_(t-1)|",
+    "unit": "calendar-consecutive day pair",
+    "input_scope": "timestamped user logs only; dialogue/topics/labels excluded",
+    "empty_policy": "skip both-empty pairs; one-empty pairs have drift 1",
+    "prompt_version": "mempal-log-interest-v1",
+    "official_reproduction": false
+  },
+  "provenance": {
+    "user_id": "0037",
+    "history_only": false,
+    "evaluated_logs_sha256": "e5bc706f50b7b081cf92d16b25f729346e8b8e942ff15c11d156b6226788b99f",
+    "model": "deepseek-v4-flash"
+  },
+  "coverage": {
+    "log_count": 324,
+    "day_count": 89,
+    "first_date": "2024-08-11",
+    "last_date": "2024-11-08",
+    "source_sample_count": 37,
+    "source_split_counts": {
+      "history": 324
+    },
+    "duplicate_logs_removed": 0,
+    "interest_log_count": 221,
+    "interest_signal_rate": 0.682099
+  },
+  "interest_drift": {
+    "summary": {
+      "count": 87,
+      "mean": 0.744444,
+      "median": 0.8,
+      "stddev": 0.300549,
+      "p25": 0.5,
+      "p75": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "skipped_both_empty_pairs": 0,
+    "monthly_summary": {
+      "2024-08": {
+        "count": 18,
+        "mean": 0.584259,
+        "median": 0.583333,
+        "stddev": 0.349447,
+        "p25": 0.375,
+        "p75": 0.95,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "2024-09": {
+        "count": 30,
+        "mean": 0.829444,
+        "median": 1.0,
+        "stddev": 0.218949,
+        "p25": 0.666667,
+        "p75": 1.0,
+        "min": 0.333333,
+        "max": 1.0
+      },
+      "2024-10": {
+        "count": 31,
+        "mean": 0.753763,
+        "median": 0.833333,
+        "stddev": 0.310327,
+        "p25": 0.55,
+        "p75": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "2024-11": {
+        "count": 8,
+        "mean": 0.75,
+        "median": 0.833333,
+        "stddev": 0.263523,
+        "p25": 0.5,
+        "p75": 1.0,
+        "min": 0.333333,
+        "max": 1.0
+      }
+    },
+    "series": [
+      {
+        "previous_date": "2024-08-11",
+        "date": "2024-08-12",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-08-12",
+        "date": "2024-08-13",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Travel & Outdoors"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-13",
+        "date": "2024-08-14",
+        "previous_categories": [
+          "Arts & Culture",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Food & Cooking",
+          "Travel & Outdoors"
+        ],
+        "drift": 0.333333
+      },
+      {
+        "previous_date": "2024-08-14",
+        "date": "2024-08-15",
+        "previous_categories": [
+          "Arts & Culture",
+          "Food & Cooking",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Education & Learning",
+          "Food & Cooking",
+          "Travel & Outdoors"
+        ],
+        "drift": 0.25
+      },
+      {
+        "previous_date": "2024-08-15",
+        "date": "2024-08-16",
+        "previous_categories": [
+          "Arts & Culture",
+          "Education & Learning",
+          "Food & Cooking",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-08-16",
+        "date": "2024-08-17",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "categories": [
+          "Travel & Outdoors"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-17",
+        "date": "2024-08-18",
+        "previous_categories": [
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-18",
+        "date": "2024-08-19",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-19",
+        "date": "2024-08-20",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Finance",
+          "Home & Lifestyle"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-08-20",
+        "date": "2024-08-21",
+        "previous_categories": [
+          "Career & Professional",
+          "Finance",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking",
+          "Social & Relationships"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-08-21",
+        "date": "2024-08-22",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking",
+          "Social & Relationships"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-08-22",
+        "date": "2024-08-23",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-23",
+        "date": "2024-08-24",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Finance"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-26",
+        "date": "2024-08-27",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-08-27",
+        "date": "2024-08-28",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-28",
+        "date": "2024-08-29",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-08-29",
+        "date": "2024-08-30",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-30",
+        "date": "2024-08-31",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-31",
+        "date": "2024-09-01",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking",
+          "Health & Wellness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-01",
+        "date": "2024-09-02",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-02",
+        "date": "2024-09-03",
+        "previous_categories": [
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-03",
+        "date": "2024-09-04",
+        "previous_categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-04",
+        "date": "2024-09-05",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-05",
+        "date": "2024-09-06",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Finance",
+          "Food & Cooking"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-06",
+        "date": "2024-09-07",
+        "previous_categories": [
+          "Career & Professional",
+          "Finance",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-09-07",
+        "date": "2024-09-08",
+        "previous_categories": [
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Finance",
+          "Home & Lifestyle"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-08",
+        "date": "2024-09-09",
+        "previous_categories": [
+          "Career & Professional",
+          "Finance",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Finance",
+          "Food & Cooking"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-09-09",
+        "date": "2024-09-10",
+        "previous_categories": [
+          "Finance",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Finance"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-10",
+        "date": "2024-09-11",
+        "previous_categories": [
+          "Career & Professional",
+          "Finance"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-11",
+        "date": "2024-09-12",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-12",
+        "date": "2024-09-13",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Travel & Outdoors"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-13",
+        "date": "2024-09-14",
+        "previous_categories": [
+          "Arts & Culture",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Home & Lifestyle"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-14",
+        "date": "2024-09-15",
+        "previous_categories": [
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-15",
+        "date": "2024-09-16",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Food & Cooking",
+          "Home & Lifestyle"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-09-16",
+        "date": "2024-09-17",
+        "previous_categories": [
+          "Food & Cooking",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-17",
+        "date": "2024-09-18",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-09-18",
+        "date": "2024-09-19",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Finance",
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-19",
+        "date": "2024-09-20",
+        "previous_categories": [
+          "Finance",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Food & Cooking",
+          "Shopping & Fashion"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-20",
+        "date": "2024-09-21",
+        "previous_categories": [
+          "Education & Learning",
+          "Food & Cooking",
+          "Shopping & Fashion"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-09-21",
+        "date": "2024-09-22",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-09-22",
+        "date": "2024-09-23",
+        "previous_categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-23",
+        "date": "2024-09-24",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Education & Learning"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-24",
+        "date": "2024-09-25",
+        "previous_categories": [
+          "Education & Learning"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-25",
+        "date": "2024-09-26",
+        "previous_categories": [],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking",
+          "Home & Lifestyle"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-26",
+        "date": "2024-09-27",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.333333
+      },
+      {
+        "previous_date": "2024-09-27",
+        "date": "2024-09-28",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking",
+          "Travel & Outdoors"
+        ],
+        "drift": 0.333333
+      },
+      {
+        "previous_date": "2024-09-28",
+        "date": "2024-09-29",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Food & Cooking",
+          "Home & Lifestyle",
+          "Travel & Outdoors"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-09-29",
+        "date": "2024-09-30",
+        "previous_categories": [
+          "Food & Cooking",
+          "Home & Lifestyle",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-30",
+        "date": "2024-10-01",
+        "previous_categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-01",
+        "date": "2024-10-02",
+        "previous_categories": [],
+        "categories": [
+          "Arts & Culture",
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-02",
+        "date": "2024-10-03",
+        "previous_categories": [
+          "Arts & Culture",
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-03",
+        "date": "2024-10-04",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-04",
+        "date": "2024-10-05",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-05",
+        "date": "2024-10-06",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-06",
+        "date": "2024-10-07",
+        "previous_categories": [
+          "Family & Parenting",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Finance",
+          "Health & Wellness"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-10-07",
+        "date": "2024-10-08",
+        "previous_categories": [
+          "Career & Professional",
+          "Finance",
+          "Health & Wellness"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-08",
+        "date": "2024-10-09",
+        "previous_categories": [],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-09",
+        "date": "2024-10-10",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-10",
+        "date": "2024-10-11",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-11",
+        "date": "2024-10-12",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-12",
+        "date": "2024-10-13",
+        "previous_categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-10-13",
+        "date": "2024-10-14",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Finance",
+          "Food & Cooking"
+        ],
+        "drift": 0.6
+      },
+      {
+        "previous_date": "2024-10-14",
+        "date": "2024-10-15",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Finance",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-10-15",
+        "date": "2024-10-16",
+        "previous_categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-16",
+        "date": "2024-10-17",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-17",
+        "date": "2024-10-18",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-10-18",
+        "date": "2024-10-19",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-10-19",
+        "date": "2024-10-20",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-20",
+        "date": "2024-10-21",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-21",
+        "date": "2024-10-22",
+        "previous_categories": [],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-22",
+        "date": "2024-10-23",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-10-23",
+        "date": "2024-10-24",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Health & Wellness",
+          "Travel & Outdoors"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-24",
+        "date": "2024-10-25",
+        "previous_categories": [
+          "Health & Wellness",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-25",
+        "date": "2024-10-26",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Food & Cooking"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-26",
+        "date": "2024-10-27",
+        "previous_categories": [
+          "Education & Learning",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Food & Cooking",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-10-27",
+        "date": "2024-10-28",
+        "previous_categories": [
+          "Arts & Culture",
+          "Food & Cooking",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Finance",
+          "Food & Cooking"
+        ],
+        "drift": 0.833333
+      },
+      {
+        "previous_date": "2024-10-28",
+        "date": "2024-10-29",
+        "previous_categories": [
+          "Family & Parenting",
+          "Finance",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-29",
+        "date": "2024-10-30",
+        "previous_categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-30",
+        "date": "2024-10-31",
+        "previous_categories": [],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-31",
+        "date": "2024-11-01",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-01",
+        "date": "2024-11-02",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-02",
+        "date": "2024-11-03",
+        "previous_categories": [
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-03",
+        "date": "2024-11-04",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-04",
+        "date": "2024-11-05",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Food & Cooking",
+          "Social & Relationships"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-11-05",
+        "date": "2024-11-06",
+        "previous_categories": [
+          "Food & Cooking",
+          "Social & Relationships"
+        ],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-11-06",
+        "date": "2024-11-07",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-11-07",
+        "date": "2024-11-08",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.333333
+      }
+    ]
+  },
+  "distributions": {
+    "interest_categories": {
+      "Career & Professional": 71,
+      "Food & Cooking": 68,
+      "Arts & Culture": 16,
+      "Health & Wellness": 15,
+      "Finance": 12,
+      "Travel & Outdoors": 11,
+      "Family & Parenting": 8,
+      "Home & Lifestyle": 8,
+      "Education & Learning": 7,
+      "Social & Relationships": 2,
+      "Technology": 1,
+      "Shopping & Fashion": 1,
+      "Sports & Fitness": 1
+    },
+    "top_keywords": {
+      "coffee": 7,
+      "coffee beans": 6,
+      "手冲咖啡": 5,
+      "budgeting": 4,
+      "photography": 4,
+      "饮品制作": 4,
+      "marketing": 4,
+      "business": 4,
+      "咖啡文化": 4,
+      "lighting": 3,
+      "咖啡": 3,
+      "咖啡店": 3,
+      "training": 3,
+      "meditation": 3,
+      "relaxation": 3,
+      "pour-over coffee": 3,
+      "coffee brewing": 3,
+      "咖啡店经营": 3,
+      "drink recipes": 3,
+      "creative writing": 3,
+      "reading": 3,
+      "coffee machine": 3,
+      "风景摄影": 2,
+      "sunset": 2,
+      "supplier": 2,
+      "记账": 2,
+      "竞争对手": 2,
+      "新店开业": 2,
+      "咖啡烘焙": 2,
+      "promotion plan": 2,
+      "grind setting": 2,
+      "库存管理": 2,
+      "flavor": 2,
+      "entrepreneurship": 2,
+      "social media marketing": 2,
+      "renovation": 2,
+      "interior design": 2,
+      "new drinks": 2,
+      "smart home": 2,
+      "beverage development": 2,
+      "entrepreneur psychology": 2,
+      "社交媒体营销": 2,
+      "创业": 2,
+      "parents": 2,
+      "inventory": 2,
+      "budget planning": 2,
+      "coffee shop design": 2,
+      "writing": 2,
+      "成本优化": 2,
+      "新品推广": 2,
+      "joint stiffness": 2,
+      "开店贷款": 1,
+      "创业筹备": 1,
+      "店面装修": 1,
+      "施工管理": 1,
+      "咖啡店开业": 1,
+      "筹备资料": 1,
+      "点单系统": 1,
+      "咖啡店运营": 1,
+      "露营地点": 1,
+      "自然环境": 1,
+      "露营导航": 1,
+      "出行规划": 1,
+      "帐篷搭建": 1,
+      "露营": 1,
+      "社交媒体分享": 1,
+      "日落摄影": 1,
+      "拍照": 1,
+      "鸟类摄影": 1,
+      "图片分享": 1,
+      "户外烹饪": 1,
+      "便携炉具": 1,
+      "手绘": 1,
+      "风景绘画": 1,
+      "徒步": 1,
+      "户外心得": 1,
+      "划艇": 1,
+      "水上活动": 1,
+      "山峦倒影": 1,
+      "户外冲泡": 1,
+      "astronomy": 1,
+      "constellation": 1,
+      "sketching": 1,
+      "store planning": 1,
+      "community": 1,
+      "camping": 1,
+      "photos": 1,
+      "family": 1,
+      "health check": 1,
+      "cafe design": 1,
+      "contract": 1,
+      "building materials": 1,
+      "sourcing": 1,
+      "装修": 1,
+      "吧台设计": 1,
+      "实用性": 1,
+      "开支明细": 1,
+      "设计风格": 1,
+      "餐饮同行": 1,
+      "结识": 1
+    }
+  },
+  "daily_profiles": [
+    {
+      "date": "2024-08-11",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-08-12",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-08-13",
+      "event_count": 5,
+      "interest_event_count": 5,
+      "interest_categories": {
+        "Travel & Outdoors": 3,
+        "Arts & Culture": 2
+      }
+    },
+    {
+      "date": "2024-08-14",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Arts & Culture": 2,
+        "Food & Cooking": 1,
+        "Travel & Outdoors": 1
+      }
+    },
+    {
+      "date": "2024-08-15",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Travel & Outdoors": 1,
+        "Arts & Culture": 1,
+        "Food & Cooking": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-08-17",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Travel & Outdoors": 1
+      }
+    },
+    {
+      "date": "2024-08-18",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-08-19",
+      "event_count": 6,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-08-20",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Home & Lifestyle": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-08-21",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Social & Relationships": 1,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-08-22",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-08-23",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-08-24",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Finance": 1,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-08-26",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 3
+      }
+    },
+    {
+      "date": "2024-08-27",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Food & Cooking": 4
+      }
+    },
+    {
+      "date": "2024-08-28",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 2,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-08-29",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Food & Cooking": 2,
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-08-30",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 3
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "event_count": 6,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 2
+      }
+    },
+    {
+      "date": "2024-09-01",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Food & Cooking": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-02",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Technology": 1
+      }
+    },
+    {
+      "date": "2024-09-03",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-04",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-09-05",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-09-06",
+      "event_count": 5,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Food & Cooking": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-09-07",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Family & Parenting": 2,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-09-08",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Home & Lifestyle": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-09-09",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-09-10",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Finance": 2,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-09-11",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-09-12",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-09-13",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Travel & Outdoors": 2,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-14",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Home & Lifestyle": 3
+      }
+    },
+    {
+      "date": "2024-09-15",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 3
+      }
+    },
+    {
+      "date": "2024-09-16",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 2,
+        "Home & Lifestyle": 1
+      }
+    },
+    {
+      "date": "2024-09-17",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 2,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-09-18",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-09-19",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Finance": 2,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-20",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Food & Cooking": 2,
+        "Shopping & Fashion": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-09-21",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Career & Professional": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-22",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-23",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Food & Cooking": 2
+      }
+    },
+    {
+      "date": "2024-09-24",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-09-25",
+      "event_count": 3,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-26",
+      "event_count": 7,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Food & Cooking": 2,
+        "Home & Lifestyle": 1,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-09-27",
+      "event_count": 5,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 3,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-09-28",
+      "event_count": 5,
+      "interest_event_count": 5,
+      "interest_categories": {
+        "Food & Cooking": 3,
+        "Career & Professional": 1,
+        "Travel & Outdoors": 1
+      }
+    },
+    {
+      "date": "2024-09-29",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Travel & Outdoors": 1,
+        "Food & Cooking": 1,
+        "Home & Lifestyle": 1
+      }
+    },
+    {
+      "date": "2024-09-30",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Education & Learning": 1,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-01",
+      "event_count": 5,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-10-02",
+      "event_count": 6,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Family & Parenting": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-03",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-10-04",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-10-05",
+      "event_count": 1,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-10-06",
+      "event_count": 6,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Family & Parenting": 2,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-07",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Career & Professional": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-10-08",
+      "event_count": 2,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-10-09",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-10",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-11",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-10-12",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-13",
+      "event_count": 6,
+      "interest_event_count": 5,
+      "interest_categories": {
+        "Arts & Culture": 2,
+        "Career & Professional": 2,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-10-14",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Arts & Culture": 1,
+        "Finance": 1,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-15",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-16",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Arts & Culture": 2,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-17",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-10-18",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-19",
+      "event_count": 5,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 4
+      }
+    },
+    {
+      "date": "2024-10-20",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Food & Cooking": 2
+      }
+    },
+    {
+      "date": "2024-10-21",
+      "event_count": 3,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-10-22",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-23",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-10-24",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Travel & Outdoors": 1
+      }
+    },
+    {
+      "date": "2024-10-25",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-10-26",
+      "event_count": 7,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Food & Cooking": 3,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-10-27",
+      "event_count": 6,
+      "interest_event_count": 6,
+      "interest_categories": {
+        "Health & Wellness": 2,
+        "Food & Cooking": 2,
+        "Sports & Fitness": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-28",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Family & Parenting": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-10-29",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-10-30",
+      "event_count": 2,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-10-31",
+      "event_count": 5,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Food & Cooking": 2
+      }
+    },
+    {
+      "date": "2024-11-01",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 2
+      }
+    },
+    {
+      "date": "2024-11-02",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-11-03",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 3
+      }
+    },
+    {
+      "date": "2024-11-04",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Food & Cooking": 2
+      }
+    },
+    {
+      "date": "2024-11-05",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Social & Relationships": 1
+      }
+    },
+    {
+      "date": "2024-11-06",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 3
+      }
+    },
+    {
+      "date": "2024-11-07",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Arts & Culture": 1,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-11-08",
+      "event_count": 5,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Food & Cooking": 3,
+        "Career & Professional": 1
+      }
+    }
+  ],
+  "event_extractions": [
+    {
+      "event_id": "0037:0037_sample22:log:59",
+      "timestamp": "2024-08-11 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户向银行客户经理发送消息：“请提供关于开店贷款的详细信息。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "开店贷款",
+        "创业筹备"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:60",
+      "timestamp": "2024-08-11 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户向施工方负责人发送消息：“请加快墙面涂料施工进度。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "店面装修",
+        "施工管理"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample22:log:61",
+      "timestamp": "2024-08-12 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在云盘上传了文件，主要内容为：“咖啡店开业筹备资料汇总”。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "咖啡店开业",
+        "筹备资料"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:62",
+      "timestamp": "2024-08-12 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在平板电脑上启动了咖啡店点单系统，并模拟下单操作三次。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "点单系统",
+        "咖啡店运营"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample22:log:63",
+      "timestamp": "2024-08-13 08:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户搜索了湖边露营地点，并查看了附近自然环境的介绍。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "露营地点",
+        "自然环境"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample22:log:64",
+      "timestamp": "2024-08-13 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户搜索了前往青湖露营地的导航路线，并查看了预计行车时间。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "露营导航",
+        "出行规划"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:65",
+      "timestamp": "2024-08-13 11:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在便携式帐篷设备上进行了展开和固定操作，成功完成搭建。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "帐篷搭建",
+        "露营"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample22:log:66",
+      "timestamp": "2024-08-13 12:10:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在社交媒体发布了照片，主要内容为：湖面波光粼粼的美景。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "风景摄影",
+        "社交媒体分享"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample22:log:67",
+      "timestamp": "2024-08-13 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在智能手机上拍摄了多张渐变天空的日落照片。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "日落摄影",
+        "拍照"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:68",
+      "timestamp": "2024-08-14 07:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在图片分享平台发布了鸟类照片，主要内容为：晨曦中的鸟儿。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "鸟类摄影",
+        "图片分享"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:69",
+      "timestamp": "2024-08-14 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在便携式炉具上进行了煮水和煎蛋的操作，完成午餐制作。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "户外烹饪",
+        "便携炉具"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample22:log:70",
+      "timestamp": "2024-08-14 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在手绘板上绘制了湖边草地的风景细节。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "手绘",
+        "风景绘画"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample22:log:71",
+      "timestamp": "2024-08-14 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在个人博客发布了文章，主要内容为：今天的湖边徒步心得。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "徒步",
+        "户外心得"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:72",
+      "timestamp": "2024-08-15 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户通过移动支付完成小船租赁，产品：单人划艇（半天）。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "划艇",
+        "水上活动"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:73",
+      "timestamp": "2024-08-15 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在社交平台发布了照片，主要内容为：湖心视角下的山峦倒影。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "风景摄影",
+        "山峦倒影"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample22:log:74",
+      "timestamp": "2024-08-15 16:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在手冲咖啡设备上进行了研磨和冲泡操作，制作了一杯户外咖啡。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "手冲咖啡",
+        "户外冲泡"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:75",
+      "timestamp": "2024-08-15 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在手机应用上辨认了猎户座，并将图案画在笔记本上。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "astronomy",
+        "constellation",
+        "sketching"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample22:log:76",
+      "timestamp": "2024-08-16 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户通过现金支付购买了产品：当地手工蜂蜜（500g）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "local honey",
+        "purchase"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample22:log:77",
+      "timestamp": "2024-08-16 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户浏览了电子文档，主要内容为：店铺选址与预算分配方案。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "store planning",
+        "budgeting"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample22:log:78",
+      "timestamp": "2024-08-16 18:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在摄影社区发布了照片，主要内容为：最后一晚的湖边夕阳。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photography",
+        "sunset",
+        "community"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample22:log:79",
+      "timestamp": "2024-08-17 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在云存储平台上上传了露营期间拍摄的所有照片。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "camping",
+        "photos"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample22:log:80",
+      "timestamp": "2024-08-17 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户在垃圾分类袋中进行了分类整理操作，清理完毕后拍照确认。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "waste sorting",
+        "chore"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample22:log:81",
+      "timestamp": "2024-08-17 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户通过信用卡支付完成加油，产品：92号汽油（20升）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "fuel",
+        "payment"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample22:log:82",
+      "timestamp": "2024-08-18 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户向供应商发送消息：“请提供最新咖啡豆报价。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "coffee beans",
+        "supplier"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample22:log:83",
+      "timestamp": "2024-08-18 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample22",
+      "content": "用户向家人发送消息：“爸妈最近身体还好吗？我刚看了医疗报告。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "family",
+        "health check"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:0",
+      "timestamp": "2024-08-19 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在手机上进行了导航操作：设置目的地为“星光创意产业园B栋3楼”。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "navigation",
+        "commute"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample23:log:1",
+      "timestamp": "2024-08-19 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户浏览了装修设计APP的文章，主要内容为：“如何选择适合咖啡店的灯光布局”。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "cafe design",
+        "lighting"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:2",
+      "timestamp": "2024-08-19 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在手机相机应用中拍摄了10张施工现场的照片，并启用了HDR模式。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "construction site",
+        "photos"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:3",
+      "timestamp": "2024-08-19 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户向供应商发送消息：“您好，请问现在方便详细讨论合同条款吗？”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "contract",
+        "supplier"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample23:log:4",
+      "timestamp": "2024-08-19 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户接收到来自供应商的消息：“关于价格条款，我们可以进一步协商。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "supplier message",
+        "price"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample23:log:5",
+      "timestamp": "2024-08-19 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在笔记本电脑上进行了文件管理操作：创建名为“施工现场_20240819”的文件夹并将照片归类。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "file management",
+        "photos"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:6",
+      "timestamp": "2024-08-20 08:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在地图服务APP中搜索了关键词“建材市场”，并查看了附近推荐地点。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "building materials",
+        "sourcing"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample23:log:7",
+      "timestamp": "2024-08-20 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户向装修团队负责人发送消息：“建议将吧台边缘加宽5厘米以提升实用性。”",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "装修",
+        "吧台设计",
+        "实用性"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:8",
+      "timestamp": "2024-08-20 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户接收到来自供应商的消息：“已调整价格条款，请查收最新版本。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "供应商",
+        "价格条款"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample23:log:9",
+      "timestamp": "2024-08-20 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在Excel软件中新建了一张工作表，命名为“2024年8月开支明细”。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "开支明细",
+        "记账"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:10",
+      "timestamp": "2024-08-21 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在平板电脑上打开施工进度表，核对了昨日提出的修改项状态。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "施工进度",
+        "核对"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:11",
+      "timestamp": "2024-08-21 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户向设计师发送消息：“请考虑加入手冲咖啡元素的设计风格。”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "手冲咖啡",
+        "设计风格"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:12",
+      "timestamp": "2024-08-21 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在社交媒体平台发布了帖子，主要内容为：“今天结识了几位餐饮行业的优秀同行！”",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "餐饮同行",
+        "结识"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:13",
+      "timestamp": "2024-08-21 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在手机名片扫描APP中扫描了5张新名片，并标记为潜在合作对象。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "名片",
+        "潜在合作"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:14",
+      "timestamp": "2024-08-22 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户通过电子邮件完成原料采购合同签署，产品：咖啡豆（10kg/袋）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "采购合同",
+        "咖啡豆"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:15",
+      "timestamp": "2024-08-22 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户向工程负责人发送消息：“请优先安排灯具安装，确保按时完工。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "灯具安装",
+        "工期"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:16",
+      "timestamp": "2024-08-22 18:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户浏览了竞争对手官网的商品页，主要内容为：“主打手冲咖啡体验区”。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "手冲咖啡",
+        "竞争对手"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:17",
+      "timestamp": "2024-08-23 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在手机日历系统创建了“员工培训”日程，时间：12:00-13:00，地点：会议室A。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "员工培训",
+        "日程"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample23:log:18",
+      "timestamp": "2024-08-23 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在笔记APP中发布了文章，主要内容为：“推广计划初稿已完成，主题方向明确。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "推广计划",
+        "主题方向"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:19",
+      "timestamp": "2024-08-24 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在财务软件中更新了“2024年8月预算表”，重新分配剩余资金。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "预算表",
+        "资金分配"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:20",
+      "timestamp": "2024-08-24 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在微信公众号发布了文章，主要内容为：“新店即将开业，期待您的光临！”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "新店开业",
+        "公众号推广"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:21",
+      "timestamp": "2024-08-26 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在笔记本电脑上进行了视频会议操作：启动会议软件并共享研发计划文档。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "视频会议",
+        "研发计划"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:22",
+      "timestamp": "2024-08-26 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在手机便签应用中输入了关于研发分工的详细记录。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "研发分工",
+        "便签记录"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:23",
+      "timestamp": "2024-08-26 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在地图服务APP上搜索了“本地咖啡豆供应商”，并查看了供应商地址和营业时间。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡豆",
+        "供应商"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample23:log:24",
+      "timestamp": "2024-08-26 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在智能咖啡机上设置了烘焙参数：温度200°C，时长12分钟。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡烘焙",
+        "参数设置"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample23:log:25",
+      "timestamp": "2024-08-26 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在咖啡机上进行了多次冲泡操作，并记录每款饮品的配方比例。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "冲泡",
+        "配方比例"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0037:0037_sample23:log:26",
+      "timestamp": "2024-08-27 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户向朋友发送消息：“下午两点来店里试试我新研发的咖啡吧！”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡研发",
+        "分享"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample23:log:27",
+      "timestamp": "2024-08-27 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在平板电脑上的笔记应用中记录了朋友们对三款饮品的评价。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "饮品评价",
+        "记录"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample23:log:28",
+      "timestamp": "2024-08-27 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在咖啡机上重新设置冲泡参数，修改糖浆添加量为10ml。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "冲泡参数",
+        "糖浆"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample23:log:29",
+      "timestamp": "2024-08-27 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在平板电脑上播放了新饮品制作的教学视频，并暂停讲解关键步骤。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "饮品制作",
+        "教学视频"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample23:log:30",
+      "timestamp": "2024-08-28 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在电脑上的电子表格软件中分类归档了所有饮品配方数据。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "配方归档",
+        "饮品"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample23:log:31",
+      "timestamp": "2024-08-28 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在设计工具软件发布了初版菜单草稿，主要内容为：手冲咖啡、拿铁、季节限定特调等分类。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "菜单设计",
+        "咖啡"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample23:log:32",
+      "timestamp": "2024-08-28 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户向设计公司发送消息：“请确认菜单排版是否需要调整。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "菜单排版",
+        "设计沟通"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:33",
+      "timestamp": "2024-08-28 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在计时器APP上设置了模拟场景的时间限制为30分钟。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "计时器",
+        "模拟场景"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample23:log:34",
+      "timestamp": "2024-08-29 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户搜索了“本地咖啡店推荐”，并查看了两家热门咖啡店的菜单和评价。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡店",
+        "菜单评价"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample23:log:35",
+      "timestamp": "2024-08-29 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在电脑上修改了菜单文件，新增了一款季节限定饮品描述。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "菜单修改",
+        "季节限定"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample23:log:36",
+      "timestamp": "2024-08-29 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户向兼职员工发送消息：“下午两点会议室集合，讨论新店开业活动。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "新店开业",
+        "团队讨论"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample23:log:37",
+      "timestamp": "2024-08-29 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在便签应用中记录了三个优选的营销活动创意。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "营销创意",
+        "活动策划"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample23:log:38",
+      "timestamp": "2024-08-30 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在邮件客户端发布了最终版菜单文件，主要内容为：饮品分类、价格及图片风格说明。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "菜单发布",
+        "饮品分类"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:39",
+      "timestamp": "2024-08-30 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在投影仪上播放了服务礼仪教学视频，并暂停讲解重点内容。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "service etiquette",
+        "training",
+        "teaching"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:40",
+      "timestamp": "2024-08-30 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在文档编辑软件发布了宣传计划草案，主要内容为：开业活动时间表及推广渠道。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "promotion plan",
+        "marketing",
+        "business"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample23:log:41",
+      "timestamp": "2024-08-30 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample23",
+      "content": "用户在任务管理APP上标记完成了“菜单设计”和“宣传计划”两项任务。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "task management",
+        "menu design"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample24:log:0",
+      "timestamp": "2024-08-31 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在咖啡机进行了开机检测操作：启动电源并观察运行状态。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "coffee machine",
+        "equipment check"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample24:log:1",
+      "timestamp": "2024-08-31 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户向兼职员工发送消息：“稍等一下，我需要休息几分钟缓解手部不适。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "rest",
+        "hand discomfort"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample24:log:2",
+      "timestamp": "2024-08-31 11:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在智能家居系统设置了热水温度为45°C，并使用毛巾加热功能。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "smart home",
+        "hot water",
+        "towel heating"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample24:log:3",
+      "timestamp": "2024-08-31 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在手机日历创建了“员工培训”日程，时间：12:00-14:00，地点：咖啡店培训室。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "staff training",
+        "calendar"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample24:log:4",
+      "timestamp": "2024-08-31 14:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户浏览了音乐平台的文章，主要内容为：推荐适合冥想的舒缓音乐。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "meditation",
+        "relaxing music",
+        "well-being"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample24:log:5",
+      "timestamp": "2024-08-31 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在智能音箱进行了播放操作：选择歌单“冥想音乐精选”。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "meditation music",
+        "relaxation"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample24:log:6",
+      "timestamp": "2024-09-01 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在手机日历创建了“手冲咖啡技术培训”日程，时间：08:30-11:00，地点：咖啡店培训室。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "pour-over coffee",
+        "training",
+        "skill"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample24:log:7",
+      "timestamp": "2024-09-01 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在咖啡机制作了创新饮品，并记录操作步骤：调整研磨度至中等粗细。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee brewing",
+        "grind setting",
+        "innovation"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample24:log:8",
+      "timestamp": "2024-09-01 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在智能家居系统设置了热水温度为45°C，并重复加热毛巾两次。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "smart home",
+        "towel heating"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample24:log:9",
+      "timestamp": "2024-09-01 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在社交媒体发布了帖子，主要内容为：分享冥想练习后的放松感及心得。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "meditation",
+        "relaxation",
+        "sharing"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample24:log:10",
+      "timestamp": "2024-09-02 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在磨豆机进行了测试操作：连续运行五分钟以检查稳定性。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "grinder",
+        "equipment test"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample24:log:11",
+      "timestamp": "2024-09-02 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户接收到来自健康手环的消息：“您已连续操作超过一小时，请注意休息。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "health band",
+        "notification",
+        "rest reminder"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample24:log:12",
+      "timestamp": "2024-09-02 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在笔记应用发布了文章，主要内容为：列出今日发现的设备问题及解决方案。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "device troubleshooting",
+        "solutions",
+        "notes"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample24:log:13",
+      "timestamp": "2024-09-03 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在平板电脑创建了“模拟运营演练”日程，时间：10:00-12:00，地点：咖啡店大厅。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "运营演练",
+        "咖啡店经营"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample24:log:14",
+      "timestamp": "2024-09-03 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户向兼职员工发送消息：“下午两点将进行额外培训，请准时参加。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "员工培训",
+        "团队管理"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample24:log:15",
+      "timestamp": "2024-09-03 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户浏览了健康网站的文章，主要内容为：如何通过热敷缓解关节僵硬。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "关节健康",
+        "热敷"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample24:log:16",
+      "timestamp": "2024-09-04 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在咖啡机调整了水温设置：将温度设定为92°C以优化萃取效果。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡萃取",
+        "水温调整"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample24:log:17",
+      "timestamp": "2024-09-04 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户通过电商平台完成商品购买，产品：硅胶护腕（M码）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "护腕购买"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0037:0037_sample24:log:18",
+      "timestamp": "2024-09-05 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在手机日历创建了“总结培训会议”日程，时间：09:00-10:30，地点：咖啡店会议室。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "培训会议",
+        "咖啡店经营"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample24:log:19",
+      "timestamp": "2024-09-05 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample24",
+      "content": "用户在库存管理系统进行了盘点操作：确认咖啡豆库存量为20公斤。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "库存管理",
+        "咖啡店经营"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample25:log:0",
+      "timestamp": "2024-09-06 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户向哥哥发送消息：“谢谢你的提议，但我还是想自己解决开店的资金问题。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "开店资金",
+        "自主创业"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample25:log:1",
+      "timestamp": "2024-09-06 10:18:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户接收到来自哥哥的消息：“我已经计算过，年终奖金可以覆盖一部分装修费用。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "哥哥消息",
+        "装修费用"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0037:0037_sample25:log:2",
+      "timestamp": "2024-09-06 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在咖啡机进行了参数调整操作：将水温设置为92°C，并测试了蒸汽压力。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡机调试",
+        "蒸汽压力"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample25:log:3",
+      "timestamp": "2024-09-06 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在内部培训平台发布了帖子，主要内容为：如何更好地处理高峰时段订单。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "培训分享",
+        "订单处理"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample25:log:4",
+      "timestamp": "2024-09-06 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在笔记本电脑进行了文件整理操作：将家庭开支数据按月份分类存储。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "家庭开支",
+        "记账"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample25:log:5",
+      "timestamp": "2024-09-07 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在手机日历创建了“陪父母复查”日程，时间：08:30-10:30，地点：市人民医院。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "陪父母复查",
+        "家人健康"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample25:log:6",
+      "timestamp": "2024-09-07 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户搜索了“市人民医院内科医生排班表”，并查看了最近的医生出诊安排。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "医生排班",
+        "陪父母就医"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample25:log:7",
+      "timestamp": "2024-09-07 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户通过支付宝完成药品购买，产品：高血压药物×30天用量。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "药品购买"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0037:0037_sample25:log:8",
+      "timestamp": "2024-09-07 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户通过微信支付完成商品购买，产品：大米5kg、牛奶1L×2。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "日常采购"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0037:0037_sample25:log:9",
+      "timestamp": "2024-09-07 20:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户浏览了咖啡论坛的文章，主要内容为：如何用不同产地的豆子调制独特风味。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee",
+        "beans",
+        "flavor"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample25:log:10",
+      "timestamp": "2024-09-08 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在手机日历创建了“创业者交流会”日程，时间：09:30-12:00，地点：时代会议中心3楼。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "entrepreneurship",
+        "networking"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample25:log:11",
+      "timestamp": "2024-09-08 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户浏览了交流会现场展示的成功案例，主要内容为：如何利用社交媒体推广店铺。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "social media marketing",
+        "business"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample25:log:12",
+      "timestamp": "2024-09-08 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户向装修团队负责人发送消息：“请将墙面颜色调整为暖灰色，灯光改为暖白光。”",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "renovation",
+        "interior design"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample25:log:13",
+      "timestamp": "2024-09-08 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在Excel表格中进行了预算输入操作：将装修费用标注为优先支出项。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "budgeting",
+        "renovation expenses"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample25:log:14",
+      "timestamp": "2024-09-09 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在咖啡机进行了功能调试操作：调整研磨粗细至中等水平。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee",
+        "grind setting"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample25:log:15",
+      "timestamp": "2024-09-09 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户向供货商发送消息：“请将本月的发货时间提前至15号。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "supplier",
+        "shipping"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample25:log:16",
+      "timestamp": "2024-09-09 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户浏览了银行官网的贷款政策页面，主要内容为：小微企业贷款申请流程。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "small business loan",
+        "financing"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample25:log:17",
+      "timestamp": "2024-09-10 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在企业管理系统创建了“模拟运营演练”日程，时间：10:00-12:00，地点：咖啡店培训室。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "operations",
+        "business training"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample25:log:18",
+      "timestamp": "2024-09-10 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户向朋友发送消息：“请问如何优化家庭和店铺的财务规划？”",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "financial planning",
+        "budgeting"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample25:log:19",
+      "timestamp": "2024-09-10 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在记账APP中进行了数据修改操作：将每月娱乐支出减少20%。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "budgeting",
+        "expense tracking"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample25:log:20",
+      "timestamp": "2024-09-11 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在吸尘器进行了启动操作：清理地板和桌椅下方的灰尘。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "vacuuming",
+        "cleaning"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample25:log:21",
+      "timestamp": "2024-09-11 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户向设计师发送消息：“请将字体大小调整为12pt，确保清晰易读。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "design",
+        "font size"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0037:0037_sample25:log:22",
+      "timestamp": "2024-09-11 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在内部品鉴平台发布了帖子，主要内容为：推荐埃塞俄比亚耶加雪菲作为主打单品。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee",
+        "Yirgacheffe",
+        "tasting"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample25:log:23",
+      "timestamp": "2024-09-12 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在企业管理系统创建了“开业宣传会议”日程，时间：10:00-11:30，地点：咖啡店会议室。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "marketing",
+        "business opening"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample25:log:24",
+      "timestamp": "2024-09-12 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户在笔记本中进行了文本编辑操作：列出剩余待办事项及其负责人。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "todo list"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample25:log:25",
+      "timestamp": "2024-09-12 13:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample25",
+      "content": "用户浏览了个人笔记的应用记录，主要内容为：从选址到设备采购的完整时间线。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "personal notes",
+        "timeline"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample26:log:0",
+      "timestamp": "2024-09-13 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户浏览了本地相册的应用中的照片，主要内容为：挑选具有创意的旅行摄影作品。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "travel photography",
+        "creative photos"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample26:log:1",
+      "timestamp": "2024-09-13 11:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在Instagram发布了帖子，主要内容为：一片日出时分的稻田、一座古朴的小巷以及一杯在山顶冲泡的手冲咖啡，配文“旅途的风景与味道”。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "travel scenery",
+        "rice fields",
+        "sunrise"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample26:log:2",
+      "timestamp": "2024-09-13 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户接收到来自Instagram的消息：“你的摄影视角太棒了！可以分享拍摄地点吗？”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "received message",
+        "photography"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample26:log:3",
+      "timestamp": "2024-09-13 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户向朋友发送消息：“谢谢！稻田是在山间村落拍的，小巷是古镇的一角。”",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "travel locations",
+        "old town"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample26:log:4",
+      "timestamp": "2024-09-14 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户搜索了“民族风格装饰灵感”，并查看了如何将乡村文化融入室内设计的内容。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "ethnic decor",
+        "interior design",
+        "rural culture"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample26:log:5",
+      "timestamp": "2024-09-14 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户通过线下支付完成商品购买，产品：手工编织挂毯和陶瓷摆件。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "handwoven tapestry",
+        "ceramic ornaments",
+        "decor"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample26:log:6",
+      "timestamp": "2024-09-14 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在平板电脑进行了笔记应用操作：记录装饰品的摆放位置及设计理念。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "decor placement",
+        "design ideas"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample26:log:7",
+      "timestamp": "2024-09-15 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户浏览了咖啡豆评测网站的文章，主要内容为：不同产地咖啡豆的风味特点。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee beans",
+        "flavor profiles"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample26:log:8",
+      "timestamp": "2024-09-15 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在智能咖啡机进行了多次冲泡实验操作：测试柑橘皮与肉桂粉的搭配效果。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee brewing",
+        "flavor experiments"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0037:0037_sample26:log:9",
+      "timestamp": "2024-09-15 16:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在笔记本电脑进行了文档编辑操作：详细记录三款新饮品的配方与描述。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "drink recipes",
+        "beverage creation"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0037:0037_sample26:log:10",
+      "timestamp": "2024-09-16 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户向朋友发送消息：“晚上来我家参加小型品鉴会吧，有新饮品哦！”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "tasting party",
+        "new drinks"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample26:log:11",
+      "timestamp": "2024-09-16 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户通过超市APP完成商品购买，产品：新鲜牛奶、柑橘和肉桂粉。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "groceries",
+        "ingredients"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample26:log:12",
+      "timestamp": "2024-09-16 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在智能家居系统进行了灯光调整操作：将客厅灯光设置为柔和暖光。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "smart home",
+        "lighting",
+        "ambiance"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample26:log:13",
+      "timestamp": "2024-09-16 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户向朋友发送消息：“这款是‘晨曦柑香’，灵感来自日出的清新味道。”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "drink naming",
+        "flavor inspiration"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample26:log:14",
+      "timestamp": "2024-09-17 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在智能咖啡机进行了调整操作：减少肉桂粉用量以平衡口感。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee brewing",
+        "flavor balance"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample26:log:15",
+      "timestamp": "2024-09-17 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户浏览了社交媒体营销案例文章，主要内容为：如何结合个人故事吸引粉丝关注。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "social media marketing",
+        "personal branding"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample26:log:16",
+      "timestamp": "2024-09-17 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在Notion发布了文章，主要内容为：以“旅途中的味道”为主题，展示咖啡与旅行结合的创意理念。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee",
+        "travel",
+        "creative writing"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample26:log:17",
+      "timestamp": "2024-09-18 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在文件管理应用进行了归档操作：将新饮品研发过程的照片与文案分类保存。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "beverage development",
+        "drink R&D"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample26:log:18",
+      "timestamp": "2024-09-18 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户通过打印店完成服务购买，产品：A3尺寸宣传海报样本。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "printing",
+        "poster"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample26:log:19",
+      "timestamp": "2024-09-18 17:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample26",
+      "content": "用户在云存储应用进行了上传操作：将整理后的品牌推广资料备份至云端。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "cloud backup",
+        "brand materials"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0037:0037_sample27:log:0",
+      "timestamp": "2024-09-19 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户向供应商发送消息：“请确认咖啡豆和牛奶的采购数量是否无误。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "supplier",
+        "procurement"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample27:log:1",
+      "timestamp": "2024-09-19 14:05:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户接收到来自供应商的消息：“已核对无误，请放心。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "supplier confirmation"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample27:log:2",
+      "timestamp": "2024-09-19 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在手机上进行了银行APP的操作：预约理财经理，并上传了补充材料。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "wealth management",
+        "banking"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample27:log:3",
+      "timestamp": "2024-09-19 18:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在笔记本电脑上进行了Excel表格操作：录入并分类记录了所有收支明细。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "bookkeeping",
+        "income and expenses"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample27:log:4",
+      "timestamp": "2024-09-19 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在智能手表上启动了健康应用，开始记录步数和心率数据。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "step tracking",
+        "heart rate"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample27:log:5",
+      "timestamp": "2024-09-20 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户通过支付宝完成商品购买，产品：手工陶瓷杯（3个）+木质托盘（2个）。",
+      "interest_signal": true,
+      "category": "Shopping & Fashion",
+      "keywords": [
+        "ceramic cups",
+        "wooden tray"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0037:0037_sample27:log:6",
+      "timestamp": "2024-09-20 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户向朋友发送消息：“你觉得积分兑换饮品的方式可行吗？”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "drink rewards",
+        "points redemption"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample27:log:7",
+      "timestamp": "2024-09-20 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在Instagram发布了视频，主要内容为：手冲咖啡新配方的制作演示。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "pour-over coffee",
+        "recipe"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample27:log:8",
+      "timestamp": "2024-09-20 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户通过微信支付完成商品购买，产品：《创业者心理调适指南》（纸质版）。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "entrepreneur psychology",
+        "reading"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample27:log:9",
+      "timestamp": "2024-09-21 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在厨房电子秤上进行了称重操作：精确测量每种原料的比例。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "ingredient measurement",
+        "recipe precision"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample27:log:10",
+      "timestamp": "2024-09-21 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户向设计公司发送消息：“这是我们初步的品牌字体样式和颜色搭配，请参考优化。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "brand design",
+        "typography",
+        "color palette"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample27:log:11",
+      "timestamp": "2024-09-21 17:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在微博发布了图片，主要内容为：河边小道的日落风景照。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photography",
+        "sunset",
+        "scenery"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample27:log:12",
+      "timestamp": "2024-09-22 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户搜索了“如何提高客户复购率”，并查看了多篇关于会员制的文章。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "customer retention",
+        "membership",
+        "business"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample27:log:13",
+      "timestamp": "2024-09-22 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在平板电脑上使用文档编辑软件：创建并保存了推广计划初稿。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "promotion plan",
+        "document"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample27:log:14",
+      "timestamp": "2024-09-22 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在冥想APP上选择了“放松训练”音频课程，并完成了全程播放。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "meditation",
+        "relaxation",
+        "mental well-being"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample27:log:15",
+      "timestamp": "2024-09-23 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在公众号发布了文章，主要内容为：不同产地咖啡豆的独特风味解析。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee beans",
+        "flavor",
+        "coffee"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample27:log:16",
+      "timestamp": "2024-09-23 14:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户向摄影师发送消息：“下周六下午三点需要您帮忙拍摄品鉴会现场。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "photographer",
+        "event logistics"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0037:0037_sample27:log:17",
+      "timestamp": "2024-09-23 17:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户通过线下扫码支付完成商品购买，产品：姜黄拿铁原料包（5份）。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "turmeric latte",
+        "beverage"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample27:log:18",
+      "timestamp": "2024-09-24 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户向店主发送消息：“非常感谢您的分享，这对我的筹备工作帮助很大！”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "gratitude",
+        "preparation"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0037:0037_sample27:log:19",
+      "timestamp": "2024-09-24 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在笔记应用中新增了待办事项：列出了三个需解决的关键问题。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "todo",
+        "problem solving"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample27:log:20",
+      "timestamp": "2024-09-24 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在Kindle阅读器上标注了《创业者心理调适指南》中的重点段落。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "reading",
+        "entrepreneur psychology",
+        "self-development"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample27:log:21",
+      "timestamp": "2024-09-25 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在手机备忘录中勾选了所有已确认的库存项目。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "inventory",
+        "checklist"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample27:log:22",
+      "timestamp": "2024-09-25 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户向团队成员发送消息：“请按分配的任务优先级尽快落实。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "team task",
+        "work"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample27:log:23",
+      "timestamp": "2024-09-25 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample27",
+      "content": "用户在云存储平台上传了多个文件夹：包括预算表、合同扫描件和宣传素材。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "cloud storage",
+        "documents"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample28:log:0",
+      "timestamp": "2024-09-26 08:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在智能家居系统进行了灯光调节操作：将大厅亮度设置为70%。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "smart home",
+        "lighting"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample28:log:1",
+      "timestamp": "2024-09-26 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户搜索了咖啡店桌椅布局，并查看了如何优化空间舒适度的相关文章。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "cafe layout",
+        "space optimization",
+        "business"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:2",
+      "timestamp": "2024-09-26 09:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在智能咖啡机进行了温度校准操作：将水温设定为92°C。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee machine",
+        "brewing",
+        "coffee"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample28:log:3",
+      "timestamp": "2024-09-26 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向助手发送消息：“请确认所有创新饮品原料是否已备齐。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "原料确认",
+        "活动准备"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample28:log:4",
+      "timestamp": "2024-09-26 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户浏览了手机上的活动流程文档，主要内容为：品鉴会的时间安排和饮品亮点。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "活动流程",
+        "品鉴会"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0037:0037_sample28:log:5",
+      "timestamp": "2024-09-26 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在现场投影仪发布了视频，主要内容为：手冲咖啡的独特风味与文化背景。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "手冲咖啡",
+        "咖啡文化"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample28:log:6",
+      "timestamp": "2024-09-26 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在平板电脑进行了笔记记录操作：输入了五条参与者的改进建议。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "笔记记录",
+        "反馈"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample28:log:7",
+      "timestamp": "2024-09-27 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在笔记本电脑进行了分类归纳操作：将反馈分为饮品口味和服务质量两大类。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "反馈分类",
+        "归纳"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0037:0037_sample28:log:8",
+      "timestamp": "2024-09-27 11:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户浏览了咖啡馆菜单页面，主要内容为：特色饮品推荐及价格区间。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡馆菜单",
+        "特色饮品"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:9",
+      "timestamp": "2024-09-27 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户浏览了电子书平台的文章，主要内容为：如何通过社交媒体提升品牌知名度。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "品牌知名度",
+        "社交媒体营销"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:10",
+      "timestamp": "2024-09-27 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户搜索了咖啡品牌营销案例，并查看了几家知名品牌的推广策略总结。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "咖啡品牌营销",
+        "推广策略"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample28:log:11",
+      "timestamp": "2024-09-27 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在手机备忘录中记录了会员制度设计的关键点。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "会员制度",
+        "品牌运营"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:12",
+      "timestamp": "2024-09-28 07:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户通过移动支付完成商品购买，产品：有机咖啡豆（500g）和新鲜牛奶（2L）。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "有机咖啡豆",
+        "牛奶"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample28:log:13",
+      "timestamp": "2024-09-28 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在咖啡研磨机调整了研磨度：从粗磨改为中细磨。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡研磨",
+        "研磨度"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample28:log:14",
+      "timestamp": "2024-09-28 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向哥哥发送消息：“我做了新款饮品，请你帮忙尝一下。”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "自制饮品",
+        "分享品尝"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:15",
+      "timestamp": "2024-09-28 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向广告公司发送消息：“您好，我想咨询品牌宣传的合作细节。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "品牌宣传",
+        "广告合作"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample28:log:16",
+      "timestamp": "2024-09-28 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在手机日历创建了“温泉度假”日程，时间：09:00-17:00，地点：清泉度假村。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "温泉度假",
+        "度假村"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:17",
+      "timestamp": "2024-09-29 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户通过扫码支付完成服务购买，产品：温泉门票+午餐套餐。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "温泉",
+        "度假套餐"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample28:log:18",
+      "timestamp": "2024-09-29 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户浏览了纸质书籍的内容，主要内容为：全球不同地区的咖啡种植历史。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡种植历史",
+        "咖啡文化"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample28:log:19",
+      "timestamp": "2024-09-29 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在便携式笔记本上记录了装修设计草图和配色方案。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "装修设计",
+        "配色方案",
+        "家居布置"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample28:log:20",
+      "timestamp": "2024-09-30 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户通过书店收银台完成商品购买，产品：《创业者手册》和《心理韧性训练》。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "创业",
+        "心理韧性",
+        "阅读"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample28:log:21",
+      "timestamp": "2024-09-30 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在笔记本电脑更新了营销策略文档：添加了社交媒体推广的具体步骤。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "营销策略",
+        "社交媒体推广"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:22",
+      "timestamp": "2024-09-30 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在平板电脑进行文件审核操作：确认无误后将其存档至云端。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "文件审核",
+        "存档"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample28:log:23",
+      "timestamp": "2024-10-01 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在店内POS系统进行了开机操作：启动收银及订单管理系统。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "POS系统",
+        "开机"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0037:0037_sample28:log:24",
+      "timestamp": "2024-10-01 15:10:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向维修服务公司发送消息：“您好，我的咖啡机出现故障，请尽快安排人员上门维修。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "咖啡机维修"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample28:log:25",
+      "timestamp": "2024-10-01 15:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在咖啡机上进行了手动调整操作：重新设置制作优先级为冷饮订单。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "咖啡机调整",
+        "订单优先级"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample28:log:26",
+      "timestamp": "2024-10-01 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向投诉顾客发送消息：“非常抱歉让您久等了，这是我们的补偿饮品，希望您满意。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "顾客投诉",
+        "补偿"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample28:log:27",
+      "timestamp": "2024-10-01 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在库存管理APP上进行了盘点操作：记录咖啡豆剩余量为20kg，低于安全库存。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "库存盘点",
+        "咖啡豆"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample28:log:28",
+      "timestamp": "2024-10-02 07:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在咖啡机上进行了自检操作：确认加热功能正常。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "咖啡机自检"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0037:0037_sample28:log:29",
+      "timestamp": "2024-10-02 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向新员工发送消息：“请先完成简单的饮品制作，复杂订单由我负责。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "新员工指导",
+        "饮品制作"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample28:log:30",
+      "timestamp": "2024-10-02 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户接收到来自家人的消息：“妈妈和爸爸今天需要去医院复查，请帮忙安排。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "家人消息",
+        "医院复查"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample28:log:31",
+      "timestamp": "2024-10-02 12:40:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向哥哥发送消息：“爸妈今天要去医院，你方便陪他们去吗？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "父母就医",
+        "家人协调"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample28:log:32",
+      "timestamp": "2024-10-02 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在店内音响系统上进行了播放操作：选择播放《River Flows in You》。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "音乐",
+        "River Flows in You"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample28:log:33",
+      "timestamp": "2024-10-02 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在财务软件上进行了计算操作：记录当日营业额为5000元，利润率为15%。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "营业额",
+        "利润率"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample28:log:34",
+      "timestamp": "2024-10-03 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在企业内部沟通平台发布了帖子，主要内容为：强调服务态度和团队配合的重要性。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "服务态度",
+        "团队配合"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample28:log:35",
+      "timestamp": "2024-10-03 11:20:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向顾客发送消息：“非常抱歉给您带来不便，您的退款已处理完毕。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "customer service",
+        "refund"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0037:0037_sample28:log:36",
+      "timestamp": "2024-10-03 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在订单管理系统上进行了调整操作：将未完成订单转移至自己名下。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "order management",
+        "work task"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample28:log:37",
+      "timestamp": "2024-10-03 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向前辈发送消息：“请问如何吸引更多年轻顾客？”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "customer acquisition",
+        "business growth",
+        "mentoring"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample28:log:38",
+      "timestamp": "2024-10-04 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户通过线下渠道完成商品购买，产品：咖啡豆（50kg）。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee beans",
+        "coffee"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:39",
+      "timestamp": "2024-10-04 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在企业内部培训平台上发布了文章，主要内容为：高峰期应对技巧。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "training",
+        "peak-hour handling",
+        "knowledge sharing"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:40",
+      "timestamp": "2024-10-04 17:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在社交媒体平台发布了帖子，主要内容为：承诺改进服务质量。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "social media",
+        "service quality"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample28:log:41",
+      "timestamp": "2024-10-04 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户在电脑上进行了编辑操作：创建限时折扣促销计划文档。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "promotion planning",
+        "marketing"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample28:log:42",
+      "timestamp": "2024-10-05 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample28",
+      "content": "用户向媒体记者发送消息：“感谢您关注，我的初衷是让更多人爱上手冲咖啡。”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "pour-over coffee",
+        "coffee passion"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample29:log:0",
+      "timestamp": "2024-10-06 07:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户向智能助手发送消息：“记录今天的日程：陪父母去医院复查。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "parents",
+        "hospital visit",
+        "caregiving"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample29:log:1",
+      "timestamp": "2024-10-06 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户搜索了“市中心医院挂号流程”，并查看了预约挂号的相关说明。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "hospital registration",
+        "logistics"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample29:log:2",
+      "timestamp": "2024-10-06 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在手机上进行了挂号操作：选择科室为内科，确认预约时间为09:30。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "appointment",
+        "registration"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample29:log:3",
+      "timestamp": "2024-10-06 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户浏览了医疗网站的文章，主要内容为“如何缓解常见药物副作用”。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "medication side effects",
+        "health information"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample29:log:4",
+      "timestamp": "2024-10-06 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户向员工发送消息：“请准备好店内饮品菜单供我父母参观时参考。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "parents",
+        "store visit",
+        "drink menu"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample29:log:5",
+      "timestamp": "2024-10-06 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户接收到来自哥哥的消息：“最近爸妈身体还好吗？需要我帮忙吗？”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "family message",
+        "received"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample29:log:6",
+      "timestamp": "2024-10-07 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在导航应用中输入目的地“市中心医院”，规划了驾车路线。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "navigation",
+        "hospital route"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample29:log:7",
+      "timestamp": "2024-10-07 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户通过电商平台完成了保健品购买，产品为“综合维生素片×2瓶”。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "supplements",
+        "vitamins"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample29:log:8",
+      "timestamp": "2024-10-07 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户向餐馆发送预订请求：“预留四人桌，预计12:45到店。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "restaurant reservation",
+        "logistics"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample29:log:9",
+      "timestamp": "2024-10-07 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在库存管理系统中更新了咖啡豆余量，并调整了周末排班计划。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "coffee shop management",
+        "inventory",
+        "staff scheduling"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample29:log:10",
+      "timestamp": "2024-10-07 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户向笔记本应用发送笔记：“记录家庭月度预算分配方案。”",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "family budget",
+        "budget planning"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample29:log:11",
+      "timestamp": "2024-10-08 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在智能热水器中设置水温至40℃，启动定时加热功能。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "water heater",
+        "routine setting"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample29:log:12",
+      "timestamp": "2024-10-08 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户浏览了父母拍摄的城市风景照片，主要内容为“地标建筑及夜景”。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "parents' photos",
+        "city scenery"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample29:log:13",
+      "timestamp": "2024-10-09 07:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户接收到来自哥哥的消息：“我可以承担更多家用开支，你别太累。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "brother message",
+        "family support"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample29:log:14",
+      "timestamp": "2024-10-09 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户向员工发送消息：“准备两杯新品测试饮品，放置于吧台。”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "new drink testing",
+        "beverage development"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample29:log:15",
+      "timestamp": "2024-10-09 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在企业微信发布了会议纪要，主要内容为“联合推广初步方案讨论”。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "meeting minutes",
+        "joint promotion"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample29:log:16",
+      "timestamp": "2024-10-10 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在平板电脑上播放了服务规范视频，并指导新员工学习。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "service training",
+        "new employee coaching"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample29:log:17",
+      "timestamp": "2024-10-10 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户通过药店小程序购买了护手霜×3支和关节膏×1盒。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "pharmacy purchase",
+        "hand cream",
+        "joint ointment"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample29:log:18",
+      "timestamp": "2024-10-11 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在日历系统创建了“员工总结会”日程，时间：09:00-10:30，地点：会议室。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "staff meeting",
+        "calendar"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample29:log:19",
+      "timestamp": "2024-10-11 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在咖啡机上设置了研磨参数，但由于手指不适中断操作。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee grinding",
+        "coffee machine"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample29:log:20",
+      "timestamp": "2024-10-12 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在电子菜单编辑器中上传了新饮品图片，并调整排列顺序。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "menu editing",
+        "new drinks"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample29:log:21",
+      "timestamp": "2024-10-12 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户向合作商发送消息：“请确认推广活动的时间为10月20日。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "promotion scheduling",
+        "partner message"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample29:log:22",
+      "timestamp": "2024-10-12 17:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample29",
+      "content": "用户在智能健康应用中记录：“每日使用关节膏两次，早晚各一次。”",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "joint ointment",
+        "health tracking"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample30:log:0",
+      "timestamp": "2024-10-13 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在个人社交媒体发布了文章，主要内容为：如何从旅途中汲取咖啡店设计灵感。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "coffee shop design",
+        "travel inspiration",
+        "writing"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample30:log:1",
+      "timestamp": "2024-10-13 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在手机进行了图片编辑操作：调整了几张旅行照片的亮度和对比度。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photo editing",
+        "travel photos"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample30:log:2",
+      "timestamp": "2024-10-13 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在个人社交媒体发布了文章，主要内容为：如何通过旅途中的风景激发咖啡店设计创意。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "coffee shop design",
+        "creative writing"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample30:log:3",
+      "timestamp": "2024-10-13 14:20:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户向一位读者发送消息：“感谢您对我的文章感兴趣，灵感主要来源于一次云南之旅。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "writing",
+        "reader engagement"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample30:log:4",
+      "timestamp": "2024-10-13 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在手机进行了设置操作：启用了夜间模式以减少蓝光干扰。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "night mode",
+        "settings"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample30:log:5",
+      "timestamp": "2024-10-13 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在智能手环进行了屏幕锁定操作：关闭了所有通知提醒以专注阅读。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "reading",
+        "focus"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0037:0037_sample30:log:6",
+      "timestamp": "2024-10-14 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在平板电脑进行了表格更新操作：记录了咖啡豆和牛奶的剩余量。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee beans",
+        "inventory"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample30:log:7",
+      "timestamp": "2024-10-14 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在手机进行了拍照操作：拍摄了咖啡店吧台和墙饰的细节照片。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photography",
+        "coffee shop decor"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample30:log:8",
+      "timestamp": "2024-10-14 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户向哥哥发送消息：“我们可能需要重新分配下个月的开支计划。”",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "budget planning",
+        "expenses"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample30:log:9",
+      "timestamp": "2024-10-14 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在个人社交媒体发布了补充说明，主要内容为：进一步解释创意来源的具体细节。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "creative writing",
+        "social media"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample30:log:10",
+      "timestamp": "2024-10-15 09:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在手机日历创建了“父亲复诊”日程，时间：09:30-10:30，地点：市人民医院。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "appointment",
+        "family"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample30:log:11",
+      "timestamp": "2024-10-15 11:20:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户搜索了关键词“成功咖啡品牌社交媒体策略”，并查看了相关案例分析。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "coffee brand",
+        "social media strategy"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample30:log:12",
+      "timestamp": "2024-10-15 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在智能手环进行了健康数据记录操作：标记今天未饮用含咖啡因饮品。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "caffeine tracking",
+        "health data"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample30:log:13",
+      "timestamp": "2024-10-16 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在笔记本电脑进行了文档编辑操作：列出品牌推广的兴趣点和互动方式。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "brand promotion",
+        "marketing"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample30:log:14",
+      "timestamp": "2024-10-16 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户向一位朋友发送消息：“能否分享一些提升图片质量的小技巧？”",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photography",
+        "image quality"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample30:log:15",
+      "timestamp": "2024-10-16 21:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在智能音箱进行了播放操作：选择了一首舒缓的钢琴曲作为背景音乐。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "piano music",
+        "background music"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample30:log:16",
+      "timestamp": "2024-10-17 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在个人社交媒体发布了照片，主要内容为：展示咖啡店新装修的风格。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "coffee shop",
+        "renovation"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample30:log:17",
+      "timestamp": "2024-10-17 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在手机日历创建了“创业交流会”日程，时间：14:00-16:00，地点：城市会议中心三楼。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "创业交流会",
+        "创业"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample30:log:18",
+      "timestamp": "2024-10-17 17:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户通过电商平台完成商品购买，产品：热敷包（中号）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "热敷包",
+        "购买"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample30:log:19",
+      "timestamp": "2024-10-18 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在笔记本电脑进行了文档整理操作：汇总过去几天收集到的推广建议。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "推广建议",
+        "文档整理"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample30:log:20",
+      "timestamp": "2024-10-18 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample30",
+      "content": "用户在手机日历创建了“员工轮班表”日程，时间：13:00-14:00，地点：咖啡店前台。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "员工轮班表",
+        "日程"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample31:log:0",
+      "timestamp": "2024-10-19 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在笔记本电脑进行了财务软件操作：查看并分析了店铺首月的收支明细。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "店铺收支",
+        "财务分析"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:1",
+      "timestamp": "2024-10-19 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户搜索了“咖啡店库存管理优化方案”，并查看了相关文章和案例分析。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "库存管理",
+        "咖啡店"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample31:log:2",
+      "timestamp": "2024-10-19 13:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在会议室投影仪上展示了采购清单，并调整了库存管理策略。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "采购清单",
+        "库存策略"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:3",
+      "timestamp": "2024-10-19 15:20:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在企业内部系统发布了文档，主要内容为：新员工技能培训计划及考核标准。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "技能培训",
+        "考核标准"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:4",
+      "timestamp": "2024-10-19 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户向哥哥发送消息：“今天完成了库存优化方案，感觉压力小了一些。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "哥哥",
+        "压力"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample31:log:5",
+      "timestamp": "2024-10-20 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在平板电脑上编辑了课程大纲，包括手冲流程、设备维护等内容。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "课程大纲",
+        "手冲"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:6",
+      "timestamp": "2024-10-20 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在咖啡机上进行操作：演示了几款主打饮品的具体制作步骤。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "饮品制作",
+        "咖啡"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample31:log:7",
+      "timestamp": "2024-10-20 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在吧台设备上进行操作：指导新员工完成手冲咖啡的标准化流程。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "手冲咖啡",
+        "标准化流程"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample31:log:8",
+      "timestamp": "2024-10-20 17:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在个人笔记应用发布了文字记录，主要内容为：新员工技能掌握情况及改进建议。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "新员工",
+        "技能记录"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample31:log:9",
+      "timestamp": "2024-10-21 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户向资深员工李明发送消息：“请帮忙跟进今天的库存盘点工作。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "库存盘点",
+        "跟进"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:10",
+      "timestamp": "2024-10-21 13:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户向供应商王经理发送消息：“您好，请问是否能提供豆类原料批量采购折扣？”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "供应商",
+        "采购折扣"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:11",
+      "timestamp": "2024-10-21 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在记事本应用发布了文字记录，主要内容为：与供应商沟通结果及后续待办事项。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "供应商沟通",
+        "待办"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:12",
+      "timestamp": "2024-10-22 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在手机地图服务上搜索了“XX银行分行”，并导航至目的地。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "银行",
+        "导航"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0037:0037_sample31:log:13",
+      "timestamp": "2024-10-22 11:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户向同行张总发送消息：“感谢您的建议，对我启发很大！”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "感谢",
+        "商务沟通"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample31:log:14",
+      "timestamp": "2024-10-22 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在办公电脑上创建了一份Excel表格，详细列出了人力和物料优化措施。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "成本优化",
+        "人力物料"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample31:log:15",
+      "timestamp": "2024-10-23 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在办公电脑上修改了昨天的成本优化方案，增加了具体执行细节。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "成本优化",
+        "执行细节"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample31:log:16",
+      "timestamp": "2024-10-23 13:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在会议室投影仪上展示了成本优化方案，并听取了团队反馈。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "方案展示",
+        "团队反馈"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:17",
+      "timestamp": "2024-10-23 16:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户向员工刘芳发送消息：“请负责监督新方案的执行进度，有问题随时汇报。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "任务分配",
+        "监督"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample31:log:18",
+      "timestamp": "2024-10-24 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在智能手表上启动了健康监测功能，佩戴护具保护手指关节。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "健康监测",
+        "关节保护"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:19",
+      "timestamp": "2024-10-24 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户浏览了手机相册中的旅行照片，主要内容为：沿途风景记录及文化元素。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "旅行照片",
+        "风景文化"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample31:log:20",
+      "timestamp": "2024-10-25 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户向博主小陈发送邮件：“您好，希望邀请您合作推广我们的新品咖啡。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "博主合作",
+        "新品推广"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample31:log:21",
+      "timestamp": "2024-10-25 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在微信公众号发布了文章，主要内容为：咖啡文化的历史与发展前景。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡文化",
+        "公众号文章"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample31:log:22",
+      "timestamp": "2024-10-25 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample31",
+      "content": "用户在店铺管理系统中查看了当日销售数据，并记录了关键指标变化。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "销售数据",
+        "店铺管理"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample32:log:0",
+      "timestamp": "2024-10-26 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在智能手机上进行了酒店入住登记操作：扫描二维码并填写个人信息。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "酒店入住",
+        "登记"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0037:0037_sample32:log:1",
+      "timestamp": "2024-10-26 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户浏览了度假村餐厅的菜单页面，主要内容为：特色菜品推荐及食材来源介绍。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "菜单",
+        "特色菜品"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample32:log:2",
+      "timestamp": "2024-10-26 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户向家人发送消息：“正在温泉度假村放松，一切都好，请放心。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "家人报平安",
+        "温泉"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample32:log:3",
+      "timestamp": "2024-10-26 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户浏览了电子书平台的一本书籍，主要内容为：咖啡文化的起源与发展。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "电子书",
+        "咖啡文化"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample32:log:4",
+      "timestamp": "2024-10-26 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在社交媒体发布了照片，主要内容为：度假村晚餐的特色菜肴展示。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "晚餐菜肴",
+        "美食分享"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample32:log:5",
+      "timestamp": "2024-10-26 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户向服务员发送语音消息：“这些食材来自哪里？质量很赞！”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "食材质量",
+        "饮食"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample32:log:6",
+      "timestamp": "2024-10-26 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在平板电脑上进行了日记记录操作：输入文字约200字。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "日记"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0037:0037_sample32:log:7",
+      "timestamp": "2024-10-27 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在健康应用创建了“瑜伽课程”日程，时间：08:00-09:00，地点：度假村多功能厅。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "瑜伽",
+        "健身"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample32:log:8",
+      "timestamp": "2024-10-27 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户浏览了自助早餐区的菜单页面，主要内容为：健康食品选项及其营养成分说明。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "健康食品",
+        "营养成分"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample32:log:9",
+      "timestamp": "2024-10-27 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在摄影APP发布了照片，主要内容为：度假村周边小径的自然风景。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "摄影",
+        "自然风景"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample32:log:10",
+      "timestamp": "2024-10-27 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户通过移动支付完成花草茶购买，产品：茉莉花茶（大杯）。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "花草茶",
+        "茉莉花茶"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample32:log:11",
+      "timestamp": "2024-10-27 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户浏览了电子书平台的一本书籍，主要内容为：咖啡豆烘焙技术详解。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡烘焙",
+        "咖啡"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample32:log:12",
+      "timestamp": "2024-10-27 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在智能手环上设置了冷热交替浴提醒：每15分钟切换一次水温。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "冷热交替浴",
+        "健康管理"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample32:log:13",
+      "timestamp": "2024-10-28 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户通过现金完成有机蔬菜购买，产品：胡萝卜、菠菜、番茄（各1公斤）。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "有机蔬菜",
+        "健康饮食"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample32:log:14",
+      "timestamp": "2024-10-28 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在手机快递应用上进行了寄件操作：填写收件地址并选择次日达服务。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "寄件"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample32:log:15",
+      "timestamp": "2024-10-28 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户向哥哥发送语音通话请求：“我们聊聊父母的医疗费用吧。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "父母医疗",
+        "家庭"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample32:log:16",
+      "timestamp": "2024-10-28 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在笔记本电脑上进行了文档编辑操作：输入家庭预算表格数据。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "家庭预算",
+        "理财"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample32:log:17",
+      "timestamp": "2024-10-29 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在企业系统创建了“员工会议”日程，时间：09:00-10:00，地点：咖啡店会议室。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "员工会议"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample32:log:18",
+      "timestamp": "2024-10-29 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户向新员工发送消息：“注意调节咖啡机压力，避免过度磨损。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "咖啡机维护",
+        "专业指导"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample32:log:19",
+      "timestamp": "2024-10-29 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户浏览了在线学习平台的文章，主要内容为：高效时间管理技巧。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "时间管理",
+        "在线学习"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample32:log:20",
+      "timestamp": "2024-10-30 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在财务软件上进行了数据整理操作：核对账目并生成月度报告。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "账目核对",
+        "月度报告"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample32:log:21",
+      "timestamp": "2024-10-30 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample32",
+      "content": "用户在笔记应用上进行了事件记录操作：输入本月重要事件列表。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "event list",
+        "note-taking"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:0",
+      "timestamp": "2024-10-31 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在笔记本电脑上进行了文档整理操作：打开并分类存储了近期的顾客反馈记录。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "customer feedback",
+        "document organization"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:1",
+      "timestamp": "2024-10-31 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在平板电脑上进行了笔记编辑操作：标记并优化了几款高评价饮品配方。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "drink recipes",
+        "recipe optimization"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample33:log:2",
+      "timestamp": "2024-10-31 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在电子秤上进行了称重操作：精确测量了不同种类咖啡豆的重量比例。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "coffee beans",
+        "brewing ratios"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample33:log:3",
+      "timestamp": "2024-10-31 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户向同事发送消息：“我需要休息一下，手指不太舒服。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "rest",
+        "finger discomfort"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample33:log:4",
+      "timestamp": "2024-10-31 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户浏览了纸质信件的内容，主要内容为：哥哥对家庭经济状况的关心及鼓励。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "letter",
+        "family finances"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample33:log:5",
+      "timestamp": "2024-11-01 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户通过药店APP完成商品购买，产品：医用护腕（L码）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "wrist brace",
+        "pharmacy purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample33:log:6",
+      "timestamp": "2024-11-01 08:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户向药剂师发送消息：“请问有什么方法可以缓解手指关节僵硬？”",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "joint stiffness",
+        "health consultation"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample33:log:7",
+      "timestamp": "2024-11-01 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户接收到来自资深咖啡师的消息：“创新风味要结合传统口味才能吸引更广泛的顾客群体。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "barista message",
+        "flavor advice"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:8",
+      "timestamp": "2024-11-01 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户搜索了“手指关节僵硬缓解方法”，并查看了相关健康文章。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "joint stiffness",
+        "health articles"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample33:log:9",
+      "timestamp": "2024-11-02 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在咖啡机上进行了调试操作：测试多种新饮品配方的味道和口感。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "drink recipes",
+        "coffee machine",
+        "taste testing"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample33:log:10",
+      "timestamp": "2024-11-02 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户向同事发送消息：“能否帮我完成部分饮品样品的制作？”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "sample preparation",
+        "colleague request"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:11",
+      "timestamp": "2024-11-02 18:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在纸质信件发布了感谢信，主要内容为：表达对哥哥支持的感激之情。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "thank-you letter",
+        "brother support"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:12",
+      "timestamp": "2024-11-03 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户浏览了Zoom会议平台的视频，主要内容为：创业者分享市场策略经验。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "entrepreneurship",
+        "market strategy"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:13",
+      "timestamp": "2024-11-03 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在办公软件上进行了文档编辑操作：更新了饮品推广计划的具体内容。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "drink promotion",
+        "marketing plan"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample33:log:14",
+      "timestamp": "2024-11-03 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户向熟客发送消息：“这是我设计的新饮品推广计划，请帮忙提点意见。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "promotion plan",
+        "feedback seeking"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample33:log:15",
+      "timestamp": "2024-11-04 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户搜索了“本地咖啡店菜单对比”，并查看了相关店铺的产品信息。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡店菜单",
+        "产品对比"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample33:log:16",
+      "timestamp": "2024-11-04 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在平板电脑上进行了菜单编辑操作：新增两款符合大众口味的饮品选项。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "菜单编辑",
+        "饮品研发"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample33:log:17",
+      "timestamp": "2024-11-04 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在电脑上进行了数据录入操作：将调研结果输入表格文件中。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "数据录入"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:18",
+      "timestamp": "2024-11-05 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在咖啡机上进行了参数调整操作：优化新饮品的制作步骤。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡机",
+        "饮品制作"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample33:log:19",
+      "timestamp": "2024-11-05 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户向常客发送消息：“今天有空来试试我们改良后的新饮品吗？”",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "常客互动",
+        "新品邀请"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample33:log:20",
+      "timestamp": "2024-11-05 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在手机日历创建了“下周工作计划”日程，时间：每天09:00-18:00，地点：咖啡店及家中。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "工作计划",
+        "日程"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample33:log:21",
+      "timestamp": "2024-11-06 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在咖啡机进行了配方调整操作：修改了糖浆比例为15ml，并记录了最终参数。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "配方调整",
+        "糖浆比例"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0037:0037_sample33:log:22",
+      "timestamp": "2024-11-06 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户浏览了收银系统的销售数据，主要内容为：新品销量占比低于预期。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "销售数据",
+        "收银系统"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:23",
+      "timestamp": "2024-11-06 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户向笔记本应用发送消息：“顾客A反馈饮品过甜，建议减少糖浆用量。”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "顾客反馈",
+        "配方改进"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample33:log:24",
+      "timestamp": "2024-11-06 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在平板电脑进行了数据分析操作：统计了新品日销量为35杯，占总销量的15%。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "数据分析",
+        "销量统计"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:25",
+      "timestamp": "2024-11-06 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户搜索了“季节限定特饮评价”，并查看了关于新品口感偏甜的评论。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "季节限定特饮",
+        "口感评价"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample33:log:26",
+      "timestamp": "2024-11-07 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户向朋友李明发送消息：“想请教如何通过社交媒体提升新品知名度。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社交媒体营销",
+        "新品推广"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:27",
+      "timestamp": "2024-11-07 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在手机相机进行了拍摄操作：保存了三张饮品摆盘照片。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "饮品拍摄",
+        "摆盘照片"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0037:0037_sample33:log:28",
+      "timestamp": "2024-11-07 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在社交媒体发布了帖子，主要内容为：“尝鲜冬季限定特饮，温暖你的味蕾！”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社交媒体发布",
+        "新品宣传"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:29",
+      "timestamp": "2024-11-07 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户浏览了社交媒体的评论区，主要内容为：部分用户建议改进饮品外观。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "评论区反馈",
+        "饮品外观"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0037:0037_sample33:log:30",
+      "timestamp": "2024-11-08 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在手机应用查看了帖子数据：点赞数增加至120，但转化率仅为5%。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "帖子数据",
+        "转化率"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:31",
+      "timestamp": "2024-11-08 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在平板电脑上绘制了新的饮品摆盘设计图，增加了拉花细节。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "饮品摆盘",
+        "拉花设计"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0037:0037_sample33:log:32",
+      "timestamp": "2024-11-08 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户向店员小王发送消息：“请按照新摆盘方式制作饮品，并注意拉花细节。”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "饮品制作",
+        "拉花细节"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0037:0037_sample33:log:33",
+      "timestamp": "2024-11-08 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户搜索了“附近咖啡店促销活动”，并查看了三家店铺的产品展示方式。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "咖啡店",
+        "促销活动",
+        "产品展示"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0037:0037_sample33:log:34",
+      "timestamp": "2024-11-08 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0037_sample33",
+      "content": "用户在笔记本电脑上创建了笔记文档，记录了竞争对手的促销策略。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "竞争对手",
+        "促销策略"
+      ],
+      "confidence": 0.7
+    }
+  ]
+}

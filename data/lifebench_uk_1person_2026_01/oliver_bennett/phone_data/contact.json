@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Margaret Bennett",
+    "relation": "母亲",
+    "gender": "女",
+    "nickname": "Maggie",
+    "phoneNumber": "07712345601",
+    "personalEmail": "margaret.bennett_sa@gmail.com",
+    "workEmail": "margaret.bennett@verulampark.sch.uk",
+    "idNumber": "826101196304121002"
+  },
+  {
+    "name": "David Bennett",
+    "relation": "父亲",
+    "gender": "男",
+    "nickname": "Dave",
+    "phoneNumber": "07712345602",
+    "personalEmail": "david.bennett_sa@outlook.com",
+    "workEmail": "david.bennett@cedarwellengineering.co.uk",
+    "idNumber": "826101196111031013"
+  },
+  {
+    "name": "Chloe Bennett",
+    "relation": "妹妹",
+    "gender": "女",
+    "nickname": "Chlo",
+    "phoneNumber": "07712345603",
+    "personalEmail": "chloe.bennett_br@gmail.com",
+    "workEmail": "chloe.bennett@brookfieldcreative.co.uk",
+    "idNumber": "826101199706181024"
+  },
+  {
+    "name": "Priya Raman",
+    "relation": "后端平台技术负责人",
+    "gender": "女",
+    "nickname": "Priya",
+    "phoneNumber": "07712345604",
+    "personalEmail": "priya.raman_lon@gmail.com",
+    "workEmail": "priya.raman@alderwicksoftware.com",
+    "idNumber": "826101198906121024"
+  },
+  {
+    "name": "Tom Whitfield",
+    "relation": "同团队后端工程师",
+    "gender": "男",
+    "nickname": "Tom",
+    "phoneNumber": "07712345605",
+    "personalEmail": "tom.whitfield_lon@outlook.com",
+    "workEmail": "tom.whitfield@alderwicksoftware.com",
+    "idNumber": "826101199603081013"
+  },
+  {
+    "name": "Daniel Osei",
+    "relation": "工程经理",
+    "gender": "男",
+    "nickname": "Dan",
+    "phoneNumber": "07712345606",
+    "personalEmail": "daniel.osei_lon@gmail.com",
+    "workEmail": "daniel.osei@alderwicksoftware.com",
+    "idNumber": "826101198309211015"
+  },
+  {
+    "name": "Hannah Cole",
+    "relation": "平台架构师",
+    "gender": "女",
+    "nickname": "Han",
+    "phoneNumber": "07712345607",
+    "personalEmail": "hannah.cole_lon@protonmail.com",
+    "workEmail": "hannah.cole@alderwicksoftware.com",
+    "idNumber": "826101198703141024"
+  },
+  {
+    "name": "Sofia Marchetti",
+    "relation": "产品经理",
+    "gender": "女",
+    "nickname": "Sofi",
+    "phoneNumber": "07712345608",
+    "personalEmail": "sofia.marchetti_lon@gmail.com",
+    "workEmail": "sofia.marchetti@alderwicksoftware.com",
+    "idNumber": "826101199106081026"
+  },
+  {
+    "name": "James Okonkwo",
+    "relation": "大学同学，现居伦敦",
+    "gender": "男",
+    "nickname": "Jim",
+    "phoneNumber": "07712345609",
+    "personalEmail": "james.okonkwo_lon@yahoo.co.uk",
+    "workEmail": "james.okonkwo@northbridge.co.uk",
+    "idNumber": "826101199403151015"
+  },
+  {
+    "name": "Aisha Karim",
+    "relation": "大学同学，现居曼彻斯特",
+    "gender": "女",
+    "nickname": "Aish",
+    "phoneNumber": "07712345610",
+    "personalEmail": "aisha.karim_mcr@gmail.com",
+    "workEmail": "aisha.karim@cedarwell.co.uk",
+    "idNumber": "826101199502081024"
+  },
+  {
+    "name": "Elliot Shaw",
+    "relation": "大学同学，现居爱丁堡",
+    "gender": "男",
+    "nickname": "El",
+    "phoneNumber": "07712345611",
+    "personalEmail": "elliot.shaw_edi@outlook.com",
+    "workEmail": "elliot.shaw@westhaven.co.uk",
+    "idNumber": "826102199311211015"
+  },
+  {
+    "name": "Marcus Bell",
+    "relation": "跑团组织者",
+    "gender": "男",
+    "nickname": "Marc",
+    "phoneNumber": "07712345612",
+    "personalEmail": "marcus.bell_lon@gmail.com",
+    "workEmail": "marcus.bell@cedarwellhealth.co.uk",
+    "idNumber": "826101198903141017"
+  },
+  {
+    "name": "Lena Fischer",
+    "relation": "跑友",
+    "gender": "女",
+    "nickname": "Len",
+    "phoneNumber": "07712345613",
+    "personalEmail": "lena.fischer_lon@gmail.com",
+    "workEmail": "lena.fischer@northbridgeengineering.co.uk",
+    "idNumber": "826101199508221028"
+  },
+  {
+    "name": "Iris Novak",
+    "relation": "胶片摄影同好",
+    "gender": "女",
+    "nickname": "Iris",
+    "phoneNumber": "07712345614",
+    "personalEmail": "iris.novak_lon@gmail.com",
+    "workEmail": "iris.novak@cedarwell.co.uk",
+    "idNumber": "826101199103141022"
+  },
+  {
+    "name": "Callum Reid",
+    "relation": "摄影同好",
+    "gender": "男",
+    "nickname": "Cal",
+    "phoneNumber": "07712345615",
+    "personalEmail": "callum.reid_lon@outlook.com",
+    "workEmail": "callum.reid@brookfield.co.uk",
+    "idNumber": "826101198811071019"
+  },
+  {
+    "name": "Zoe Hart",
+    "relation": "读书会成员",
+    "gender": "女",
+    "nickname": "Zee",
+    "phoneNumber": "07712345616",
+    "personalEmail": "zoe.hart_lon@gmail.com",
+    "workEmail": "zoe.hart@cedarwell.co.uk",
+    "idNumber": "826101199604181024"
+  },
+  {
+    "name": "Peter Lindqvist",
+    "relation": "读书会主持人",
+    "gender": "男",
+    "nickname": "Pete",
+    "phoneNumber": "07712345617",
+    "personalEmail": "peter.lindqvist_lon@gmail.com",
+    "workEmail": "peter.lindqvist@northbridge.co.uk",
+    "idNumber": "826101198511021011"
+  },
+  {
+    "name": "Helen Marsh",
+    "relation": "同栋公寓邻居",
+    "gender": "女",
+    "nickname": "Helen",
+    "phoneNumber": "07712345618",
+    "personalEmail": "helen.marsh_lon@yahoo.co.uk",
+    "workEmail": "helen.marsh@cedarwellhealth.co.uk",
+    "idNumber": "826101198503141026"
+  },
+  {
+    "name": "Arif Chowdhury",
+    "relation": "街区咖啡店店主",
+    "gender": "男",
+    "nickname": "Arif",
+    "phoneNumber": "07712345619",
+    "personalEmail": "arif.chowdhury_lon@gmail.com",
+    "workEmail": "arif.chowdhury@newmancornercoffee.co.uk",
+    "idNumber": "826101197911081013"
+  },
+  {
+    "name": "Yusuf Adeyemi",
+    "relation": "Meetup 组织者",
+    "gender": "男",
+    "nickname": "Yus",
+    "phoneNumber": "07712345620",
+    "personalEmail": "yusuf.adeyemi_lon@gmail.com",
+    "workEmail": "yusuf.adeyemi@cedarwell.co.uk",
+    "idNumber": "826101199104121015"
+  },
+  {
+    "name": "Rebecca Tan",
+    "relation": "AWS 认证学习伙伴",
+    "gender": "女",
+    "nickname": "Becca",
+    "phoneNumber": "07712345621",
+    "personalEmail": "rebecca.tan_lon@outlook.com",
+    "workEmail": "rebecca.tan@brookfield.co.uk",
+    "idNumber": "826101199611031028"
+  },
+  {
+    "name": "Theo Bright",
+    "relation": "线上骑友",
+    "gender": "男",
+    "nickname": "Theo",
+    "phoneNumber": "07712345622",
+    "personalEmail": "theo.bright_lon@gmail.com",
+    "workEmail": "theo.bright@cedarwellcycles.co.uk",
+    "idNumber": "826101199106181019"
+  }
+]

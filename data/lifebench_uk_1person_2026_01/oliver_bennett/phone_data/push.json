@@ -1,0 +1,130 @@
+[
+  {
+    "type": "push",
+    "title": "BBC Weather：伦敦阴雨出门提醒",
+    "content": "【BBC Weather】伦敦今日阴有小雨，气温6°C，出门请带伞",
+    "datetime": "2026-01-04 07:35:00",
+    "source": "BBC Weather",
+    "push_status": "已读",
+    "jump_path": "BBC Weather→今日天气→伦敦",
+    "daily_event_id": "61",
+    "event_id": [
+      "4-1"
+    ],
+    "phone_id": 0
+  },
+  {
+    "type": "push",
+    "title": "Headspace：睡前冥想推荐",
+    "content": "【Headspace】睡前10分钟睡眠冥想练习，帮你放松身心、安稳入睡，已加入你的今日推荐",
+    "datetime": "2026-01-07 22:55:00",
+    "source": "Headspace",
+    "push_status": "未读",
+    "jump_path": "Headspace→今日推荐→10分钟睡眠冥想",
+    "daily_event_id": "133",
+    "event_id": [
+      "77-2",
+      "77-3"
+    ],
+    "phone_id": 1
+  },
+  {
+    "type": "push",
+    "title": "Strava：右膝恢复训练建议",
+    "content": "【Strava】根据右膝评估，建议继续低强度训练并加强核心力量，本周训练计划已更新",
+    "datetime": "2026-01-08 20:25:00",
+    "source": "Strava",
+    "push_status": "已读",
+    "jump_path": "Strava→训练计划→本周建议",
+    "daily_event_id": "153",
+    "event_id": [
+      "103-3",
+      "132-5"
+    ],
+    "phone_id": 2
+  },
+  {
+    "type": "push",
+    "title": "Open City：Barbican 导览开始提醒",
+    "content": "【Open City】Barbican 建筑导览 16:00 开始，请到 Beech Street 入口集合点出示预约码 OC-2026-1187",
+    "datetime": "2026-01-11 15:45:00",
+    "source": "Open City",
+    "push_status": "未读",
+    "jump_path": "Open City→我的预约→OC-2026-1187",
+    "daily_event_id": "204",
+    "event_id": [
+      "46-4",
+      "11-8",
+      "46-5",
+      "46-2",
+      "46-3"
+    ],
+    "phone_id": 3
+  },
+  {
+    "type": "push",
+    "title": "Compare the Market：保险投保成功同步",
+    "content": "【Compare the Market】contents insurance 投保成功，年费 £85，保额 £15,000，含意外损坏险，较去年节省 £20",
+    "datetime": "2026-01-13 20:35:00",
+    "source": "Compare the Market",
+    "push_status": "已读",
+    "jump_path": "Compare the Market→我的保险→保单详情",
+    "daily_event_id": "241",
+    "event_id": [
+      "89-5",
+      "89-6",
+      "90-2",
+      "90-3"
+    ],
+    "phone_id": 4
+  },
+  {
+    "type": "push",
+    "title": "Slack：架构边界会议纪要待整理",
+    "content": "【Slack】与【Hannah Cole】的架构边界会已结束，待整理服务边界图与四条外部依赖",
+    "datetime": "2026-01-16 11:52:00",
+    "source": "Slack",
+    "push_status": "已读",
+    "jump_path": "Slack→#core-refactor→Hannah Cole",
+    "daily_event_id": "290",
+    "event_id": [
+      "16-2",
+      "16-3"
+    ],
+    "phone_id": 5
+  },
+  {
+    "type": "push",
+    "title": "Strava：夜跑装备准备提醒",
+    "content": "【Strava】今晚 18:55 运河慢跑，请备好长袖、反光层、手套和水壶，检查右膝状态",
+    "datetime": "2026-01-22 18:00:00",
+    "source": "Strava",
+    "push_status": "已读",
+    "jump_path": "Strava→训练计划→今晚慢跑",
+    "daily_event_id": "431",
+    "event_id": [
+      "22-5",
+      "22-7",
+      "141-1",
+      "22-4",
+      "22-3"
+    ],
+    "phone_id": 6
+  },
+  {
+    "type": "push",
+    "title": "Google Maps：步行导航至 Camden Market",
+    "content": "【Google Maps】步行至 Camden Market 约38分钟，预计12:33到达，途经摄政运河。",
+    "datetime": "2026-01-30 11:56:00",
+    "source": "Google Maps",
+    "push_status": "已读",
+    "jump_path": "Google Maps→导航→步行路线",
+    "daily_event_id": "589",
+    "event_id": [
+      "99-3",
+      "30-2",
+      "99-2"
+    ],
+    "phone_id": 7
+  }
+]

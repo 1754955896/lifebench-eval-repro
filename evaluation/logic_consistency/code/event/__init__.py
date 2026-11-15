@@ -1,0 +1,1 @@
+"""Event arrangement consistency score."""

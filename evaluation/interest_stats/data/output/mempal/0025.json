@@ -1,0 +1,6233 @@
+{
+  "schema_version": 1,
+  "method": {
+    "name": "Mem-PAL consecutive-day interest drift",
+    "formula": "1 - |C_t intersection C_(t-1)| / |C_t union C_(t-1)|",
+    "unit": "calendar-consecutive day pair",
+    "input_scope": "timestamped user logs only; dialogue/topics/labels excluded",
+    "empty_policy": "skip both-empty pairs; one-empty pairs have drift 1",
+    "prompt_version": "mempal-log-interest-v1",
+    "official_reproduction": false
+  },
+  "provenance": {
+    "user_id": "0025",
+    "history_only": false,
+    "evaluated_logs_sha256": "e74eabaa69c59863ab18ea63f6629ec61317e764ffc648b3d9d1f1475a283265",
+    "model": "deepseek-v4-flash"
+  },
+  "coverage": {
+    "log_count": 302,
+    "day_count": 89,
+    "first_date": "2024-08-11",
+    "last_date": "2024-11-08",
+    "source_sample_count": 24,
+    "source_split_counts": {
+      "history": 302
+    },
+    "duplicate_logs_removed": 0,
+    "interest_log_count": 174,
+    "interest_signal_rate": 0.576159
+  },
+  "interest_drift": {
+    "summary": {
+      "count": 85,
+      "mean": 0.807143,
+      "median": 1.0,
+      "stddev": 0.249922,
+      "p25": 0.666667,
+      "p75": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "skipped_both_empty_pairs": 2,
+    "monthly_summary": {
+      "2024-08": {
+        "count": 19,
+        "mean": 0.802632,
+        "median": 1.0,
+        "stddev": 0.224928,
+        "p25": 0.666667,
+        "p75": 1.0,
+        "min": 0.333333,
+        "max": 1.0
+      },
+      "2024-09": {
+        "count": 29,
+        "mean": 0.82931,
+        "median": 1.0,
+        "stddev": 0.244231,
+        "p25": 0.666667,
+        "p75": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "2024-10": {
+        "count": 29,
+        "mean": 0.766338,
+        "median": 0.857143,
+        "stddev": 0.28324,
+        "p25": 0.6,
+        "p75": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "2024-11": {
+        "count": 8,
+        "mean": 0.885417,
+        "median": 1.0,
+        "stddev": 0.14987,
+        "p25": 0.729167,
+        "p75": 1.0,
+        "min": 0.666667,
+        "max": 1.0
+      }
+    },
+    "series": [
+      {
+        "previous_date": "2024-08-11",
+        "date": "2024-08-12",
+        "previous_categories": [
+          "Sports & Fitness"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-13",
+        "date": "2024-08-14",
+        "previous_categories": [],
+        "categories": [
+          "Family & Parenting",
+          "Finance",
+          "Travel & Outdoors"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-14",
+        "date": "2024-08-15",
+        "previous_categories": [
+          "Family & Parenting",
+          "Finance",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Education & Learning"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-15",
+        "date": "2024-08-16",
+        "previous_categories": [
+          "Education & Learning"
+        ],
+        "categories": [
+          "Finance",
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-16",
+        "date": "2024-08-17",
+        "previous_categories": [
+          "Finance",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-17",
+        "date": "2024-08-18",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-18",
+        "date": "2024-08-19",
+        "previous_categories": [
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Social & Relationships"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-19",
+        "date": "2024-08-20",
+        "previous_categories": [
+          "Social & Relationships"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Travel & Outdoors"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-20",
+        "date": "2024-08-21",
+        "previous_categories": [
+          "Family & Parenting",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Finance"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-21",
+        "date": "2024-08-22",
+        "previous_categories": [
+          "Career & Professional",
+          "Finance"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Sports & Fitness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-08-22",
+        "date": "2024-08-23",
+        "previous_categories": [
+          "Career & Professional",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-08-23",
+        "date": "2024-08-24",
+        "previous_categories": [
+          "Career & Professional",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "drift": 0.333333
+      },
+      {
+        "previous_date": "2024-08-24",
+        "date": "2024-08-25",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Sports & Fitness"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-08-25",
+        "date": "2024-08-26",
+        "previous_categories": [
+          "Career & Professional",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-26",
+        "date": "2024-08-27",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Social & Relationships"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-27",
+        "date": "2024-08-28",
+        "previous_categories": [
+          "Career & Professional",
+          "Social & Relationships"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-08-28",
+        "date": "2024-08-29",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Home & Lifestyle"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-08-29",
+        "date": "2024-08-30",
+        "previous_categories": [
+          "Arts & Culture",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Food & Cooking",
+          "Home & Lifestyle",
+          "Sports & Fitness"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-30",
+        "date": "2024-08-31",
+        "previous_categories": [
+          "Arts & Culture",
+          "Food & Cooking",
+          "Home & Lifestyle",
+          "Sports & Fitness"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-01",
+        "date": "2024-09-02",
+        "previous_categories": [],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-02",
+        "date": "2024-09-03",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-03",
+        "date": "2024-09-04",
+        "previous_categories": [],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-04",
+        "date": "2024-09-05",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-05",
+        "date": "2024-09-06",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Entertainment & Media",
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-06",
+        "date": "2024-09-07",
+        "previous_categories": [
+          "Entertainment & Media",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Health & Wellness",
+          "Shopping & Fashion"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-07",
+        "date": "2024-09-08",
+        "previous_categories": [
+          "Health & Wellness",
+          "Shopping & Fashion"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Health & Wellness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-08",
+        "date": "2024-09-09",
+        "previous_categories": [
+          "Arts & Culture",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-09-09",
+        "date": "2024-09-10",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Finance"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-10",
+        "date": "2024-09-11",
+        "previous_categories": [
+          "Finance"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-11",
+        "date": "2024-09-12",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-09-12",
+        "date": "2024-09-13",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Entertainment & Media"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-13",
+        "date": "2024-09-14",
+        "previous_categories": [
+          "Entertainment & Media"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-14",
+        "date": "2024-09-15",
+        "previous_categories": [],
+        "categories": [
+          "Family & Parenting",
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-15",
+        "date": "2024-09-16",
+        "previous_categories": [
+          "Family & Parenting",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Social & Relationships"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-16",
+        "date": "2024-09-17",
+        "previous_categories": [
+          "Family & Parenting",
+          "Social & Relationships"
+        ],
+        "categories": [
+          "Finance",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-17",
+        "date": "2024-09-18",
+        "previous_categories": [
+          "Finance",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "drift": 0.333333
+      },
+      {
+        "previous_date": "2024-09-18",
+        "date": "2024-09-19",
+        "previous_categories": [
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-19",
+        "date": "2024-09-20",
+        "previous_categories": [],
+        "categories": [
+          "Career & Professional",
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-20",
+        "date": "2024-09-21",
+        "previous_categories": [
+          "Career & Professional",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-21",
+        "date": "2024-09-22",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Sports & Fitness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-22",
+        "date": "2024-09-23",
+        "previous_categories": [
+          "Arts & Culture",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Finance",
+          "Sports & Fitness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-23",
+        "date": "2024-09-24",
+        "previous_categories": [
+          "Finance",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Home & Lifestyle"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-24",
+        "date": "2024-09-25",
+        "previous_categories": [
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-25",
+        "date": "2024-09-26",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "categories": [
+          "Home & Lifestyle"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-26",
+        "date": "2024-09-27",
+        "previous_categories": [
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Family & Parenting",
+          "Home & Lifestyle"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-09-27",
+        "date": "2024-09-28",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Family & Parenting",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-09-28",
+        "date": "2024-09-29",
+        "previous_categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Travel & Outdoors"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-29",
+        "date": "2024-09-30",
+        "previous_categories": [
+          "Career & Professional",
+          "Travel & Outdoors"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Finance"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-30",
+        "date": "2024-10-01",
+        "previous_categories": [
+          "Arts & Culture",
+          "Finance"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-01",
+        "date": "2024-10-02",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-02",
+        "date": "2024-10-03",
+        "previous_categories": [],
+        "categories": [
+          "Arts & Culture",
+          "Travel & Outdoors"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-03",
+        "date": "2024-10-04",
+        "previous_categories": [
+          "Arts & Culture",
+          "Travel & Outdoors"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-04",
+        "date": "2024-10-05",
+        "previous_categories": [],
+        "categories": [
+          "Social & Relationships"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-05",
+        "date": "2024-10-06",
+        "previous_categories": [
+          "Social & Relationships"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-06",
+        "date": "2024-10-07",
+        "previous_categories": [],
+        "categories": [
+          "Entertainment & Media"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-07",
+        "date": "2024-10-08",
+        "previous_categories": [
+          "Entertainment & Media"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-08",
+        "date": "2024-10-09",
+        "previous_categories": [
+          "Arts & Culture",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-09",
+        "date": "2024-10-10",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-10-10",
+        "date": "2024-10-11",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-10-11",
+        "date": "2024-10-12",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Shopping & Fashion"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-12",
+        "date": "2024-10-13",
+        "previous_categories": [
+          "Shopping & Fashion"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-13",
+        "date": "2024-10-14",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Sports & Fitness"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-14",
+        "date": "2024-10-15",
+        "previous_categories": [
+          "Family & Parenting",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Family & Parenting",
+          "Food & Cooking",
+          "Sports & Fitness"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-15",
+        "date": "2024-10-16",
+        "previous_categories": [
+          "Arts & Culture",
+          "Family & Parenting",
+          "Food & Cooking",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Food & Cooking",
+          "Home & Lifestyle",
+          "Sports & Fitness"
+        ],
+        "drift": 0.6
+      },
+      {
+        "previous_date": "2024-10-16",
+        "date": "2024-10-17",
+        "previous_categories": [
+          "Food & Cooking",
+          "Home & Lifestyle",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Sports & Fitness"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-10-17",
+        "date": "2024-10-18",
+        "previous_categories": [
+          "Family & Parenting",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Food & Cooking",
+          "Sports & Fitness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-20",
+        "date": "2024-10-21",
+        "previous_categories": [
+          "Career & Professional",
+          "Finance",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Finance"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-10-21",
+        "date": "2024-10-22",
+        "previous_categories": [
+          "Arts & Culture",
+          "Finance"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-22",
+        "date": "2024-10-23",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Home & Lifestyle"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-23",
+        "date": "2024-10-24",
+        "previous_categories": [
+          "Career & Professional",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Arts & Culture"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-24",
+        "date": "2024-10-25",
+        "previous_categories": [
+          "Arts & Culture"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Finance"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-25",
+        "date": "2024-10-26",
+        "previous_categories": [
+          "Arts & Culture",
+          "Finance"
+        ],
+        "categories": [
+          "Arts & Culture"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-26",
+        "date": "2024-10-27",
+        "previous_categories": [
+          "Arts & Culture"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Entertainment & Media",
+          "Family & Parenting",
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-27",
+        "date": "2024-10-28",
+        "previous_categories": [
+          "Education & Learning",
+          "Entertainment & Media",
+          "Family & Parenting",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Finance",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "drift": 0.857143
+      },
+      {
+        "previous_date": "2024-10-28",
+        "date": "2024-10-29",
+        "previous_categories": [
+          "Arts & Culture",
+          "Finance",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Home & Lifestyle",
+          "Sports & Fitness"
+        ],
+        "drift": 0.6
+      },
+      {
+        "previous_date": "2024-10-29",
+        "date": "2024-10-30",
+        "previous_categories": [
+          "Arts & Culture",
+          "Home & Lifestyle",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Sports & Fitness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-30",
+        "date": "2024-10-31",
+        "previous_categories": [
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-31",
+        "date": "2024-11-01",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-01",
+        "date": "2024-11-02",
+        "previous_categories": [
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Health & Wellness",
+          "Technology"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-11-02",
+        "date": "2024-11-03",
+        "previous_categories": [
+          "Health & Wellness",
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-03",
+        "date": "2024-11-04",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Shopping & Fashion"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-11-04",
+        "date": "2024-11-05",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Shopping & Fashion"
+        ],
+        "categories": [
+          "Finance"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-05",
+        "date": "2024-11-06",
+        "previous_categories": [
+          "Finance"
+        ],
+        "categories": [
+          "Food & Cooking",
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-06",
+        "date": "2024-11-07",
+        "previous_categories": [
+          "Food & Cooking",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-11-07",
+        "date": "2024-11-08",
+        "previous_categories": [
+          "Arts & Culture",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Finance"
+        ],
+        "drift": 1.0
+      }
+    ]
+  },
+  "distributions": {
+    "interest_categories": {
+      "Arts & Culture": 27,
+      "Career & Professional": 26,
+      "Health & Wellness": 26,
+      "Sports & Fitness": 25,
+      "Family & Parenting": 15,
+      "Home & Lifestyle": 15,
+      "Finance": 14,
+      "Food & Cooking": 7,
+      "Travel & Outdoors": 5,
+      "Social & Relationships": 4,
+      "Entertainment & Media": 4,
+      "Shopping & Fashion": 3,
+      "Education & Learning": 2,
+      "Technology": 1
+    },
+    "top_keywords": {
+      "折纸": 13,
+      "stretching": 8,
+      "社区团购": 7,
+      "腰部拉伸": 6,
+      "children": 5,
+      "供应商": 5,
+      "gardening": 5,
+      "photography": 4,
+      "晨练": 4,
+      "fitness app": 3,
+      "walking": 3,
+      "健康饮食": 3,
+      "妻子": 3,
+      "教程": 3,
+      "植物养护": 3,
+      "园艺": 3,
+      "健康监测": 3,
+      "基础体操": 3,
+      "团购": 3,
+      "手工": 3,
+      "houseplants": 3,
+      "exercise": 2,
+      "budgeting": 2,
+      "outdoors": 2,
+      "fitness tracking": 2,
+      "parenting": 2,
+      "nature": 2,
+      "business": 2,
+      "抖音": 2,
+      "手工品": 2,
+      "学习": 2,
+      "绿萝": 2,
+      "多肉植物": 2,
+      "人体工学座椅垫": 2,
+      "轻音乐": 2,
+      "播放列表": 2,
+      "exercise tracking": 2,
+      "锻炼记录": 2,
+      "供应商沟通": 2,
+      "运动记录": 2,
+      "绿萝养护": 2,
+      "origami": 2,
+      "慢性咽炎": 2,
+      "孩子": 2,
+      "心率监测": 2,
+      "记账": 2,
+      "梨": 2,
+      "银耳": 2,
+      "savings plan": 1,
+      "family finance": 1,
+      "savings goal": 1,
+      "park walk": 1,
+      "family activity": 1,
+      "plant identification": 1,
+      "learning": 1,
+      "community sports": 1,
+      "running": 1,
+      "savings allocation": 1,
+      "personal finance": 1,
+      "play": 1,
+      "park": 1,
+      "soccer": 1,
+      "neighbors": 1,
+      "playdate": 1,
+      "family conversation": 1,
+      "community group buying": 1,
+      "agent": 1,
+      "suppliers": 1,
+      "supplier contact": 1,
+      "business notes": 1,
+      "reduce spending": 1,
+      "budget": 1,
+      "supplier": 1,
+      "cooperation": 1,
+      "supplier quotes": 1,
+      "contracts": 1,
+      "团购学习": 1,
+      "出车": 1,
+      "日程": 1,
+      "低油低盐": 1,
+      "清蒸鱼": 1,
+      "运营": 1,
+      "有机蔬菜": 1,
+      "购买": 1,
+      "作业辅导": 1,
+      "孩子数学": 1,
+      "创业项目": 1,
+      "启动管理": 1,
+      "创业": 1,
+      "成本控制": 1,
+      "瑜伽": 1,
+      "拉伸训练": 1,
+      "盈利分析": 1,
+      "操作手册": 1,
+      "操作流程": 1,
+      "盈利空间": 1,
+      "会谈文档": 1,
+      "建议": 1,
+      "代理商": 1,
+      "合作信息": 1
+    }
+  },
+  "daily_profiles": [
+    {
+      "date": "2024-08-11",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-08-12",
+      "event_count": 2,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-08-13",
+      "event_count": 1,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-08-14",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Finance": 2,
+        "Travel & Outdoors": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-08-15",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Sports & Fitness": 2,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-08-17",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Family & Parenting": 2
+      }
+    },
+    {
+      "date": "2024-08-18",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-08-19",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Social & Relationships": 1
+      }
+    },
+    {
+      "date": "2024-08-20",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Travel & Outdoors": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-08-21",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-08-22",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-08-23",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-08-24",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Food & Cooking": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-08-25",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-08-26",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-08-27",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Social & Relationships": 1
+      }
+    },
+    {
+      "date": "2024-08-28",
+      "event_count": 10,
+      "interest_event_count": 6,
+      "interest_categories": {
+        "Arts & Culture": 4,
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-08-29",
+      "event_count": 6,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Arts & Culture": 2,
+        "Home & Lifestyle": 2
+      }
+    },
+    {
+      "date": "2024-08-30",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Arts & Culture": 1,
+        "Food & Cooking": 1,
+        "Sports & Fitness": 1,
+        "Home & Lifestyle": 1
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "event_count": 5,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-01",
+      "event_count": 5,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-02",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-03",
+      "event_count": 3,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-04",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-05",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-09-06",
+      "event_count": 6,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-09-07",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Shopping & Fashion": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-08",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-09",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-10",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-09-11",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 2
+      }
+    },
+    {
+      "date": "2024-09-12",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-13",
+      "event_count": 4,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-09-14",
+      "event_count": 3,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-15",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-16",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Social & Relationships": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-17",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Health & Wellness": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-09-18",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-19",
+      "event_count": 1,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-20",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-09-21",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Arts & Culture": 2
+      }
+    },
+    {
+      "date": "2024-09-22",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-23",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-09-24",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Home & Lifestyle": 3
+      }
+    },
+    {
+      "date": "2024-09-25",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-26",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Home & Lifestyle": 2
+      }
+    },
+    {
+      "date": "2024-09-27",
+      "event_count": 9,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Family & Parenting": 1,
+        "Arts & Culture": 1,
+        "Home & Lifestyle": 1
+      }
+    },
+    {
+      "date": "2024-09-28",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-29",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Travel & Outdoors": 2,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-09-30",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Finance": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-01",
+      "event_count": 6,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-02",
+      "event_count": 4,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-10-03",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Travel & Outdoors": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-04",
+      "event_count": 3,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-10-05",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Social & Relationships": 1
+      }
+    },
+    {
+      "date": "2024-10-06",
+      "event_count": 4,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-10-07",
+      "event_count": 4,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-10-08",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-09",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-10",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-11",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-12",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Shopping & Fashion": 1
+      }
+    },
+    {
+      "date": "2024-10-13",
+      "event_count": 5,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-14",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-15",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Food & Cooking": 1,
+        "Arts & Culture": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-16",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Food & Cooking": 1,
+        "Home & Lifestyle": 1
+      }
+    },
+    {
+      "date": "2024-10-17",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-18",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-10-20",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Career & Professional": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-10-21",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Arts & Culture": 2,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-10-22",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-23",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Home & Lifestyle": 2,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-24",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-25",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Finance": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-26",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-27",
+      "event_count": 7,
+      "interest_event_count": 6,
+      "interest_categories": {
+        "Health & Wellness": 3,
+        "Entertainment & Media": 1,
+        "Education & Learning": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-28",
+      "event_count": 7,
+      "interest_event_count": 6,
+      "interest_categories": {
+        "Health & Wellness": 2,
+        "Arts & Culture": 2,
+        "Sports & Fitness": 1,
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-10-29",
+      "event_count": 5,
+      "interest_event_count": 5,
+      "interest_categories": {
+        "Home & Lifestyle": 3,
+        "Sports & Fitness": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-30",
+      "event_count": 1,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-11-01",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-11-02",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-11-03",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-11-04",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Shopping & Fashion": 1,
+        "Career & Professional": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-11-05",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Finance": 1
+      }
+    },
+    {
+      "date": "2024-11-06",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Health & Wellness": 2,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-11-07",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Arts & Culture": 1,
+        "Health & Wellness": 1,
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-11-08",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Finance": 1
+      }
+    }
+  ],
+  "event_extractions": [
+    {
+      "event_id": "0025:0025_sample7:log:35",
+      "timestamp": "2024-08-11 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户接收到来自乘客的消息：“学校下周要举办运动会，我们班准备参加接力赛！”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "received message",
+        "school event"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample7:log:36",
+      "timestamp": "2024-08-11 12:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在车载座椅进行了活动操作：完成脊柱扭转和腿部伸展动作各3组。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "stretching",
+        "exercise"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample7:log:37",
+      "timestamp": "2024-08-12 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在车载座椅进行了调节操作：微调座椅垫位置以优化舒适度。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "seat adjustment",
+        "comfort"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample7:log:38",
+      "timestamp": "2024-08-12 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户向自己发送提醒消息：“近期需要关注职业病预防措施。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "reminder",
+        "occupational health"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample7:log:39",
+      "timestamp": "2024-08-13 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在手机日历创建了“短暂休息”日程，时间：11:00-11:10，地点：阳光公园停车场。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "calendar",
+        "short break"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample7:log:40",
+      "timestamp": "2024-08-14 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户浏览了家庭财务管理APP的文章，主要内容为：如何制定储蓄计划。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "savings plan",
+        "family finance"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample7:log:41",
+      "timestamp": "2024-08-14 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在手机上进行了数据输入操作：录入家庭每月固定支出和潜在储蓄目标。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "budgeting",
+        "savings goal"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample7:log:42",
+      "timestamp": "2024-08-14 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在手机日历创建了“公园散步”日程，时间：15:00-16:00，地点：阳光公园。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "park walk",
+        "outdoors"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample7:log:43",
+      "timestamp": "2024-08-14 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户向妻子发送消息：“我们在公园里踢球，孩子们很开心。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children",
+        "family activity"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample7:log:44",
+      "timestamp": "2024-08-15 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户通过商场APP完成商品购买，产品：人体工学座椅垫（黑色）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "purchase",
+        "ergonomic cushion"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample7:log:45",
+      "timestamp": "2024-08-15 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在汽车座椅上进行了安装操作：固定人体工学座椅垫。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "installation",
+        "seat cushion"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample7:log:46",
+      "timestamp": "2024-08-15 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户搜索了“常见植物识别”，并查看了植物图片和名称对照表。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "plant identification",
+        "learning"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample7:log:47",
+      "timestamp": "2024-08-16 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在导航APP上进行了路线规划操作：设置多条长途订单目的地。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "route planning",
+        "navigation"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample7:log:48",
+      "timestamp": "2024-08-16 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在手机日历创建了“社区运动”日程，时间：16:00-17:00，地点：星光社区运动场。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "community sports",
+        "exercise"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample7:log:49",
+      "timestamp": "2024-08-16 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在智能手环上记录了跑步数据：总距离1.2公里，用时15分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "running",
+        "fitness tracking"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample7:log:50",
+      "timestamp": "2024-08-16 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在家庭财务管理APP上调整了储蓄分配比例。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "savings allocation",
+        "personal finance"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample7:log:51",
+      "timestamp": "2024-08-17 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在手机日历创建了“绿地玩耍”日程，时间：18:30-19:30，地点：绿荫广场。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children",
+        "play",
+        "park"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample7:log:52",
+      "timestamp": "2024-08-17 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在朋友圈发布了视频，主要内容为：孩子们学习踢球的动作。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children",
+        "soccer",
+        "parenting"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample7:log:53",
+      "timestamp": "2024-08-18 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在健身APP上记录了拉伸运动数据：持续时间10分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "stretching",
+        "fitness app"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample7:log:54",
+      "timestamp": "2024-08-18 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户接收到来自智能手环的消息：“您已行走8000步，建议继续活动。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "smart band",
+        "notification"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample7:log:55",
+      "timestamp": "2024-08-19 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户向邻居发送消息：“孩子们正在院子里玩捉迷藏，您可以来一起加入吗？”",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "neighbors",
+        "children",
+        "playdate"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample7:log:56",
+      "timestamp": "2024-08-19 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在手机上进行了数据输入操作：更新当天的家庭开支明细。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "expense tracking",
+        "routine"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample7:log:57",
+      "timestamp": "2024-08-20 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在导航APP上选择了空气质量较好的路线进行驾驶。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "navigation",
+        "air quality"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample7:log:58",
+      "timestamp": "2024-08-20 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户在手机日历创建了“林荫散步”日程，时间：14:00-15:00，地点：青松林荫道。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "walking",
+        "nature",
+        "outdoors"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample7:log:59",
+      "timestamp": "2024-08-20 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample7",
+      "content": "用户向妻子发送消息：“孩子们今天问了很多有趣的问题，我们聊得很开心。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children",
+        "family conversation"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample8:log:0",
+      "timestamp": "2024-08-21 14:23:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户搜索了“社区团购代理”，并查看了几家供应商的官方网站和联系方式。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "community group buying",
+        "agent",
+        "suppliers"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:1",
+      "timestamp": "2024-08-21 15:12:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手机上进行了笔记记录操作：保存了供应商A的电话号码和微信二维码。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "supplier contact",
+        "business notes"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample8:log:2",
+      "timestamp": "2024-08-21 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户向妻子发送消息：“我们得减少非必要支出，比如少点外卖。”",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "reduce spending",
+        "budget"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample8:log:3",
+      "timestamp": "2024-08-22 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手机上拨打了供应商B的联系电话，并询问合作细节。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "supplier",
+        "cooperation",
+        "business"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:4",
+      "timestamp": "2024-08-22 10:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户接收到来自供应商B的消息：“代理启动资金为5000元，具体流程请参考邮件。””",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "supplier message",
+        "received"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample8:log:5",
+      "timestamp": "2024-08-22 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在平板电脑上进行了文件整理操作：将供应商C的报价表和合同模板归档。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "supplier quotes",
+        "contracts",
+        "business"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample8:log:6",
+      "timestamp": "2024-08-22 20:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手环上设置了运动模式，并记录了15分钟的步行数据和拉伸时间。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "walking",
+        "stretching",
+        "fitness tracking"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample8:log:7",
+      "timestamp": "2024-08-23 07:50:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在手机日历中创建了“出车+团购学习”日程，时间：08:00-18:00，地点：出租车/家中。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "团购学习",
+        "出车",
+        "日程"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample8:log:8",
+      "timestamp": "2024-08-23 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户浏览了美团外卖APP的商品页，主要内容为：一份低油低盐的清蒸鱼套餐。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "低油低盐",
+        "清蒸鱼",
+        "健康饮食"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0025:0025_sample8:log:9",
+      "timestamp": "2024-08-23 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手机上拨打了供应商D的电话，并预约下周见面详谈。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "供应商",
+        "预约"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:10",
+      "timestamp": "2024-08-23 19:50:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手表上启动了计步器功能，并记录了孩子们的运动数据。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "计步器",
+        "孩子运动数据"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample8:log:11",
+      "timestamp": "2024-08-24 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户浏览了抖音APP的视频，主要内容为：如何高效运营社区团购群组。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社区团购",
+        "运营",
+        "抖音"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:12",
+      "timestamp": "2024-08-24 18:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户通过支付宝完成商品购买，产品：有机蔬菜礼盒（5kg装）。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "有机蔬菜",
+        "购买"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0025:0025_sample8:log:13",
+      "timestamp": "2024-08-24 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在平板电脑上打开了作业辅导APP，并查看了孩子们的数学练习情况。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "作业辅导",
+        "孩子数学"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample8:log:14",
+      "timestamp": "2024-08-25 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户浏览了腾讯会议APP的文章，主要内容为：小型创业项目的启动与管理技巧。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "创业项目",
+        "启动管理"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:15",
+      "timestamp": "2024-08-25 10:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手机上使用记事本应用，记录了关于创业成本控制的关键点。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "创业",
+        "成本控制"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:16",
+      "timestamp": "2024-08-25 21:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手环上启动了瑜伽模式，并完成了10分钟的基础拉伸训练。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "瑜伽",
+        "拉伸训练"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample8:log:17",
+      "timestamp": "2024-08-26 12:05:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户向供应商E发送消息：“我们确认下午两点在咖啡馆见面。””",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "供应商",
+        "见面"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:18",
+      "timestamp": "2024-08-26 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手表上记录了孩子们的跑步时间和距离。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "孩子跑步",
+        "记录"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample8:log:19",
+      "timestamp": "2024-08-26 20:40:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在笔记本电脑上整理了供应商F的盈利分析报告和操作手册。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "盈利分析",
+        "供应商",
+        "操作手册"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample8:log:20",
+      "timestamp": "2024-08-27 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手机上记录了供应商G的操作流程和盈利空间说明。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "供应商",
+        "操作流程",
+        "盈利空间"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample8:log:21",
+      "timestamp": "2024-08-27 14:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户向妻子发送消息：“我已经把今天会谈的内容写成文档，你看看有什么建议。””",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "妻子",
+        "会谈文档",
+        "建议"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0025:0025_sample8:log:22",
+      "timestamp": "2024-08-28 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手机导航应用中设置了从当前位置到市中心的路线。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "导航",
+        "路线"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample8:log:23",
+      "timestamp": "2024-08-28 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户搜索了“热门打车区域”，并查看了高峰时段热门地点分布。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "打车",
+        "高峰时段"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample8:log:24",
+      "timestamp": "2024-08-28 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户向妻子发送消息：“今天收入还可以，但旺季快结束了。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "收入",
+        "旺季"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:25",
+      "timestamp": "2024-08-28 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在手机地图应用上查询了从当前位置到阳光社区团购办公室的最佳路线。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "路线查询",
+        "团购办公室"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample8:log:26",
+      "timestamp": "2024-08-28 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户浏览了阳光社区团购官网的文章，主要内容为如何成为代理商的详细指南。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社区团购",
+        "代理商"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:27",
+      "timestamp": "2024-08-28 16:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手机便签应用中记录了社区团购合作的关键信息。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社区团购",
+        "合作信息"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample8:log:28",
+      "timestamp": "2024-08-28 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户向妻子发送消息：“最近手工品订单不错，需要多准备一些材料。”",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "手工品",
+        "订单"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:29",
+      "timestamp": "2024-08-28 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在手机购物应用中核对了即将发货的手工产品清单。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "手工产品",
+        "发货清单"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample8:log:30",
+      "timestamp": "2024-08-28 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户搜索了“基础折纸教程”，并查看了几个推荐视频。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "教程"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample8:log:31",
+      "timestamp": "2024-08-28 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户通过某电商平台完成书籍购买，产品：《折纸入门指南》。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "书籍"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample8:log:32",
+      "timestamp": "2024-08-29 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在手机折纸教程APP中学习了基础造型制作方法。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "学习"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample8:log:33",
+      "timestamp": "2024-08-29 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户通过某药店小程序完成维生素C片购买，规格：500mg×60片。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "维生素C",
+        "购买"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:34",
+      "timestamp": "2024-08-29 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在手机地图应用中查询了从当前位置到绿意花卉市场的最佳路线。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "路线查询",
+        "花卉市场"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample8:log:35",
+      "timestamp": "2024-08-29 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户通过某花卉市场POS机完成绿萝和多肉植物购买。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "绿萝",
+        "多肉植物"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample8:log:36",
+      "timestamp": "2024-08-29 17:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户向邻居发送消息：“刚买了几盆植物，请教一下养护方法。”",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "植物养护",
+        "请教"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:37",
+      "timestamp": "2024-08-29 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户浏览了某折纸教学网站的视频，主要内容为复杂造型制作步骤。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "复杂造型"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample8:log:38",
+      "timestamp": "2024-08-30 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在手机折纸教程APP中学习了进阶造型制作方法。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "进阶造型"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample8:log:39",
+      "timestamp": "2024-08-30 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户通过某外卖平台完成蔬菜沙拉、鸡蛋和全麦面包的购买。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "蔬菜沙拉",
+        "全麦面包",
+        "健康饮食"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample8:log:40",
+      "timestamp": "2024-08-30 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户在智能手环中启动了步数计数功能，目标步数：2000步。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "步数目标",
+        "智能手环",
+        "步行"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample8:log:41",
+      "timestamp": "2024-08-30 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample8",
+      "content": "用户通过某园艺用品商店完成有机肥料购买，规格：2kg袋装。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "园艺",
+        "有机肥料"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample9:log:0",
+      "timestamp": "2024-08-31 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在车载导航仪进行了终点设定操作：目的地为阳光工业园区。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "导航",
+        "目的地设定"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample9:log:1",
+      "timestamp": "2024-08-31 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户向妻子发送消息：“今天的油钱又超支了，得想办法多接几单。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "油钱",
+        "接单"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample9:log:2",
+      "timestamp": "2024-08-31 14:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在出租车计价器进行了区域锁定操作：当前候车点为星光广场。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "出租车",
+        "候车点"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample9:log:3",
+      "timestamp": "2024-08-31 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在手机日历创建了“夜间加班”日程，时间：21:00-01:00，地点：城市主干道。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "夜间加班",
+        "日程"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample9:log:4",
+      "timestamp": "2024-08-31 23:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户通过出租车平台完成服务购买，产品：夜间拼车服务（三人次）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "夜间拼车",
+        "出租车服务"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample9:log:5",
+      "timestamp": "2024-09-01 07:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户接收到来自智能手环的消息：“您的心率和睡眠质量低于正常水平，请注意休息。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "心率",
+        "睡眠提醒"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample9:log:6",
+      "timestamp": "2024-09-01 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在车载广播进行了频道切换操作：当前播放内容为交通路况信息。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "交通路况",
+        "广播"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample9:log:7",
+      "timestamp": "2024-09-01 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户通过便利店完成商品购买，产品：金嗓子润喉片（一盒）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "润喉片",
+        "便利店"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample9:log:8",
+      "timestamp": "2024-09-01 16:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在出租车APP进行了区域筛选操作：当前目标区域为第一小学周边。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "区域筛选",
+        "出租车"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample9:log:9",
+      "timestamp": "2024-09-01 23:50:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在手机日历创建了“深夜运营”日程，时间：23:30-01:30，地点：火车站出口。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "深夜运营",
+        "日程"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample9:log:10",
+      "timestamp": "2024-09-02 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户搜索了工业园区路线，并查看了相关地图导航信息。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "路线搜索",
+        "导航"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample9:log:11",
+      "timestamp": "2024-09-02 13:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户浏览了便利店宣传页的文章，主要内容为：如何缓解长期驾驶带来的疲劳感。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "驾驶疲劳",
+        "缓解疲劳"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0025:0025_sample9:log:12",
+      "timestamp": "2024-09-02 19:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户通过出租车平台完成服务购买，产品：夜间短途接送服务（两单）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "夜间接送",
+        "出租车服务"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample9:log:13",
+      "timestamp": "2024-09-03 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户向妻子发送消息：“今天腰特别疼，可能需要买点药贴。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "腰疼",
+        "买药"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample9:log:14",
+      "timestamp": "2024-09-03 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户通过药店完成商品购买，产品：云南白药膏药贴（一盒）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "膏药贴",
+        "购药"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample9:log:15",
+      "timestamp": "2024-09-03 15:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在拼车平台发布了帖子，主要内容为：提供晚间拼车服务，价格优惠。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "拼车",
+        "发布帖子"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample9:log:16",
+      "timestamp": "2024-09-04 07:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户接收到来自妻子的消息：“身体要紧，别太累。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "妻子消息",
+        "关心"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample9:log:17",
+      "timestamp": "2024-09-04 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户通过出租车平台完成服务购买，产品：医院往返接送服务（两单）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "医院接送",
+        "打车"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample9:log:18",
+      "timestamp": "2024-09-04 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在手机日历创建了“晚间休息”日程，时间：18:30-20:00，地点：家中客厅。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "晚间休息",
+        "日程安排"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample9:log:19",
+      "timestamp": "2024-09-05 09:50:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户在出租车APP进行了订单确认操作：当前订单为火车站专线服务。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "火车站专线",
+        "打车订单"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample9:log:20",
+      "timestamp": "2024-09-05 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample9",
+      "content": "用户向妻子发送消息：“手工品销量下降了，看来得再想办法增加收入。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "手工品",
+        "销量",
+        "增加收入"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample10:log:0",
+      "timestamp": "2024-09-06 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在手机上进行了导航应用启动操作：设置目的地为商业区中心。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "导航",
+        "商业区"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample10:log:1",
+      "timestamp": "2024-09-06 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户通过车载支付系统完成服务购买，产品：短途打车服务（起步价）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "短途打车",
+        "支付"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample10:log:2",
+      "timestamp": "2024-09-06 12:05:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户通过扫码支付完成商品购买，产品：牛肉盖饭+饮料。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "牛肉盖饭",
+        "午餐"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample10:log:3",
+      "timestamp": "2024-09-06 12:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在车内进行了健康监测操作：记录腰部拉伸时长为8分钟。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "腰部拉伸",
+        "健康监测"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample10:log:4",
+      "timestamp": "2024-09-06 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户通过车载支付系统完成服务购买，产品：长途打车服务（里程费）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "长途打车",
+        "支付"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample10:log:5",
+      "timestamp": "2024-09-06 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户浏览了短视频平台的视频，主要内容为：搞笑合集。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "短视频",
+        "搞笑合集"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample10:log:6",
+      "timestamp": "2024-09-07 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户搜索了人体工学座椅垫，并查看了商品推荐页面。",
+      "interest_signal": true,
+      "category": "Shopping & Fashion",
+      "keywords": [
+        "人体工学座椅垫",
+        "商品推荐"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0025:0025_sample10:log:7",
+      "timestamp": "2024-09-07 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在车内进行了座椅调整操作：安装人体工学座椅垫并测试舒适度。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "人体工学座椅垫",
+        "舒适度"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0025:0025_sample10:log:8",
+      "timestamp": "2024-09-07 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在家用智能温控热水袋设置了温度为45°C，持续时间为20分钟。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "智能温控热水袋",
+        "设置温度"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample10:log:9",
+      "timestamp": "2024-09-08 12:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在车内进行了健康监测操作：记录肩颈拉伸动作次数为5次。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "健康监测",
+        "肩颈拉伸"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample10:log:10",
+      "timestamp": "2024-09-08 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户浏览了音乐平台的歌曲，主要内容为：轻音乐播放列表。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "轻音乐",
+        "播放列表"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample10:log:11",
+      "timestamp": "2024-09-09 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在手机上进行了导航应用暂停操作：标记当前位置为临时休息点。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "导航",
+        "临时休息点"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample10:log:12",
+      "timestamp": "2024-09-09 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户浏览了冥想应用的音频，主要内容为：五分钟基础冥想指导。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "冥想",
+        "音频"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample10:log:13",
+      "timestamp": "2024-09-10 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户向车队管理员发送消息：“今天身体不适，提前收车。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "身体不适",
+        "提前收车"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample10:log:14",
+      "timestamp": "2024-09-10 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户向妻子发送消息：“我们得计划一下下个月的开销。”",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "计划开销",
+        "家庭财务"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample10:log:15",
+      "timestamp": "2024-09-11 12:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在车内进行了健康监测操作：记录腰部拉伸时长为15分钟。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "健康监测",
+        "腰部拉伸"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample10:log:16",
+      "timestamp": "2024-09-11 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在手机上进行了计时器设置操作：每两小时提醒停车活动。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "定时提醒",
+        "停车活动"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample10:log:17",
+      "timestamp": "2024-09-12 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在车内进行了座椅调整操作：改变座椅垫倾斜角度为10°。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "座椅调整"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample10:log:18",
+      "timestamp": "2024-09-12 11:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在手机上进行了健康记录操作：标记腰部疲劳等级为中度。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "健康记录",
+        "腰部疲劳"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample10:log:19",
+      "timestamp": "2024-09-12 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample10",
+      "content": "用户在手机日历创建了“整理工作计划”日程，时间：14:00-15:00，地点：家中书房。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "日历",
+        "工作计划"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample11:log:0",
+      "timestamp": "2024-09-13 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户搜索了“附近加油站”，并查看了最近的三家加油站的位置和油价。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "加油站",
+        "油价"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample11:log:1",
+      "timestamp": "2024-09-13 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户浏览了抖音的视频，主要内容为搞笑段子和生活技巧。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "抖音",
+        "搞笑段子",
+        "生活技巧"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample11:log:2",
+      "timestamp": "2024-09-13 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户搜索了“市区内最短路线”，并查看了推荐的最佳路径。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "最短路线",
+        "导航"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample11:log:3",
+      "timestamp": "2024-09-13 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户向妻子发送消息：“我马上到家了，大概10分钟后。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "到家",
+        "消息"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample11:log:4",
+      "timestamp": "2024-09-14 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户搜索了“今日天气情况”，并查看了未来几小时的降雨概率。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "weather check"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample11:log:5",
+      "timestamp": "2024-09-14 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户通过支付宝完成了商品购买，产品：苹果5斤、菠菜2斤。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "grocery purchase"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample11:log:6",
+      "timestamp": "2024-09-14 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户在智能家居系统进行了衣物分类操作：将夏装收纳进储物箱。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "seasonal clothing storage"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample11:log:7",
+      "timestamp": "2024-09-15 06:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户在智能手环记录了运动数据：伸展动作10分钟，腰部扭转练习5分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "stretching",
+        "exercise tracking"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample11:log:8",
+      "timestamp": "2024-09-15 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户通过微信支付完成了服务购买，产品：轻便盒饭套餐（鸡肉+米饭）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "meal purchase"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample11:log:9",
+      "timestamp": "2024-09-15 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户在平板电脑选择了儿童故事书，并朗读了《小熊维尼》中的一个章节。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children's storybook",
+        "reading aloud"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample11:log:10",
+      "timestamp": "2024-09-16 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户向妻子发送消息：“今天早些回去，一起去商场买东西吧。”",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "spouse",
+        "shopping together"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample11:log:11",
+      "timestamp": "2024-09-16 17:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户通过信用卡完成了商品购买，产品：儿童羽绒服两件套。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children's clothing"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample11:log:12",
+      "timestamp": "2024-09-16 18:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户在空气净化器APP设置了定时开关功能：晚上22点自动关闭。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "appliance timer"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample11:log:13",
+      "timestamp": "2024-09-17 06:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户在智能手环记录了新增运动数据：腿部拉伸10分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "leg stretching",
+        "exercise tracking"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample11:log:14",
+      "timestamp": "2024-09-17 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户在智能水杯记录了饮水量：一次性补充500ml温水。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "hydration tracking"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample11:log:15",
+      "timestamp": "2024-09-17 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户在记账软件发布了支出计划，主要内容为：下月房租预算3000元。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "budgeting",
+        "expense planning"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample11:log:16",
+      "timestamp": "2024-09-18 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户搜索了“周末天气”，并查看了周六下午的晴天概率。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "weather check"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample11:log:17",
+      "timestamp": "2024-09-18 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户在智能手表计时器设置了训练时间：每次练习持续20分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "training timer",
+        "exercise routine"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample11:log:18",
+      "timestamp": "2024-09-18 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户浏览了知乎的文章，主要内容为改善慢性病的日常饮食建议。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "chronic illness diet",
+        "health reading"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample11:log:19",
+      "timestamp": "2024-09-19 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample11",
+      "content": "用户通过便利店扫码支付完成了商品购买，产品：蜂蜜柠檬饮料3瓶。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "beverage purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample12:log:0",
+      "timestamp": "2024-09-20 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在智能手环进行了健康数据记录操作：记录了今日的基础体操锻炼时长为15分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "基础体操",
+        "锻炼记录"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample12:log:1",
+      "timestamp": "2024-09-20 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户接收到来自微信的消息：“您好，这是社区团购代理模式的详细介绍，请查收。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "微信消息",
+        "团购介绍"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample12:log:2",
+      "timestamp": "2024-09-20 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户搜索了“社区团购供应商联系方式”，并查看了相关企业的官网和联系方式。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社区团购",
+        "供应商"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample12:log:3",
+      "timestamp": "2024-09-21 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在手机进行了通话操作：拨打供应商A的电话，通话时长为8分钟。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "供应商沟通",
+        "团购"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample12:log:4",
+      "timestamp": "2024-09-21 12:25:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在手机进行了通话操作：拨打供应商B的电话，通话时长为12分钟。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "供应商沟通",
+        "团购"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample12:log:5",
+      "timestamp": "2024-09-21 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户浏览了抖音的文章，主要内容为：如何快速学会折纸鹤。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "手工"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample12:log:6",
+      "timestamp": "2024-09-21 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在手机进行了拍照操作：拍摄了一张纸鹤的照片，并保存到相册中。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "拍照"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample12:log:7",
+      "timestamp": "2024-09-22 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在智能手表进行了运动记录操作：记录了今日的户外活动时长为30分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "户外活动",
+        "运动记录"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample12:log:8",
+      "timestamp": "2024-09-22 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户通过淘宝完成商品购买，产品：折纸教程书+彩纸套装（20张）。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸教程",
+        "彩纸"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample12:log:9",
+      "timestamp": "2024-09-23 06:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在智能手环进行了健康数据记录操作：记录了今日的基础体操锻炼时长为10分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "基础体操",
+        "锻炼记录"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample12:log:10",
+      "timestamp": "2024-09-23 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户搜索了“附近便利店和快递站点分布”，并查看了具体位置信息。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "便利店",
+        "快递站点"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample12:log:11",
+      "timestamp": "2024-09-23 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户通过手机银行完成服务购买，产品：教育储备金账户开通服务。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "教育储备金",
+        "账户开通"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample12:log:12",
+      "timestamp": "2024-09-24 17:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户通过支付宝完成商品购买，产品：绿萝（1盆）、多肉（2盆）、吊兰（1盆）。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "绿植",
+        "盆栽"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample12:log:13",
+      "timestamp": "2024-09-24 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户搜索了“绿萝养护方法”，并查看了养护指南文章。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "绿萝养护",
+        "园艺"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample12:log:14",
+      "timestamp": "2024-09-24 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在智能音箱进行了语音指令操作：播放儿童版植物养护教学音频。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "植物养护",
+        "园艺"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample12:log:15",
+      "timestamp": "2024-09-25 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户向社区团购客服发送消息：“您好，我想了解合作细节。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社区团购",
+        "合作细节"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample12:log:16",
+      "timestamp": "2024-09-25 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在手机进行了拍照操作：拍摄了一张复杂纸船的照片，并保存到相册中。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photography",
+        "paper craft"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample12:log:17",
+      "timestamp": "2024-09-25 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户向妻子发送消息：“我们今晚讨论一下预算调整吧。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "budget discussion"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample12:log:18",
+      "timestamp": "2024-09-26 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在智能园艺工具进行了修剪操作：修剪了绿萝和吊兰的多余枝叶。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "gardening",
+        "houseplants"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample12:log:19",
+      "timestamp": "2024-09-26 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample12",
+      "content": "用户在智能园艺工具进行了换土操作：为绿萝更换了营养土。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "gardening",
+        "houseplants"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:0",
+      "timestamp": "2024-09-27 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户搜索了“市中心到郊区沿途加油站”，并查看了最近的几家加油站的评价和位置。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "gas station search"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:1",
+      "timestamp": "2024-09-27 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户在手机地图应用中进行了路线规划操作：选择了一个距离当前位置约5公里的加油站作为目的地。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "route planning"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:2",
+      "timestamp": "2024-09-27 11:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户向妻子发送消息：“今天的手工饰品订单情况怎么样？”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "handmade jewelry",
+        "orders"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample13:log:3",
+      "timestamp": "2024-09-27 11:46:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户接收到来自妻子的消息：“还不错，有几个客户问了定制的事。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "received message"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:4",
+      "timestamp": "2024-09-27 12:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户浏览了学校家长群的文章，主要内容为：“本周数学作业重点解析及学习建议。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "parenting",
+        "school group"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample13:log:5",
+      "timestamp": "2024-09-27 13:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户在车载导航系统中进行了路径设置操作：输入了“阳光批发市场”作为目的地。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "navigation"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:6",
+      "timestamp": "2024-09-27 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户通过现金完成商品购买，产品：苹果（5公斤）、香蕉（3公斤）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "fruit purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:7",
+      "timestamp": "2024-09-27 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户在智能音箱上播放了折纸教程视频，并跟随视频完成了几只简单的动物模型。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "origami",
+        "crafts"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:8",
+      "timestamp": "2024-09-27 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户通过微信支付完成商品购买，产品：小型绿植（一盆）。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "houseplants"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample13:log:9",
+      "timestamp": "2024-09-28 06:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户搜索了“今日市区天气情况”，并查看了实时温度和空气质量指数。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "weather check"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:10",
+      "timestamp": "2024-09-28 08:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户在手机日历中创建了一个提醒事项：标记下午散步时间为13:00-13:30。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "reminder"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:11",
+      "timestamp": "2024-09-28 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户在智能手环上启动了计步功能，记录了散步过程中的步数和心率变化。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "walking",
+        "step tracking"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample13:log:12",
+      "timestamp": "2024-09-28 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户浏览了某社区团购平台的文章，主要内容为：“如何成为优秀团长的指南。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社区团购",
+        "团长",
+        "指南"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample13:log:13",
+      "timestamp": "2024-09-28 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户在手机备忘录中新增了一条笔记，记录了两个供应商的联系电话和地址信息。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "供应商",
+        "联系方式",
+        "团购"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample13:log:14",
+      "timestamp": "2024-09-29 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户向同事发送消息：“今天有点不舒服，可能需要稍微调整一下班次。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "班次调整",
+        "身体不适"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample13:log:15",
+      "timestamp": "2024-09-29 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户向供应商发送语音通话请求：“您好，请问你们的团购政策是怎样的？”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "供应商",
+        "团购政策"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample13:log:16",
+      "timestamp": "2024-09-29 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户浏览了某视频平台的纪录片，主要内容为：“全球珍稀动植物保护现状。”",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "纪录片",
+        "珍稀动植物",
+        "自然保护"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample13:log:17",
+      "timestamp": "2024-09-29 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户向妻子发送消息：“刚刚看到一种很有趣的鸟类，它们的迁徙习惯非常特别！”",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "鸟类",
+        "迁徙",
+        "自然"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample13:log:18",
+      "timestamp": "2024-09-30 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户在智能手表上设置了倒计时：标记休息时间为30分钟。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "倒计时",
+        "休息"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample13:log:19",
+      "timestamp": "2024-09-30 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户向妻子发送消息：“我们得重新规划下月的预算，尤其是孩子的教育费用。”",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "预算",
+        "教育费用"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample13:log:20",
+      "timestamp": "2024-09-30 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample13",
+      "content": "用户通过邮箱注册了一门免费课程，产品：摄影入门课程（基础班）。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "摄影",
+        "课程",
+        "学习"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:0",
+      "timestamp": "2024-10-01 08:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户在出租车导航设备上进行了路线规划操作：设定目的地为“市中心商业广场”。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "路线规划",
+        "商业广场"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:1",
+      "timestamp": "2024-10-01 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户搜索了“附近快餐店”，并查看了“阳光快餐”的菜单和评价。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "快餐店",
+        "菜单"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample14:log:2",
+      "timestamp": "2024-10-01 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户通过支付宝完成商品购买，产品：阳光快餐套餐A。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "快餐套餐",
+        "购买"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample14:log:3",
+      "timestamp": "2024-10-01 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户在出租车导航设备上进行了路线规划操作：设定目的地为“城市之星酒店8楼802室”。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "路线规划",
+        "酒店"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:4",
+      "timestamp": "2024-10-01 15:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户搜索了“慢性咽炎缓解方法”，并查看了健康网站上的相关文章。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "慢性咽炎",
+        "缓解方法",
+        "健康"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample14:log:5",
+      "timestamp": "2024-10-01 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户接收到来自妻子的消息：“今天晚饭已经准备好了，记得早点回来。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "晚饭",
+        "妻子消息"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:6",
+      "timestamp": "2024-10-02 07:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户在出租车计价器上进行了多次计费操作：总金额累计至120元。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "计价器",
+        "计费"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample14:log:7",
+      "timestamp": "2024-10-02 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户通过微信支付完成商品购买，产品：热豆浆一杯+馒头一个。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "breakfast purchase",
+        "routine purchase"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample14:log:8",
+      "timestamp": "2024-10-02 13:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户在出租车导航设备上进行了路线规划操作：设定目的地为“市火车站”和“国际机场T2航站楼”。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "route planning",
+        "transportation"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:9",
+      "timestamp": "2024-10-02 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户向妻子发送消息：“我快到家了，晚餐大概几点？”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "family message",
+        "dinner timing"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample14:log:10",
+      "timestamp": "2024-10-03 06:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户在出租车导航设备上进行了路线规划操作：设定目的地为“青山湖景区停车场”。",
+      "interest_signal": true,
+      "category": "Travel & Outdoors",
+      "keywords": [
+        "scenic area",
+        "outing"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample14:log:11",
+      "timestamp": "2024-10-03 13:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户通过支付宝完成商品购买，产品：矿泉水一瓶+巧克力饼干两包。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "snack purchase",
+        "routine purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:12",
+      "timestamp": "2024-10-03 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户通过药店小程序完成药品购买，产品：胃舒宁片一盒。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "medication purchase",
+        "stomach medicine"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample14:log:13",
+      "timestamp": "2024-10-03 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户浏览了妻子手工装饰品的照片，主要内容为：客厅挂饰设计细节展示。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "handicraft",
+        "home decor"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0025:0025_sample14:log:14",
+      "timestamp": "2024-10-04 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户通过现金支付完成商品购买，产品：红烧牛肉面一份。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "meal purchase",
+        "routine purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:15",
+      "timestamp": "2024-10-04 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户在出租车导航设备上进行了实时路况查询操作：显示前方路段拥堵约2公里。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "traffic query",
+        "navigation"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:16",
+      "timestamp": "2024-10-04 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户在冰箱智能屏上进行了食物查询操作：查看剩余菜品存储情况。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "food storage check",
+        "routine"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample14:log:17",
+      "timestamp": "2024-10-05 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户通过医院自助机完成药品购买，产品：咽炎片一盒。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "medication purchase",
+        "throat medicine"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample14:log:18",
+      "timestamp": "2024-10-05 16:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户通过微信支付完成商品购买，产品：苹果三斤+香蕉两斤。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "fruit purchase",
+        "routine purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample14:log:19",
+      "timestamp": "2024-10-05 17:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample14",
+      "content": "用户向妻子发送消息：“你的手工作品真的很棒，给家里省了不少钱！”",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "spouse support",
+        "handicraft appreciation"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample15:log:0",
+      "timestamp": "2024-10-06 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在出租车导航设备进行了启动操作：设置目的地为市区中心。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "route planning",
+        "commute"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample15:log:1",
+      "timestamp": "2024-10-06 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户通过线下支付完成快餐购买，产品：一份炸鸡套餐。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "fast food purchase",
+        "routine purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample15:log:2",
+      "timestamp": "2024-10-06 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在出租车接单APP进行了刷新操作：查看附近订单。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "ride-hailing",
+        "order check"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample15:log:3",
+      "timestamp": "2024-10-06 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户向妻子发送消息：“我今天嗓子不舒服，可能需要买点药。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "sore throat",
+        "buying medicine"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample15:log:4",
+      "timestamp": "2024-10-07 07:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在手机闹钟APP进行了关闭操作：结束早晨闹钟提醒。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "morning alarm",
+        "routine"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample15:log:5",
+      "timestamp": "2024-10-07 10:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在出租车计价器进行了启动操作：记录行程费用。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "taxi meter",
+        "trip fare"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample15:log:6",
+      "timestamp": "2024-10-07 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户通过扫码支付完成煎饼果子购买，产品：一份加蛋煎饼果子。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "pancake purchase",
+        "payment"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample15:log:7",
+      "timestamp": "2024-10-07 22:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户浏览了短视频平台的搞笑视频，主要内容为：一段宠物搞笑集锦。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "short videos",
+        "funny pet clips"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample15:log:8",
+      "timestamp": "2024-10-08 06:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在出租车接单APP进行了登录操作：进入早高峰模式。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "taxi app login",
+        "morning rush"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample15:log:9",
+      "timestamp": "2024-10-08 10:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在健康手环进行了记录操作：记录五分钟拉伸数据。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "stretching",
+        "fitness tracker"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample15:log:10",
+      "timestamp": "2024-10-08 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户通过现金支付完成零食购买，产品：一包巧克力夹心饼干。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "snack purchase",
+        "chocolate biscuits"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample15:log:11",
+      "timestamp": "2024-10-08 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在智能音箱进行了播放操作：播放轻音乐《夜色》。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "light music",
+        "smart speaker"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample15:log:12",
+      "timestamp": "2024-10-09 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户通过扫码支付完成汤面购买，产品：一碗牛肉汤面。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "noodle purchase",
+        "payment"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample15:log:13",
+      "timestamp": "2024-10-09 17:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在手机日历创建了“定时休息”日程，时间：17:00-17:10，地点：路边停车位。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "scheduled rest",
+        "break reminder"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0025:0025_sample15:log:14",
+      "timestamp": "2024-10-09 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户接收到来自乘客的消息：“这条路太堵了，能不能换条路？”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "passenger message",
+        "traffic"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample15:log:15",
+      "timestamp": "2024-10-10 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户通过药店购买润喉含片和消炎药，产品：两盒润喉片、一瓶消炎药。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "pharmacy",
+        "throat medicine"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample15:log:16",
+      "timestamp": "2024-10-10 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户搜索了“如何正确进行深呼吸”，并查看了相关教程。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "deep breathing",
+        "tutorial search"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample15:log:17",
+      "timestamp": "2024-10-11 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户在保温杯进行了取用操作：倒出一杯温水饮用。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "drinking water",
+        "thermos"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample15:log:18",
+      "timestamp": "2024-10-11 14:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户接收到来自诊所医生的消息：“建议您规律饮食并适当锻炼。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "doctor message",
+        "diet advice"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample15:log:19",
+      "timestamp": "2024-10-11 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户浏览了健康网站的文章，主要内容为：缓解职业疲劳的方法。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "职业疲劳",
+        "健康文章"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample15:log:20",
+      "timestamp": "2024-10-12 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户通过扫码支付完成午餐购买，产品：一份清蒸鱼套餐。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "午餐购买"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample15:log:21",
+      "timestamp": "2024-10-12 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample15",
+      "content": "用户搜索了“汽车座椅垫推荐”，并查看了几款高评价产品。",
+      "interest_signal": true,
+      "category": "Shopping & Fashion",
+      "keywords": [
+        "汽车座椅垫",
+        "产品推荐"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample16:log:0",
+      "timestamp": "2024-10-13 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在出租车导航系统中设置了从市中心到郊区的路线，并完成了导航。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "导航路线"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample16:log:1",
+      "timestamp": "2024-10-13 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户浏览了手机记账APP中的当日收入数据，主要内容为：上午完成一单长途订单，收入300元。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "记账",
+        "收入"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample16:log:2",
+      "timestamp": "2024-10-13 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户向妻子发送消息：“我们已经到游乐场了，孩子们很开心。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "游乐场",
+        "孩子"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample16:log:3",
+      "timestamp": "2024-10-13 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在手机记账APP中输入了今日总收入，金额为600元。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "记账",
+        "收入"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample16:log:4",
+      "timestamp": "2024-10-13 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在手机日历创建了“周一接送固定客户”的日程，时间：08:00-10:00，地点：市区主干道。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "日程",
+        "客户"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample16:log:5",
+      "timestamp": "2024-10-14 07:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在智能手环上启动了运动模式，记录了15分钟的伸展运动和腰部放松动作。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "伸展运动",
+        "腰部放松"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample16:log:6",
+      "timestamp": "2024-10-14 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在车载导航中设置了从家到阳光幼儿园的路线，并完成了导航。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "导航",
+        "幼儿园"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample16:log:7",
+      "timestamp": "2024-10-14 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在出租车内启用了计时提醒功能，每两小时提示下车休息。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "计时提醒",
+        "休息"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample16:log:8",
+      "timestamp": "2024-10-14 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户向妻子发送消息：“今天我来洗碗吧，你辛苦了。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "洗碗",
+        "妻子"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample16:log:9",
+      "timestamp": "2024-10-15 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在智能手环上记录了20分钟的晨练活动，包括慢走和拉伸。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "晨练",
+        "慢走",
+        "拉伸"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample16:log:10",
+      "timestamp": "2024-10-15 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户通过支付宝完成了一份健康餐购买，产品：鸡肉沙拉+全麦面包。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "健康餐",
+        "鸡肉沙拉"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample16:log:11",
+      "timestamp": "2024-10-15 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户浏览了音乐APP的推荐列表，主要内容为：播放了名为《自然之声》的舒缓音乐专辑。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "舒缓音乐",
+        "自然之声"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample16:log:12",
+      "timestamp": "2024-10-15 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户向妻子发送消息：“今晚孩子们学会了一首新儿歌，真开心。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "孩子",
+        "儿歌"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample16:log:13",
+      "timestamp": "2024-10-16 07:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在智能手环上记录了20分钟的晨练活动，心率数据显示比昨日有所改善。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "晨练",
+        "心率监测"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample16:log:14",
+      "timestamp": "2024-10-16 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户通过微信支付完成了一份清淡餐购买，产品：清蒸鱼+蔬菜沙拉。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "清淡餐",
+        "健康饮食"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample16:log:15",
+      "timestamp": "2024-10-16 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在家庭维修APP中搜索了“如何更换灯泡”，并查看了相关教程。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "家庭维修",
+        "DIY"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample16:log:16",
+      "timestamp": "2024-10-17 07:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在智能手环上记录了25分钟的晨练活动，重点是腰部拉伸。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "晨练",
+        "腰部拉伸"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample16:log:17",
+      "timestamp": "2024-10-17 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户向妻子发送消息：“我们可以考虑减少夜班，多陪陪孩子们。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "陪伴孩子",
+        "家庭时间"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample16:log:18",
+      "timestamp": "2024-10-18 07:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户在智能手环上记录了20分钟的晨练活动，心率数据显示稳定。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "晨练",
+        "心率监测"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample16:log:19",
+      "timestamp": "2024-10-18 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户接收到来自平台的通知：“当前订单较少，建议适当休息。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "平台通知"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample16:log:20",
+      "timestamp": "2024-10-18 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample16",
+      "content": "用户浏览了美食APP的推荐列表，主要内容为：收藏了几道适合家庭聚餐的菜谱。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "菜谱",
+        "家庭聚餐"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample17:log:0",
+      "timestamp": "2024-10-20 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在智能手环进行了运动记录操作：标记完成了15分钟的基础体操。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "基础体操",
+        "运动记录"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample17:log:1",
+      "timestamp": "2024-10-20 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户向供应商发送消息：“您好，请问可以详细介绍一下代理条件和收益模式吗？”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "代理条件",
+        "收益模式"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample17:log:2",
+      "timestamp": "2024-10-20 12:40:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户接收到来自供应商的消息：“代理条件包括押金和月销售指标，收益按销售额比例分配。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "供应商消息"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample17:log:3",
+      "timestamp": "2024-10-20 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在手机银行APP上查看了教育储蓄账户相关信息，并记录下开户所需材料。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "教育储蓄",
+        "开户"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample17:log:4",
+      "timestamp": "2024-10-21 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户通过银行柜台完成了储蓄账户开设，产品：教育储蓄账户。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "教育储蓄账户"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample17:log:5",
+      "timestamp": "2024-10-21 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户浏览了电子书平台的文章，主要内容为：折纸基础技巧及示例作品展示。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "手工"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample17:log:6",
+      "timestamp": "2024-10-21 20:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在智能平板上观看了一个折纸教程视频，并跟随步骤制作了纸鹤。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "纸鹤",
+        "教程"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample17:log:7",
+      "timestamp": "2024-10-22 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在地图服务APP上标注了多个地点，备注为“潜在团购客户区域”。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "团购客户",
+        "区域标注"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample17:log:8",
+      "timestamp": "2024-10-22 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在智能平板上打开了折纸教学页面，并指导孩子们完成简单作品。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "手工"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample17:log:9",
+      "timestamp": "2024-10-23 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在笔记软件发布了文章，主要内容为：社区团购代理行动计划清单。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "社区团购",
+        "代理计划"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample17:log:10",
+      "timestamp": "2024-10-23 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户通过电商平台完成商品购买，产品：一盆绿萝+一盆多肉植物。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "绿萝",
+        "多肉植物"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample17:log:11",
+      "timestamp": "2024-10-23 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在手机浏览器搜索了关键词“绿萝养护”，并查看了相关文章。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "绿萝养护",
+        "植物养护"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample17:log:12",
+      "timestamp": "2024-10-24 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户向供应商发送消息：“请问我们下周面谈的具体时间和地点是？”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "供应商面谈"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample17:log:13",
+      "timestamp": "2024-10-24 13:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户接收到来自供应商的消息：“下周三上午10点，在公司会议室见面详谈。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "供应商消息"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample17:log:14",
+      "timestamp": "2024-10-24 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在智能平板上播放高级折纸教程视频，并成功完成复杂作品。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "高级教程"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample17:log:15",
+      "timestamp": "2024-10-25 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在财务管理APP中录入了近期收入与支出明细。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "记账",
+        "收支管理"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample17:log:16",
+      "timestamp": "2024-10-25 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在智能平板上打开儿童折纸教程，并协助孩子们完成作品。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "儿童手工"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample17:log:17",
+      "timestamp": "2024-10-26 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户接收到来自供应商的消息：“附件为合作合同模板，请查阅。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "合同模板"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample17:log:18",
+      "timestamp": "2024-10-26 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户浏览了电子邮件中的合同文档，主要内容为：合作条款与细则。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "合同文档"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample17:log:19",
+      "timestamp": "2024-10-26 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample17",
+      "content": "用户在智能平板上录制了纸青蛙弹跳测试的小视频，并分享给家人观看。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "折纸",
+        "纸青蛙"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample18:log:0",
+      "timestamp": "2024-10-27 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在智能手机上记录了身体状态：腰部疼痛加剧。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "腰痛",
+        "身体状态记录"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:1",
+      "timestamp": "2024-10-27 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户通过商场POS机完成商品购买，产品：腰部按摩仪（型号XYZ）。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "腰部按摩仪",
+        "健康管理"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:2",
+      "timestamp": "2024-10-27 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了说明书文档，主要内容为：使用方法和注意事项。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "说明书"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample18:log:3",
+      "timestamp": "2024-10-27 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在家中智能插座上启动了腰部按摩仪器，持续时间：20分钟。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "腰部按摩",
+        "理疗"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:4",
+      "timestamp": "2024-10-27 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了视频平台的纪录片，主要内容为：非洲草原生态系统与北极冰川变化。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "documentary",
+        "nature",
+        "video platform"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:5",
+      "timestamp": "2024-10-27 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在平板电脑上记录了笔记，内容包括关键知识点和感想。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "note-taking",
+        "knowledge points"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample18:log:6",
+      "timestamp": "2024-10-27 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户向家庭群聊发送消息：“今天我们一起折了一个小动物模型。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "family chat",
+        "origami"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample18:log:7",
+      "timestamp": "2024-10-28 06:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在健身APP上记录了拉伸动作，涉及部位：腰部、背部肌肉。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "stretching",
+        "fitness app"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample18:log:8",
+      "timestamp": "2024-10-28 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在车载语音助手记录了健康状态：完成颈部放松练习。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "neck relaxation",
+        "health tracking"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample18:log:9",
+      "timestamp": "2024-10-28 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在家中智能插座上调整了按摩仪器强度为中档，并使用20分钟。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "massage device",
+        "relaxation"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample18:log:10",
+      "timestamp": "2024-10-28 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了在线教育平台的课程，主要内容为：基础摄影技巧与构图方法。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photography",
+        "composition",
+        "online course"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample18:log:11",
+      "timestamp": "2024-10-28 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在手机相机应用中拍摄了街景照片，并存储于相册。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photography",
+        "street scenes"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:12",
+      "timestamp": "2024-10-28 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了银行APP的账户信息，主要内容为：当前余额与近期支出明细。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "bank balance",
+        "expenses"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample18:log:13",
+      "timestamp": "2024-10-28 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户向妻子发送消息：“我们需要减少不必要的开支，争取每月存更多钱。”",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "saving",
+        "spending reduction"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:14",
+      "timestamp": "2024-10-29 06:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在日历APP上创建了每日提醒事项：完成10分钟拉伸运动。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "stretching",
+        "daily reminder"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample18:log:15",
+      "timestamp": "2024-10-29 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了视频平台的教学视频，主要内容为：如何修剪盆栽枝叶和浇水。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "gardening",
+        "pruning",
+        "potted plants"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample18:log:16",
+      "timestamp": "2024-10-29 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在智能家居系统中记录了园艺活动：修剪盆栽枝叶并浇灌适量水分。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "gardening",
+        "plant care"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample18:log:17",
+      "timestamp": "2024-10-29 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在手机修图软件中调整了照片亮度与对比度。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "photo editing",
+        "photography"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:18",
+      "timestamp": "2024-10-29 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在智能家居系统中记录了种植活动：种植一盆新多肉植物。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "gardening",
+        "succulent planting"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample18:log:19",
+      "timestamp": "2024-10-30 06:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在健身APP上记录了当天的拉伸动作，持续时间：10分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "stretching",
+        "fitness app"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample18:log:20",
+      "timestamp": "2024-10-31 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在出租车导航系统进行了操作：查看今日接单记录，显示上午仅完成3笔订单。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "接单记录",
+        "出租车工作"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample18:log:21",
+      "timestamp": "2024-10-31 13:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在出租车导航系统中搜索了“市中心商圈”的实时交通情况，并规划了一条前往该区域的路线。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "路线规划",
+        "交通情况"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample18:log:22",
+      "timestamp": "2024-10-31 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户向妻子发送消息：“新衣服还没买吧？我明天抽空看看。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "妻子",
+        "买衣服"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:23",
+      "timestamp": "2024-11-01 06:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在智能手表上设置了闹钟提醒，并提前启动了出租车的GPS定位功能。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "闹钟",
+        "GPS定位"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample18:log:24",
+      "timestamp": "2024-11-01 12:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户搜索了“如何缓解长期驾驶导致的腰痛”，并查看了一些拉伸动作教程。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "腰痛缓解",
+        "拉伸动作"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample18:log:25",
+      "timestamp": "2024-11-01 12:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在健身类APP上观看了一个5分钟的腰部拉伸视频，并跟随练习。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "腰部拉伸",
+        "健身APP"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample18:log:26",
+      "timestamp": "2024-11-01 20:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在健康助手APP上记录了服用止痛药的时间和剂量。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "止痛药",
+        "服药记录"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample18:log:27",
+      "timestamp": "2024-11-02 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在出租车导航系统中规划了一条避开拥堵路段的节能路线。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "节能路线",
+        "避堵"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample18:log:28",
+      "timestamp": "2024-11-02 13:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了某短视频平台的一段视频，主要内容为‘如何通过平稳驾驶降低油耗’。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "平稳驾驶",
+        "降低油耗"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0025:0025_sample18:log:29",
+      "timestamp": "2024-11-02 18:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在打车平台APP上确认了一笔从市中心到郊区的长途订单。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "长途订单",
+        "打车平台"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0025:0025_sample18:log:30",
+      "timestamp": "2024-11-02 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在健康助手APP上记录了当天的驾驶时长和身体不适情况。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "驾驶时长",
+        "身体不适"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0025:0025_sample18:log:31",
+      "timestamp": "2024-11-03 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了一个微信公众号文章，主要内容为‘淡季如何提高收入’。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "淡季收入",
+        "提高收入"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:32",
+      "timestamp": "2024-11-03 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户通过线下支付完成药品购买，产品包括止痛药一瓶、按摩膏一支。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "止痛药",
+        "按摩膏"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0025:0025_sample18:log:33",
+      "timestamp": "2024-11-03 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在家庭记账APP上新增了一项待办任务：检查现有取暖设备状态。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "记账",
+        "取暖设备"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample18:log:34",
+      "timestamp": "2024-11-04 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户搜索了“二手取暖器推荐”，并查看了几款低价产品的评价信息。",
+      "interest_signal": true,
+      "category": "Shopping & Fashion",
+      "keywords": [
+        "二手取暖器",
+        "产品评价"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample18:log:35",
+      "timestamp": "2024-11-04 14:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了某招聘网站的一篇帖子，主要内容为‘适合司机的兼职工作推荐’。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "兼职工作",
+        "司机"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample18:log:36",
+      "timestamp": "2024-11-04 19:15:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在家庭相册APP中上传了几张与孩子的合照，并添加了日期标记。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "家庭相册",
+        "孩子合照",
+        "记录"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample18:log:37",
+      "timestamp": "2024-11-05 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户浏览了某电商平台的商品页，主要内容为‘新款节能取暖器介绍’。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "取暖器",
+        "商品浏览"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample18:log:38",
+      "timestamp": "2024-11-05 12:10:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在打车平台APP上确认了一笔短途订单，起点为商场附近，终点为火车站。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "打车",
+        "短途订单"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample18:log:39",
+      "timestamp": "2024-11-05 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample18",
+      "content": "用户在记账APP上录入了最近一周的家庭开支明细。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "记账",
+        "家庭开支"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample19:log:0",
+      "timestamp": "2024-11-06 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户浏览了手机读书APP的文章，主要内容为：饮食调理对慢性咽炎的帮助。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "饮食调理",
+        "慢性咽炎"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0025:0025_sample19:log:1",
+      "timestamp": "2024-11-06 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户在手机备忘录中进行了文本输入操作：记录了梨和银耳等润喉食品的信息。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "润喉食品",
+        "梨",
+        "银耳"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample19:log:2",
+      "timestamp": "2024-11-06 18:20:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户通过路边小摊完成商品购买，产品：梨5个、银耳一袋。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "梨",
+        "银耳",
+        "购买食材"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample19:log:3",
+      "timestamp": "2024-11-07 07:45:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户向车队调度员发送消息：“今天身体不适，会减少接单。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "身体不适",
+        "减少接单"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample19:log:4",
+      "timestamp": "2024-11-07 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户在车载音响系统中进行了播放列表切换操作：选择并播放轻音乐频道。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "轻音乐",
+        "播放列表"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample19:log:5",
+      "timestamp": "2024-11-07 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户搜索了腰部拉伸动作，并查看了相关图文教程。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "腰部拉伸",
+        "教程"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample19:log:6",
+      "timestamp": "2024-11-07 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户在智能手环中开启了运动模式：记录了5分钟的腰部拉伸活动数据。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "运动模式",
+        "腰部拉伸"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0025:0025_sample19:log:7",
+      "timestamp": "2024-11-08 06:50:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户在智能家居设备中设置了提醒事项：标记已饮用银耳汤。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "提醒事项",
+        "银耳汤"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0025:0025_sample19:log:8",
+      "timestamp": "2024-11-08 17:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户接收到来自常客的消息：“请帮我安排明天上午9点前往机场的车。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "常客消息",
+        "机场行程"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0025:0025_sample19:log:9",
+      "timestamp": "2024-11-08 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0025_sample19",
+      "content": "用户在家庭共享账单APP中新增了一项预算条目：冬季取暖设备预算5000元。",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "预算条目",
+        "取暖设备"
+      ],
+      "confidence": 0.6
+    }
+  ]
+}

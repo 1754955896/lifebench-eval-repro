@@ -1,0 +1,185 @@
+{
+  "2025-05-31": {
+    "retrieved_memory_ids": [
+      "event_1"
+    ],
+    "written_memory_ids": [
+      "event_1"
+    ]
+  },
+  "2025-06-01": {
+    "retrieved_memory_ids": [
+      "event_2",
+      "event_1"
+    ],
+    "written_memory_ids": [
+      "event_2"
+    ]
+  },
+  "2025-06-02": {
+    "retrieved_memory_ids": [
+      "event_3",
+      "event_2",
+      "event_1"
+    ],
+    "written_memory_ids": [
+      "event_3"
+    ]
+  },
+  "2025-06-03": {
+    "retrieved_memory_ids": [
+      "event_4",
+      "event_3",
+      "event_2",
+      "event_1"
+    ],
+    "written_memory_ids": [
+      "event_4"
+    ]
+  },
+  "2025-06-04": {
+    "retrieved_memory_ids": [
+      "event_5",
+      "event_4",
+      "event_3",
+      "event_2",
+      "event_1"
+    ],
+    "written_memory_ids": [
+      "event_5"
+    ]
+  },
+  "2025-06-05": {
+    "retrieved_memory_ids": [
+      "event_6",
+      "event_5",
+      "event_4",
+      "event_3",
+      "event_2"
+    ],
+    "written_memory_ids": [
+      "event_6"
+    ]
+  },
+  "2025-06-06": {
+    "retrieved_memory_ids": [
+      "event_7",
+      "event_6",
+      "event_5",
+      "event_4",
+      "event_3",
+      "event_1"
+    ],
+    "written_memory_ids": [
+      "event_7"
+    ]
+  },
+  "2025-06-07": {
+    "retrieved_memory_ids": [
+      "event_8",
+      "event_7",
+      "event_6",
+      "event_5",
+      "event_4",
+      "event_2",
+      "event_1"
+    ],
+    "written_memory_ids": [
+      "event_8"
+    ]
+  },
+  "2025-06-08": {
+    "retrieved_memory_ids": [
+      "event_9",
+      "event_8",
+      "event_7",
+      "event_6",
+      "event_5",
+      "event_3"
+    ],
+    "written_memory_ids": [
+      "event_9"
+    ]
+  },
+  "2025-06-09": {
+    "retrieved_memory_ids": [
+      "event_10",
+      "event_9",
+      "event_8",
+      "event_7",
+      "event_6",
+      "event_4"
+    ],
+    "written_memory_ids": [
+      "event_10"
+    ]
+  },
+  "2025-06-10": {
+    "retrieved_memory_ids": [
+      "event_11",
+      "event_10",
+      "event_9",
+      "event_8",
+      "event_7",
+      "event_5"
+    ],
+    "written_memory_ids": [
+      "event_11"
+    ]
+  },
+  "2025-06-11": {
+    "retrieved_memory_ids": [
+      "event_12",
+      "event_11",
+      "event_10",
+      "event_9",
+      "event_8",
+      "event_6"
+    ],
+    "written_memory_ids": [
+      "event_12"
+    ]
+  },
+  "2025-06-12": {
+    "retrieved_memory_ids": [
+      "event_13",
+      "event_12",
+      "event_11",
+      "event_10",
+      "event_9",
+      "event_7",
+      "event_1",
+      "event_8"
+    ],
+    "written_memory_ids": [
+      "event_13"
+    ]
+  },
+  "2025-06-13": {
+    "retrieved_memory_ids": [
+      "event_14",
+      "event_13",
+      "event_12",
+      "event_11",
+      "event_10",
+      "event_8",
+      "event_6"
+    ],
+    "written_memory_ids": [
+      "event_14"
+    ]
+  },
+  "2025-06-14": {
+    "retrieved_memory_ids": [
+      "event_15",
+      "event_14",
+      "event_13",
+      "event_12",
+      "event_11",
+      "event_9"
+    ],
+    "written_memory_ids": [
+      "event_15"
+    ]
+  }
+}

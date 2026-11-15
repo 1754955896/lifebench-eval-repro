@@ -14,7 +14,7 @@
 去首尾空白 → 折叠连续空白 → 统一 & 两侧空格 → 官方/别名表映射
 ```
 
-已确认别名：
+别名映射：
 
 | 原始字符串 | 规范结果 |
 |---|---|
@@ -23,8 +23,7 @@
 | `Family` | `Family&Living Situation` |
 | `Home&Living Situation` | `Family&Living Situation` |
 
-`K` 按归一化后的类别计数获得，不再使用归一化前的字符串数量。官方九类
-输入保持不变，函数幂等；映射只作用于计算，不写回 `daily_event.json`。
+`K` 按归一化后的类别计数获得。映射只作用于计算，不写回 `daily_event.json`。
 
 ## 指标
 
@@ -56,11 +55,8 @@ python -m evaluation.event_diversity.method \
   --data-dir data/lifebench_10people/fenghaoran \
   --output-dir output/event_diversity
 
-# 兼容原单文件入口
+# 单文件入口
 python -m evaluation.event_diversity.method \
   --file-path data/lifebench_10people/fenghaoran/daily_event.json \
   --output-dir output/event_diversity_single
 ```
-
-可选真实数据验收：对本地十人数据统计原始标签数、规范化变体数与事件
-总数；这些数值由输入实际统计，不写死为固定结果。

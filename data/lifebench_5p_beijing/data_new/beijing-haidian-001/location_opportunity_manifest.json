@@ -1,0 +1,26 @@
+{
+  "schema_version": "location_opportunity_manifest_v1",
+  "persona_hash": "12e6e531a9cf8473d85ca39c8fa4e69807c00cd6d47dd8d1ce8dc92f4b1ff735",
+  "base_location_hash": "dcb2e45e5de7100a68b2750e79eaec9f945542f2d332c2142d50b41f16ead327",
+  "generator_version": "location-opportunity-builder-v1",
+  "prompt_hash": "714871c7a4e9cd204f44c82b3426f594d64d8169471fe5dec4a4a5322ed58f72",
+  "map_provider": "amap",
+  "home_city": "北京市",
+  "simulation_start": "2025-01-08",
+  "poi_count_by_category": {
+    "scenic": 6,
+    "culture": 18,
+    "nature": 12,
+    "fitness": 6,
+    "entertainment": 6,
+    "meal": 6,
+    "shopping": 6
+  },
+  "poi_count_by_distance_band": {
+    "0-3": 2,
+    "3-10": 29,
+    "10-20": 29,
+    "20+": 0
+  },
+  "partial_failures": []
+}

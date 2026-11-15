@@ -1,0 +1,9 @@
+{
+  "schema_version": "simulation_asset_snapshot_v1",
+  "simulation_start": "2025-03-01",
+  "persona_hash": "5b3c6f4483c7475e07f756f32191576098fdc3136af381f8198f39847140717e",
+  "events_hash": "bf105be9fc8321013cfe4ec4fe6feed898437a295d2ebbf49247bf5e22d08185",
+  "location_asset_hash": "8bb7ffe176a44fea60f97383784265abf335032d0ea4e040ec13194d34031110",
+  "location_status": "cache_hit",
+  "frozen": true
+}

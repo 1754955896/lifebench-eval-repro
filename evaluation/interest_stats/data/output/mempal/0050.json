@@ -1,0 +1,6391 @@
+{
+  "schema_version": 1,
+  "method": {
+    "name": "Mem-PAL consecutive-day interest drift",
+    "formula": "1 - |C_t intersection C_(t-1)| / |C_t union C_(t-1)|",
+    "unit": "calendar-consecutive day pair",
+    "input_scope": "timestamped user logs only; dialogue/topics/labels excluded",
+    "empty_policy": "skip both-empty pairs; one-empty pairs have drift 1",
+    "prompt_version": "mempal-log-interest-v1",
+    "official_reproduction": false
+  },
+  "provenance": {
+    "user_id": "0050",
+    "history_only": false,
+    "evaluated_logs_sha256": "fecd426dd8d0b534d49deba67bae0017b66e13375c797aededb248cc1957af47",
+    "model": "deepseek-v4-flash"
+  },
+  "coverage": {
+    "log_count": 311,
+    "day_count": 86,
+    "first_date": "2024-08-11",
+    "last_date": "2024-11-08",
+    "source_sample_count": 27,
+    "source_split_counts": {
+      "history": 311
+    },
+    "duplicate_logs_removed": 0,
+    "interest_log_count": 201,
+    "interest_signal_rate": 0.646302
+  },
+  "interest_drift": {
+    "summary": {
+      "count": 82,
+      "mean": 0.76626,
+      "median": 0.8,
+      "stddev": 0.255123,
+      "p25": 0.666667,
+      "p75": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "skipped_both_empty_pairs": 0,
+    "monthly_summary": {
+      "2024-08": {
+        "count": 18,
+        "mean": 0.837963,
+        "median": 1.0,
+        "stddev": 0.195379,
+        "p25": 0.6875,
+        "p75": 1.0,
+        "min": 0.5,
+        "max": 1.0
+      },
+      "2024-09": {
+        "count": 25,
+        "mean": 0.763333,
+        "median": 0.8,
+        "stddev": 0.259101,
+        "p25": 0.666667,
+        "p75": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "2024-10": {
+        "count": 31,
+        "mean": 0.712366,
+        "median": 0.75,
+        "stddev": 0.28281,
+        "p25": 0.5,
+        "p75": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "2024-11": {
+        "count": 8,
+        "mean": 0.822917,
+        "median": 0.875,
+        "stddev": 0.188366,
+        "p25": 0.666667,
+        "p75": 1.0,
+        "min": 0.5,
+        "max": 1.0
+      }
+    },
+    "series": [
+      {
+        "previous_date": "2024-08-11",
+        "date": "2024-08-12",
+        "previous_categories": [],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-12",
+        "date": "2024-08-13",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-08-13",
+        "date": "2024-08-14",
+        "previous_categories": [
+          "Career & Professional",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-08-14",
+        "date": "2024-08-15",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-15",
+        "date": "2024-08-16",
+        "previous_categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-16",
+        "date": "2024-08-17",
+        "previous_categories": [
+          "Technology"
+        ],
+        "categories": [
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-17",
+        "date": "2024-08-18",
+        "previous_categories": [
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "categories": [
+          "Entertainment & Media",
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-18",
+        "date": "2024-08-19",
+        "previous_categories": [
+          "Entertainment & Media",
+          "Food & Cooking"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-19",
+        "date": "2024-08-20",
+        "previous_categories": [],
+        "categories": [
+          "Entertainment & Media"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-20",
+        "date": "2024-08-21",
+        "previous_categories": [
+          "Entertainment & Media"
+        ],
+        "categories": [
+          "Entertainment & Media",
+          "Family & Parenting",
+          "Technology"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-08-21",
+        "date": "2024-08-22",
+        "previous_categories": [
+          "Entertainment & Media",
+          "Family & Parenting",
+          "Technology"
+        ],
+        "categories": [
+          "Entertainment & Media",
+          "Family & Parenting",
+          "Health & Wellness"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-08-22",
+        "date": "2024-08-23",
+        "previous_categories": [
+          "Entertainment & Media",
+          "Family & Parenting",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Entertainment & Media",
+          "Social & Relationships"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-08-23",
+        "date": "2024-08-24",
+        "previous_categories": [
+          "Entertainment & Media",
+          "Social & Relationships"
+        ],
+        "categories": [
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-24",
+        "date": "2024-08-25",
+        "previous_categories": [
+          "Technology"
+        ],
+        "categories": [
+          "Social & Relationships"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-27",
+        "date": "2024-08-28",
+        "previous_categories": [
+          "Entertainment & Media",
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-28",
+        "date": "2024-08-29",
+        "previous_categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-08-29",
+        "date": "2024-08-30",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-30",
+        "date": "2024-08-31",
+        "previous_categories": [
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-08-31",
+        "date": "2024-09-01",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "categories": [
+          "Entertainment & Media",
+          "Technology"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-09-01",
+        "date": "2024-09-02",
+        "previous_categories": [
+          "Entertainment & Media",
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-02",
+        "date": "2024-09-03",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Social & Relationships"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-06",
+        "date": "2024-09-07",
+        "previous_categories": [],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-07",
+        "date": "2024-09-08",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Sports & Fitness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-08",
+        "date": "2024-09-09",
+        "previous_categories": [
+          "Arts & Culture",
+          "Sports & Fitness"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-09",
+        "date": "2024-09-10",
+        "previous_categories": [],
+        "categories": [
+          "Food & Cooking"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-10",
+        "date": "2024-09-11",
+        "previous_categories": [
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-11",
+        "date": "2024-09-12",
+        "previous_categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-09-12",
+        "date": "2024-09-13",
+        "previous_categories": [
+          "Education & Learning",
+          "Family & Parenting",
+          "Food & Cooking"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Family & Parenting",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "drift": 0.6
+      },
+      {
+        "previous_date": "2024-09-13",
+        "date": "2024-09-14",
+        "previous_categories": [
+          "Education & Learning",
+          "Family & Parenting",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "drift": 0.25
+      },
+      {
+        "previous_date": "2024-09-14",
+        "date": "2024-09-15",
+        "previous_categories": [
+          "Family & Parenting",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-15",
+        "date": "2024-09-16",
+        "previous_categories": [],
+        "categories": [
+          "Family & Parenting",
+          "Food & Cooking",
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-16",
+        "date": "2024-09-17",
+        "previous_categories": [
+          "Family & Parenting",
+          "Food & Cooking",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-09-17",
+        "date": "2024-09-18",
+        "previous_categories": [
+          "Education & Learning",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Food & Cooking",
+          "Sports & Fitness"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-09-20",
+        "date": "2024-09-21",
+        "previous_categories": [
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-21",
+        "date": "2024-09-22",
+        "previous_categories": [
+          "Family & Parenting",
+          "Technology"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Home & Lifestyle"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-09-22",
+        "date": "2024-09-23",
+        "previous_categories": [
+          "Family & Parenting",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Home & Lifestyle"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-09-23",
+        "date": "2024-09-24",
+        "previous_categories": [
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Home & Lifestyle"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-09-24",
+        "date": "2024-09-25",
+        "previous_categories": [
+          "Family & Parenting",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Home & Lifestyle"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-09-25",
+        "date": "2024-09-26",
+        "previous_categories": [
+          "Family & Parenting",
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Home & Lifestyle"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-09-26",
+        "date": "2024-09-27",
+        "previous_categories": [
+          "Home & Lifestyle"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-27",
+        "date": "2024-09-28",
+        "previous_categories": [
+          "Arts & Culture",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-09-28",
+        "date": "2024-09-29",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Technology"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Education & Learning",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "drift": 0.833333
+      },
+      {
+        "previous_date": "2024-09-29",
+        "date": "2024-09-30",
+        "previous_categories": [
+          "Arts & Culture",
+          "Education & Learning",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-09-30",
+        "date": "2024-10-01",
+        "previous_categories": [
+          "Career & Professional",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Technology"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-01",
+        "date": "2024-10-02",
+        "previous_categories": [
+          "Career & Professional",
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-02",
+        "date": "2024-10-03",
+        "previous_categories": [
+          "Career & Professional",
+          "Education & Learning"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-10-03",
+        "date": "2024-10-04",
+        "previous_categories": [
+          "Career & Professional",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Technology"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-10-04",
+        "date": "2024-10-05",
+        "previous_categories": [
+          "Education & Learning",
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-05",
+        "date": "2024-10-06",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-06",
+        "date": "2024-10-07",
+        "previous_categories": [
+          "Technology"
+        ],
+        "categories": [
+          "Entertainment & Media",
+          "Technology"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-07",
+        "date": "2024-10-08",
+        "previous_categories": [
+          "Entertainment & Media",
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-08",
+        "date": "2024-10-09",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "drift": 0.75
+      },
+      {
+        "previous_date": "2024-10-09",
+        "date": "2024-10-10",
+        "previous_categories": [
+          "Family & Parenting",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Technology"
+        ],
+        "drift": 0.333333
+      },
+      {
+        "previous_date": "2024-10-10",
+        "date": "2024-10-11",
+        "previous_categories": [
+          "Family & Parenting",
+          "Technology"
+        ],
+        "categories": [
+          "Entertainment & Media"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-11",
+        "date": "2024-10-12",
+        "previous_categories": [
+          "Entertainment & Media"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-12",
+        "date": "2024-10-13",
+        "previous_categories": [
+          "Family & Parenting",
+          "Technology"
+        ],
+        "categories": [
+          "Technology"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-13",
+        "date": "2024-10-14",
+        "previous_categories": [
+          "Technology"
+        ],
+        "categories": [
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-14",
+        "date": "2024-10-15",
+        "previous_categories": [
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-15",
+        "date": "2024-10-16",
+        "previous_categories": [
+          "Family & Parenting",
+          "Technology"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-16",
+        "date": "2024-10-17",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-17",
+        "date": "2024-10-18",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-18",
+        "date": "2024-10-19",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-19",
+        "date": "2024-10-20",
+        "previous_categories": [
+          "Family & Parenting",
+          "Health & Wellness",
+          "Technology"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-10-20",
+        "date": "2024-10-21",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-10-21",
+        "date": "2024-10-22",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Family & Parenting",
+          "Social & Relationships"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-10-22",
+        "date": "2024-10-23",
+        "previous_categories": [
+          "Family & Parenting",
+          "Social & Relationships"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Sports & Fitness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-23",
+        "date": "2024-10-24",
+        "previous_categories": [
+          "Education & Learning",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-24",
+        "date": "2024-10-25",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Family & Parenting"
+        ],
+        "drift": 0.0
+      },
+      {
+        "previous_date": "2024-10-25",
+        "date": "2024-10-26",
+        "previous_categories": [
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-26",
+        "date": "2024-10-27",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Technology"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-10-27",
+        "date": "2024-10-28",
+        "previous_categories": [
+          "Education & Learning",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Technology"
+        ],
+        "drift": 0.8
+      },
+      {
+        "previous_date": "2024-10-28",
+        "date": "2024-10-29",
+        "previous_categories": [
+          "Career & Professional",
+          "Family & Parenting",
+          "Technology"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Food & Cooking",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "drift": 0.833333
+      },
+      {
+        "previous_date": "2024-10-29",
+        "date": "2024-10-30",
+        "previous_categories": [
+          "Education & Learning",
+          "Food & Cooking",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "categories": [
+          "Education & Learning",
+          "Food & Cooking",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "drift": 0.4
+      },
+      {
+        "previous_date": "2024-10-30",
+        "date": "2024-10-31",
+        "previous_categories": [
+          "Education & Learning",
+          "Food & Cooking",
+          "Health & Wellness",
+          "Sports & Fitness"
+        ],
+        "categories": [
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-10-31",
+        "date": "2024-11-01",
+        "previous_categories": [
+          "Technology"
+        ],
+        "categories": [],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-01",
+        "date": "2024-11-02",
+        "previous_categories": [],
+        "categories": [
+          "Career & Professional",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-02",
+        "date": "2024-11-03",
+        "previous_categories": [
+          "Career & Professional",
+          "Sports & Fitness",
+          "Technology"
+        ],
+        "categories": [
+          "Health & Wellness"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-03",
+        "date": "2024-11-04",
+        "previous_categories": [
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional",
+          "Entertainment & Media",
+          "Health & Wellness"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-11-04",
+        "date": "2024-11-05",
+        "previous_categories": [
+          "Career & Professional",
+          "Entertainment & Media",
+          "Health & Wellness"
+        ],
+        "categories": [
+          "Career & Professional"
+        ],
+        "drift": 0.666667
+      },
+      {
+        "previous_date": "2024-11-05",
+        "date": "2024-11-06",
+        "previous_categories": [
+          "Career & Professional"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Family & Parenting",
+          "Finance"
+        ],
+        "drift": 1.0
+      },
+      {
+        "previous_date": "2024-11-06",
+        "date": "2024-11-07",
+        "previous_categories": [
+          "Arts & Culture",
+          "Family & Parenting",
+          "Finance"
+        ],
+        "categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "drift": 0.5
+      },
+      {
+        "previous_date": "2024-11-07",
+        "date": "2024-11-08",
+        "previous_categories": [
+          "Arts & Culture",
+          "Career & Professional",
+          "Family & Parenting"
+        ],
+        "categories": [
+          "Entertainment & Media",
+          "Family & Parenting"
+        ],
+        "drift": 0.75
+      }
+    ]
+  },
+  "distributions": {
+    "interest_categories": {
+      "Family & Parenting": 42,
+      "Technology": 41,
+      "Career & Professional": 28,
+      "Health & Wellness": 17,
+      "Sports & Fitness": 17,
+      "Entertainment & Media": 15,
+      "Education & Learning": 13,
+      "Food & Cooking": 8,
+      "Home & Lifestyle": 8,
+      "Arts & Culture": 7,
+      "Social & Relationships": 4,
+      "Finance": 1
+    },
+    "top_keywords": {
+      "冒险之旅": 7,
+      "parenting": 6,
+      "性能优化": 5,
+      "gaming": 5,
+      "代码调试": 5,
+      "运动记录": 5,
+      "技术博客": 4,
+      "云计算": 4,
+      "数据库优化": 4,
+      "running": 4,
+      "园艺": 4,
+      "拉伸": 3,
+      "短视频": 3,
+      "分布式系统": 3,
+      "fitness tracking": 3,
+      "workout": 3,
+      "微服务架构": 3,
+      "microservices": 3,
+      "walking": 3,
+      "妻子": 3,
+      "child": 3,
+      "代码编辑": 2,
+      "技术讨论": 2,
+      "健康监测": 2,
+      "技术文章": 2,
+      "烹饪": 2,
+      "单机游戏": 2,
+      "child homework": 2,
+      "内存泄漏": 2,
+      "亲子活动": 2,
+      "孩子": 2,
+      "关心": 2,
+      "音乐应用": 2,
+      "轻音乐": 2,
+      "团队协作": 2,
+      "distance": 2,
+      "tech news": 2,
+      "tech blog": 2,
+      "跑步": 2,
+      "健康管理": 2,
+      "亲子沟通": 2,
+      "gardening": 2,
+      "技术方案": 2,
+      "免疫力": 2,
+      "debugging": 2,
+      "database": 2,
+      "memory leak": 2,
+      "performance tuning": 2,
+      "亲子": 2,
+      "开发者论坛": 2,
+      "数据库工具": 2,
+      "技术成果": 1,
+      "内部发布": 1,
+      "妻子沟通": 1,
+      "减少加班": 1,
+      "后端性能": 1,
+      "健康记录": 1,
+      "技术优化": 1,
+      "方案发布": 1,
+      "心率监测": 1,
+      "胃部不适": 1,
+      "睡眠模式": 1,
+      "白噪音": 1,
+      "架构扩展性": 1,
+      "血压": 1,
+      "疲劳指数": 1,
+      "后端框架": 1,
+      "服务器监控": 1,
+      "故障排查": 1,
+      "代码审查": 1,
+      "代码托管": 1,
+      "瑜伽垫": 1,
+      "颈部拉伸": 1,
+      "面条煮制": 1,
+      "自然纪录片": 1,
+      "地球脉动": 1,
+      "游戏": 1,
+      "console": 1,
+      "router": 1,
+      "network configuration": 1,
+      "stretching": 1,
+      "health article": 1,
+      "education method": 1,
+      "wife": 1,
+      "caring message": 1,
+      "数据库性能": 1,
+      "技术论坛": 1,
+      "与妻子": 1,
+      "一起看电影": 1,
+      "数据库查询优化": 1,
+      "科技博客": 1,
+      "算法": 1,
+      "荒野大镖客": 1,
+      "宠物视频": 1,
+      "内存泄漏修复": 1,
+      "一致性哈希": 1,
+      "代码重构": 1,
+      "版本控制": 1,
+      "健康烹饪": 1,
+      "共同做饭": 1
+    }
+  },
+  "daily_profiles": [
+    {
+      "date": "2024-08-11",
+      "event_count": 2,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-08-12",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-08-13",
+      "event_count": 6,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Technology": 2,
+        "Health & Wellness": 1,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-08-14",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 2
+      }
+    },
+    {
+      "date": "2024-08-15",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 2
+      }
+    },
+    {
+      "date": "2024-08-17",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 1,
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-08-18",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-08-19",
+      "event_count": 2,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-08-20",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Entertainment & Media": 3
+      }
+    },
+    {
+      "date": "2024-08-21",
+      "event_count": 5,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Entertainment & Media": 2,
+        "Technology": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-08-22",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Family & Parenting": 1,
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-08-23",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Social & Relationships": 1,
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-08-24",
+      "event_count": 4,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Technology": 1
+      }
+    },
+    {
+      "date": "2024-08-25",
+      "event_count": 1,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Social & Relationships": 1
+      }
+    },
+    {
+      "date": "2024-08-27",
+      "event_count": 8,
+      "interest_event_count": 6,
+      "interest_categories": {
+        "Technology": 4,
+        "Entertainment & Media": 2
+      }
+    },
+    {
+      "date": "2024-08-28",
+      "event_count": 5,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-08-29",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Food & Cooking": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-08-30",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "event_count": 9,
+      "interest_event_count": 6,
+      "interest_categories": {
+        "Career & Professional": 3,
+        "Technology": 1,
+        "Family & Parenting": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-09-01",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 1,
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-09-02",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-03",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Family & Parenting": 1,
+        "Social & Relationships": 1
+      }
+    },
+    {
+      "date": "2024-09-06",
+      "event_count": 4,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-07",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-08",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-09",
+      "event_count": 3,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-10",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-09-11",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-09-12",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Food & Cooking": 1,
+        "Family & Parenting": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-09-13",
+      "event_count": 6,
+      "interest_event_count": 5,
+      "interest_categories": {
+        "Sports & Fitness": 2,
+        "Technology": 1,
+        "Education & Learning": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-14",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Technology": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-15",
+      "event_count": 3,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-09-16",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Food & Cooking": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-17",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Health & Wellness": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-09-18",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Food & Cooking": 1
+      }
+    },
+    {
+      "date": "2024-09-20",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Home & Lifestyle": 3
+      }
+    },
+    {
+      "date": "2024-09-21",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-22",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Home & Lifestyle": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-23",
+      "event_count": 4,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Home & Lifestyle": 1
+      }
+    },
+    {
+      "date": "2024-09-24",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Home & Lifestyle": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-25",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Home & Lifestyle": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-26",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Home & Lifestyle": 1
+      }
+    },
+    {
+      "date": "2024-09-27",
+      "event_count": 6,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-28",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Technology": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-09-29",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Education & Learning": 1,
+        "Health & Wellness": 1,
+        "Technology": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-09-30",
+      "event_count": 5,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Health & Wellness": 3,
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-01",
+      "event_count": 6,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Technology": 2,
+        "Career & Professional": 2
+      }
+    },
+    {
+      "date": "2024-10-02",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-10-03",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Technology": 1,
+        "Career & Professional": 1,
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-10-04",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-10-05",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-10-06",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 2
+      }
+    },
+    {
+      "date": "2024-10-07",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 1,
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-10-08",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-09",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Family & Parenting": 1,
+        "Technology": 1
+      }
+    },
+    {
+      "date": "2024-10-10",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Family & Parenting": 2,
+        "Technology": 1
+      }
+    },
+    {
+      "date": "2024-10-11",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-10-12",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Technology": 2,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-13",
+      "event_count": 5,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 2
+      }
+    },
+    {
+      "date": "2024-10-14",
+      "event_count": 4,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Sports & Fitness": 2
+      }
+    },
+    {
+      "date": "2024-10-15",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-16",
+      "event_count": 4,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-17",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-18",
+      "event_count": 2,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-19",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Family & Parenting": 2,
+        "Technology": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-20",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Family & Parenting": 3
+      }
+    },
+    {
+      "date": "2024-10-21",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Family & Parenting": 2
+      }
+    },
+    {
+      "date": "2024-10-22",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Social & Relationships": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-23",
+      "event_count": 2,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Education & Learning": 1,
+        "Sports & Fitness": 1
+      }
+    },
+    {
+      "date": "2024-10-24",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Family & Parenting": 2
+      }
+    },
+    {
+      "date": "2024-10-25",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Family & Parenting": 2
+      }
+    },
+    {
+      "date": "2024-10-26",
+      "event_count": 6,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Technology": 2,
+        "Career & Professional": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-10-27",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Education & Learning": 2,
+        "Sports & Fitness": 1,
+        "Technology": 1
+      }
+    },
+    {
+      "date": "2024-10-28",
+      "event_count": 5,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Technology": 1,
+        "Career & Professional": 1,
+        "Family & Parenting": 1
+      }
+    },
+    {
+      "date": "2024-10-29",
+      "event_count": 5,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Technology": 1,
+        "Food & Cooking": 1,
+        "Education & Learning": 1
+      }
+    },
+    {
+      "date": "2024-10-30",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Sports & Fitness": 1,
+        "Education & Learning": 1,
+        "Food & Cooking": 1,
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "event_count": 5,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Technology": 2
+      }
+    },
+    {
+      "date": "2024-11-01",
+      "event_count": 4,
+      "interest_event_count": 0,
+      "interest_categories": {}
+    },
+    {
+      "date": "2024-11-02",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Career & Professional": 2,
+        "Sports & Fitness": 1,
+        "Technology": 1
+      }
+    },
+    {
+      "date": "2024-11-03",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Health & Wellness": 1
+      }
+    },
+    {
+      "date": "2024-11-04",
+      "event_count": 3,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Health & Wellness": 1,
+        "Career & Professional": 1,
+        "Entertainment & Media": 1
+      }
+    },
+    {
+      "date": "2024-11-05",
+      "event_count": 3,
+      "interest_event_count": 1,
+      "interest_categories": {
+        "Career & Professional": 1
+      }
+    },
+    {
+      "date": "2024-11-06",
+      "event_count": 4,
+      "interest_event_count": 4,
+      "interest_categories": {
+        "Family & Parenting": 2,
+        "Finance": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-11-07",
+      "event_count": 4,
+      "interest_event_count": 3,
+      "interest_categories": {
+        "Career & Professional": 1,
+        "Family & Parenting": 1,
+        "Arts & Culture": 1
+      }
+    },
+    {
+      "date": "2024-11-08",
+      "event_count": 3,
+      "interest_event_count": 2,
+      "interest_categories": {
+        "Family & Parenting": 1,
+        "Entertainment & Media": 1
+      }
+    }
+  ],
+  "event_extractions": [
+    {
+      "event_id": "0050:0050_sample13:log:15",
+      "timestamp": "2024-08-11 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在笔记本电脑上启动了远程开发环境连接操作。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "远程开发",
+        "工作操作"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:16",
+      "timestamp": "2024-08-11 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在厨房智能水龙头应用中启用了热水模式以清洗餐具。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "智能水龙头",
+        "清洗餐具"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample13:log:17",
+      "timestamp": "2024-08-12 06:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在公司内部系统发布了文档，主要内容为：最新技术成果总结。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "技术成果",
+        "内部发布"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample13:log:18",
+      "timestamp": "2024-08-12 10:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户向团队成员发送消息：“已提交最新成果，请查收附件。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "团队沟通",
+        "提交成果"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:19",
+      "timestamp": "2024-08-12 14:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户向智能助手发送消息：“记录与妻子沟通的内容，承诺减少加班时间。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "妻子沟通",
+        "减少加班"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample13:log:20",
+      "timestamp": "2024-08-13 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在笔记本电脑进行了代码编辑操作：修改了系统性能优化模块的参数。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "代码编辑",
+        "性能优化"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample13:log:21",
+      "timestamp": "2024-08-13 11:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户搜索了“后端性能瓶颈优化”，并查看了相关技术博客和案例分析。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "后端性能",
+        "技术博客"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample13:log:22",
+      "timestamp": "2024-08-13 14:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户通过外卖平台完成商品购买，产品：快餐套餐（含米饭、蔬菜、鸡肉）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "快餐套餐"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample13:log:23",
+      "timestamp": "2024-08-13 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能手环进行了健康记录操作：记录了站立时间和拉伸动作持续5分钟。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "健康记录",
+        "拉伸"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample13:log:24",
+      "timestamp": "2024-08-13 17:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户向团队成员发送消息：“会议即将开始，请大家准时加入。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "会议通知",
+        "团队"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample13:log:25",
+      "timestamp": "2024-08-13 23:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在公司内部系统发布了文章，主要内容为：技术优化方案的详细说明。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "技术优化",
+        "方案发布"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample13:log:26",
+      "timestamp": "2024-08-14 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户接收到来自团队负责人的消息：“请加快进度，确保本周完成核心功能开发。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "工作进度",
+        "团队负责人"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample13:log:27",
+      "timestamp": "2024-08-14 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能手表进行了健康监测操作：记录了心率和胃部不适症状。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "心率监测",
+        "胃部不适"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample13:log:28",
+      "timestamp": "2024-08-14 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能手环进行了步数记录操作：记录了办公室走廊步行约500步。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "步数记录",
+        "办公室步行"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:29",
+      "timestamp": "2024-08-14 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能家居设备进行了睡眠模式设置操作：启动白噪音播放功能。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "睡眠模式",
+        "白噪音"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample13:log:30",
+      "timestamp": "2024-08-15 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户向同事发送消息：“我们需要重新评估当前架构的扩展性。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "架构扩展性",
+        "技术讨论"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample13:log:31",
+      "timestamp": "2024-08-15 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在笔记本电脑进行了邮件回复操作：发送了三封邮件并记录站立时间10分钟。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "邮件回复",
+        "工作"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample13:log:32",
+      "timestamp": "2024-08-15 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能手表进行了健康监测操作：记录了血压和疲劳指数。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "健康监测",
+        "血压",
+        "疲劳指数"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:33",
+      "timestamp": "2024-08-15 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户通过便利店扫码支付完成商品购买，产品：速食便当和饮料。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "便利店",
+        "速食便当"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample13:log:34",
+      "timestamp": "2024-08-16 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户浏览了在线会议平台的文章，主要内容为：最新后端框架的使用技巧。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "后端框架",
+        "技术文章"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample13:log:35",
+      "timestamp": "2024-08-16 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户通过外卖APP完成商品购买，产品：汉堡套餐（含薯条和可乐）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "汉堡套餐"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample13:log:36",
+      "timestamp": "2024-08-16 14:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能升降桌进行了调节操作：将桌面高度从70cm调整至80cm。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "升降桌",
+        "调节"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:37",
+      "timestamp": "2024-08-16 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在服务器监控平台进行了故障排查操作：重启了两个关键服务进程。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "服务器监控",
+        "故障排查"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:38",
+      "timestamp": "2024-08-17 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户浏览了代码托管平台的文章，主要内容为：代码审查报告和优化建议。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "代码审查",
+        "代码托管"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample13:log:39",
+      "timestamp": "2024-08-17 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能瑜伽垫进行了运动记录操作：完成一组颈部拉伸动作共15分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "瑜伽垫",
+        "颈部拉伸"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample13:log:40",
+      "timestamp": "2024-08-18 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能厨房设备进行了烹饪记录操作：记录了面条煮制时长为8分钟。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "烹饪",
+        "面条煮制"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample13:log:41",
+      "timestamp": "2024-08-18 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能手环进行了步数记录操作：记录了房间内步行约300步。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "步数记录",
+        "室内步行"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:42",
+      "timestamp": "2024-08-18 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户浏览了视频平台的文章，主要内容为：自然生态纪录片《地球脉动》。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "自然纪录片",
+        "地球脉动"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample13:log:43",
+      "timestamp": "2024-08-19 09:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在手机日历创建了“新项目启动会议”日程，时间：09:00-10:30，地点：公司会议室A。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "日历",
+        "项目会议"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample13:log:44",
+      "timestamp": "2024-08-19 17:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户通过超市扫码支付完成商品购买，产品：坚果混合包（规格：200g）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "超市",
+        "坚果"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:45",
+      "timestamp": "2024-08-20 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户通过应用商店完成商品购买，产品：单机游戏《冒险之旅》。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "单机游戏",
+        "冒险之旅"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:46",
+      "timestamp": "2024-08-20 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在手机上进行了启动游戏的操作：打开了《冒险之旅》并玩了15分钟。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "游戏",
+        "冒险之旅"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample13:log:47",
+      "timestamp": "2024-08-20 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户接收到来自工作邮件的消息：“会议将在30分钟后开始，请提前准备。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "work email",
+        "meeting reminder"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "event_id": "0050:0050_sample13:log:48",
+      "timestamp": "2024-08-20 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在平板电脑上进行了启动游戏的操作：重新打开了《冒险之旅》。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "gaming",
+        "冒险之旅"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample13:log:49",
+      "timestamp": "2024-08-20 22:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户接收到来自工作邮件的消息：“请尽快回复客户的需求文档。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "work email",
+        "client request"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "event_id": "0050:0050_sample13:log:50",
+      "timestamp": "2024-08-21 19:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在电视上进行了启动游戏的操作：连接手柄并加载了《冒险之旅》。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "gaming",
+        "冒险之旅",
+        "console"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample13:log:51",
+      "timestamp": "2024-08-21 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户接收到来自妻子的消息：“家里网络断了，能帮忙看看吗？”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "wife message",
+        "network issue"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample13:log:52",
+      "timestamp": "2024-08-21 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在路由器管理界面进行了重启和参数调整操作：重置IP配置并优化信道设置。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "router",
+        "network configuration"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:53",
+      "timestamp": "2024-08-21 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户向妻子发送消息：“我觉得孩子的作业方式需要改进。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "child homework",
+        "parenting"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample13:log:54",
+      "timestamp": "2024-08-21 22:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在电视上进行了启动游戏的操作：重新加载了《冒险之旅》。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "gaming",
+        "冒险之旅"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample13:log:55",
+      "timestamp": "2024-08-22 13:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户浏览了健康网站的文章，主要内容为：简单拉伸动作可以缓解久坐疲劳。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "stretching",
+        "health article"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample13:log:56",
+      "timestamp": "2024-08-22 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户向妻子发送消息：“我们需要找到更好的教育方法。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "education method",
+        "parenting"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample13:log:57",
+      "timestamp": "2024-08-22 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在电脑上进行了启动游戏的操作：双击桌面图标打开《冒险之旅》。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "gaming",
+        "冒险之旅"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample13:log:58",
+      "timestamp": "2024-08-23 18:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户通过线下商店完成商品购买，产品：人体工学坐垫（黑色，标准尺寸）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "ergonomic cushion",
+        "purchase"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample13:log:59",
+      "timestamp": "2024-08-23 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户向妻子发送消息：“你今天过得怎么样？”",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "wife",
+        "caring message"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:60",
+      "timestamp": "2024-08-23 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在电脑上进行了启动游戏的操作：打开《冒险之旅》。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "gaming",
+        "冒险之旅"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample13:log:61",
+      "timestamp": "2024-08-24 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在智能家居系统进行了清洁模式操作：启动扫地机器人清理书房。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "robot vacuum",
+        "cleaning"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample13:log:62",
+      "timestamp": "2024-08-24 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户通过线下超市完成商品购买，产品：纸巾、洗衣液、零食等。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "groceries",
+        "household supplies"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample13:log:63",
+      "timestamp": "2024-08-24 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户在电脑上进行了退出游戏的操作：点击退出按钮并关闭窗口。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "退出游戏"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample13:log:64",
+      "timestamp": "2024-08-24 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户浏览了技术论坛的文章，主要内容为：如何优化数据库性能。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "数据库性能",
+        "技术论坛"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample13:log:65",
+      "timestamp": "2024-08-25 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample13",
+      "content": "用户向妻子发送消息：“我们一起看部电影放松一下吧。”",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "与妻子",
+        "一起看电影"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:0",
+      "timestamp": "2024-08-27 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户搜索了“公司附近早餐推荐”，并查看了几家快餐店的评价和菜单。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "早餐推荐",
+        "快餐店"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample14:log:1",
+      "timestamp": "2024-08-27 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户浏览了搜索引擎的文章，主要内容为“如何优化数据库查询性能”。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "数据库查询优化"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample14:log:2",
+      "timestamp": "2024-08-27 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户向张伟发送消息：“关于昨天提到的内存泄漏问题，你有什么建议吗？”",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "内存泄漏",
+        "技术讨论"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:3",
+      "timestamp": "2024-08-27 10:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户接收到来自张伟的消息：“可以尝试使用内存分析工具进行排查。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "收到消息"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:4",
+      "timestamp": "2024-08-27 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户浏览了科技博客的文章，主要内容为“2024年云计算发展趋势预测”。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "云计算",
+        "科技博客"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample14:log:5",
+      "timestamp": "2024-08-27 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在笔记本电脑上进行了代码调试操作：调整了算法参数并运行测试案例。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "代码调试",
+        "算法"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:6",
+      "timestamp": "2024-08-27 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在台式机上进行了游戏操作：启动单机游戏《荒野大镖客》，但仅玩了不到半小时便退出。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "单机游戏",
+        "荒野大镖客"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:7",
+      "timestamp": "2024-08-27 22:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户浏览了短视频平台的内容，主要内容为“搞笑宠物视频合集”。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "短视频",
+        "宠物视频"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample14:log:8",
+      "timestamp": "2024-08-28 06:55:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在浴室进行了水龙头操作：调节冷水流量并洗脸约两分钟。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "洗脸"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample14:log:9",
+      "timestamp": "2024-08-28 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在企业系统发布了文章，主要内容为“上周内存泄漏问题的详细修复步骤”。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "内存泄漏修复",
+        "技术文章"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample14:log:10",
+      "timestamp": "2024-08-28 13:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户通过外卖平台完成商品购买，产品：“鸡肉蔬菜沙拉+柠檬水”。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "沙拉"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample14:log:11",
+      "timestamp": "2024-08-28 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在厨房进行了饮水机操作：设定温度为40℃并倒出一杯温水饮用。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "饮水"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample14:log:12",
+      "timestamp": "2024-08-28 21:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户浏览了纸质书《分布式系统设计原理》的内容，主要内容为“一致性哈希算法的应用场景”。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "分布式系统",
+        "一致性哈希"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:13",
+      "timestamp": "2024-08-29 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户通过便利店支付系统完成商品购买，产品：“苹果3个+香蕉2根”。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "便利店购买",
+        "水果"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:14",
+      "timestamp": "2024-08-29 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在开发环境进行了代码编辑操作：重构了核心模块函数逻辑并提交至版本控制系统。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "代码重构",
+        "版本控制"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:15",
+      "timestamp": "2024-08-29 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户向妻子发送消息：“我中午约了朋友见面，晚点回去。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "告知行程"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:16",
+      "timestamp": "2024-08-29 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户向妻子发送消息：“今晚我们试试一起做点简单又健康的菜吧！”",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "健康烹饪",
+        "共同做饭"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:17",
+      "timestamp": "2024-08-29 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在客厅进行了玩具箱操作：取出积木并与孩子搭建模型约半小时。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "亲子活动",
+        "积木搭建"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:18",
+      "timestamp": "2024-08-30 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在办公室进行了瑜伽垫操作：完成简单的颈部和肩部拉伸动作。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "拉伸",
+        "办公室锻炼"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample14:log:19",
+      "timestamp": "2024-08-30 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户通过药店支付系统完成商品购买，产品：“褪黑素片（30粒）+奥美拉唑肠溶胶囊（1盒）”。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "药品购买"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:20",
+      "timestamp": "2024-08-31 07:05:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户浏览了手机上的PDF阅读器的文章，主要内容为：近期项目中的技术难点解决方案。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "技术难点",
+        "专业阅读"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:21",
+      "timestamp": "2024-08-31 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户搜索了“数据库优化方法”，并查看了关于索引优化和查询性能提升的内容。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "数据库优化",
+        "索引优化"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:22",
+      "timestamp": "2024-08-31 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在笔记本电脑上进行了在线会议操作：分享屏幕并展示技术总结报告。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "在线会议",
+        "工作汇报"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:23",
+      "timestamp": "2024-08-31 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户通过支付宝完成商品购买，产品：一碗牛肉面+一份小菜。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "午餐购买"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:24",
+      "timestamp": "2024-08-31 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在台式电脑上进行了代码编辑操作：修复遗留的系统错误日志。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "代码修复",
+        "系统错误"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample14:log:25",
+      "timestamp": "2024-08-31 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在企业内部系统上传了一份文件：《系统性能优化总结》。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "性能优化",
+        "技术总结"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:26",
+      "timestamp": "2024-08-31 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户接收到来自智能家居系统的消息：“晚餐已准备好，请加热后食用。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "智能家居通知"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:27",
+      "timestamp": "2024-08-31 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户向妻子发送消息：“我们是否可以重新考虑孩子的学习计划？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "孩子学习计划",
+        "教育规划"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:28",
+      "timestamp": "2024-08-31 23:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在智能手环上启动了睡眠监测功能：设置目标睡眠时间为23:00-06:00。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "睡眠监测",
+        "睡眠目标"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:29",
+      "timestamp": "2024-09-01 07:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在智能闹钟上关闭了第二次提醒：设定闹钟时间6:50。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "闹钟",
+        "提醒"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "event_id": "0050:0050_sample14:log:30",
+      "timestamp": "2024-09-01 08:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在开发环境中进行了代码调试操作：检查逻辑错误并提出优化建议。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "代码调试",
+        "优化建议"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:31",
+      "timestamp": "2024-09-01 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户通过美团完成商品购买，产品：两份宫保鸡丁套餐。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "宫保鸡丁"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:32",
+      "timestamp": "2024-09-01 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在手机上启动了一款射击类游戏：当前关卡进度为第5关。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "射击游戏",
+        "关卡进度"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample14:log:33",
+      "timestamp": "2024-09-02 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户在投影仪上展示了PPT内容：讲解数据库查询优化方法。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "数据库优化",
+        "技术讲解"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample14:log:34",
+      "timestamp": "2024-09-02 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户通过微信支付完成商品购买，产品：全麦鸡肉三明治+矿泉水。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "三明治",
+        "支付"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample14:log:35",
+      "timestamp": "2024-09-02 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户接收到来自Outlook的消息：“您已被邀请参加2024年行业技术峰会，请查收详情。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "会议邀请",
+        "通知"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample14:log:36",
+      "timestamp": "2024-09-02 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户向妻子发送消息：“我来辅导孩子数学作业吧。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "辅导作业",
+        "孩子"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample14:log:37",
+      "timestamp": "2024-09-03 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户通过自动售货机完成商品购买，产品：一杯美式咖啡。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "咖啡",
+        "自动售货机"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample14:log:38",
+      "timestamp": "2024-09-03 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户向父母发送消息：“最近身体还好吗？家里有什么需要帮忙的吗？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "父母",
+        "关心"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample14:log:39",
+      "timestamp": "2024-09-03 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample14",
+      "content": "用户通过花店小程序完成商品购买，产品：一束玫瑰花（12支）。",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "玫瑰花",
+        "花店"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:0",
+      "timestamp": "2024-09-06 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在笔记本电脑进行了文档编辑操作：创建并修改了一份技术维护报告。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "文档编辑",
+        "技术报告"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:1",
+      "timestamp": "2024-09-06 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户接收到来自工作群聊的消息：“紧急会议，请立即参加。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "紧急会议",
+        "工作群"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample15:log:2",
+      "timestamp": "2024-09-06 15:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过外卖平台完成商品购买，产品：鸡肉卷+可乐（标准套餐）.",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "套餐"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample15:log:3",
+      "timestamp": "2024-09-06 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在手机便签应用中记录了妻子提出的家务分配建议。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "家务分配",
+        "便签"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:4",
+      "timestamp": "2024-09-07 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户浏览了个人云笔记中的文章，主要内容为：近期项目优化方案总结。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "项目优化",
+        "云笔记"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:5",
+      "timestamp": "2024-09-07 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过便利店APP完成商品购买，产品：美式咖啡+芝士蛋糕。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "便利店购买",
+        "咖啡蛋糕"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:6",
+      "timestamp": "2024-09-07 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手机上进行了安装操作：下载并启动了一款名为“轻松听”的音乐应用。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "音乐应用",
+        "下载安装"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:7",
+      "timestamp": "2024-09-08 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户接收到来自同事的电话通知：“需要确认生产环境的问题。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "同事电话",
+        "生产环境"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample15:log:8",
+      "timestamp": "2024-09-08 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手表上记录了户外活动步数：累计3500步。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "户外活动",
+        "步数记录"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:9",
+      "timestamp": "2024-09-08 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手机上的音乐应用中播放了轻音乐列表《夜晚放松》。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "轻音乐",
+        "夜晚放松"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample15:log:10",
+      "timestamp": "2024-09-09 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过自动售货机完成商品购买，产品：巧克力曲奇饼干（一包）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "自动售货机",
+        "饼干"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:11",
+      "timestamp": "2024-09-09 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户接收到来自妻子的电话通知：“我们需要谈谈孩子教育的事情。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "妻子电话",
+        "孩子教育"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:12",
+      "timestamp": "2024-09-09 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在微波炉上进行了加热操作：将剩菜加热至适宜温度。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "微波炉",
+        "加热剩菜"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample15:log:13",
+      "timestamp": "2024-09-10 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过餐馆POS机完成商品购买，产品：蔬菜沙拉+少量烤鱼。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "蔬菜沙拉",
+        "烤鱼"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0050:0050_sample15:log:14",
+      "timestamp": "2024-09-10 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在洗碗机上进行了清洗操作：加载餐具并启动洗涤程序。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "洗碗机",
+        "清洗餐具"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample15:log:15",
+      "timestamp": "2024-09-11 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户向团队成员发送消息：“关于性能优化的几点建议，请参阅附件。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "性能优化",
+        "团队协作"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample15:log:16",
+      "timestamp": "2024-09-11 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过外卖平台完成商品购买，产品：牛肉饭套餐。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "牛肉饭"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:17",
+      "timestamp": "2024-09-11 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在平板电脑上查阅了数学教学视频以辅助讲解。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "数学教学视频",
+        "辅助讲解"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:18",
+      "timestamp": "2024-09-12 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过餐厅扫码点餐系统完成商品购买，产品：鸡胸肉沙拉+全麦面包。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "鸡胸肉沙拉",
+        "全麦面包"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0050:0050_sample15:log:19",
+      "timestamp": "2024-09-12 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在手机便签中草拟了一份家庭责任分工计划。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "家庭责任分工",
+        "计划"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:20",
+      "timestamp": "2024-09-12 17:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户浏览了Kindle中的电子书，主要内容为：编程语言进阶教程。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "编程语言",
+        "进阶教程"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample15:log:21",
+      "timestamp": "2024-09-13 07:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手表进行了跑步模式启动操作：记录跑步数据。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "running",
+        "fitness tracking"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample15:log:22",
+      "timestamp": "2024-09-13 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手表进行了跑步模式结束操作：总距离2公里，用时15分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "running",
+        "distance",
+        "workout"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample15:log:23",
+      "timestamp": "2024-09-13 07:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能家居系统设置了卧室灯光为柔和模式：亮度降低至30%。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "smart home",
+        "lighting"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:24",
+      "timestamp": "2024-09-13 07:50:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能音箱播放了早晨新闻摘要：主要内容为最新科技资讯。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "tech news",
+        "morning news"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:25",
+      "timestamp": "2024-09-13 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户搜索了“提高专注力的方法”，并查看了相关文章。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "focus improvement",
+        "self-improvement"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:26",
+      "timestamp": "2024-09-13 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户浏览了在线教育平台的文章，主要内容为如何选择适合孩子的辅导班。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children tutoring",
+        "parenting"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample15:log:27",
+      "timestamp": "2024-09-14 07:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手表进行了跑步模式结束操作：总距离1.5公里，用时10分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "running",
+        "workout"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample15:log:28",
+      "timestamp": "2024-09-14 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过外卖平台完成商品购买，产品：红烧牛肉面+煎蛋。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "food delivery",
+        "meal"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:29",
+      "timestamp": "2024-09-14 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户浏览了技术博客的文章，主要内容为云服务优化工具介绍。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "cloud services",
+        "tech blog"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample15:log:30",
+      "timestamp": "2024-09-14 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户向家庭群聊发送消息：“孩子的数学成绩有进步，很棒！”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "child academics",
+        "family chat"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample15:log:31",
+      "timestamp": "2024-09-15 08:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在手机闹钟应用取消了跑步提醒操作：原定于6:50的跑步计划被取消。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "running reminder",
+        "cancelled plan"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0050:0050_sample15:log:32",
+      "timestamp": "2024-09-15 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过便利店扫码支付完成商品购买，产品：全麦面包+矿泉水。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "convenience store",
+        "purchase"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample15:log:33",
+      "timestamp": "2024-09-15 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户接收到来自妻子的消息：“我们需要找到更好的沟通方式。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "spouse message",
+        "communication"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:34",
+      "timestamp": "2024-09-16 07:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手表进行了跑步模式结束操作：总距离3公里，用时20分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "running",
+        "distance",
+        "workout"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample15:log:35",
+      "timestamp": "2024-09-16 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过超市APP完成商品购买，产品：鸡胸肉+蔬菜沙拉。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "healthy food",
+        "chicken breast",
+        "salad"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:36",
+      "timestamp": "2024-09-16 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户浏览了在线书店的文章，主要内容为儿童阅读推荐书单。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children reading",
+        "book list"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample15:log:37",
+      "timestamp": "2024-09-17 07:05:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手表进行了跑步模式结束操作：总距离1公里，用时7分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "跑步",
+        "运动记录"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample15:log:38",
+      "timestamp": "2024-09-17 12:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在健康应用进行了添加饮食记录操作：输入部分数据后退出。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "饮食记录",
+        "健康管理"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample15:log:39",
+      "timestamp": "2024-09-17 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户浏览了在线学习平台的文章，主要内容为编程语言进阶课程介绍。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "编程课程",
+        "在线学习"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample15:log:40",
+      "timestamp": "2024-09-18 07:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户在智能手表进行了跑步模式结束操作：总距离2.5公里，用时15分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "跑步",
+        "运动记录"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample15:log:41",
+      "timestamp": "2024-09-18 12:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample15",
+      "content": "用户通过健康食品店完成商品购买，产品：鸡肉凯撒沙拉+绿茶。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "健康食品",
+        "沙拉"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0050:0050_sample16:log:0",
+      "timestamp": "2024-09-20 08:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户搜索了“兴趣爱好推荐”，并查看了园艺相关的文章。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "园艺",
+        "兴趣爱好"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:1",
+      "timestamp": "2024-09-20 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了某生活类网站的文章，主要内容为：如何在家中开始园艺种植。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "园艺",
+        "家庭种植"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:2",
+      "timestamp": "2024-09-20 19:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户向家人发送消息：“我最近对园艺很感兴趣，或许我们可以在家里尝试种植一些植物。”",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "园艺",
+        "种植"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample16:log:3",
+      "timestamp": "2024-09-21 06:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在智能手环上设置了跑步提醒，但由于疲劳感过重未执行操作。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "跑步提醒",
+        "未执行"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample16:log:4",
+      "timestamp": "2024-09-21 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在电脑上的开发环境中修复了代码中的几处逻辑错误。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "编程",
+        "开发环境"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample16:log:5",
+      "timestamp": "2024-09-21 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户向孩子发送消息：“今天看起来你有点不开心，能告诉我发生了什么吗？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "关心孩子",
+        "亲子沟通"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample16:log:6",
+      "timestamp": "2024-09-21 18:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户接收到来自孩子的消息：“我在学校和同学吵架了。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "孩子消息"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0050:0050_sample16:log:7",
+      "timestamp": "2024-09-22 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户通过电商平台完成书籍购买，产品：《家庭园艺入门指南》。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "园艺",
+        "书籍购买"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:8",
+      "timestamp": "2024-09-22 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在手机上查找了适合亲子互动的桌游推荐，并选择了简单易上手的游戏。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "亲子桌游",
+        "亲子互动"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample16:log:9",
+      "timestamp": "2024-09-23 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在企业视频会议系统中静音了自己的麦克风，并未主动参与讨论。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "视频会议",
+        "静音"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:10",
+      "timestamp": "2024-09-23 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户接收到来自促销平台的消息：“最新园艺工具套装限时优惠！”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "促销消息"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:11",
+      "timestamp": "2024-09-23 14:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了电商网站的商品页面，主要内容为：多功能园艺剪刀的详细参数介绍。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "gardening",
+        "pruning shears",
+        "product research"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:12",
+      "timestamp": "2024-09-23 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在智能音箱上暂停了播放音乐，并将音量调低。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "music playback",
+        "volume adjustment"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample16:log:13",
+      "timestamp": "2024-09-24 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了视频网站的教学视频，主要内容为：如何在室内种植多肉植物。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "succulent plants",
+        "indoor gardening",
+        "tutorial"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample16:log:14",
+      "timestamp": "2024-09-24 19:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户向孩子发送消息：“爸爸妈妈有时候会吵架，但我们都希望你能快乐成长。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "parenting",
+        "child communication",
+        "family"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample16:log:15",
+      "timestamp": "2024-09-25 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户接收到来自领导的消息：“请检查文档中的细节部分再提交一次。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "work instruction",
+        "document review"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:16",
+      "timestamp": "2024-09-25 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户通过电商平台完成工具购买，产品：小型园艺套装（含铲子、喷壶等）。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "gardening tools",
+        "purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:17",
+      "timestamp": "2024-09-25 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户向孩子发送消息：“你可以随时告诉我们你的想法，我们会支持你。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "parenting",
+        "child support",
+        "communication"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample16:log:18",
+      "timestamp": "2024-09-26 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在笔记本电脑上打开了在线课程页面，但多次切换至其他窗口查看消息。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "online course",
+        "distracted"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0050:0050_sample16:log:19",
+      "timestamp": "2024-09-26 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在智能家居摄像头下记录了组装过程，并调整了灯光亮度以便拍摄清晰画面。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "assembly",
+        "recording",
+        "lighting"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0050:0050_sample16:log:20",
+      "timestamp": "2024-09-26 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了纸质书籍的章节，主要内容为：适合初学者种植的几种耐寒植物。",
+      "interest_signal": true,
+      "category": "Home & Lifestyle",
+      "keywords": [
+        "gardening",
+        "cold-hardy plants",
+        "reading"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample16:log:21",
+      "timestamp": "2024-09-27 08:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在企业系统创建了“新项目启动会议”日程，时间：08:00-09:00，地点：公司会议室A。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "meeting scheduling",
+        "work"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:22",
+      "timestamp": "2024-09-27 09:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在笔记本电脑进行了文件整理操作：创建了“新项目资料”文件夹，并上传了相关文档。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "file organization",
+        "work"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:23",
+      "timestamp": "2024-09-27 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户通过电商平台完成了商品购买，产品：维生素C片（500mg×60片）、增强免疫力口服液（30ml×10瓶）。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "vitamins",
+        "immunity",
+        "supplements"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:24",
+      "timestamp": "2024-09-27 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在开发环境进行了代码调试操作：修复了服务器接口响应超时的问题。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "code debugging",
+        "work"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:25",
+      "timestamp": "2024-09-27 19:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了音乐应用的播放列表，主要内容为：随机播放的轻松流行歌曲。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "music",
+        "pop songs",
+        "playlist"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample16:log:26",
+      "timestamp": "2024-09-27 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户向孩子的班主任发送消息：“您好，孩子明天可以按时参加活动。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "teacher message",
+        "logistics"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:27",
+      "timestamp": "2024-09-28 09:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在团队协作平台发布了帖子，主要内容为：总结了会议中提出的三种技术方案的优缺点。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "技术方案",
+        "团队协作",
+        "会议总结"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:28",
+      "timestamp": "2024-09-28 12:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户接收到来自物流平台的消息：“您的订单已送达，请及时查收。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "物流通知",
+        "订单送达"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample16:log:29",
+      "timestamp": "2024-09-28 12:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在智能手环记录了健康数据：服用了维生素C片，剂量500mg。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "维生素C",
+        "健康记录"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:30",
+      "timestamp": "2024-09-28 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在代码编辑器进行了代码提交操作：优化了数据库查询逻辑以提升性能。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "数据库优化",
+        "代码提交",
+        "性能提升"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample16:log:31",
+      "timestamp": "2024-09-28 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户向孩子发送消息：“最近学习怎么样？有没有需要爸爸帮忙的地方？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "孩子学习",
+        "关心",
+        "亲子沟通"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:32",
+      "timestamp": "2024-09-29 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了在线教育平台的视频课程，主要内容为：微服务架构设计的最佳实践。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "微服务架构",
+        "在线课程",
+        "学习"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample16:log:33",
+      "timestamp": "2024-09-29 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了职场博客的文章，主要内容为：如何在高压环境中保持心理健康。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "心理健康",
+        "高压环境",
+        "职场"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:34",
+      "timestamp": "2024-09-29 15:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在终端进行了命令行操作：解决了服务器内存泄漏的问题。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "服务器",
+        "内存泄漏",
+        "命令行"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample16:log:35",
+      "timestamp": "2024-09-29 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了音乐应用的专辑页面，主要内容为：轻音乐精选集《宁静时光》。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "轻音乐",
+        "专辑",
+        "音乐应用"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:36",
+      "timestamp": "2024-09-30 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在企业文档管理系统发布了文章，主要内容为：新项目任务分解及时间安排。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "项目任务",
+        "时间安排",
+        "文档管理"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:37",
+      "timestamp": "2024-09-30 12:05:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了健康资讯网站的文章，主要内容为：科学饮食与睡眠对免疫力的影响。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "科学饮食",
+        "睡眠",
+        "免疫力"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample16:log:38",
+      "timestamp": "2024-09-30 16:50:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在智能座椅调整了坐姿设置：增加了腰部支撑强度。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "坐姿",
+        "腰部支撑",
+        "智能座椅"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample16:log:39",
+      "timestamp": "2024-09-30 19:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了流媒体平台的视频节目，主要内容为：儿童动画《奇幻森林冒险》第5集。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "儿童动画",
+        "流媒体"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample16:log:40",
+      "timestamp": "2024-09-30 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在健康管理APP记录了服用数据：今日已服用维生素C片和增强免疫力口服液。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "维生素C",
+        "免疫力",
+        "健康管理"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:41",
+      "timestamp": "2024-10-01 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在公司内部协作平台发布了笔记，主要内容为：云计算架构优化和人工智能算法的实际应用案例。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "云计算",
+        "人工智能",
+        "架构优化"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:42",
+      "timestamp": "2024-10-01 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户向演讲嘉宾发送消息：“您好，请问如何解决分布式系统中的性能瓶颈？”",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "分布式系统",
+        "性能瓶颈",
+        "技术交流"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample16:log:43",
+      "timestamp": "2024-10-01 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户接收到来自公司邮箱的消息：“新邮件提醒：服务器崩溃问题需要紧急处理。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "work email",
+        "server issue"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample16:log:44",
+      "timestamp": "2024-10-01 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在笔记本电脑上进行了代码调试操作：定位并修复了导致服务器崩溃的关键错误。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "debugging",
+        "server fix"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:45",
+      "timestamp": "2024-10-01 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在开发环境中进行了代码优化操作：重构了数据库查询逻辑以提升效率。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "code optimization",
+        "database"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:46",
+      "timestamp": "2024-10-01 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在智能沙发上进行了坐姿调整操作：将靠背角度调至120度以减轻腰部压力。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "posture adjustment",
+        "sofa"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample16:log:47",
+      "timestamp": "2024-10-02 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了公司文档管理系统中的技术文档，主要内容为：微服务架构的设计原则。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "microservices",
+        "technical docs"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample16:log:48",
+      "timestamp": "2024-10-02 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户通过电商平台完成商品购买，产品：腰部支撑靠垫（标准尺寸）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "lumbar cushion",
+        "purchase"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:49",
+      "timestamp": "2024-10-02 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在开发环境中进行了调试操作：尝试修复内存泄漏问题但未完全解决。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "debugging",
+        "memory leak"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:50",
+      "timestamp": "2024-10-02 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了电子书平台上的书籍，主要内容为：微服务架构的实践与挑战。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "microservices",
+        "ebook"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample16:log:51",
+      "timestamp": "2024-10-03 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户搜索了“分布式缓存优化”，并查看了相关技术博客文章。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "distributed cache",
+        "tech blogs"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:52",
+      "timestamp": "2024-10-03 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户接收到来自公司会议系统的消息：“紧急会议通知：请立即参加跨部门协作讨论。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "meeting notice"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample16:log:53",
+      "timestamp": "2024-10-03 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在公司内部文档系统发布了性能测试报告，主要内容为：数据库查询性能分析结果。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "performance testing",
+        "database"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:54",
+      "timestamp": "2024-10-03 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在智能手环上进行了运动记录操作：记录了20分钟的步行数据。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "walking",
+        "fitness tracking"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "event_id": "0050:0050_sample16:log:55",
+      "timestamp": "2024-10-04 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在性能监控工具上进行了配置操作：设置内存使用率监控阈值。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "monitoring",
+        "memory threshold"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample16:log:56",
+      "timestamp": "2024-10-04 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在笔记本电脑上进行了屏幕高度调整操作：因不适放弃站立办公模式。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "standing desk",
+        "adjustment"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample16:log:57",
+      "timestamp": "2024-10-04 18:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户浏览了在线教育平台的课程页面，主要内容为：分布式系统设计原理。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "distributed systems",
+        "online course"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:58",
+      "timestamp": "2024-10-04 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在智能水壶上进行了加热操作：烧制一杯温水以缓解胃部不适。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "warm water",
+        "stomach discomfort"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:59",
+      "timestamp": "2024-10-05 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户在公司项目管理系统发布了技术方案，主要内容为：数据库连接池优化设计方案。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "技术方案",
+        "数据库优化"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample16:log:60",
+      "timestamp": "2024-10-05 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample16",
+      "content": "用户向同事发送消息：“建议检查防火墙配置是否允许数据库端口通信。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "防火墙配置"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample17:log:0",
+      "timestamp": "2024-10-06 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户在笔记本电脑进行了代码调试操作：运行了性能测试脚本并记录结果。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "代码调试",
+        "性能测试"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample17:log:1",
+      "timestamp": "2024-10-06 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户浏览了技术博客网站的文章，主要内容为：如何通过缓存机制提升数据库查询效率。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "技术博客",
+        "缓存机制"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample17:log:2",
+      "timestamp": "2024-10-06 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户向妻子发送消息：“这次的报名费用我来支付吧。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "报名费用"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0050:0050_sample17:log:3",
+      "timestamp": "2024-10-07 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户通过外卖平台完成商品购买，产品：牛肉炒饭+可乐（中杯）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "牛肉炒饭"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample17:log:4",
+      "timestamp": "2024-10-07 11:05:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户在台式电脑进行了编码操作：修改了SQL查询语句以减少冗余数据加载。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "SQL优化",
+        "编码"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample17:log:5",
+      "timestamp": "2024-10-07 22:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户浏览了短视频平台的视频，主要内容为：搞笑宠物日常合集。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "短视频",
+        "搞笑宠物"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample17:log:6",
+      "timestamp": "2024-10-08 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户在会议室投影仪上进行了演示操作：展示了性能优化前后的对比数据。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "性能优化",
+        "演示"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample17:log:7",
+      "timestamp": "2024-10-08 14:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户在升降桌进行了高度调节操作：将桌子升高至站立办公模式。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "升降桌",
+        "站立办公"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0050:0050_sample17:log:8",
+      "timestamp": "2024-10-08 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户向妻子发送消息：“我们能不能找到一个折中的方案？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "妻子",
+        "折中方案"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample17:log:9",
+      "timestamp": "2024-10-09 13:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户在智能手表进行了健康监测操作：记录了站立活动时的心率变化。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "健康监测",
+        "心率"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample17:log:10",
+      "timestamp": "2024-10-09 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户向妻子发送消息：“这个兴趣班会不会增加孩子的负担？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "孩子",
+        "兴趣班"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample17:log:11",
+      "timestamp": "2024-10-09 23:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户浏览了短视频平台的视频，主要内容为：科技新闻速递。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "科技新闻",
+        "短视频"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample17:log:12",
+      "timestamp": "2024-10-10 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户在笔记本电脑进行了代码编辑操作：修复了缓存策略中的边界条件问题。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "代码编辑",
+        "缓存策略"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample17:log:13",
+      "timestamp": "2024-10-10 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户向妻子发送消息：“我们可以把家庭会议安排到周末。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "家庭会议",
+        "妻子"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample17:log:14",
+      "timestamp": "2024-10-10 22:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户浏览了母婴社区的文章，主要内容为：如何平衡兴趣班与孩子自由时间。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "parenting",
+        "children's interest classes",
+        "work-life balance"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample17:log:15",
+      "timestamp": "2024-10-11 15:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户在企业内网系统进行了文件上传操作：提交了优化后的代码包供测试团队验证。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "code submission",
+        "work task"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample17:log:16",
+      "timestamp": "2024-10-11 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户浏览了游戏平台的内容，主要内容为：参与多人在线竞技游戏一局。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "online gaming",
+        "multiplayer competitive"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample17:log:17",
+      "timestamp": "2024-10-12 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户向同事发送消息：“一起去楼下散散步吧，顺便聊聊最近的技术热点。”",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "tech trends",
+        "colleague chat"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample17:log:18",
+      "timestamp": "2024-10-12 13:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户在手机日历创建了“家庭陪伴”日程，时间：13:30-18:00，地点：家中客厅。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "family time",
+        "scheduled"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample17:log:19",
+      "timestamp": "2024-10-12 13:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample17",
+      "content": "用户浏览了技术博客的文章，主要内容为：微服务架构下的性能调优方法。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "microservices",
+        "performance tuning",
+        "tech blog"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample18:log:0",
+      "timestamp": "2024-10-13 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户在笔记本电脑上进行了文档编辑操作：记录了项目进度汇报会的关键内容。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "project report",
+        "work notes"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample18:log:1",
+      "timestamp": "2024-10-13 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户搜索了“后端系统优化方案”，并查看了关于性能调优的技术博客。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "backend optimization",
+        "performance tuning"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample18:log:2",
+      "timestamp": "2024-10-13 14:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户浏览了Stack Overflow的文章，主要内容为：“如何解决多线程并发问题”。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "concurrency",
+        "programming",
+        "Stack Overflow"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample18:log:3",
+      "timestamp": "2024-10-13 22:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户向妻子发送消息：“我刚到家，晚饭随便吃点吧。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "dinner",
+        "routine message"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample18:log:4",
+      "timestamp": "2024-10-13 23:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户在智能手机上进行了屏幕时间管理设置：将手机设为勿扰模式。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "do not disturb",
+        "phone setting"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample18:log:5",
+      "timestamp": "2024-10-14 06:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户接收到来自智能手环的提醒消息：“您的睡眠时长仅为4小时，请注意休息。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "sleep reminder",
+        "device notification"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample18:log:6",
+      "timestamp": "2024-10-14 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户通过外卖平台完成商品购买，产品：简易便当（米饭+鸡胸肉）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "takeout",
+        "basic meal"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample18:log:7",
+      "timestamp": "2024-10-14 18:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户在智能手表上启动了运动记录功能：开始记录步行数据。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "walking",
+        "exercise tracking"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample18:log:8",
+      "timestamp": "2024-10-14 18:50:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户在智能手表上停止了运动记录功能：步行距离2.3公里，耗时30分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "walking",
+        "fitness tracking"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample18:log:9",
+      "timestamp": "2024-10-15 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户在企业协作平台发布了帖子，主要内容为：“建议优化数据库连接池配置以提升性能。”",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "database connection pool",
+        "performance optimization"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample18:log:10",
+      "timestamp": "2024-10-15 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户向孩子发送消息：“这道题需要先算括号里的内容。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "helping child",
+        "homework"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample18:log:11",
+      "timestamp": "2024-10-15 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户通过小区便利店购买商品，产品：鲜牛奶（250ml）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "milk purchase"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample18:log:12",
+      "timestamp": "2024-10-16 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户向妻子发送消息：“我胃有点不舒服，可能昨晚吃得太简单了。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "stomach discomfort"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample18:log:13",
+      "timestamp": "2024-10-16 15:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户接收到来自领导的消息：“请确保按时提交测试报告。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "work reminder"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "event_id": "0050:0050_sample18:log:14",
+      "timestamp": "2024-10-16 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户向妻子发送消息：“我们需要重新规划孩子的教育预算。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "education budget",
+        "child"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample18:log:15",
+      "timestamp": "2024-10-16 22:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户在智能手机上关闭了短视频应用：停止观看推荐内容。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "closing app"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample18:log:16",
+      "timestamp": "2024-10-17 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户在企业文档平台发布了文章，主要内容为：“系统架构设计初稿已完成。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "system architecture",
+        "documentation"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample18:log:17",
+      "timestamp": "2024-10-17 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户向同事发送消息：“我今天状态不太好，可能需要早点回家。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "feeling unwell"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample18:log:18",
+      "timestamp": "2024-10-17 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户在智能家居音箱上播放了儿童音乐：选择轻松背景音乐配合家庭互动。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "children's music",
+        "family interaction"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample18:log:19",
+      "timestamp": "2024-10-18 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户浏览了企业系统的会议纪要，主要内容为：“关于新任务的风险评估意见汇总。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "meeting minutes"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample18:log:20",
+      "timestamp": "2024-10-18 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample18",
+      "content": "用户向妻子发送消息：“今天孩子的课程安排怎么样？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "child's schedule"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:0",
+      "timestamp": "2024-10-19 07:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在笔记本电脑上进行了代码编辑操作：打开IDE并修改了后端服务的配置文件。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "coding",
+        "backend config"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:1",
+      "timestamp": "2024-10-19 08:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户搜索了“如何改善注意力不集中的问题”，并查看了关于时间管理和休息调整的文章。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "attention",
+        "time management"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample19:log:2",
+      "timestamp": "2024-10-19 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户向配偶发送消息：“孩子今天看起来有点不对劲，你有没有发现什么？”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "child wellbeing"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:3",
+      "timestamp": "2024-10-19 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户浏览了某电商平台的拼图商品页面，主要内容为：适合亲子互动的简单拼图推荐。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "puzzle",
+        "parent-child activity"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:4",
+      "timestamp": "2024-10-20 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在手机日历中创建了“提醒孩子补做数学作业”日程，时间：07:30-07:45，地点：厨房餐桌。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "child homework",
+        "reminder"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample19:log:5",
+      "timestamp": "2024-10-20 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户搜索了“儿童心理压力表现及应对方法”，并查看了几篇专业心理学博客的分析。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "儿童心理",
+        "育儿"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample19:log:6",
+      "timestamp": "2024-10-20 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在平板电脑上拍下了孩子的数学作业照片，并标注了未完成的部分。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "孩子作业",
+        "教育"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:7",
+      "timestamp": "2024-10-21 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户通过某电商APP完成拼图玩具购买，产品：益智亲子拼图套装（500片）。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "益智玩具",
+        "亲子"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample19:log:8",
+      "timestamp": "2024-10-21 18:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在家庭群聊中发布了帖子，主要内容为：邀请大家今晚一起试试新拼图！",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "家庭活动",
+        "拼图"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample19:log:9",
+      "timestamp": "2024-10-22 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户向配偶发送消息：“我们晚上聊聊吧，希望能找到解决办法。”",
+      "interest_signal": true,
+      "category": "Social & Relationships",
+      "keywords": [
+        "配偶沟通",
+        "关系维护"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample19:log:10",
+      "timestamp": "2024-10-22 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户浏览了某视频平台的动画片播放页，主要内容为：热门儿童动画《奇妙探险队》第一集。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "儿童动画",
+        "亲子"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample19:log:11",
+      "timestamp": "2024-10-23 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户通过同事转账完成了书籍借用押金支付，产品：《高效沟通的艺术》。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "沟通技巧",
+        "阅读"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:12",
+      "timestamp": "2024-10-23 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在智能手表中创建了“晚间公园散步”日程，时间：18:30-19:30，地点：阳光公园湖边步道。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "散步",
+        "公园"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:13",
+      "timestamp": "2024-10-24 07:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在公司内网系统中提交了今日工作任务计划表，优先级调整为高效率完成核心任务。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "工作任务"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample19:log:14",
+      "timestamp": "2024-10-24 19:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户浏览了某教育网站的亲子活动指南，主要内容为：如何通过游戏增进亲子关系。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "亲子活动",
+        "亲子关系"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample19:log:15",
+      "timestamp": "2024-10-24 21:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在电子笔记本中记录了从书中摘抄的家庭沟通策略要点。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "家庭沟通",
+        "读书笔记"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:16",
+      "timestamp": "2024-10-25 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在办公电脑上运行自动化脚本优化数据库查询性能，涉及的具体操作内容包括索引重建和缓存清理。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "数据库优化",
+        "工作"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample19:log:17",
+      "timestamp": "2024-10-25 17:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户通过某线下商店扫码支付完成桌游购买，产品：欢乐大富翁豪华版。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "桌游",
+        "家庭娱乐"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample19:log:18",
+      "timestamp": "2024-10-25 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample19",
+      "content": "用户在社交媒体上发布了视频，主要内容为：全家一起玩桌游的欢乐瞬间。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "家庭桌游",
+        "亲子时光"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample20:log:0",
+      "timestamp": "2024-10-26 08:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在笔记本电脑进行了文件归档操作：将项目资料按类别分类并上传至公司云盘。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "文件归档",
+        "工作"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample20:log:1",
+      "timestamp": "2024-10-26 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在企业协作平台发布了文章，主要内容为：项目归档后的总结与技术建议。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "项目总结",
+        "技术建议"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample20:log:2",
+      "timestamp": "2024-10-26 12:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户通过外卖平台完成商品购买，产品：蔬菜沙拉+清汤。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "蔬菜沙拉"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample20:log:3",
+      "timestamp": "2024-10-26 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户浏览了开发者论坛的文章，主要内容为：微服务架构优化的最佳实践。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "微服务架构",
+        "开发者论坛"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample20:log:4",
+      "timestamp": "2024-10-26 14:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户浏览了技术博客的文章，主要内容为：云计算领域的最新趋势分析。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "云计算",
+        "技术博客"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample20:log:5",
+      "timestamp": "2024-10-26 19:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在智能音箱进行了语音查询操作：搜索乐高模型拼装教程。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "乐高模型",
+        "拼装教程"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample20:log:6",
+      "timestamp": "2024-10-27 07:05:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在智能手环进行了运动记录操作：慢跑十分钟，步数约1200步。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "慢跑",
+        "运动记录"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample20:log:7",
+      "timestamp": "2024-10-27 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户浏览了在线会议平台的视频，主要内容为：微服务架构的性能调优方法。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "微服务架构",
+        "性能调优"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample20:log:8",
+      "timestamp": "2024-10-27 10:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在笔记应用进行了文本编辑操作：列出学习方向包括云计算和容器化技术。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "云计算",
+        "容器化技术",
+        "学习方向"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample20:log:9",
+      "timestamp": "2024-10-27 15:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户浏览了在线视频平台的视频，主要内容为：宇宙探索的科普知识。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "宇宙探索",
+        "科普"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample20:log:10",
+      "timestamp": "2024-10-28 07:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在智能闹钟进行了延迟操作：将闹钟推迟30分钟后响起。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "闹钟",
+        "延迟"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample20:log:11",
+      "timestamp": "2024-10-28 08:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户浏览了技术社区的文章，主要内容为：新数据库工具的功能介绍与使用案例。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "数据库工具",
+        "技术社区"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample20:log:12",
+      "timestamp": "2024-10-28 12:05:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户通过外卖平台完成商品购买，产品：混合蔬菜沙拉+柠檬水。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "外卖",
+        "蔬菜沙拉"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample20:log:13",
+      "timestamp": "2024-10-28 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在办公软件进行了任务创建操作：设置下月目标为提升代码效率10%。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "代码效率",
+        "目标"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample20:log:14",
+      "timestamp": "2024-10-28 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户向妻子发送消息：“我们需要找到更合适的教育方法。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "教育方法",
+        "妻子"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample20:log:15",
+      "timestamp": "2024-10-29 06:50:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在智能手环进行了运动记录操作：步行二十分钟，步数约2500步。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "步行",
+        "运动记录"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample20:log:16",
+      "timestamp": "2024-10-29 09:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户浏览了开发者论坛的文章，主要内容为：数据库工具的高级功能解析。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "数据库工具",
+        "开发者论坛"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample20:log:17",
+      "timestamp": "2024-10-29 12:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在智能厨房设备进行了烹饪操作：煮制一碗简易番茄鸡蛋面。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "烹饪",
+        "番茄鸡蛋面"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample20:log:18",
+      "timestamp": "2024-10-29 15:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在电子地图进行了导航操作：查询从家到社区图书馆的路线。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "导航",
+        "路线查询"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample20:log:19",
+      "timestamp": "2024-10-29 16:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户通过图书馆自助借阅机完成书籍借阅，产品：《高效能人士的生活方式》。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "借阅",
+        "高效能人士"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample20:log:20",
+      "timestamp": "2024-10-30 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在健身APP进行了运动记录操作：完成十分钟全身拉伸训练。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "拉伸训练",
+        "健身APP"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample20:log:21",
+      "timestamp": "2024-10-30 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户在笔记应用进行了文本编辑操作：标注短期行动计划如每周学习两小时新技术课程。",
+      "interest_signal": true,
+      "category": "Education & Learning",
+      "keywords": [
+        "学习计划",
+        "新技术课程"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample20:log:22",
+      "timestamp": "2024-10-30 12:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户通过餐厅小程序完成商品购买，产品：鸡胸肉套餐+蒸蔬菜。",
+      "interest_signal": true,
+      "category": "Food & Cooking",
+      "keywords": [
+        "鸡胸肉",
+        "蒸蔬菜",
+        "健康餐"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample20:log:23",
+      "timestamp": "2024-10-30 13:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample20",
+      "content": "用户搜索了“缓解慢性疲劳方法”，并查看了调整作息时间和增加适量运动的相关建议。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "慢性疲劳",
+        "作息调整",
+        "运动建议"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample21:log:0",
+      "timestamp": "2024-10-31 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在笔记本电脑上进行了文档编辑操作：创建了一份名为“年终冲刺任务计划”的文档。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "任务计划",
+        "文档编辑"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample21:log:1",
+      "timestamp": "2024-10-31 12:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户向新同事李明发送消息：“这是系统架构的概览图，你可以先了解一下。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "同事沟通",
+        "架构图"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample21:log:2",
+      "timestamp": "2024-10-31 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户通过药店APP完成药品购买，产品：胃药（规格：20片/盒）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "药品购买",
+        "胃药"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample21:log:3",
+      "timestamp": "2024-10-31 16:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在开发环境中进行了代码调试操作：修复了一处性能瓶颈问题。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "代码调试",
+        "性能优化"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample21:log:4",
+      "timestamp": "2024-10-31 23:50:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户浏览了技术博客平台的文章，主要内容为：如何优化分布式系统的性能。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "技术博客",
+        "分布式系统"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample21:log:5",
+      "timestamp": "2024-11-01 06:10:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在智能手环上停止了闹钟提醒，并记录了睡眠时长：4小时20分钟。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "闹钟",
+        "睡眠记录"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample21:log:6",
+      "timestamp": "2024-11-01 08:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在会议软件中进行了屏幕共享操作：展示了近期项目的进展图表。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "会议",
+        "项目进展"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample21:log:7",
+      "timestamp": "2024-11-01 15:20:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户向新同事李明发送消息：“这个接口需要增加一个参数校验逻辑。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "同事沟通",
+        "接口开发"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample21:log:8",
+      "timestamp": "2024-11-01 20:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户通过便利店支付完成食品购买，产品：速食便当（规格：微波加热型）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "速食便当",
+        "便利店"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample21:log:9",
+      "timestamp": "2024-11-02 06:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在健身APP上记录了运动数据：拉伸时间8分钟。",
+      "interest_signal": true,
+      "category": "Sports & Fitness",
+      "keywords": [
+        "拉伸",
+        "运动记录"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample21:log:10",
+      "timestamp": "2024-11-02 10:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在服务器监控平台上进行了日志分析操作：定位到内存泄漏问题。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "log analysis",
+        "memory leak",
+        "server monitoring"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample21:log:11",
+      "timestamp": "2024-11-02 14:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在内部知识库发布了文章，主要内容为：如何配置系统运行环境。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "knowledge base",
+        "system configuration",
+        "technical writing"
+      ],
+      "confidence": 0.65
+    },
+    {
+      "event_id": "0050:0050_sample21:log:12",
+      "timestamp": "2024-11-02 23:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户浏览了科技新闻网站的文章，主要内容为：AI驱动的自动化测试工具发展趋势。",
+      "interest_signal": true,
+      "category": "Technology",
+      "keywords": [
+        "AI",
+        "automated testing",
+        "tech news"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample21:log:13",
+      "timestamp": "2024-11-03 07:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在睡眠监测设备上查看了夜间苏醒次数：3次。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "sleep monitoring",
+        "night awakenings"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample21:log:14",
+      "timestamp": "2024-11-03 11:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在演示软件上进行了文件上传操作：提交了优化后的系统性能报告。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "performance report",
+        "file upload"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0050:0050_sample21:log:15",
+      "timestamp": "2024-11-03 16:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户接收到来自团队领导的消息：“请负责核心模块的设计。”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "team assignment",
+        "core module"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample21:log:16",
+      "timestamp": "2024-11-04 07:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在健康手环上记录了心率数据：静息心率偏高。",
+      "interest_signal": true,
+      "category": "Health & Wellness",
+      "keywords": [
+        "heart rate",
+        "fitness tracker"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample21:log:17",
+      "timestamp": "2024-11-04 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在测试工具上进行了脚本运行操作：验证新功能的稳定性。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "testing",
+        "script execution",
+        "stability"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample21:log:18",
+      "timestamp": "2024-11-04 19:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户浏览了短视频平台的内容，主要内容为：搞笑宠物视频。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "short videos",
+        "funny pets"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample21:log:19",
+      "timestamp": "2024-11-05 05:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户通过家庭冰箱上的智能购物清单添加了饼干（规格：独立小包装）。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "shopping list",
+        "cookies"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0050:0050_sample21:log:20",
+      "timestamp": "2024-11-05 11:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户向团队成员发送消息：“建议在这里增加异常捕获逻辑。”",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "exception handling",
+        "code review",
+        "team collaboration"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "event_id": "0050:0050_sample21:log:21",
+      "timestamp": "2024-11-05 14:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample21",
+      "content": "用户在任务管理软件上进行了事项标记操作：将所有待办事项标记为已完成。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "task management",
+        "to-do"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "event_id": "0050:0050_sample22:log:0",
+      "timestamp": "2024-11-06 11:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户接收到来自学校老师的消息：“您的孩子在班级比赛中取得了第三名的好成绩，恭喜！”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "child",
+        "school competition"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample22:log:1",
+      "timestamp": "2024-11-06 18:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户在手机日历中创建了“学校颁奖仪式”日程，时间：18:00-19:00，地点：阳光小学礼堂。",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "school award ceremony",
+        "child"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample22:log:2",
+      "timestamp": "2024-11-06 20:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户向配偶发送消息：“我觉得这笔奖金应该存起来，而不是花在奢侈品上。”",
+      "interest_signal": true,
+      "category": "Finance",
+      "keywords": [
+        "saving",
+        "bonus",
+        "spending"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample22:log:3",
+      "timestamp": "2024-11-06 21:15:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户浏览了电子书平台的小说《百年孤独》，主要内容为：一个家族的兴衰史。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "novel",
+        "One Hundred Years of Solitude",
+        "literature"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "event_id": "0050:0050_sample22:log:4",
+      "timestamp": "2024-11-07 10:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户在笔记本电脑上进行了代码调试操作：修复了一个导致服务器性能下降的关键逻辑错误。",
+      "interest_signal": true,
+      "category": "Career & Professional",
+      "keywords": [
+        "代码调试",
+        "服务器性能",
+        "技术问题解决"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "event_id": "0050:0050_sample22:log:5",
+      "timestamp": "2024-11-07 12:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户接收到来自班主任的消息：“感谢您对班级活动的支持，孩子的表现非常出色！”",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "班主任消息",
+        "班级活动"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample22:log:6",
+      "timestamp": "2024-11-07 20:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户向配偶发送消息：“我们应该更加注重孩子的兴趣培养，而不是一味追求成绩。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "孩子兴趣培养",
+        "教育理念"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "event_id": "0050:0050_sample22:log:7",
+      "timestamp": "2024-11-07 21:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户浏览了电子书平台的小说《白鹿原》，主要内容为：农村社会的历史变迁。",
+      "interest_signal": true,
+      "category": "Arts & Culture",
+      "keywords": [
+        "小说阅读",
+        "白鹿原",
+        "文学"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample22:log:8",
+      "timestamp": "2024-11-08 09:00:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户在企业系统中创建了“技术评审会议”日程，时间：09:00-11:00，地点：公司会议室A。",
+      "interest_signal": false,
+      "category": "None",
+      "keywords": [
+        "技术评审会议",
+        "日程安排"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample22:log:9",
+      "timestamp": "2024-11-08 19:30:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户向配偶发送消息：“我觉得课外活动太多了，孩子需要更多休息时间。”",
+      "interest_signal": true,
+      "category": "Family & Parenting",
+      "keywords": [
+        "孩子休息",
+        "课外活动"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "event_id": "0050:0050_sample22:log:10",
+      "timestamp": "2024-11-08 20:45:00",
+      "source_split": "history",
+      "source_sample_id": "0050_sample22",
+      "content": "用户在游戏主机上进行了游戏操作：完成了一场多人在线对战游戏。",
+      "interest_signal": true,
+      "category": "Entertainment & Media",
+      "keywords": [
+        "多人在线游戏",
+        "游戏主机"
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

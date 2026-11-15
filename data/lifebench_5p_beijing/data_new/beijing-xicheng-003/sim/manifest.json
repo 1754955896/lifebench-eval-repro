@@ -1,0 +1,110 @@
+{
+  "model": {
+    "default_model": "deepseek-v4-flash",
+    "reason_model": "deepseek-v4-pro"
+  },
+  "temperature": null,
+  "seed": null,
+  "template_hash": "d3a20b1b9a9c151802fb42dd0f9ab0bf445ead3873e76cb411970d86cb2ec1ab",
+  "config": {
+    "llm": {
+      "default_model": "deepseek-v4-flash",
+      "reason_model": "deepseek-v4-pro",
+      "strip_think": false
+    },
+    "simulation_asset_preparation": {
+      "enabled": true,
+      "run_before_sharding": true,
+      "ensure_fuzzy_memory": true,
+      "ensure_location_opportunity_pool": true,
+      "freeze_for_run": true,
+      "strict_anchor_validation": true,
+      "allow_partial_optional_pois": true
+    },
+    "trajectory_assignment": {
+      "enabled": true,
+      "allocation_mode": "full",
+      "seed": 0,
+      "candidate_limit": 18,
+      "route_top_k": 6,
+      "budget_aware": true,
+      "location_opportunity_pool": {
+        "enabled": true,
+        "refresh": false,
+        "preseed_target_count": 60,
+        "per_query_limit": 6,
+        "daily_familiar_quota": [
+          3,
+          5
+        ],
+        "daily_citywide_quota": [
+          3,
+          6
+        ],
+        "daily_social_quota": [
+          0,
+          1
+        ]
+      },
+      "replan_enabled": true,
+      "plausible_fallback_enabled": true,
+      "intent_retry_count": 2,
+      "final_itinerary_retry_count": 1,
+      "strict_validation": true,
+      "accuracy_validation": false,
+      "half_hour_export": {
+        "enabled": true,
+        "slot_minutes": 30,
+        "gap_policy": "carry_forward",
+        "local_loop_geometry": "seeded_closed_loop"
+      },
+      "mobility_calibration": {
+        "rho": 0.52,
+        "gamma": 0.24,
+        "return_exponent": 0.85,
+        "distance_beta": 1.6,
+        "distance_cutoff_km": 24.0,
+        "distance_cutoff_multiplier": 3.0,
+        "epr_count_scope": "blended",
+        "epr_global_count_weight": 0.35,
+        "urban_candidate_share": 0.35,
+        "personalization_weight": 0.5,
+        "selection_temperature": 0.75,
+        "preference_boost": 1.5,
+        "repetition_fatigue_step": 0.1,
+        "repetition_fatigue_cap": 0.3,
+        "routine_active_days": 3
+      },
+      "mobility_distribution_targets": {
+        "weekday_archetype_weights": {
+          "low_mobility": 0.18,
+          "routine_commute": 0.31,
+          "commute_with_errand": 0.22,
+          "evening_activity": 0.14,
+          "social_or_leisure": 0.08,
+          "exploratory": 0.04,
+          "citywide_leisure": 0.03
+        },
+        "weekend_archetype_weights": {
+          "home_recovery": 0.23,
+          "local_leisure": 0.24,
+          "social_activity": 0.17,
+          "exercise_outing": 0.12,
+          "exploratory": 0.08,
+          "citywide_leisure": 0.09,
+          "long_distance": 0.07
+        }
+      }
+    },
+    "map_tool": {}
+  },
+  "dependencies": {
+    "openai": "2.44.0",
+    "numpy": "1.23.5",
+    "sentence-transformers": "5.6.0",
+    "holidays": "0.86",
+    "pypinyin": "0.55.0",
+    "torch": "2.12.1",
+    "transformers": "5.12.1"
+  }
+}

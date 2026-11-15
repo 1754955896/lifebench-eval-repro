@@ -1,0 +1,271 @@
+[
+  {
+    "type": "calendar",
+    "title": "父母家早午餐与卖房谈话（St Albans）",
+    "description": "时间 2026-01-04 10:05-13:30，地点 St Albans 父母家 21-23 London Road，与母亲 Margaret、父亲 David 共进英式早餐，饭后客厅喝茶谈及父母考虑卖掉老宅搬到附近两居室平房，需了解平房位置、预算与物业费，来源家庭约定",
+    "start_time": "2026-01-04 10:05:00",
+    "end_time": "2026-01-04 13:30:00",
+    "datetime": "2026-01-02 20:15:00",
+    "daily_event_id": "65",
+    "event_id": [
+      "4-2",
+      "4-3"
+    ],
+    "phone_id": 0
+  },
+  {
+    "type": "calendar",
+    "title": "运动康复理疗评估 - Marcus Bell（右膝）",
+    "description": "2026-01-08 10:00 与运动康复理疗师 Marcus Bell 的右膝评估预约；起因：5 公里夜跑后右膝轻微酸胀 2/10，先减少跑量；已告知跑友 Lena Fischer 取消原定周末长跑，半马备赛表暂停周末长跑与高强度跑步，改为休息、拉伸与低强度交叉训练；来源 消息沟通确认",
+    "start_time": "2026-01-08 10:00:00",
+    "end_time": "2026-01-08 11:00:00",
+    "datetime": "2026-01-02 20:40:00",
+    "daily_event_id": "39",
+    "event_id": [
+      "2-4",
+      "2-5",
+      "2-6"
+    ],
+    "phone_id": 1
+  },
+  {
+    "type": "calendar",
+    "title": "基础指标测量与空腹抽血（The Caversham Group Practice）",
+    "description": "2026-01-05 09:30-10:05 于 The Caversham Group Practice（4 Peckwater Street, Kentish Town, London），护士 Sarah Patel 测量血压、静息心率、体重与体脂，采集空腹血糖和胆固醇血样；需保持禁食，携带 NHS 号码与预约确认，样本送检后等待结果通知，来源 GP 预约确认",
+    "start_time": "2026-01-05 09:30:00",
+    "end_time": "2026-01-05 10:05:00",
+    "datetime": "2026-01-05 06:50:00",
+    "daily_event_id": "77",
+    "event_id": [
+      "38-4",
+      "38-5"
+    ],
+    "phone_id": 2
+  },
+  {
+    "type": "calendar",
+    "title": "BP大楼工作：设计评审会与接口清单整理",
+    "description": "2026-01-06 08:20-12:40 于BP大楼（1 St James's Square）工作：先致电Caversham Group Practice预约流感疫苗，随后参加核心服务重构Q1设计评审启动会（Priya主持，Hannah说明架构边界，Sofia对齐产品需求），会后整理会议记录并按会话、认证、共享组件三块列出接口，来源：个人日程与会议通知",
+    "start_time": "2026-01-06 08:20:00",
+    "end_time": "2026-01-06 12:40:00",
+    "datetime": "2026-01-06 08:22:00",
+    "daily_event_id": "95",
+    "event_id": [
+      "6-3",
+      "6-4",
+      "110-4",
+      "110-5"
+    ],
+    "phone_id": 3
+  },
+  {
+    "type": "calendar",
+    "title": "右膝评估（West Hampstead Physiotherapy）",
+    "description": "2026-01-08 19:00 至 20:30 在 West Hampstead Physiotherapy（96 Mill Lane）由理疗师 Marcus Bell 做右膝触诊、活动度与稳定性检查，需带跑鞋，来源诊所预约确认",
+    "start_time": "2026-01-08 19:00:00",
+    "end_time": "2026-01-08 20:30:00",
+    "datetime": "2026-01-08 17:10:00",
+    "daily_event_id": "153",
+    "event_id": [
+      "132-4",
+      "103-2",
+      "103-3",
+      "103-4",
+      "103-5"
+    ],
+    "phone_id": 4
+  },
+  {
+    "type": "calendar",
+    "title": "Maple Dental Clinic 牙科检查与洁牙",
+    "description": "15:15 在Maple Dental Clinic（102 Cleveland Street, Fitzrovia）进行牙科检查与专业洁牙，前台Claire Doyle登记，放射技师Liam Foster拍口腔全景X光，Dr. Eleanor Hayes检查牙周与口腔，卫生师Maya Patel洁牙；需带牙科保险信息与预约资料，结束后前台预约2027年1月复查，来源牙科诊所预约确认",
+    "start_time": "2026-01-09 15:15:00",
+    "end_time": "2026-01-09 16:35:00",
+    "datetime": "2026-01-09 09:05:00",
+    "daily_event_id": "166",
+    "event_id": [
+      "69-2",
+      "69-3",
+      "69-4",
+      "69-5",
+      "9-6"
+    ],
+    "phone_id": 5
+  },
+  {
+    "type": "calendar",
+    "title": "Workshop Coffee 手冲咖啡品鉴会（已报名）",
+    "description": "Workshop Coffee 手冲咖啡品鉴会，2026-01-12 12:00 中午场次，已于 2026-01-10 傍晚在线提交报名并付款，日历已加提前一天提醒，来源 Workshop Coffee 官网报名页面",
+    "start_time": "2026-01-12 12:00:00",
+    "end_time": "2026-01-12 13:30:00",
+    "datetime": "2026-01-10 17:55:00",
+    "daily_event_id": "190",
+    "event_id": [
+      "53-1"
+    ],
+    "phone_id": 6
+  },
+  {
+    "type": "calendar",
+    "title": "Boots 流感疫苗接种（Camden High Street）",
+    "description": "Boots 流感疫苗接种（173-175 Camden High Street），10:30 到店报预约姓名，药剂师核对出生日期与健康问询，左上臂注射，支付约 15 英镑并取得收据与接种记录，留观约 15 分钟；医嘱避免剧烈运动多喝水，来源 Boots 预约",
+    "start_time": "2026-01-12 10:30:00",
+    "end_time": "2026-01-12 11:10:00",
+    "datetime": "2026-01-12 09:15:00",
+    "daily_event_id": "220",
+    "event_id": [
+      "111-1",
+      "111-3",
+      "111-4"
+    ],
+    "phone_id": 7
+  },
+  {
+    "type": "calendar",
+    "title": "与Hannah视频同步会（架构边界评审）",
+    "description": "视频会议10:45-11:50，与平台架构师Hannah Cole逐项过服务边界图：后端拆为会话管理、令牌签发与刷新、权限校验三块，标记关键资产与信任边界；确认外部依赖四条，其中两条待基础设施团队回复；定下组件清单为三个服务加一条消息通道，结论带进下周设计评审，来源Alderwick项目日历邀请与Slack改期确认",
+    "start_time": "2026-01-16 10:45:00",
+    "end_time": "2026-01-16 11:50:00",
+    "datetime": "2026-01-16 10:20:00",
+    "daily_event_id": "290",
+    "event_id": [
+      "16-2"
+    ],
+    "phone_id": 8
+  },
+  {
+    "type": "calendar",
+    "title": "泰晤士河游船晚餐与夜景拍摄",
+    "description": "2026-01-17 18:15 于Westminster Pier登船，18:20开航；玻璃顶观光船，两道式晚餐与现场爵士乐，途经London Eye、圣保罗大教堂和塔桥，用Olympus OM-2n拍摄Portra 400，约20:50靠岸，费用约85英镑，来源游船预订确认",
+    "start_time": "2026-01-17 18:15:00",
+    "end_time": "2026-01-17 20:50:00",
+    "datetime": "2026-01-17 15:55:00",
+    "daily_event_id": "321",
+    "event_id": [
+      "17-5",
+      "45-4",
+      "45-5"
+    ],
+    "phone_id": 9
+  },
+  {
+    "type": "calendar",
+    "title": "Canal Geometries线上评审照片提交（10张）",
+    "description": "London Film Photography Walks线上评审提交，20:30至21:30截止，每人10张，黑白扫描文件，按命名规则重命名后上传，来源群聊与邮件通知",
+    "start_time": "2026-01-19 20:30:00",
+    "end_time": "2026-01-19 21:30:00",
+    "datetime": "2026-01-19 08:10:00",
+    "daily_event_id": "364",
+    "event_id": [
+      "92-1",
+      "92-4",
+      "92-6"
+    ],
+    "phone_id": 10
+  },
+  {
+    "type": "calendar",
+    "title": "AWS Solutions Architect 认证报名（BP大楼）",
+    "description": "2026-01-20 08:30-09:20 在1 St James's Square BP大楼到岗后，登录Slack与邮件查看核心重构看板，并在AWS认证门户报名AWS Solutions Architect考试：填写个人信息、确认考试窗口、支付报名费，收到确认邮件后将考试日期记入日历，来源AWS认证门户与本人日程核对",
+    "start_time": "2026-01-20 08:30:00",
+    "end_time": "2026-01-20 09:20:00",
+    "datetime": "2026-01-20 08:20:00",
+    "daily_event_id": "369",
+    "event_id": [
+      "20-1"
+    ],
+    "phone_id": 11
+  },
+  {
+    "type": "calendar",
+    "title": "核心重构设计评审（BP 大楼）",
+    "description": "时间 2026-01-21 08:30 至 10:15，地点 1 St James's Square BP 大楼，议题含错误码命名空间未决项、异常封装边界、接口文档与迁移风险，参与人 Priya、Hannah、Sofia、Tom，来源 团队重构项目组日程",
+    "start_time": "2026-01-21 08:30:00",
+    "end_time": "2026-01-21 10:15:00",
+    "datetime": "2026-01-21 07:05:00",
+    "daily_event_id": "397",
+    "event_id": [
+      "21-1"
+    ],
+    "phone_id": 12
+  },
+  {
+    "type": "calendar",
+    "title": "与妹妹 Chloe 确认次日布里斯托尔看房安排",
+    "description": "与妹妹 Chloe Bennett 消息确认 1月25日 在布里斯托尔 Clifton 看房的集合时间，约定看房后在附近吃午餐；同步确认她暂住约一个月的行李数量与空间需求，记入日历与空间规划备忘；来源 即时消息",
+    "start_time": "2026-01-24 18:30:00",
+    "end_time": "2026-01-24 18:45:00",
+    "datetime": "2026-01-24 18:45:00",
+    "daily_event_id": "483",
+    "event_id": [
+      "58-1",
+      "117-6",
+      "25-1"
+    ],
+    "phone_id": 13
+  },
+  {
+    "type": "calendar",
+    "title": "火车返程（布里斯托尔Temple Meads → 伦敦Paddington）",
+    "description": "13:10 从Bristol Temple Meads乘城际列车返回伦敦Paddington，约14:45抵达；车上仅查看下午路线与简短消息，防雨层放手边；来源 GWR 电子票",
+    "start_time": "2026-01-25 13:10:00",
+    "end_time": "2026-01-25 14:45:00",
+    "datetime": "2026-01-25 12:35:00",
+    "daily_event_id": "498",
+    "event_id": [
+      "58-2",
+      "25-5",
+      "25-6",
+      "44-2",
+      "25-3"
+    ],
+    "phone_id": 14
+  },
+  {
+    "type": "calendar",
+    "title": "核心服务重构威胁建模复审会议",
+    "description": "时间 2026-01-26 09:00-10:15，核心服务重构威胁建模复审，与 Hannah Cole、Priya Raman 等按清单逐项过令牌、设备指纹与越权访问条目，结论为有条件通过，新增令牌轮换机制与设备指纹方案两项遗留项，2月第一周关闭，来源 Alderwick Software Ltd 项目组",
+    "start_time": "2026-01-26 09:00:00",
+    "end_time": "2026-01-26 10:15:00",
+    "datetime": "2026-01-26 08:50:00",
+    "daily_event_id": "512",
+    "event_id": [
+      "26-1"
+    ],
+    "phone_id": 15
+  },
+  {
+    "type": "calendar",
+    "title": "Specsavers 年度眼科检查",
+    "description": "2026-01-27 17:05 在 Specsavers（245-246 Tottenham Court Road）做年度眼科检查，验光师 Sophie Turner；含视力、眼压与眼底检查，购买两盒不含防腐剂人工泪液，来源 Specsavers 预约",
+    "start_time": "2026-01-27 17:05:00",
+    "end_time": "2026-01-27 18:15:00",
+    "datetime": "2026-01-27 09:20:00",
+    "daily_event_id": "539",
+    "event_id": [
+      "51-7",
+      "51-1",
+      "51-5",
+      "72-1",
+      "51-6",
+      "51-2",
+      "72-4",
+      "51-4"
+    ],
+    "phone_id": 16
+  },
+  {
+    "type": "calendar",
+    "title": "后端平台双周回顾会（BP大楼）",
+    "description": "09:00–10:20 在 1 St James's Square BP 大楼参加后端平台双周回顾会，确认项目进入下一轮细化，讨论错误码命名与异常封装，Oliver 负责 2 月第一周提交 ADR，来源工作日程",
+    "start_time": "2026-01-28 09:00:00",
+    "end_time": "2026-01-28 10:20:00",
+    "datetime": "2026-01-28 07:55:00",
+    "daily_event_id": "553",
+    "event_id": [
+      "28-1",
+      "28-2"
+    ],
+    "phone_id": 17
+  }
+]

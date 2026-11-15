@@ -1,0 +1,140 @@
+{
+  "LIFEBENCH-BEIJING": {
+    "jump_distance_km": {
+      "mean": 3.9347241158139465,
+      "median": 3.142336009872615
+    },
+    "daily_distance_km": {
+      "mean": 29.44786458407752,
+      "median": 24.2870981802603
+    },
+    "radius_gyration_km": {
+      "mean": 4.434751645796525,
+      "median": 4.634932517464256
+    },
+    "dwell_minutes": {
+      "mean": 164.2079002079002,
+      "median": 30.0
+    },
+    "daily_locations": {
+      "mean": 6.568904593639576,
+      "median": 7.0
+    },
+    "mean_valid_slots_per_day": 46.51590106007067
+  },
+  "WorldMove": {
+    "jump_distance_km": {
+      "mean": 5.358386981123857,
+      "median": 1.1535671906808764
+    },
+    "daily_distance_km": {
+      "mean": 74.2003778065801,
+      "median": 16.741490448839343
+    },
+    "radius_gyration_km": {
+      "mean": 8.973926749076046,
+      "median": 1.7703868607151947
+    },
+    "dwell_minutes": {
+      "mean": 96.98588550749966,
+      "median": 30.0
+    },
+    "daily_locations": {
+      "mean": 11.283309542243298,
+      "median": 10.0
+    },
+    "mean_valid_slots_per_day": 48.0
+  },
+  "CoPB": {
+    "jump_distance_km": {
+      "mean": 4.423341738149854,
+      "median": 2.285551857327715
+    },
+    "daily_distance_km": {
+      "mean": 1.8079303519252996,
+      "median": 0.0
+    },
+    "radius_gyration_km": {
+      "mean": 2.623640251308328,
+      "median": 1.7400533131738056
+    },
+    "dwell_minutes": {
+      "mean": 222.54258247237624,
+      "median": 180.0
+    },
+    "daily_locations": {
+      "mean": 2.404485,
+      "median": 2.0
+    },
+    "mean_valid_slots_per_day": 26.03496
+  },
+  "ChinaMobile": {
+    "jump_distance_km": {
+      "mean": 4.163306359793976,
+      "median": 1.892086015575678
+    },
+    "daily_distance_km": {
+      "mean": 24.50002303928671,
+      "median": 16.21870713152257
+    },
+    "radius_gyration_km": {
+      "mean": 4.609977563257819,
+      "median": 3.1681380087646427
+    },
+    "dwell_minutes": {
+      "mean": 41.34426720099927,
+      "median": 30.0
+    },
+    "daily_locations": {
+      "mean": 5.780220756829776,
+      "median": 5.0
+    },
+    "mean_valid_slots_per_day": 15.061019178471765
+  },
+  "Tencent POI": {
+    "jump_distance_km": {
+      "mean": 1.825773550604084,
+      "median": 1.2278808002038943
+    },
+    "daily_distance_km": {
+      "mean": 0.1895946677115574,
+      "median": 0.0
+    },
+    "radius_gyration_km": {
+      "mean": 2.13122195223599,
+      "median": 0.48664614205684625
+    },
+    "dwell_minutes": {
+      "mean": 250.4479048630025,
+      "median": 180.0
+    },
+    "daily_locations": {
+      "mean": 1.7522359134761136,
+      "median": 2.0
+    },
+    "mean_valid_slots_per_day": 23.015759463747855
+  },
+  "GeoLife": {
+    "jump_distance_km": {
+      "mean": 5.036476697172188,
+      "median": 3.2250663082459075
+    },
+    "daily_distance_km": {
+      "mean": 21.276559000257702,
+      "median": 14.38921356456679
+    },
+    "radius_gyration_km": {
+      "mean": 4.532989556878602,
+      "median": 3.72042777247341
+    },
+    "dwell_minutes": {
+      "mean": 38.73273942093541,
+      "median": 30.0
+    },
+    "daily_locations": {
+      "mean": 5.226337448559671,
+      "median": 5.0
+    },
+    "mean_valid_slots_per_day": 9.048815098623528
+  }
+}

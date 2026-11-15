@@ -1,0 +1,1061 @@
+{
+  "name": "Oliver Bennett",
+  "birth": "1994-10-29",
+  "age": 31,
+  "nationality": "英国",
+  "home_address": {
+    "country_code": "GB",
+    "country": "United Kingdom",
+    "province": "England",
+    "city": "London",
+    "district": "Camden",
+    "street_name": "Newman Street",
+    "street_number": "23-24",
+    "timezone": "Europe/London",
+    "currency": "GBP",
+    "salary_period": "annual",
+    "output_language": "zh-CN",
+    "local_language": "en",
+    "administrative_area": "Camden",
+    "raw_provider_address": {
+      "country_code": "GB",
+      "province": "England",
+      "city": "Westminster",
+      "district": "Mayfair",
+      "county": "",
+      "state_district": "",
+      "formatted_address": "23-24 Newman Street, Mayfair, Westminster, England, United Kingdom"
+    },
+    "postcode": "W1T 1PY",
+    "administrative_area_source": "synthetic"
+  },
+  "birth_place": {
+    "country_code": "GB",
+    "country": "United Kingdom",
+    "province": "England",
+    "city": "London",
+    "district": "Camden"
+  },
+  "gender": "男",
+  "education": "大学本科",
+  "job": "软件工程师",
+  "occupation": "软件开发企业",
+  "workplace": {
+    "country_code": "GB",
+    "country": "United Kingdom",
+    "province": "England",
+    "city": "London",
+    "district": "Camden",
+    "street_name": "St James's Square",
+    "street_number": "1",
+    "administrative_area": "Camden",
+    "raw_provider_address": {
+      "country_code": "GB",
+      "province": "England",
+      "city": "Westminster",
+      "district": "Mayfair",
+      "county": "",
+      "state_district": "",
+      "formatted_address": "1 St James's Square, Mayfair, Westminster, England, United Kingdom"
+    },
+    "postcode": "SW1Y 4PD",
+    "administrative_area_source": "synthetic"
+  },
+  "belief": "不信仰宗教",
+  "salary": 65000,
+  "body": {
+    "height": 178,
+    "weight": 72,
+    "BMI": 22.7
+  },
+  "family": "未婚；父母住在赫特福德郡，妹妹在布里斯托尔工作",
+  "personality": {
+    "mbti": "INTJ",
+    "traits": [
+      "自律",
+      "好奇",
+      "独立",
+      "有条理"
+    ]
+  },
+  "hobbies": [
+    "城市夜跑（沿摄政运河5公里）",
+    "阅读科幻与非虚构类书籍",
+    "街头与建筑摄影（偏好胶片）",
+    "周末骑行（伦敦运河沿线短途）"
+  ],
+  "favorite_foods": [
+    "英式早餐（煎蛋、香肠、豆子）",
+    "意大利肉酱面",
+    "泰式绿咖喱"
+  ],
+  "memory_date": [
+    "2016-07-01：完成计算机科学本科学习并搬回伦敦",
+    "2021-05-17：加入现公司，开始从事后端平台开发",
+    "2023-09-10：与朋友在维多利亚公园完成首次10公里比赛，用时52分钟"
+  ],
+  "aim": [
+    "两年内取得 AWS 解决方案架构师认证并主导一次核心服务重构",
+    "保持每周三次运动习惯，两年内完成一次半程马拉松"
+  ],
+  "healthy_desc": "身高178厘米、体重72公斤，BMI约22.7，处于健康范围。每周三次跑步，其中至少两次是沿摄政运河的5公里夜跑，周末安排一次伦敦运河沿线的短途骑行，偶尔进行自重训练。睡眠规律，但在项目上线期会稍晚入睡，整体状态稳定。",
+  "lifestyle_desc": "工作日实行混合办公，每周三天骑自行车从Newman Street 23-24出发，沿街道前往St James's Square 1号BP大楼的办公室，单程约6.6分钟；另两天居家办公。他有一个固定的早晨仪式：起床后先用Bialetti摩卡壶煮一壶咖啡，打开BBC Radio 4的Today节目，边听边检查当天日程。出门拍照前，他会先拍一张住处附近的消防栓作为“测光片”，确保胶片曝光设置正确。周末常沿摄政运河散步、用胶片相机拍摄街头与建筑，或骑行探索运河支线，生活节奏安静有序。",
+  "economic_desc": "税前年薪65,000英镑，按年发放。在Camden租住Newman Street 23-24的一居室公寓，房租、食品、日常交通和胶片摄影耗材是主要支出。有定期储蓄习惯，参与职场养老金计划，并对年度大额支出（如旅行或摄影器材）提前做预算。",
+  "work_desc": "在Alderwick Software Ltd担任软件工程师，加入后端平台开发团队，办公室设在St James's Square 1号的BP大楼内。实行每周三天到岗、两天远程的混合办公，团队采用代码评审与敏捷迭代，重大项目上线阶段会有阶段性加班，近期参与核心服务模块的重构前期讨论。",
+  "experience_desc": "在伦敦Camden长大，2013年至2016年在曼彻斯特大学学习计算机科学。2014年秋天，他逛到曼彻斯特北角的Real Camera Co.，用兼职攒下的钱买下一台Olympus OM-2n和一卷Ilford HP5，从此沉迷于胶片摄影。2016年7月毕业后搬回伦敦，先在东伦敦Shoreditch的Pacecode Ltd做初级开发，参与物流调度系统的维护；2021年5月加入现公司Alderwick Software Ltd，开始从事后端平台开发；2023年9月与朋友在维多利亚公园完成首次10公里比赛，用时52分钟，同年开始参加London Film Photography Walks，每月第一个周六上午从Hawley Lock出发拍摄。2025年下半年起，他进入核心服务模块重构项目组，每周参加一次设计评审。",
+  "description": "Oliver Bennett 是31岁的英国软件工程师，现居伦敦Camden的Newman Street 23-24，在Alderwick Software Ltd后端平台开发团队工作，办公室位于St James's Square 1号的BP大楼。他性格独立、务实，习惯先规划再行动，重视工作与生活的稳定节奏。在审美上，他偏爱几何感强烈的现代主义建筑与工业遗迹，尤其喜欢用柯达Portra 400胶片捕捉城市中重复的线条与光影，这也让他成为London Film Photography Walks的常客。他常说“先跑起来再说”，用这句话逼自己离开屏幕投入运动。业余喜欢夜跑、阅读、街头摄影和周末骑行，沿摄政运河是他最常活动的路线。家庭关系亲近但各自独立，目前未婚独居。",
+  "relation": [
+    [
+      {
+        "name": "Margaret Bennett",
+        "relation": "母亲",
+        "social circle": "Bennett 家庭",
+        "gender": "女",
+        "age": 62,
+        "birth_date": "1963-04-12",
+        "home_address": {
+          "province": "England",
+          "city": "St Albans",
+          "district": "Cottonmill",
+          "street_name": "London Road",
+          "street_number": "21-23",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "AL1 1PX",
+          "administrative_area": "Cottonmill",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "St Albans",
+            "district": "Cottonmill",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "21-23 London Road, Cottonmill, St Albans, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "Sheffield",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ESFJ",
+        "economic_level": "中等偏稳：与配偶共同拥有 St Albans 的自住房，靠教师养老金与储蓄维持退休生活",
+        "occupation": "退休中学教师",
+        "organization": "Verulam Park School（St Albans，已退休）",
+        "nickname": "Maggie",
+        "relation_description": "Oliver 的母亲。她与丈夫 David 住在赫特福德郡 St Albans 的 Clarence Road，1996 年从伦敦 Camden 搬来后一直住在这里，Chloe 也在 St Albans 出生。她与 Oliver 保持每月一次的周末探访或电话联系，家庭群里常发园艺照片和家庭聚餐安排；Oliver 回 St Albans 时她总要做一顿英式早餐。"
+      },
+      {
+        "name": "David Bennett",
+        "relation": "父亲",
+        "social circle": "Bennett 家庭",
+        "gender": "男",
+        "age": 64,
+        "birth_date": "1961-11-03",
+        "home_address": {
+          "province": "England",
+          "city": "St Albans",
+          "district": "Milehouse",
+          "street_name": "Colindale Avenue",
+          "street_number": "13",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "AL1 1JR",
+          "administrative_area": "Milehouse",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "St Albans",
+            "district": "Milehouse",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "13 Colindale Avenue, Milehouse, St Albans, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "Norwich",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ISTJ",
+        "economic_level": "中等偏稳：退休金加长期储蓄，生活节俭，住房无贷款",
+        "occupation": "退休结构工程师",
+        "organization": "Cedarwell Engineering Ltd（已退休）",
+        "nickname": "Dave",
+        "relation_description": "Oliver 的父亲，退休前在 Cedarwell Engineering Ltd 做结构工程师，因工作调动在 1996 年把家从伦敦搬到 St Albans。他与 Oliver 每月通一次电话或等儿子周末回家，常一起在 St Albans 街头散步聊工程与自行车；家庭群里的消息多半由他转发新闻和天气提醒。"
+      },
+      {
+        "name": "Chloe Bennett",
+        "relation": "妹妹",
+        "social circle": "Bennett 家庭",
+        "gender": "女",
+        "age": 28,
+        "birth_date": "1997-06-18",
+        "home_address": {
+          "province": "England",
+          "city": "Bristol",
+          "district": "Clifton",
+          "street_name": "Lower Clifton Hill",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "BS8 1BX",
+          "administrative_area": "Clifton",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Bristol",
+            "district": "Clifton",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Lower Clifton Hill, Clifton, Bristol, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "St Albans",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ENFP",
+        "economic_level": "中等：布里斯托尔租房居住，有稳定月薪与少量存款",
+        "occupation": "品牌传播经理",
+        "organization": "Brookfield Creative Ltd",
+        "nickname": "Chlo",
+        "relation_description": "Oliver 的妹妹，1997 年在 St Albans 出生，在赫特福德郡长大，大学毕业后到布里斯托尔工作并住在 Redland 的 Whiteladies Road。她与 Oliver 每月至少通话一次，偶尔坐火车来伦敦一起沿摄政运河散步拍照，也会把家里的近况发到 Bennett 家庭群；节假日多在 St Albans 父母家碰面。"
+      }
+    ],
+    [
+      {
+        "name": "Priya Raman",
+        "relation": "后端平台技术负责人",
+        "social circle": "Alderwick Software Ltd – Backend Platform Team",
+        "gender": "女",
+        "age": 36,
+        "birth_date": "1989-06-12",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Covent Garden",
+          "street_name": "John Adam Street",
+          "street_number": "22",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "WC2N 6HE",
+          "administrative_area": "Covent Garden",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Covent Garden",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "22 John Adam Street, Covent Garden, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "IN",
+          "country": "India",
+          "province": "Tamil Nadu",
+          "city": "Chennai",
+          "district": "Mylapore",
+          "verification": "synthetic"
+        },
+        "personality": "ENTJ",
+        "economic_level": "税前年薪约九万英镑级别的高级技术管理收入，与伴侣在Islington合租一套两居室，通勤以地铁与骑行为主，储蓄与投资规划清晰，属于稳定的中高收入层。",
+        "occupation": "后端平台技术负责人（软件工程）",
+        "organization": "Alderwick Software Ltd",
+        "nickname": "Priya",
+        "relation_description": "2019年加入Alderwick Software Ltd，2021年起担任后端平台开发团队技术负责人，是Oliver自2021年5月入职以来的直线技术上级。两人在1 St James's Square的办公室按每周三天到岗、两天远程的混合节奏共事，Priya主持每周一次的重构设计评审并对Oliver的代码做评审；日常通过Slack与GitHub评论沟通，每月一次正式一对一，频率稳定。"
+      },
+      {
+        "name": "Tom Whitfield",
+        "relation": "同团队后端工程师",
+        "social circle": "Alderwick Software Ltd – Backend Platform Team",
+        "gender": "男",
+        "age": 29,
+        "birth_date": "1996-03-08",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Soho",
+          "street_name": "Marshall Street",
+          "street_number": "20",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "W1F 7EP",
+          "administrative_area": "Soho",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Soho",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "20 Marshall Street, Soho, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "Leeds",
+          "district": "Headingley",
+          "verification": "synthetic"
+        },
+        "personality": "ENFP",
+        "economic_level": "税前年薪约六万英镑的工程师收入，与两位朋友在Hackney合租排屋，开销偏社交与音乐演出，储蓄起步中，属于稳定的中等收入层。",
+        "occupation": "后端软件工程师",
+        "organization": "Alderwick Software Ltd",
+        "nickname": "Tom",
+        "relation_description": "2021年8月加入Alderwick Software Ltd后端平台开发团队，与Oliver同期参与平台服务维护，逐渐成为固定的结对编程搭档。两人常在到岗日约在1 St James's Square办公室的白板区一起拆解接口设计，每周结对两到三次，重构项目期间一同参加Priya主持的每周设计评审；下班偶尔沿摄政运河一起跑一段。"
+      },
+      {
+        "name": "Daniel Osei",
+        "relation": "工程经理",
+        "social circle": "Alderwick Software Ltd – Backend Platform Team",
+        "gender": "男",
+        "age": 42,
+        "birth_date": "1983-09-21",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Covent Garden",
+          "street_name": "Buckingham Street",
+          "street_number": "9",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "WC2N 6DF",
+          "administrative_area": "Covent Garden",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Covent Garden",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "9 Buckingham Street, Covent Garden, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "London",
+          "district": "Croydon",
+          "verification": "synthetic"
+        },
+        "personality": "ENFJ",
+        "economic_level": "税前年薪约九万五千英镑的工程管理收入，与家人住在Greenwich带小花园的联排住宅，通勤以火车加步行，家庭预算稳健，属于中高收入层。",
+        "occupation": "工程经理（软件研发管理）",
+        "organization": "Alderwick Software Ltd",
+        "nickname": "Dan",
+        "relation_description": "2020年加入Alderwick Software Ltd担任工程经理，是Oliver所在后端平台开发团队的直线管理者，办公地点同在1 St James's Square。两人每月进行一次一对一绩效与成长沟通，内容涉及AWS认证备考与半程马拉松计划的节奏安排；每两周参加一次团队回顾会，日常通过Slack和邮件处理排期与资源问题，混合办公下也会安排在到岗日面谈。"
+      }
+    ],
+    [
+      {
+        "name": "Hannah Cole",
+        "relation": "平台架构师",
+        "social circle": "Alderwick Software Ltd – 核心服务重构项目组",
+        "gender": "女",
+        "age": 38,
+        "birth_date": "1987-03-14",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Soho",
+          "street_name": "Foubert''s Place",
+          "street_number": "14-18",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "W1F 7PH",
+          "administrative_area": "Soho",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Soho",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "14-18 Foubert''s Place, Soho, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "Sheffield",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ENTJ",
+        "economic_level": "中高收入，生活稳定",
+        "occupation": "平台架构师",
+        "organization": "Alderwick Software Ltd",
+        "nickname": "Han",
+        "relation_description": "2025年下半年核心服务重构项目启动时，Oliver 在架构评审中与 Hannah 对接后端服务边界；她负责平台架构决策，每周设计评审会前会与 Oliver 预审方案，到岗日在 BP 大楼 1 St James's Square 的办公区当面讨论，远程时通过 Slack 和视频会议联系，频率约每周两三次，属于技术导师型同事关系。"
+      },
+      {
+        "name": "Sofia Marchetti",
+        "relation": "产品经理",
+        "social circle": "Alderwick Software Ltd – 核心服务重构项目组",
+        "gender": "女",
+        "age": 34,
+        "birth_date": "1991-06-08",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Soho",
+          "street_name": "Saint Anne's Court",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "W1F 0BJ",
+          "administrative_area": "Soho",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Soho",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Saint Anne's Court, Soho, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "IT",
+          "country": "Italy",
+          "province": "Emilia-Romagna",
+          "city": "Bologna",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ENFJ",
+        "economic_level": "中等偏上收入，生活稳定",
+        "occupation": "产品经理",
+        "organization": "Alderwick Software Ltd",
+        "nickname": "Sofi",
+        "relation_description": "2025年下半年核心服务重构项目组组建后，Sofia 作为产品经理负责需求对齐和跨团队协调，与 Oliver 在后端平台范围划分上频繁协作；每周设计评审、双周需求梳理会以及日常站会保持联系，到岗日在 BP 大楼 1 St James's Square 办公区碰面，远程时用 Slack 和视频会议沟通，频率约每周三到四次。"
+      }
+    ],
+    [
+      {
+        "name": "James Okonkwo",
+        "relation": "大学同学，现居伦敦",
+        "social circle": "University of Manchester 计算机科学 2013–2016",
+        "gender": "男",
+        "age": 31,
+        "birth_date": "1994-03-15",
+        "home_address": {
+          "province": "England",
+          "city": "London",
+          "district": "Isle of Dogs",
+          "street_name": "Crossharbour Plaza",
+          "street_number": "25",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "E14 9UE",
+          "administrative_area": "Isle of Dogs",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "London",
+            "district": "Isle of Dogs",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "25 Crossharbour Plaza, Isle of Dogs, London, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "London",
+          "district": "Hackney",
+          "verification": "synthetic"
+        },
+        "personality": "ENFP",
+        "economic_level": "中等",
+        "occupation": "软件工程师",
+        "organization": "Northbridge Ltd",
+        "nickname": "Jim",
+        "relation_description": "我们同在 University of Manchester 读计算机科学（BSc Computer Science，2013–2016），读书时一起做课程项目，也常在校园周边跑步；他毕业后搬到伦敦做软件工程师，我们因此保持线下联系，通常每两周沿摄政运河或 Regent's Park 夜跑一次，偶尔一起吃饭。"
+      },
+      {
+        "name": "Aisha Karim",
+        "relation": "大学同学，现居曼彻斯特",
+        "social circle": "University of Manchester 计算机科学 2013–2016",
+        "gender": "女",
+        "age": 30,
+        "birth_date": "1995-02-08",
+        "home_address": {
+          "province": "England",
+          "city": "Manchester",
+          "district": "Fallowfield",
+          "street_name": "Chancellors Way",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "M14 6NN",
+          "administrative_area": "Fallowfield",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Manchester",
+            "district": "Fallowfield",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Chancellors Way, Fallowfield, Manchester, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "Bradford",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ISTJ",
+        "economic_level": "中等",
+        "occupation": "数据工程师",
+        "organization": "Cedarwell Ltd",
+        "nickname": "Aish",
+        "relation_description": "我们同在 University of Manchester 读计算机科学（BSc Computer Science，2013–2016），在数据库课程的小组项目里熟起来；她毕业后留在曼彻斯特做数据工程，我们主要靠消息和每季度一次视频通话联系，Oliver 去曼彻斯特出差或探访时会约咖啡。"
+      },
+      {
+        "name": "Elliot Shaw",
+        "relation": "大学同学，现居爱丁堡",
+        "social circle": "University of Manchester 计算机科学 2013–2016",
+        "gender": "男",
+        "age": 32,
+        "birth_date": "1993-11-21",
+        "home_address": {
+          "province": "Scotland",
+          "city": "Edinburgh",
+          "district": "Ratho Station",
+          "street_name": "Boathouse Bridge",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "EH29 9ES",
+          "administrative_area": "Ratho Station",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "Scotland",
+            "city": "Edinburgh",
+            "district": "Ratho Station",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Boathouse Bridge, Ratho Station, Edinburgh, Scotland, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "Scotland",
+          "city": "Edinburgh",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "INTP",
+        "economic_level": "中等",
+        "occupation": "后端工程师",
+        "organization": "Westhaven Ltd",
+        "nickname": "El",
+        "relation_description": "我们同在 University of Manchester 读计算机科学（BSc Computer Science，2013–2016），大三时一起准备毕业项目；他后来去爱丁堡做后端开发，我们保持偶尔的线上联络，大约每两三个月互发消息，年末会约一次长时间视频更新近况。"
+      }
+    ],
+    [
+      {
+        "name": "Marcus Bell",
+        "relation": "跑团组织者",
+        "social circle": "Regent's Park 夜跑小组",
+        "gender": "男",
+        "age": 36,
+        "birth_date": "1989-03-14",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Mayfair",
+          "street_name": "Albany Court Yard",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "W1J 0AL",
+          "administrative_area": "Mayfair",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Mayfair",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Albany Court Yard, Mayfair, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "Sheffield",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ESFJ",
+        "economic_level": "中等偏上，收入稳定",
+        "occupation": "运动康复理疗师",
+        "organization": "Cedarwell Health Services Ltd",
+        "nickname": "Marc",
+        "relation_description": "2022年在Regent's Park夜跑小组的周二、周四19:00训练中认识；他负责路线与配速分组，常带大家从公园跑到摄政运河步道。2023年9月10日一起参加维多利亚公园10公里，赛后沿运河慢跑放松；平时每周训练见面两次，赛前通过群聊协调集合与配速。"
+      },
+      {
+        "name": "Lena Fischer",
+        "relation": "跑友",
+        "social circle": "Regent's Park 夜跑小组",
+        "gender": "女",
+        "age": 30,
+        "birth_date": "1995-08-22",
+        "home_address": {
+          "province": "England",
+          "city": "London",
+          "district": "Canary Wharf",
+          "street_name": "Marsh Wall",
+          "street_number": "10",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "E14 9BT",
+          "administrative_area": "Canary Wharf",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "London",
+            "district": "Canary Wharf",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "10 Marsh Wall, Canary Wharf, London, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "DE",
+          "country": "Germany",
+          "province": "Bavaria",
+          "city": "Munich",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ENFP",
+        "economic_level": "中等，生活稳定",
+        "occupation": "结构工程师",
+        "organization": "Northbridge Engineering Ltd",
+        "nickname": "Len",
+        "relation_description": "2022年加入Regent's Park夜跑小组后，在周二、周四19:00的5–10公里训练中与Oliver配速相近而熟悉；近期两人常约周末加练，为半程马拉松备赛，路线多从Regent's Park延伸到摄政运河步道，平时每周见面一至两次，赛前用Strava和群聊对表。"
+      }
+    ],
+    [
+      {
+        "name": "Iris Novak",
+        "relation": "胶片摄影同好",
+        "social circle": "London Film Photography Walks",
+        "gender": "女",
+        "age": 34,
+        "birth_date": "1991-03-14",
+        "home_address": {
+          "province": "England",
+          "city": "London",
+          "district": "Camden",
+          "street_name": "Lewis Street",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "NW1 8PX",
+          "administrative_area": "Camden",
+          "administrative_area_source": "provider",
+          "neighbourhood": "Kentish Town",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "London Borough of Camden",
+            "district": "Kentish Town",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Lewis Street, Kentish Town, London Borough of Camden, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "London",
+          "district": "Camden",
+          "verification": "synthetic"
+        },
+        "personality": "ISFP",
+        "economic_level": "中等收入",
+        "occupation": "建筑师",
+        "organization": "Cedarwell Ltd",
+        "nickname": "Iris",
+        "relation_description": "2023 年起参加 London Film Photography Walks，每月第一个周六上午从 Hawley Lock 出发的胶片街拍与建筑摄影徒步中与 Oliver 相识。两人都偏爱几何线条和现代主义建筑，经常在同一条运河边徒步边交流取景与曝光经验；平时每月徒步见面一次，偶尔在群里约临时拍摄或互发扫描样片。"
+      },
+      {
+        "name": "Callum Reid",
+        "relation": "摄影同好",
+        "social circle": "London Film Photography Walks",
+        "gender": "男",
+        "age": 37,
+        "birth_date": "1988-11-07",
+        "home_address": {
+          "province": "England",
+          "city": "London",
+          "district": "Camden",
+          "street_name": "Royal College Street",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "NW1 9RD",
+          "administrative_area": "Camden",
+          "administrative_area_source": "provider",
+          "neighbourhood": "Kentish Town",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "London Borough of Camden",
+            "district": "Kentish Town",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Royal College Street, Kentish Town, London Borough of Camden, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "Scotland",
+          "city": "Glasgow",
+          "district": "Glasgow City",
+          "verification": "synthetic"
+        },
+        "personality": "ISTP",
+        "economic_level": "中等收入",
+        "occupation": "暗房技师",
+        "organization": "Brookfield Ltd",
+        "nickname": "Cal",
+        "relation_description": "同样在 2023 年加入 London Film Photography Walks，在每月第一个周六上午 Hawley Lock 集合的徒步中与 Oliver 认识。Callum 擅长黑白胶片冲洗和暗房放大，常和 Oliver 讨论 Ilford HP5 的显影时间与建筑阴影层次；除了月度徒步，他会不定期约 Oliver 去暗房看印片，平时也通过群聊交流器材和药水经验。"
+      }
+    ],
+    [
+      {
+        "name": "Zoe Hart",
+        "relation": "读书会成员",
+        "social circle": "Camden Sci-Fi & Non-Fiction Book Club",
+        "gender": "女",
+        "age": 29,
+        "birth_date": "1996-04-18",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Mayfair",
+          "street_name": "Newman Street",
+          "street_number": "23-24",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "W1T 1PY",
+          "administrative_area": "Mayfair",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Mayfair",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "23-24 Newman Street, Mayfair, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "Bristol",
+          "district": "Clifton",
+          "verification": "synthetic"
+        },
+        "personality": "ENTP",
+        "economic_level": "中等收入",
+        "occupation": "科幻与类型小说编辑",
+        "organization": "Cedarwell Ltd",
+        "nickname": "Zee",
+        "relation_description": "2022年秋天在Camden Sci-Fi Book Club的一次“科幻与非虚构交替选书”主题夜上认识Oliver，两人因为都喜欢勒古恩和城市基础设施类非虚构而聊到一起。每月第三个周三晚在Lamb's Conduit Street那家酒吧后厅聚会时，她常带来自制书单和出版社的试读本，和Oliver交换科幻书单、互借纸质书；聚会之外的交流多在读书会的群聊里，平均每月一两次，偶尔约在Bloomsbury的咖啡馆换书。"
+      },
+      {
+        "name": "Peter Lindqvist",
+        "relation": "读书会主持人",
+        "social circle": "Camden Sci-Fi & Non-Fiction Book Club",
+        "gender": "男",
+        "age": 40,
+        "birth_date": "1985-11-02",
+        "home_address": {
+          "province": "England",
+          "city": "London",
+          "district": "Camden",
+          "street_name": "Munster Square",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "NW1 3PG",
+          "administrative_area": "Camden",
+          "administrative_area_source": "provider",
+          "neighbourhood": "Fitzrovia",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "London Borough of Camden",
+            "district": "Fitzrovia",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Munster Square, Fitzrovia, London Borough of Camden, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "SE",
+          "country": "Sweden",
+          "province": "Stockholm County",
+          "city": "Stockholm",
+          "district": "Södermalm",
+          "verification": "synthetic"
+        },
+        "personality": "ENFJ",
+        "economic_level": "中高收入",
+        "occupation": "数据平台主管",
+        "organization": "Northbridge Ltd",
+        "nickname": "Pete",
+        "relation_description": "他是Camden Sci-Fi Book Club自2022年起的固定主持人，负责选书组织与场地协调；Oliver在2022年加入时，由他在Lamb's Conduit Street酒吧后厅介绍了“科幻与非虚构交替选书”的规则和每月第三个周三晚的聚会节奏。此后他每轮提前用邮件和群聊征集提名、排出书单，并在聚会上带讨论提纲；与Oliver的往来主要是每月一次聚会前后的书单确认，偶尔也聊伦敦运河骑行路线和翻译作品。"
+      }
+    ],
+    [
+      {
+        "name": "Helen Marsh",
+        "relation": "同栋公寓邻居",
+        "social circle": "Newman Street 街区日常熟人",
+        "gender": "女",
+        "age": 40,
+        "birth_date": "1985-03-14",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Covent Garden",
+          "street_name": "Rathbone Place",
+          "street_number": "31",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "W1T 1JH",
+          "administrative_area": "Covent Garden",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Covent Garden",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "31 Rathbone Place, Covent Garden, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "St Albans",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ISFJ",
+        "economic_level": "中等收入",
+        "occupation": "物理治疗师",
+        "organization": "Cedarwell Health Services Ltd",
+        "nickname": "Helen",
+        "relation_description": "Helen 自2018年起住在 Newman Street 23-24 同一栋公寓的楼下单元，2021年 Oliver 搬入后两人在楼道与门口逐渐熟络。她每周有两天居家处理病历与预约，白天常在，因此常帮 Oliver 代收快递，他下班回来会顺路敲门取件并聊上几句，平均每周两三次。周末早上两人偶尔在街角 Arif 的咖啡店碰上，会点头寒暄；她也会提醒 Oliver 楼道消防门不要长时间敞开。"
+      },
+      {
+        "name": "Arif Chowdhury",
+        "relation": "街区咖啡店店主",
+        "social circle": "Newman Street 街区日常熟人",
+        "gender": "男",
+        "age": 46,
+        "birth_date": "1979-11-08",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Covent Garden",
+          "street_name": "Rathbone Place",
+          "street_number": "29",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "W1T 1JG",
+          "administrative_area": "Covent Garden",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Covent Garden",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "29 Rathbone Place, Covent Garden, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "London",
+          "district": "Tower Hamlets",
+          "verification": "synthetic"
+        },
+        "personality": "ESFJ",
+        "economic_level": "中等收入",
+        "occupation": "咖啡店店主",
+        "organization": "Newman Corner Coffee",
+        "nickname": "Arif",
+        "relation_description": "Arif 在 Newman Street 街角经营一家小咖啡店，2021年 Oliver 搬进 23-24 号后很快成了他的常客。周六早上 Oliver 若不出门拍照，常来点一份英式早餐和 flat white，两人聊聊天气、运河水位和街区施工。Oliver 骑自行车出门时会把车锁在店侧的架子上，请 Arif 顺带照看；遇到快递送错到店里，Arif 也会替他收着，等他傍晚经过时取走。这种点头寒暄与互相搭把手的往来每周大约两三次。"
+      }
+    ],
+    [
+      {
+        "name": "Yusuf Adeyemi",
+        "relation": "Meetup 组织者",
+        "social circle": "London Backend Platform Meetup",
+        "gender": "男",
+        "age": 34,
+        "birth_date": "1991-04-12",
+        "home_address": {
+          "province": "England",
+          "city": "London",
+          "district": "Canary Wharf",
+          "street_name": "Newfoundland Place",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "E14 4BJ",
+          "administrative_area": "Canary Wharf",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "London",
+            "district": "Canary Wharf",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Newfoundland Place, Canary Wharf, London, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "London",
+          "district": "Hackney",
+          "verification": "synthetic"
+        },
+        "personality": "ENFJ",
+        "economic_level": "中高收入",
+        "occupation": "平台工程负责人",
+        "organization": "Cedarwell Ltd",
+        "nickname": "Yus",
+        "relation_description": "2022年在London Backend Platform Meetup的月度分享上认识，他负责组织活动并主持后端架构讨论；此后Oliver不定期参加，2025年筹备AWS认证专题时联系增多，通常每月活动后交流一次，通过Meetup私信和Slack保持联系。"
+      },
+      {
+        "name": "Rebecca Tan",
+        "relation": "AWS 认证学习伙伴",
+        "social circle": "London Backend Platform Meetup",
+        "gender": "女",
+        "age": 29,
+        "birth_date": "1996-11-03",
+        "home_address": {
+          "province": "England",
+          "city": "Westminster",
+          "district": "Millbank",
+          "street_name": "Dean Ryle Street",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "SW1P 2AW",
+          "administrative_area": "Millbank",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "Westminster",
+            "district": "Millbank",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Dean Ryle Street, Millbank, Westminster, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "London",
+          "district": "Southwark",
+          "verification": "synthetic"
+        },
+        "personality": "INTP",
+        "economic_level": "中等收入",
+        "occupation": "后端开发工程师",
+        "organization": "Brookfield Ltd",
+        "nickname": "Becca",
+        "relation_description": "2022年在London Backend Platform Meetup的活动上认识，两人都关注云平台与后端架构；2024年起固定每周三晚在线上对练AWS Solutions Architect题目，每月活动后当面交流，平时通过Slack和视频通话联系。"
+      }
+    ],
+    [
+      {
+        "name": "Theo Bright",
+        "relation": "线上骑友",
+        "social circle": "Regent's Canal Riders（Strava 俱乐部）",
+        "gender": "男",
+        "age": 34,
+        "birth_date": "1991-06-18",
+        "home_address": {
+          "province": "England",
+          "city": "London",
+          "district": "Islington",
+          "street_name": "Fortune Street",
+          "street_number": "",
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "postcode": "EC1Y 0RA",
+          "administrative_area": "Islington",
+          "administrative_area_source": "provider",
+          "neighbourhood": "Finsbury",
+          "raw_provider_address": {
+            "country_code": "GB",
+            "province": "England",
+            "city": "London Borough of Islington",
+            "district": "Finsbury",
+            "county": "",
+            "state_district": "",
+            "formatted_address": "Fortune Street, Finsbury, London Borough of Islington, England, United Kingdom"
+          }
+        },
+        "birth_place": {
+          "country_code": "GB",
+          "country": "United Kingdom",
+          "province": "England",
+          "city": "Guildford",
+          "district": "",
+          "verification": "synthetic"
+        },
+        "personality": "ENFP",
+        "economic_level": "中等收入",
+        "occupation": "自行车技师",
+        "organization": "Cedarwell Cycles Ltd",
+        "nickname": "Theo",
+        "relation_description": "2023年起在Strava俱乐部Regent's Canal Riders中因分享摄政运河周末骑行路线结识，常在俱乐部活动下互相评论路线、路况与补给点，每周线上互动数次；不定期周末约骑，线下大约每月一至两次在运河沿线碰面。"
+      }
+    ]
+  ]
+}

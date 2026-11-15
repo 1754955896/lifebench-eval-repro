@@ -1,0 +1,107 @@
+[
+  {
+    "dataset": "lifebench",
+    "sample": "fenghaoran",
+    "normalized_input": "input/lifebench/fenghaoran.json",
+    "coarse_report": "output/lifebench/fenghaoran.json",
+    "event_count": 1397
+  },
+  {
+    "dataset": "lifebench",
+    "sample": "leimingxuan",
+    "normalized_input": "input/lifebench/leimingxuan.json",
+    "coarse_report": "output/lifebench/leimingxuan.json",
+    "event_count": 1336
+  },
+  {
+    "dataset": "lifebench",
+    "sample": "songyajing",
+    "normalized_input": "input/lifebench/songyajing.json",
+    "coarse_report": "output/lifebench/songyajing.json",
+    "event_count": 1438
+  },
+  {
+    "dataset": "lifebench",
+    "sample": "yemingxuan",
+    "normalized_input": "input/lifebench/yemingxuan.json",
+    "coarse_report": "output/lifebench/yemingxuan.json",
+    "event_count": 1451
+  },
+  {
+    "dataset": "lifebench",
+    "sample": "yinhao",
+    "normalized_input": "input/lifebench/yinhao.json",
+    "coarse_report": "output/lifebench/yinhao.json",
+    "event_count": 1379
+  },
+  {
+    "dataset": "mempal",
+    "sample": "0000",
+    "normalized_input": "input/mempal/0000.json",
+    "coarse_report": "output/mempal/0000.json",
+    "event_count": 307
+  },
+  {
+    "dataset": "mempal",
+    "sample": "0012",
+    "normalized_input": "input/mempal/0012.json",
+    "coarse_report": "output/mempal/0012.json",
+    "event_count": 313
+  },
+  {
+    "dataset": "mempal",
+    "sample": "0025",
+    "normalized_input": "input/mempal/0025.json",
+    "coarse_report": "output/mempal/0025.json",
+    "event_count": 302
+  },
+  {
+    "dataset": "mempal",
+    "sample": "0037",
+    "normalized_input": "input/mempal/0037.json",
+    "coarse_report": "output/mempal/0037.json",
+    "event_count": 324
+  },
+  {
+    "dataset": "mempal",
+    "sample": "0050",
+    "normalized_input": "input/mempal/0050.json",
+    "coarse_report": "output/mempal/0050.json",
+    "event_count": 311
+  },
+  {
+    "dataset": "omni",
+    "sample": "user_029",
+    "normalized_input": "input/omni/user_029.json",
+    "coarse_report": "output/omni/user_029.json",
+    "event_count": 900
+  },
+  {
+    "dataset": "omni",
+    "sample": "user_051",
+    "normalized_input": "input/omni/user_051.json",
+    "coarse_report": "output/omni/user_051.json",
+    "event_count": 900
+  },
+  {
+    "dataset": "omni",
+    "sample": "user_122",
+    "normalized_input": "input/omni/user_122.json",
+    "coarse_report": "output/omni/user_122.json",
+    "event_count": 769
+  },
+  {
+    "dataset": "omni",
+    "sample": "user_143",
+    "normalized_input": "input/omni/user_143.json",
+    "coarse_report": "output/omni/user_143.json",
+    "event_count": 899
+  },
+  {
+    "dataset": "omni",
+    "sample": "user_157",
+    "normalized_input": "input/omni/user_157.json",
+    "coarse_report": "output/omni/user_157.json",
+    "event_count": 900
+  }
+]

@@ -1,0 +1,1 @@
+"""Person relationship consistency score."""

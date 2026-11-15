@@ -1,0 +1,1 @@
+"""Legacy path truth score."""

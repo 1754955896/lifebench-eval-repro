@@ -18,15 +18,5 @@ Thumbs.db
 config/config.json
 
 # 评测产物
-output/
+/output/
 *.log
-
-# 本地数据（lifebench_10people 与 lifebench_5p_beijing，约 240MB）
-data/
-
-# 本地 OmniBehavior 用户行为抽样数据
-evaluation/interest_stats/eval/datasets/omni_input/
-
-# 地理评估套件的重资产（参照数据 / 评估结果，约 13GB）
-evaluation/geolocation/data/
-evaluation/geolocation/results/

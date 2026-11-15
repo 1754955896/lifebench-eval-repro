@@ -1,0 +1,2260 @@
+{
+  "schema_version": "persona_locations_v2",
+  "home_city": "北京市",
+  "anchors": [
+    {
+      "name": "居住地·太平桥西里小区",
+      "location": "116.314327,39.884021",
+      "formatted_address": "北京市丰台区太平桥西里36号楼",
+      "city": "北京市",
+      "district": "丰台区",
+      "streetName": "太平桥西里",
+      "streetNumber": "36号楼",
+      "description": "人物的日常居住地",
+      "location_role": "anchor",
+      "anchor_role": "home",
+      "location_id": "loc_f02d37f7fca4",
+      "source": "persona_catalog"
+    }
+  ],
+  "familiar_places": [
+    {
+      "name": "工作地·瑞海大厦",
+      "location": "116.319749,39.897791",
+      "formatted_address": "北京市海淀区羊坊店东路21号",
+      "city": "北京市",
+      "district": "海淀区",
+      "streetName": "羊坊店东路",
+      "streetNumber": "21号",
+      "description": "人物的日常工作地",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_81926cd9abfd",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "关系圈固定地·中国人民大学北校区",
+      "location": "116.310932,39.974299",
+      "formatted_address": "北京市海淀区海淀南路24号(苏州街地铁站B东北口步行270米)",
+      "city": "北京市",
+      "district": "海淀区",
+      "streetName": "海淀南路24号(苏州街地铁站B东北口步行270米)",
+      "streetNumber": "",
+      "description": "数字媒体艺术2020级核心小组共同就读或任教的真实学校",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_0405ae7539ed",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·中昌华美生活超市",
+      "location": "116.307925,39.887125",
+      "formatted_address": "北京市丰台区西三环中路入口与西三环中路辅路交叉口西南220米",
+      "city": "北京市",
+      "district": "丰台区",
+      "streetName": "西三环中路入口与西三环中路辅路交叉口西南220米",
+      "streetNumber": "",
+      "description": "每天清晨或傍晚去小区周边超市购买早餐、水果和生活用品，偶尔买咖啡和零食应对熬夜。",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_1ad0efa8b3ca",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·美宜佳",
+      "location": "116.321021,39.894675",
+      "formatted_address": "北京市丰台区太平桥街道莲花池东路120号",
+      "city": "北京市",
+      "district": "丰台区",
+      "streetName": "太平桥街道莲花池东路120号",
+      "streetNumber": "",
+      "description": "工作日早晨和下午休息时经常去楼下便利店买咖啡、饭团或电池等应急小物。",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_7e4dccc91b0d",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·首都博物馆",
+      "location": "116.342067,39.906412",
+      "formatted_address": "北京市西城区复兴门外大街16号",
+      "city": "北京市",
+      "district": "西城区",
+      "streetName": "复兴门外大街",
+      "streetNumber": "16号",
+      "description": "每月安排一两个周末去看城市主题或摄影相关的展览，为个人作品集积累视觉素材。",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_7ad65787f103",
+      "source": "persona_familiar"
+    },
+    {
+      "name": "常去地·大柳树市场",
+      "location": "116.505127,39.872767",
+      "formatted_address": "北京市朝阳区东四环",
+      "city": "北京市",
+      "district": "朝阳区",
+      "streetName": "东四环",
+      "streetNumber": "",
+      "description": "每月去城市里的电子/相机二手市场淘镜头或CCD老相机，尝试用预算内设备创作城市题材。",
+      "location_role": "familiar",
+      "knowledge_state": "visited",
+      "return_eligible": true,
+      "visit_count": 1,
+      "location_id": "loc_7afcc875da14",
+      "source": "persona_familiar"
+    }
+  ],
+  "city_reference_pois": [
+    {
+      "location_id": "cityref:B000A5F89F",
+      "name": "莲花池公园",
+      "location": "116.315327,39.893297",
+      "formatted_address": "北京市丰台区西三环中路38号",
+      "city": "北京市",
+      "district": "丰台区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "距太平桥西里较近，适合傍晚慢跑与观察水岸光线，积累日常拍摄素材",
+      "distance_from_home_km": 1.03
+    },
+    {
+      "location_id": "cityref:B0HKLDQI62",
+      "name": "莲花池公园-东广场",
+      "location": "116.318239,39.892582",
+      "formatted_address": "北京市丰台区西三环南路38号莲花池公园(东侧)",
+      "city": "北京市",
+      "district": "丰台区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "距太平桥西里较近，适合傍晚慢跑与观察水岸光线，积累日常拍摄素材",
+      "distance_from_home_km": 1.01
+    },
+    {
+      "location_id": "cityref:B0HKLDSRUH",
+      "name": "莲花池公园-南广场",
+      "location": "116.317126,39.889600",
+      "formatted_address": "北京市丰台区西三环南路38号莲花池公园(东南角)",
+      "city": "北京市",
+      "district": "丰台区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "距太平桥西里较近，适合傍晚慢跑与观察水岸光线，积累日常拍摄素材",
+      "distance_from_home_km": 0.66
+    },
+    {
+      "location_id": "cityref:B0HKLDR4OA",
+      "name": "莲花池公园-西广场",
+      "location": "116.313006,39.891979",
+      "formatted_address": "北京市丰台区西三环南路38号莲花池公园(西南角)",
+      "city": "北京市",
+      "district": "丰台区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "距太平桥西里较近，适合傍晚慢跑与观察水岸光线，积累日常拍摄素材",
+      "distance_from_home_km": 0.89
+    },
+    {
+      "location_id": "cityref:B0HKHUCKJA",
+      "name": "莲花池公园-北广场",
+      "location": "116.315386,39.893625",
+      "formatted_address": "北京市丰台区西三环南路38号莲花池公园",
+      "city": "北京市",
+      "district": "丰台区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "距太平桥西里较近，适合傍晚慢跑与观察水岸光线，积累日常拍摄素材",
+      "distance_from_home_km": 1.07
+    },
+    {
+      "location_id": "cityref:B0KKZZKUW1",
+      "name": "莲花池公园-南门售票处",
+      "location": "116.316355,39.889539",
+      "formatted_address": "北京市丰台区广安路辅路与太平桥路交叉口北240米",
+      "city": "北京市",
+      "district": "丰台区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "距太平桥西里较近，适合傍晚慢跑与观察水岸光线，积累日常拍摄素材",
+      "distance_from_home_km": 0.64
+    },
+    {
+      "location_id": "cityref:B0FFFWAIWK",
+      "name": "首钢园",
+      "location": "116.155232,39.915415",
+      "formatted_address": "北京市石景山区石景山路68号",
+      "city": "北京市",
+      "district": "石景山区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "石景山区工业遗址公园，可拍摄城市更新与工业建筑，适合周末采风",
+      "distance_from_home_km": 14.01
+    },
+    {
+      "location_id": "cityref:B0H1T5HXY2",
+      "name": "首钢园P3(三炼钢)停车场",
+      "location": "116.161996,39.906746",
+      "formatted_address": "北京市石景山区石景山路68号首钢园(东南角)",
+      "city": "北京市",
+      "district": "石景山区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "石景山区工业遗址公园，可拍摄城市更新与工业建筑，适合周末采风",
+      "distance_from_home_km": 13.24
+    },
+    {
+      "location_id": "cityref:B0G335VPHH",
+      "name": "首钢园-月季园",
+      "location": "116.168776,39.906051",
+      "formatted_address": "北京市石景山区首钢园(东南角)",
+      "city": "北京市",
+      "district": "石景山区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "石景山区工业遗址公园，可拍摄城市更新与工业建筑，适合周末采风",
+      "distance_from_home_km": 12.66
+    },
+    {
+      "location_id": "cityref:B0K35U9SA4",
+      "name": "首钢园林",
+      "location": "116.170325,39.899975",
+      "formatted_address": "北京市石景山区石景山路68号首钢园(东南角)",
+      "city": "北京市",
+      "district": "石景山区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "石景山区工业遗址公园，可拍摄城市更新与工业建筑，适合周末采风",
+      "distance_from_home_km": 12.41
+    },
+    {
+      "location_id": "cityref:B0G3TLQLBH",
+      "name": "首钢园北区",
+      "location": "116.157104,39.915433",
+      "formatted_address": "北京市石景山区北京市古城街道石景山路68号首钢园",
+      "city": "北京市",
+      "district": "石景山区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "石景山区工业遗址公园，可拍摄城市更新与工业建筑，适合周末采风",
+      "distance_from_home_km": 13.86
+    },
+    {
+      "location_id": "cityref:B0H3HAXMNP",
+      "name": "首钢园南区",
+      "location": "116.173208,39.900844",
+      "formatted_address": "北京市石景山区石景山路68号",
+      "city": "北京市",
+      "district": "石景山区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "石景山区工业遗址公园，可拍摄城市更新与工业建筑，适合周末采风",
+      "distance_from_home_km": 12.18
+    },
+    {
+      "location_id": "cityref:B000A83U0P",
+      "name": "中国国家博物馆",
+      "location": "116.401304,39.905374",
+      "formatted_address": "北京市东城区东长安街16号天安门广场东侧",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "历史文化与艺术藏品丰富，为城市叙事与视觉细节提供参考",
+      "distance_from_home_km": 7.79
+    },
+    {
+      "location_id": "cityref:B000A7CRPA",
+      "name": "国家自然博物馆",
+      "location": "116.399833,39.883183",
+      "formatted_address": "北京市东城区天桥南大街126号",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "历史文化与艺术藏品丰富，为城市叙事与视觉细节提供参考",
+      "distance_from_home_km": 7.3
+    },
+    {
+      "location_id": "cityref:B0MRKA3907",
+      "name": "中国国家博物馆-城楼(打卡点)",
+      "location": "116.401735,39.907160",
+      "formatted_address": "北京市东城区中国国家博物馆(天安门东地铁站C东南口步行50米)",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "历史文化与艺术藏品丰富，为城市叙事与视觉细节提供参考",
+      "distance_from_home_km": 7.89
+    },
+    {
+      "location_id": "cityref:B0MRPZIITR",
+      "name": "中国国家博物馆-闹蛾金钗(打卡点)",
+      "location": "116.401348,39.906044",
+      "formatted_address": "北京市东城区中国国家博物馆",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "历史文化与艺术藏品丰富，为城市叙事与视觉细节提供参考",
+      "distance_from_home_km": 7.82
+    },
+    {
+      "location_id": "cityref:B0MRKA3901",
+      "name": "中国国家博物馆-拍摄白色花壳艺术装置(打卡点)",
+      "location": "116.401765,39.905867",
+      "formatted_address": "北京市东城区中国国家博物馆",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "历史文化与艺术藏品丰富，为城市叙事与视觉细节提供参考",
+      "distance_from_home_km": 7.85
+    },
+    {
+      "location_id": "cityref:B0MRKA2R0O",
+      "name": "中国国家博物馆-两座铜文殊菩萨坐像(打卡点)",
+      "location": "116.401521,39.904829",
+      "formatted_address": "北京市东城区中国国家博物馆",
+      "city": "北京市",
+      "district": "东城区",
+      "location_role": "city_reference",
+      "category": "culture",
+      "activity_category": "culture",
+      "activity_tags": [
+        "展览",
+        "参观",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "历史文化与艺术藏品丰富，为城市叙事与视觉细节提供参考",
+      "distance_from_home_km": 7.79
+    },
+    {
+      "location_id": "cityref:B000A81FY5",
+      "name": "798·751园区",
+      "location": "116.494784,39.985063",
+      "formatted_address": "北京市朝阳区酒仙桥路4号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "艺术展览、创意市集和开放空间集中，可获取跨领域视觉灵感",
+      "distance_from_home_km": 19.05
+    },
+    {
+      "location_id": "cityref:B0FFIUI2KG",
+      "name": "798艺术中心",
+      "location": "116.495914,39.985055",
+      "formatted_address": "北京市朝阳区酒仙桥4号798艺术区798中二街",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "艺术展览、创意市集和开放空间集中，可获取跨领域视觉灵感",
+      "distance_from_home_km": 19.13
+    },
+    {
+      "location_id": "cityref:B0JGUCHA7Y",
+      "name": "798艺术区中心广场",
+      "location": "116.496361,39.985127",
+      "formatted_address": "北京市朝阳区酒仙桥路4号798·751园区内(东侧)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "艺术展览、创意市集和开放空间集中，可获取跨领域视觉灵感",
+      "distance_from_home_km": 19.16
+    },
+    {
+      "location_id": "cityref:B0FFFDG1X7",
+      "name": "北京798艺术区A区",
+      "location": "116.491789,39.986642",
+      "formatted_address": "北京市朝阳区酒仙桥路2号北京798艺术区",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "艺术展览、创意市集和开放空间集中，可获取跨领域视觉灵感",
+      "distance_from_home_km": 18.95
+    },
+    {
+      "location_id": "cityref:B0JG27E36B",
+      "name": "北京798艺术区复兴广场",
+      "location": "116.495543,39.982181",
+      "formatted_address": "北京市朝阳区万红北巷798艺术区",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "艺术展览、创意市集和开放空间集中，可获取跨领域视觉灵感",
+      "distance_from_home_km": 18.92
+    },
+    {
+      "location_id": "cityref:B0FFFDH4EG",
+      "name": "北京798艺术区F区",
+      "location": "116.496588,39.982379",
+      "formatted_address": "北京市朝阳区酒仙桥路2号北京798艺术区",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "entertainment",
+      "activity_category": "entertainment",
+      "activity_tags": [
+        "电影",
+        "KTV",
+        "桌游",
+        "娱乐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "艺术展览、创意市集和开放空间集中，可获取跨领域视觉灵感",
+      "distance_from_home_km": 19.0
+    },
+    {
+      "location_id": "cityref:B0FFIPP0IM",
+      "name": "潘家园旧货市场",
+      "location": "116.458263,39.875426",
+      "formatted_address": "北京市朝阳区潘家园路华威里18号(潘家园桥西南)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "二手器物与旧货摊位多，适合淘便宜道具并拍摄市井人文",
+      "distance_from_home_km": 12.32
+    },
+    {
+      "location_id": "cityref:B0M6SC43ZI",
+      "name": "北京潘家园古玩城",
+      "location": "116.458261,39.875431",
+      "formatted_address": "北京市朝阳区华威北里潘家园旧货市场9排52号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "二手器物与旧货摊位多，适合淘便宜道具并拍摄市井人文",
+      "distance_from_home_km": 12.32
+    },
+    {
+      "location_id": "cityref:B0K157436Q",
+      "name": "潘家园旧货市场-跳蚤市场区",
+      "location": "116.456989,39.875054",
+      "formatted_address": "北京市朝阳区华威里18号潘家园旧货市场",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "二手器物与旧货摊位多，适合淘便宜道具并拍摄市井人文",
+      "distance_from_home_km": 12.21
+    },
+    {
+      "location_id": "cityref:B0H3D7T8AW",
+      "name": "潘家园旧货市场停车场",
+      "location": "116.456779,39.875078",
+      "formatted_address": "北京市朝阳区潘家园路华威里18号潘家园旧货市场",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "二手器物与旧货摊位多，适合淘便宜道具并拍摄市井人文",
+      "distance_from_home_km": 12.2
+    },
+    {
+      "location_id": "cityref:B0FFFXRS9P",
+      "name": "潘家园旧货市场-甲排",
+      "location": "116.459103,39.876013",
+      "formatted_address": "北京市朝阳区华威北里38楼附近(潘家园地铁站C1东南口步行300米)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "二手器物与旧货摊位多，适合淘便宜道具并拍摄市井人文",
+      "distance_from_home_km": 12.39
+    },
+    {
+      "location_id": "cityref:B0MDLBG3NK",
+      "name": "潘家园旧货市场-二区13号",
+      "location": "116.459575,39.875675",
+      "formatted_address": "北京市朝阳区潘家园桥与潘家园路交叉口南60米",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "shopping",
+      "activity_category": "shopping",
+      "activity_tags": [
+        "购物",
+        "逛街",
+        "就餐"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "social_activity"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "二手器物与旧货摊位多，适合淘便宜道具并拍摄市井人文",
+      "distance_from_home_km": 12.43
+    },
+    {
+      "location_id": "cityref:B000A8XDCI",
+      "name": "奥林匹克森林公园南园",
+      "location": "116.391365,40.016194",
+      "formatted_address": "北京市朝阳区科荟路33号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "公园步道宽阔，适合长距离慢跑和观察自然光变化",
+      "distance_from_home_km": 16.1
+    },
+    {
+      "location_id": "cityref:B0I13APEW5",
+      "name": "北京奥林匹克公园",
+      "location": "116.393096,40.009926",
+      "formatted_address": "北京市朝阳区北辰东路15号(森林公园南门地铁站C东南口旁)",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "公园步道宽阔，适合长距离慢跑和观察自然光变化",
+      "distance_from_home_km": 15.53
+    },
+    {
+      "location_id": "cityref:B000A875MC",
+      "name": "奥林匹克森林公园",
+      "location": "116.392159,40.018635",
+      "formatted_address": "北京市朝阳区科荟路33号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "公园步道宽阔，适合长距离慢跑和观察自然光变化",
+      "distance_from_home_km": 16.37
+    },
+    {
+      "location_id": "cityref:B000A8XM58",
+      "name": "奥林匹克森林公园北园",
+      "location": "116.393173,40.027647",
+      "formatted_address": "北京市朝阳区科荟路33号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "公园步道宽阔，适合长距离慢跑和观察自然光变化",
+      "distance_from_home_km": 17.33
+    },
+    {
+      "location_id": "cityref:BV10013375",
+      "name": "奥林匹克公园(地铁站)",
+      "location": "116.391758,40.002207",
+      "formatted_address": "北京市朝阳区15号线;8号线",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "公园步道宽阔，适合长距离慢跑和观察自然光变化",
+      "distance_from_home_km": 14.71
+    },
+    {
+      "location_id": "cityref:B000A87QJV",
+      "name": "奥林匹克公园中心区",
+      "location": "116.392451,40.000039",
+      "formatted_address": "北京市朝阳区科荟路33号",
+      "city": "北京市",
+      "district": "朝阳区",
+      "location_role": "city_reference",
+      "category": "fitness",
+      "activity_category": "fitness",
+      "activity_tags": [
+        "运动",
+        "游泳",
+        "球类",
+        "恢复训练"
+      ],
+      "suitable_day_types": [
+        "exercise_outing",
+        "exploratory"
+      ],
+      "indoor_outdoor": "mixed",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "公园步道宽阔，适合长距离慢跑和观察自然光变化",
+      "distance_from_home_km": 14.52
+    },
+    {
+      "location_id": "cityref:B000A87HC4",
+      "name": "星月楼火锅(本地人的涮肉铺)",
+      "location": "116.363950,39.883963",
+      "formatted_address": "北京市西城区北京城区牛街20-22号商业楼2层",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "特色小吃集中，适合尝鲜探店和拍摄烟火气街景",
+      "distance_from_home_km": 4.23
+    },
+    {
+      "location_id": "cityref:B0KAMU3JNK",
+      "name": "牛街洪记小吃店",
+      "location": "116.363892,39.886962",
+      "formatted_address": "北京市西城区牛街12号(牛街清真超市对面)",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "特色小吃集中，适合尝鲜探店和拍摄烟火气街景",
+      "distance_from_home_km": 4.24
+    },
+    {
+      "location_id": "cityref:B000A67FB7",
+      "name": "聚宝源(牛街创始店)",
+      "location": "116.363329,39.886721",
+      "formatted_address": "北京市西城区北京城区牛街5-2号(牛街地铁站D2口步行390米)",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "特色小吃集中，适合尝鲜探店和拍摄烟火气街景",
+      "distance_from_home_km": 4.19
+    },
+    {
+      "location_id": "cityref:B0L0AZB3ZL",
+      "name": "牛街小吃一条街",
+      "location": "116.363411,39.886879",
+      "formatted_address": "北京市西城区教子胡同与麻刀胡同牛街牛街东里小区一区",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "特色小吃集中，适合尝鲜探店和拍摄烟火气街景",
+      "distance_from_home_km": 4.2
+    },
+    {
+      "location_id": "cityref:B000A10E2D",
+      "name": "北京老字号牛街宝记豆汁店",
+      "location": "116.364356,39.886633",
+      "formatted_address": "北京市西城区北京城区输入胡同27号(牛街地铁站D2口步行480米)",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "特色小吃集中，适合尝鲜探店和拍摄烟火气街景",
+      "distance_from_home_km": 4.28
+    },
+    {
+      "location_id": "cityref:B0KBB5OPZ9",
+      "name": "牛街穆益斋清真小吃熟食店",
+      "location": "116.365151,39.886641",
+      "formatted_address": "北京市西城区牛街东里一区14号楼一层底商11号",
+      "city": "北京市",
+      "district": "西城区",
+      "location_role": "city_reference",
+      "category": "meal",
+      "activity_category": "meal",
+      "activity_tags": [
+        "聚餐",
+        "探店",
+        "日常就餐"
+      ],
+      "suitable_day_types": [
+        "social_activity",
+        "evening_activity",
+        "exploratory"
+      ],
+      "indoor_outdoor": "indoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "特色小吃集中，适合尝鲜探店和拍摄烟火气街景",
+      "distance_from_home_km": 4.35
+    },
+    {
+      "location_id": "cityref:B000A7O1CU",
+      "name": "颐和园",
+      "location": "116.275179,39.999617",
+      "formatted_address": "北京市海淀区新建宫门路19号",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "皇家园林建筑与水面空间开阔，可拍摄古建光影和四季变化",
+      "distance_from_home_km": 13.28
+    },
+    {
+      "location_id": "cityref:B000A7J3H1",
+      "name": "颐和园博物馆",
+      "location": "116.280855,39.997047",
+      "formatted_address": "北京市海淀区二龙闸颐和园新建宫门路21号院",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "皇家园林建筑与水面空间开阔，可拍摄古建光影和四季变化",
+      "distance_from_home_km": 12.89
+    },
+    {
+      "location_id": "cityref:B000A96EN1",
+      "name": "德和园",
+      "location": "116.279751,39.998627",
+      "formatted_address": "北京市海淀区北京市青龙桥街道新建宫门路19号颐和园内(东侧)",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "皇家园林建筑与水面空间开阔，可拍摄古建光影和四季变化",
+      "distance_from_home_km": 13.08
+    },
+    {
+      "location_id": "cityref:BV10000288",
+      "name": "颐和园(公交站)",
+      "location": "116.285573,39.998299",
+      "formatted_address": "北京市海淀区303路;332路;346路;584路;夜8路;通游专线20路;通游专线20路区间",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "皇家园林建筑与水面空间开阔，可拍摄古建光影和四季变化",
+      "distance_from_home_km": 12.94
+    },
+    {
+      "location_id": "cityref:B0FFF3EOGB",
+      "name": "颐和园-东门检票处",
+      "location": "116.281197,39.998063",
+      "formatted_address": "北京市海淀区新建宫门路19号颐和园内(东侧)",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "皇家园林建筑与水面空间开阔，可拍摄古建光影和四季变化",
+      "distance_from_home_km": 12.99
+    },
+    {
+      "location_id": "cityref:B000A9LFKZ",
+      "name": "颐和园-画中游",
+      "location": "116.270926,39.998659",
+      "formatted_address": "北京市海淀区新建宫门路19号颐和园内(西侧)",
+      "city": "北京市",
+      "district": "海淀区",
+      "location_role": "city_reference",
+      "category": "scenic",
+      "activity_category": "scenic",
+      "activity_tags": [
+        "游览",
+        "散步",
+        "拍照",
+        "半日休闲"
+      ],
+      "suitable_day_types": [
+        "citywide_leisure",
+        "exploratory"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "皇家园林建筑与水面空间开阔，可拍摄古建光影和四季变化",
+      "distance_from_home_km": 13.27
+    },
+    {
+      "location_id": "cityref:B000A856WS",
+      "name": "南海子公园",
+      "location": "116.464223,39.777746",
+      "formatted_address": "北京市大兴区黄亦路16号",
+      "city": "北京市",
+      "district": "大兴区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 1.0,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "湿地生态与麋鹿苑可提供近郊自然摄影和半日徒步路线",
+      "distance_from_home_km": 17.42
+    },
+    {
+      "location_id": "cityref:BV10007607",
+      "name": "南海子公园(公交站)",
+      "location": "116.471684,39.766254",
+      "formatted_address": "北京市大兴区453路;573路;581路;913路;兴16路;兴31路;兴38路;兴59路;兴72路(内环);兴72路(外环);兴90路",
+      "city": "北京市",
+      "district": "大兴区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.8621,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "湿地生态与麋鹿苑可提供近郊自然摄影和半日徒步路线",
+      "distance_from_home_km": 18.76
+    },
+    {
+      "location_id": "cityref:B0LRLKLORF",
+      "name": "南海子体育公园",
+      "location": "116.458625,39.788375",
+      "formatted_address": "北京市大兴区旧忠桥与S50南五环交叉口东南300米",
+      "city": "北京市",
+      "district": "大兴区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.7576,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "湿地生态与麋鹿苑可提供近郊自然摄影和半日徒步路线",
+      "distance_from_home_km": 16.28
+    },
+    {
+      "location_id": "cityref:B0FFK7YABJ",
+      "name": "南海子公园-观景台",
+      "location": "116.469568,39.773952",
+      "formatted_address": "北京市大兴区黄亦路16号南海子公园内",
+      "city": "北京市",
+      "district": "大兴区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6757,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "湿地生态与麋鹿苑可提供近郊自然摄影和半日徒步路线",
+      "distance_from_home_km": 18.04
+    },
+    {
+      "location_id": "cityref:B0FFIFOXH5",
+      "name": "南海子湿地公园露营区",
+      "location": "116.467504,39.770887",
+      "formatted_address": "北京市大兴区黄亦路16号南海子公园(东南角)",
+      "city": "北京市",
+      "district": "大兴区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.6098,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "湿地生态与麋鹿苑可提供近郊自然摄影和半日徒步路线",
+      "distance_from_home_km": 18.15
+    },
+    {
+      "location_id": "cityref:B0FFMEOP4Z",
+      "name": "南海子公园-木栈道",
+      "location": "116.464518,39.783393",
+      "formatted_address": "北京市大兴区黄亦路16号南海子公园内(北侧)",
+      "city": "北京市",
+      "district": "大兴区",
+      "location_role": "city_reference",
+      "category": "nature",
+      "activity_category": "nature",
+      "activity_tags": [
+        "公园",
+        "散步",
+        "户外休闲"
+      ],
+      "suitable_day_types": [
+        "local_leisure",
+        "citywide_leisure"
+      ],
+      "indoor_outdoor": "outdoor",
+      "typical_dwell_minutes": [
+        60,
+        240
+      ],
+      "social_suitability": [
+        "solo",
+        "friend"
+      ],
+      "attraction_weight": 0.5556,
+      "knowledge_state": "known_unvisited",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "map_preseed",
+      "map_verified": true,
+      "query_reason": "湿地生态与麋鹿苑可提供近郊自然摄影和半日徒步路线",
+      "distance_from_home_km": 17.02
+    }
+  ],
+  "social_locations": [
+    {
+      "location_id": "social_home_e6b89ff3d339",
+      "name": "陈立明住所",
+      "location": "115.715269,39.388868",
+      "formatted_address": "河北省保定市涞水县朝阳路75号",
+      "city": "保定市",
+      "district": "涞水县",
+      "location_role": "social_location",
+      "category": "home",
+      "related_person": "陈立明",
+      "relationship": "父亲",
+      "access_policy": "contact_or_invitation_required",
+      "knowledge_state": "known_location",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "plausible_relation_address",
+      "map_verified": false
+    },
+    {
+      "location_id": "social_home_df1676a8bbba",
+      "name": "王秀玲住所",
+      "location": "115.721352,39.396936",
+      "formatted_address": "河北省保定市涞水县府前东街2号桥",
+      "city": "保定市",
+      "district": "涞水县",
+      "location_role": "social_location",
+      "category": "home",
+      "related_person": "王秀玲",
+      "relationship": "母亲",
+      "access_policy": "contact_or_invitation_required",
+      "knowledge_state": "known_location",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "plausible_relation_address",
+      "map_verified": false
+    },
+    {
+      "location_id": "social_home_04a4e75182d6",
+      "name": "陈雨辰住所",
+      "location": "115.715096,39.396201",
+      "formatted_address": "河北省保定市涞水县涞水县",
+      "city": "保定市",
+      "district": "涞水县",
+      "location_role": "social_location",
+      "category": "home",
+      "related_person": "陈雨辰",
+      "relationship": "弟弟",
+      "access_policy": "contact_or_invitation_required",
+      "knowledge_state": "known_location",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "plausible_relation_address",
+      "map_verified": false
+    },
+    {
+      "location_id": "social_home_942289e8e31f",
+      "name": "胡月兰住所",
+      "location": "116.306062,39.890421",
+      "formatted_address": "北京市丰台区莲花池西里11号",
+      "city": "北京市",
+      "district": "丰台区",
+      "location_role": "social_location",
+      "category": "home",
+      "related_person": "胡月兰",
+      "relationship": "街坊长辈",
+      "access_policy": "contact_or_invitation_required",
+      "knowledge_state": "known_location",
+      "visit_count": 0,
+      "return_eligible": false,
+      "source": "plausible_relation_address",
+      "map_verified": false
+    }
+  ],
+  "asset_manifest": {
+    "schema_version": "location_opportunity_manifest_v1",
+    "persona_hash": "e8bef883623f52f7122b50f80a2a03af167987328a6713478dce580a369497c1",
+    "base_location_hash": "dd5a02a1c59c8d3395cd64f6e562de100f86f5de0efaa89848a5cc307989290e",
+    "generator_version": "location-opportunity-builder-v1",
+    "prompt_hash": "714871c7a4e9cd204f44c82b3426f594d64d8169471fe5dec4a4a5322ed58f72",
+    "map_provider": "amap",
+    "home_city": "北京市",
+    "simulation_start": "2025-09-04",
+    "poi_count_by_category": {
+      "nature": 12,
+      "scenic": 12,
+      "culture": 6,
+      "entertainment": 6,
+      "shopping": 6,
+      "fitness": 6,
+      "meal": 6
+    },
+    "poi_count_by_distance_band": {
+      "0-3": 6,
+      "3-10": 12,
+      "10-20": 36,
+      "20+": 0
+    },
+    "partial_failures": []
+  }
+}

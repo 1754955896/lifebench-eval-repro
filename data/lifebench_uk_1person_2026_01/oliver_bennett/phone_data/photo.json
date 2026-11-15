@@ -1,0 +1,382 @@
+[
+  {
+    "type": "photo",
+    "caption": "检查Olympus OM-2n快门与测光，确认Ilford HP5胶卷已装好并记录胶卷编号，摄影包内备用胶卷、测光表、镜头布和路线笔记摆放整齐",
+    "title": "IMG_20260103_075000",
+    "datetime": "2026-01-03 07:50:00",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "Newman Street",
+      "streetNumber": "23-24",
+      "poi": "居住地·Newman Street 23-24"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "Olympus OM-2n",
+      "Ilford HP5",
+      "胶卷",
+      "摄影包",
+      "器材检查"
+    ],
+    "ocrText": "Ilford HP5 Plus 400 - 135-36",
+    "shoot_mode": "正常拍照",
+    "image_size": "4032×3024",
+    "daily_event_id": "43",
+    "event_id": [
+      "3-2"
+    ],
+    "phone_id": 0
+  },
+  {
+    "type": "photo",
+    "caption": "与父母在客厅合影，背景是沙发和书架，讨论卖房事宜前温馨时刻",
+    "title": "IMG_20260104_113000",
+    "datetime": "2026-01-04 11:30:00",
+    "location": {
+      "province": "England",
+      "city": "St Albans",
+      "district": "Cottonmill",
+      "streetName": "London Road",
+      "streetNumber": "21-23",
+      "poi": "父母家客厅"
+    },
+    "faceRecognition": [
+      "Oliver Bennett",
+      "Margaret Bennett",
+      "David Bennett"
+    ],
+    "imageTag": [
+      "家庭合影",
+      "父母",
+      "客厅",
+      "卖房谈话"
+    ],
+    "ocrText": "无",
+    "shoot_mode": "人像",
+    "image_size": "3024×4032",
+    "daily_event_id": "65",
+    "event_id": [
+      "4-2",
+      "4-3"
+    ],
+    "phone_id": 1
+  },
+  {
+    "type": "photo",
+    "caption": "Oliver在BP办公室会议桌旁拍摄重构文档PPT，屏幕显示会话与认证模块职责划分，包含接口清单和评审节奏",
+    "title": "IMG_20260107_085000",
+    "datetime": "2026-01-07 08:50:00",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "St James's Square",
+      "streetNumber": "1",
+      "poi": "BP办公室"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "PPT截图",
+      "重构文档",
+      "会话认证",
+      "办公室"
+    ],
+    "ocrText": "会话与认证模块职责 - 核心服务重构",
+    "shoot_mode": "正常拍照",
+    "image_size": "4032×3024",
+    "daily_event_id": "114",
+    "event_id": [
+      "7-1"
+    ],
+    "phone_id": 2
+  },
+  {
+    "type": "photo",
+    "caption": "电脑屏幕展示会话存储方案与结对节奏要点，包含 Redis 存储与每周二/四结对安排",
+    "title": "IMG_20260108_103215",
+    "datetime": "2026-01-08 10:32:15",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "St James's Square",
+      "streetNumber": "1 号",
+      "poi": "BP 大楼"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "电脑屏幕",
+      "会话存储",
+      "结对节奏",
+      "Redis"
+    ],
+    "ocrText": "Session Storage: Redis, TTL 30min; Pairing: Tue/Thu 2-3 times per week",
+    "shoot_mode": "正常拍照",
+    "image_size": "4032×3024",
+    "daily_event_id": "140",
+    "event_id": [
+      "8-5",
+      "8-6"
+    ],
+    "phone_id": 3
+  },
+  {
+    "type": "photo",
+    "caption": "Oliver 拍摄笔记本电脑屏幕，显示 HMRC 自我评估报税提交成功页面与回执，画面包含申报年度和提交时间。",
+    "title": "IMG_20260109_115045",
+    "datetime": "2026-01-09 11:50:45",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "Newman Street",
+      "streetNumber": "23-24",
+      "poi": "居住地·Newman Street 23-24"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "HMRC",
+      "报税",
+      "电脑屏幕",
+      "提交回执"
+    ],
+    "ocrText": "HMRC Self Assessment - Submission Confirmation - 2024/25 Tax Year - 09 Jan 2026 11:50:45",
+    "shoot_mode": "正常拍照",
+    "image_size": "3024×4032",
+    "daily_event_id": "162",
+    "event_id": [
+      "73-4",
+      "9-4"
+    ],
+    "phone_id": 4
+  },
+  {
+    "type": "photo",
+    "caption": "Oliver在Barbican Centre入口外拍摄街头风景，粗野主义建筑外墙和行人构成画面，天空阴沉",
+    "title": "IMG_20260111_153000",
+    "datetime": "2026-01-11 15:30:00",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "City of London",
+      "streetName": "Beech Street",
+      "streetNumber": "XX 号",
+      "poi": "Barbican Centre"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "街头风景",
+      "Barbican Centre",
+      "粗野主义建筑",
+      "阴天",
+      "行人"
+    ],
+    "ocrText": "无",
+    "shoot_mode": "正常拍照",
+    "image_size": "4032×3024",
+    "daily_event_id": "204",
+    "event_id": [
+      "46-4",
+      "11-8",
+      "46-5",
+      "46-2",
+      "46-3"
+    ],
+    "phone_id": 5
+  },
+  {
+    "type": "photo",
+    "caption": "扫描整理好的接口清单初稿，文档上标注了存储细节待确认项和周四架构会讨论的标记",
+    "title": "IMG_20260113_151500",
+    "datetime": "2026-01-13 15:15:00",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "St James's Square",
+      "streetNumber": "1",
+      "poi": "工作地·BP"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "接口清单",
+      "文档扫描",
+      "工作",
+      "预读材料"
+    ],
+    "ocrText": "接口清单初稿 - 存储细节待确认项 2026-01-13",
+    "shoot_mode": "正常拍照",
+    "image_size": "3024×4032",
+    "daily_event_id": "239",
+    "event_id": [
+      "13-5",
+      "13-7"
+    ],
+    "phone_id": 6
+  },
+  {
+    "type": "photo",
+    "caption": "在Draughts桌游吧，Oliver和同事们围坐一桌玩《卡坦岛》，Tom Whitfield、Sofia Marchetti、Priya Raman等人在场，桌面上摆着游戏版图、卡牌和饮料。",
+    "title": "IMG_20260116_201540",
+    "datetime": "2026-01-16 20:15:40",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Lambeth",
+      "streetName": "Leake Street",
+      "streetNumber": "Arch 16",
+      "poi": "Draughts"
+    },
+    "faceRecognition": [
+      "Tom Whitfield",
+      "Sofia Marchetti",
+      "Priya Raman"
+    ],
+    "imageTag": [
+      "卡坦岛",
+      "桌游",
+      "同事聚会",
+      "Draughts",
+      "人物合影"
+    ],
+    "ocrText": "无",
+    "shoot_mode": "人像",
+    "image_size": "4032×3024",
+    "daily_event_id": "300",
+    "event_id": [
+      "47-4",
+      "47-5"
+    ],
+    "phone_id": 7
+  },
+  {
+    "type": "photo",
+    "caption": "Monmouth Coffee Company咖啡师Ethan Clarke正在手冲肯尼亚AA，吧台上摆放品鉴杯",
+    "title": "IMG_20260119_115530",
+    "datetime": "2026-01-19 11:55:30",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "Monmouth Street",
+      "streetNumber": "27",
+      "poi": "Monmouth Coffee Company"
+    },
+    "faceRecognition": [
+      "Ethan Clarke"
+    ],
+    "imageTag": [
+      "手冲咖啡",
+      "咖啡师",
+      "吧台",
+      "肯尼亚AA"
+    ],
+    "ocrText": "无",
+    "shoot_mode": "人像",
+    "image_size": "3024×4032",
+    "daily_event_id": "351",
+    "event_id": [
+      "54-3",
+      "54-4"
+    ],
+    "phone_id": 8
+  },
+  {
+    "type": "photo",
+    "caption": "卧室椅背上挂好的跑步长袖和反光背心，旁边放着薄手套和水壶，准备晚间慢跑",
+    "title": "IMG_20260122_180000",
+    "datetime": "2026-01-22 18:00:00",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "Newman Street",
+      "streetNumber": "23-24 号",
+      "poi": "Newman Street 23-24"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "物品收纳",
+      "跑步装备",
+      "长袖",
+      "反光背心"
+    ],
+    "ocrText": "无",
+    "shoot_mode": "正常拍照",
+    "image_size": "4032×3024",
+    "daily_event_id": "431",
+    "event_id": [
+      "22-5",
+      "22-7",
+      "141-1",
+      "22-4",
+      "22-3"
+    ],
+    "phone_id": 9
+  },
+  {
+    "type": "photo",
+    "caption": "Oliver端上桌的日式晚餐：米饭偏湿、味噌汤过咸，首次尝试不成功。",
+    "title": "IMG_20260123_181015",
+    "datetime": "2026-01-23 18:10:15",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "Newman Street",
+      "streetNumber": "23-24",
+      "poi": "Newman Street 23-24"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "日式晚餐",
+      "米饭",
+      "味噌汤",
+      "三文鱼"
+    ],
+    "ocrText": "无",
+    "shoot_mode": "正常拍照",
+    "image_size": "3024×4032",
+    "daily_event_id": "460",
+    "event_id": [
+      "23-3",
+      "23-4"
+    ],
+    "phone_id": 10
+  },
+  {
+    "type": "photo",
+    "caption": "Oliver 在 Camden Market 与卖家面交时用手电侧照检查 Olympus 28mm 镜头的镜片和卡口",
+    "title": "IMG_20260130_123500",
+    "datetime": "2026-01-30 12:35:00",
+    "location": {
+      "province": "England",
+      "city": "London",
+      "district": "Camden",
+      "streetName": "Camden Lock Place",
+      "streetNumber": "56-56 号",
+      "poi": "Camden Market"
+    },
+    "faceRecognition": "无",
+    "imageTag": [
+      "Olympus 28mm 镜头",
+      "细节特写",
+      "手电检查",
+      "金属卡口",
+      "二手交易"
+    ],
+    "ocrText": "无",
+    "shoot_mode": "微距",
+    "image_size": "3024×4032",
+    "daily_event_id": "590",
+    "event_id": [
+      "30-2",
+      "99-3",
+      "99-4",
+      "99-2"
+    ],
+    "phone_id": 11
+  }
+]
