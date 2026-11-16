@@ -1,17 +1,5 @@
-"""动态关系评估统一入口与 CLI。
+"""This module runs the evaluation."""
 
-用法::
-
-    from evaluation.logic_consistency.code.relation_update.method import evaluate
-    result = evaluate("data/lifebench_10people/sunyuwei",
-                      "output/relation_update")
-
-命令行::
-
-    python -m evaluation.logic_consistency.code.relation_update.method \
-      --data-dir data/lifebench_10people/sunyuwei \
-      --output-dir output/relation_update --dry-run
-"""
 from __future__ import annotations
 
 import argparse
@@ -90,7 +78,7 @@ def _run_person(name, person_dir, person_out, opts, client, prompts):
 
 def evaluate(data_dir, output_dir, *, options=None, client=None,
              persons=None) -> dict:
-    """评估单个人物目录或包含人物子目录的数据集目录。"""
+
     opts = resolve_method_options(METHOD_NAME, DEFAULT_OPTIONS, options)
     person_dirs = discover_persons(data_dir, REQUIRED_FILES)
     if persons:

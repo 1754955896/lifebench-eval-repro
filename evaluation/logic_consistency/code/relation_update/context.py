@@ -1,18 +1,5 @@
-"""
-人际关系合理性评估:输入校验、关系库构造与关系案例构造
+"""This module prepares evaluation context."""
 
-纯程序逻辑,不含模型调用:
-
-- persona.relation 确定性展平为带稳定 person_id 的动态关系库;
-- 按事件时间顺序构造 relation_case(participant 为唯一人物候选入口);
-  同一天按事件逐个出案,每个事件的可用上下文 = 当前事件 + 当天
-  开始时间不晚于当前事件的来源事件(未来事件绝不进入上下文);
-- 匹配提示 match_hints 只做确定性索引(精确姓名/别名/去后缀/唯一亲属
-  称谓),不做语义合并;禁止姓氏匹配与字符串相似度合并;
-- 来源/噪声事件分流(atomic_id)与时间可用证据边界;
-- 关系库重放: add/update/keep 统一为带日期的时序动作,按日期稳定
-  排序后重放,保证 last_seen/interaction_days 不随日志顺序倒退。
-"""
 from __future__ import annotations
 
 import re
@@ -25,14 +12,14 @@ from tools.evaluation_common.context import (
 from tools.evaluation_common.input_schema import ROLE_NOISE_TARGET
 from evaluation.logic_consistency.code.relation_update.schema import LIB_SCHEMA, normalize_tag
 
-# 主人公 participant 识别(程序提示,选择器最终路由)
+
 SELF_RELATION_MARKERS = ("自己", "本人", "我")
 
-# 完整姓名安全后缀(仅可去除一次,用于索引提示)
+
 SAFE_NAME_SUFFIXES = ("教授", "老师", "医生", "律师", "先生", "女士",
                       "师傅", "经理", "主任", "院长", "校长", "同学")
 
-# 亲属称谓同义类(用于"唯一亲属称谓索引")
+
 KINSHIP_GROUPS = {
     "父亲": ("父亲", "爸爸", "爸"),
     "母亲": ("母亲", "妈妈", "妈"),
@@ -53,20 +40,9 @@ KINSHIP_SYNONYMS = {syn: group
                     for syn in syns}
 
 
-# ── 关系库构造 ──────────────────────────────────────────────────────────
-
 def build_initial_relation_library(persona: dict, owner: str) -> dict:
-    """
-    把 persona.relation 按原始顺序确定性展平,生成初始动态关系库
 
-    输出(relation-library-v1):
-    {
-      "schema_version": ..., "owner": ...,
-      "records": [{person_id, name, aliases, relation_tags, social_circle,
-                   base_relation_description, dynamic_relation_notes,
-                   first_seen, last_seen, interaction_days, update_evidence}]
-    }
-    """
+
     records = []
     for idx, rel in enumerate(_flatten_relations(persona or {}), start=1):
         name = (rel.get("name") or "").strip()
@@ -99,7 +75,7 @@ def build_initial_relation_library(persona: dict, owner: str) -> dict:
 
 
 def library_indexes(library: dict) -> dict:
-    """构造确定性匹配索引(第 5.3 节)"""
+
     by_name = defaultdict(list)
     by_alias = defaultdict(list)
     by_stripped = defaultdict(list)
@@ -110,7 +86,7 @@ def library_indexes(library: dict) -> dict:
         stripped = strip_safe_suffix(rec["name"])
         if stripped != rec["name"]:
             by_stripped[stripped].append(rec["person_id"])
-    # 唯一亲属称谓: 仅当该类亲属在库中唯一时建立
+
     kinship_holders = defaultdict(list)
     for rec in library["records"]:
         for tag in rec["relation_tags"]:
@@ -127,7 +103,7 @@ def library_indexes(library: dict) -> dict:
 
 
 def strip_safe_suffix(name: str) -> str:
-    """安全去除一次完整姓名后缀(如'吴明远教授'→'吴明远')"""
+
     for suffix in SAFE_NAME_SUFFIXES:
         if len(name) > len(suffix) and name.endswith(suffix):
             return name[: -len(suffix)]
@@ -136,12 +112,8 @@ def strip_safe_suffix(name: str) -> str:
 
 def compute_match_hints(observed_name: str, observed_relation: str | None,
                         indexes: dict) -> list:
-    """
-    程序匹配提示(不做最终语义匹配):
-    1. 正式姓名精确;2. 昵称/别名精确;3. 安全去后缀姓名(对观察姓名
-    去一次后缀后按正式姓名/去后缀索引查询);4. 唯一亲属称谓(观察
-    姓名或关系词命中且库中唯一)。
-    """
+
+
     hints = []
     seen = set()
     candidates = [observed_name]
@@ -165,18 +137,14 @@ def compute_match_hints(observed_name: str, observed_relation: str | None,
     return hints
 
 
-# ── 事件与 participant 处理 ─────────────────────────────────────────────
-
 def event_origin_of(atomic_id) -> str:
-    """来源/噪声分类: atomic_id 非空 → source,否则 noise"""
+
     return "source" if atomic_id else "noise"
 
 
 def prepare_relation_events(daily_events: list, outline) -> tuple:
-    """
-    复用现有事件解析: 返回 (parsed, interval_parse_errors)
-    parsed 条目含 event/intervals/role;无法解析时间的记录输入错误。
-    """
+
+
     parsed = prepare_events(daily_events, outline)
     parse_errors = []
     ok = []
@@ -189,10 +157,8 @@ def prepare_relation_events(daily_events: list, outline) -> tuple:
 
 
 def participants_of(event: dict) -> tuple:
-    """
-    返回 (participants, error)
-    participant 缺失、为空或结构非法记录为输入错误。
-    """
+
+
     parts = event.get("participant")
     if not isinstance(parts, list) or not parts:
         return [], "participant 缺失或不是数组"
@@ -204,7 +170,7 @@ def participants_of(event: dict) -> tuple:
 
 
 def is_self_participant(participant: dict, persona: dict) -> bool:
-    """程序级主人公识别提示(姓名/简称/'自己'关系标记)"""
+
     name = (participant.get("name") or "").strip()
     owner = (persona or {}).get("name")
     if owner and name == owner:
@@ -220,15 +186,8 @@ def is_self_participant(participant: dict, persona: dict) -> bool:
 
 def build_day_plan(day_events: list, date: str, library: dict,
                    persona: dict) -> list:
-    """
-    按事件最早开始时间排序,为每个事件构造其 participant 案例与
-    可用上下文,返回 [(pe, cases, earlier_source_events, case_errors)]
 
-    - 每个案例可用的证据 = 当前事件 + 当天来源事件中开始时间不晚于
-      当前事件的(未来事件绝不进入可用上下文);
-    - 案例不再内嵌事件正文: 事件正文由管线按事件逐次注入模型请求
-      (当前事件 + 明确展开的较早来源事件),防止同日未来事件泄漏。
-    """
+
     ordered = sorted(day_events, key=lambda pe: pe["intervals"][0].start)
     indexes = library_indexes(library)
     plan = []
@@ -276,7 +235,7 @@ def _event_cases(pe: dict, date: str, indexes: dict, persona: dict,
 
 def build_relation_cases(day_events: list, date: str, library: dict,
                          persona: dict) -> tuple:
-    """构造某日全部 relation_case(按事件最早开始时间排序)"""
+
     cases, errors = [], []
     for _pe, c, _earlier, errs in build_day_plan(day_events, date,
                                                  library, persona):
@@ -286,7 +245,7 @@ def build_relation_cases(day_events: list, date: str, library: dict,
 
 
 def group_relation_days(parsed: list) -> dict:
-    """按归属日(最早开始时间的日期)分组"""
+
     by_day = defaultdict(list)
     for pe in parsed:
         if not pe["intervals"]:
@@ -295,8 +254,6 @@ def group_relation_days(parsed: list) -> dict:
         by_day[day].append(pe)
     return dict(by_day)
 
-
-# ── 关系库维护(程序分支执行)────────────────────────────────────────────
 
 def record_by_id(library: dict, person_id: str) -> dict | None:
     return next((r for r in library["records"]
@@ -312,7 +269,7 @@ def record_by_name_or_alias(library: dict, name: str) -> list:
 
 
 def apply_keep_maintenance(library: dict, person_id: str, date: str):
-    """EXISTING_KEEP 来源事件: 更新 last_seen 与 interaction_days(+1/天)"""
+
     rec = record_by_id(library, person_id)
     if rec is None:
         return
@@ -330,7 +287,7 @@ def next_person_id(library: dict) -> str:
 
 
 def apply_add_patch(library: dict, patch: dict) -> dict:
-    """程序为合法新增补丁生成新 person_id 并追加记录"""
+
     rec = {
         "person_id": next_person_id(library),
         "name": patch["name"].strip(),
@@ -356,7 +313,7 @@ def apply_add_patch(library: dict, patch: dict) -> dict:
 
 
 def apply_update_patch(library: dict, patch: dict) -> dict:
-    """程序应用合法 update 补丁(只追加,不删除/改写姓名;同步交集日期)"""
+
     rec = record_by_id(library, patch["target_person_id"])
     if rec is None:
         raise ValueError(f"目标 person_id 不存在: "
@@ -378,7 +335,7 @@ def apply_update_patch(library: dict, patch: dict) -> dict:
             {"date": patch.get("_date"), "note": note})
     rec["update_evidence"] = sorted(set(
         rec["update_evidence"]) | set(patch.get("evidence_event_ids") or []))
-    # 8.2: EXISTING_UPDATE 同时更新交集日期(同日 +1 上限)
+
     date = patch.get("_date")
     if date:
         apply_keep_maintenance(library, rec["person_id"], date)
@@ -387,11 +344,8 @@ def apply_update_patch(library: dict, patch: dict) -> dict:
 
 def check_patch_conflicts(library: dict, patch: dict,
                           target_self_id: str | None) -> str | None:
-    """
-    程序级冲突核验:
-    - add: 姓名/别名与现有对象冲突 → 拒绝并请求修复;
-    - update: name 必须与目标记录正式姓名一致(不得改写)。
-    """
+
+
     if patch["operation"] == "add":
         name = patch["name"].strip()
         for rec in library["records"]:
@@ -417,15 +371,8 @@ def check_patch_conflicts(library: dict, patch: dict,
 
 def rebuild_library_from_updates(initial: dict, updates: list,
                                  keep_events: list | None = None) -> dict:
-    """
-    由初始库 + 更新日志 + KEEP 交集事件确定性重建当前关系库
 
-    - add/update/keep 统一转换为带日期的时序动作,按 (日期, 类型)
-      稳定排序后重放,保证 last_seen 与 interaction_days 不因日志
-      顺序倒退;add 使用日志中已分配的 target_person_id(重放一致);
-    - keep_events: [(person_id, date), ...] 来自已完成事件的
-      EXISTING_KEEP 案例。
-    """
+
     import copy as _copy
     library = _copy.deepcopy(initial)
     actions = []
@@ -452,7 +399,7 @@ def rebuild_library_from_updates(initial: dict, updates: list,
 
 
 def apply_add_patch_with_id(library: dict, patch: dict, person_id: str):
-    """重放新增: 使用日志中已分配 person_id(重放一致性)"""
+
     if record_by_id(library, person_id) is not None:
         raise ValueError(f"重放 person_id 冲突: {person_id!r}")
     rec = {

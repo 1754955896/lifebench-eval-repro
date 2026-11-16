@@ -1,4 +1,5 @@
-"""Six-domain time-use CLI with auditable daily allocations and resume."""
+"""This module runs the evaluation."""
+
 from __future__ import annotations
 
 import argparse
@@ -59,10 +60,10 @@ def _analyze_day(prepared, persona, directory, opts, client, identity, stop):
         saved = _read(checkpoint)
         if saved.get("signature") != signature:
             raise ValueError("Checkpoint inputs/model changed: use another output directory or --no-resume")
-        # Revalidate cached allocations before using them.
+
         allocations = validate_allocations({"segments": saved["result"]["allocations"]}, prepared["segments"])
         return summarize_day(prepared, allocations), True
-    # Sleep is a declared hypothesis, not an LLM judgment. Fix its allocation in code.
+
     inferred = [s for s in prepared["segments"] if s["source"] == "inferred_sleep"]
     from .engine import CATEGORIES
     fixed = [{"segment_id": s["segment_id"], "minutes": {

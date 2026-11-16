@@ -1,8 +1,5 @@
-"""共享持久化：单人物输出目录与 JSON/JSONL 读写。
+"""This module stores evaluation outputs."""
 
-从源仓库 ``analyze/noise_plausibility.py`` 的 ``PersonOutputStore`` 抽出；
-保持原文件布局与线程安全语义，供噪声、关系等人物级方法复用。
-"""
 from __future__ import annotations
 
 import json
@@ -11,7 +8,7 @@ import threading
 
 
 def read_json(path: str, default=None):
-    """读取 JSON 文件；文件不存在或无法解析时返回 default。"""
+
     if not os.path.exists(path):
         return default
     try:
@@ -22,7 +19,7 @@ def read_json(path: str, default=None):
 
 
 def write_json(path: str, obj) -> None:
-    """原子写 JSON（先写临时文件再替换）。"""
+
     directory = os.path.dirname(os.path.abspath(path))
     os.makedirs(directory, exist_ok=True)
     tmp = path + ".tmp"
@@ -32,7 +29,7 @@ def write_json(path: str, obj) -> None:
 
 
 def append_jsonl(path: str, record: dict) -> None:
-    """追加一行 JSONL。"""
+
     directory = os.path.dirname(os.path.abspath(path))
     os.makedirs(directory, exist_ok=True)
     with open(path, "a", encoding="utf-8") as f:
@@ -40,7 +37,7 @@ def append_jsonl(path: str, record: dict) -> None:
 
 
 def read_jsonl(path: str) -> list:
-    """读取 JSONL；忽略空行与无法解析的行。"""
+
     if not os.path.exists(path):
         return []
     out = []
@@ -57,10 +54,7 @@ def read_jsonl(path: str) -> list:
 
 
 class PersonOutputStore:
-    """单个人物的输出目录（JSONL 增量落盘，线程安全）。
 
-    固定文件按方法自行约定，本类只负责路径与原子读写。
-    """
 
     def __init__(self, out_dir: str):
         self.out_dir = out_dir
@@ -87,7 +81,7 @@ class PersonOutputStore:
         return read_jsonl(self._path(name))
 
     def has_results(self) -> bool:
-        """输出目录是否已有评估结果（events.jsonl 非空）。"""
+
         path = self._path("events.jsonl")
         return os.path.exists(path) and os.path.getsize(path) > 0
 
@@ -97,10 +91,8 @@ class PersonOutputStore:
     def load_completed(self, signature: dict, *,
                        final_labels=("reasonable", "unreasonable"),
                        schema_version=None) -> set:
-        """读取已完成的 (date, event_id) 集合（断点续跑）。
 
-        只跳过 schema 校验成功、且评估签名与本次运行完全一致的行。
-        """
+
         completed = set()
         path = self._path("events.jsonl")
         if not os.path.exists(path):

@@ -1,20 +1,5 @@
-"""
-人际关系合理性评估:逐日状态推进管线
+"""This module runs the evaluation pipeline."""
 
-- 同一人物按日期严格串行(日期之间存在状态依赖);
-- 选择器按事件时间顺序逐个调用: 每次请求只含日初关系库、当前事件
-  正文与当天开始时间不晚于当前事件的来源事件正文(未来事件绝不
-  进入同一次请求);
-- 每天使用日初关系库作为稳定快照;当天的 KEEP 交集维护与通过校验
-  的补丁在日末统一提交;
-- 日级事务: 补丁/事件结果/案例日志与 day commit marker 原子提交,
-  续跑只重放已提交事务,未提交尾段整体截断;
-- 补丁操作与选择器路由强绑定(Writer 不得重新判断身份);
-- 补丁失败不伪造结果: 当日中止、--resume 可重试;
-- 事件级最终判定: nonconform > unknown > conform > not_applicable;
-- --start-date 之前的日期作为 warm-up 完整推进状态(模型调用照常),
-  其结果标记 warmup 且不纳入统计。
-"""
 from __future__ import annotations
 
 import json
@@ -51,7 +36,7 @@ logger = logging.getLogger("relation_eval")
 DEFAULT_OUTPUT_ROOT = "output/relation_update"
 COMMIT_FILE = "day_commits.jsonl"
 
-# 事务内文件: 续跑时未提交(无 commit marker)的尾段按日期整体截断
+
 TRANSACTIONAL_FILES = ("relation_events.jsonl", "relation_updates.jsonl",
                        "relation_cases.jsonl", "unknown_cases.jsonl",
                        "input_error_events.jsonl")
@@ -82,10 +67,8 @@ def _manifest(person, opts, signature, noise_count, dry_run,
     }
 
 
-# ── 事务与续跑状态 ──────────────────────────────────────────────────────
-
 def _load_committed_dates(store, signature) -> set:
-    """已提交(有 commit marker)的日期集合,按签名过滤"""
+
     dates = set()
     path = store._path(COMMIT_FILE)
     if not os.path.exists(path):
@@ -106,12 +89,8 @@ def _load_committed_dates(store, signature) -> set:
 
 
 def _truncate_uncommitted(store, committed: set):
-    """
-    事务文件截断: 只保留已提交日期的记录(崩溃尾段整体丢弃)。
-    诊断日志 errors.jsonl 中,未提交日期的 input_error 记录是同一
-    事务的崩溃残留,一并清除;其余错误类型(API 失败等)是真实运行
-    历史,保留。
-    """
+
+
     for name in TRANSACTIONAL_FILES:
         path = store._path(name)
         if not os.path.exists(path):
@@ -136,7 +115,7 @@ def _truncate_uncommitted(store, committed: set):
         if dirty:
             with open(path, "w", encoding="utf-8") as f:
                 f.writelines(keep)
-    # errors.jsonl 清理: 未提交日期的 input_error 记录
+
     path = store._path("errors.jsonl")
     if os.path.exists(path):
         keep = []
@@ -164,7 +143,7 @@ def _truncate_uncommitted(store, committed: set):
 
 
 def _load_completed(store, signature) -> set:
-    """续跑: 已完成的 (date, event_id) 集合(按签名过滤)"""
+
     completed = set()
     path = store._path("relation_events.jsonl")
     if not os.path.exists(path):
@@ -188,7 +167,7 @@ def _load_completed(store, signature) -> set:
 
 
 def _load_updates(store, signature) -> list:
-    """续跑: 重放用更新日志(按签名过滤,只含已提交日期)"""
+
     out = []
     path = store._path("relation_updates.jsonl")
     if not os.path.exists(path):
@@ -207,10 +186,8 @@ def _load_updates(store, signature) -> list:
 
 
 def _load_keep_events(store, signature) -> list:
-    """
-    续跑: 从已完成事件的 EXISTING_KEEP 案例重放 last_seen /
-    interaction_days 维护(与更新日志合并后可确定性重建关系库)。
-    """
+
+
     out = []
     path = store._path("relation_events.jsonl")
     if not os.path.exists(path):
@@ -240,8 +217,8 @@ def _has_results(store) -> bool:
 
 
 def _count_call_records(store, signature) -> int:
-    """已落盘的真实请求数(按签名过滤,含失败调用): 续跑会话的
-    模型调用预算起点,保证授权上限在 resume 之间保持全局口径"""
+
+
     count = 0
     path = store._path("selector_traces.jsonl")
     if not os.path.exists(path):
@@ -264,7 +241,7 @@ def _count_call_records(store, signature) -> int:
 def _check_manifest(store, signature) -> bool:
     path = store._path("run_manifest.json")
     if not os.path.exists(path):
-        # 已有结果但 manifest 缺失 → 无法验证签名,拒绝续跑(防混签)
+
         return not _has_results(store)
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -292,7 +269,7 @@ def _append_input_errors(store, parse_errors, person_name, prompts,
 
 
 def _load_input_error_events(store, signature) -> set:
-    """已按事务提交的输入错误事件 (date, event_id) 终止状态集合"""
+
     out = set()
     path = store._path("input_error_events.jsonl")
     if not os.path.exists(path):
@@ -331,18 +308,12 @@ def _read_jsonl(store, name, signature) -> list:
     return out
 
 
-# ── 主流程 ──────────────────────────────────────────────────────────────
-
 def evaluate_person_relations(person_name: str, event_file: str,
                               outline_file: str, persona_file: str,
                               out_dir: str, opts: dict,
                               client=None, prompts=None) -> dict:
-    """
-    单人物逐日关系评估(串行)
 
-    opts: model / max_context_tokens / max_output_tokens / start_date /
-    end_date / resume / dry_run(不同人物并行由 CLI 处理,本函数内不并行)
-    """
+
     store = PersonOutputStore(out_dir)
     with open(persona_file, "r", encoding="utf-8") as f:
         persona = json.load(f)
@@ -373,8 +344,8 @@ def evaluate_person_relations(person_name: str, event_file: str,
         "initial_library_hash": initial_library_hash,
         "max_context_tokens": opts.get("max_context_tokens", 24000),
         "max_output_tokens": opts.get("max_output_tokens", 8192),
-        # 评估窗口进入签名: 同一输出目录禁止改变日期范围
-        # (warmup 分类与汇总口径随窗口改变,不允许复用旧结果)
+
+
         "window": {
             "start_date": opts.get("start_date"),
             "end_date": opts.get("end_date"),
@@ -382,7 +353,7 @@ def evaluate_person_relations(person_name: str, event_file: str,
         "model_params": {
             "temperature": 0.0,
             "response_format": {"type": "json_object"},
-            # 授权边界参数进入签名: 同目录禁止改变调用预算/重试口径
+
             "max_retries": opts.get("max_retries", 3),
             "max_model_calls": opts.get("max_model_calls"),
         },
@@ -406,11 +377,10 @@ def evaluate_person_relations(person_name: str, event_file: str,
     if opts.get("dry_run") and _has_results(store):
         raise ValueError("dry-run 必须使用没有既有结果的输出目录。")
 
-    # 首次模型调用前落盘初始库与 manifest(崩溃后 resume 仍有签名依据)
+
     store.write_json("initial_relation_library.json", initial_library)
 
-    # 输入错误记录(时间不可解析 / participant 非法)。
-    # 续跑时输入签名一致、错误已在首跑落盘,不重复追加。
+
     if not resume_mode:
         _append_input_errors(store, parse_errors, person_name, prompts,
                              opts, signature)
@@ -421,8 +391,8 @@ def evaluate_person_relations(person_name: str, event_file: str,
     selected = [d for d in all_dates
                 if (start_date is None or d >= start_date)
                 and (end_date is None or d <= end_date)]
-    # P2-7: start_date 之前的日期作为 warm-up 完整推进状态(模型照常
-    # 调用、日级事务正常提交),其结果标记 warmup 且不纳入统计。
+
+
     warmup = {d for d in all_dates
               if start_date is not None and d < start_date
               and (end_date is None or d <= end_date)}
@@ -442,8 +412,7 @@ def evaluate_person_relations(person_name: str, event_file: str,
                                            keep_events) \
         if resume_mode else _rebuild_fresh(initial_library)
 
-    # 空 resume: 全部待处理事件已完成(含已提交的输入错误终止状态)
-    # → 不写任何产物、不调用模型
+
     if resume_mode and not opts.get("dry_run"):
         pending = {(d, str(pe["event"]["event_id"]))
                    for d in process_dates
@@ -476,9 +445,7 @@ def evaluate_person_relations(person_name: str, event_file: str,
         return {"person": person_name, "dry_run": True, **est,
                 "evaluation_signature": signature}
 
-    # 共享模型调用预算(Selector/Writer/协议修复/截断二分共用同一
-    # 客户端): 第 N+1 次请求在发出前即被阻断;续跑以已落盘调用记录
-    # 为预算起点,授权上限在 resume 会话之间保持全局口径。
+
     budget_exhausted = False
     if opts.get("max_model_calls"):
         client = BudgetClient(client, opts["max_model_calls"],
@@ -500,7 +467,7 @@ def evaluate_person_relations(person_name: str, event_file: str,
     for date in process_dates:
         is_warmup = date in warmup
         day_events = by_day[date]
-        day_library = library   # 日初快照(日末统一提交)
+        day_library = library
         plan = build_day_plan(day_events, date, day_library, persona)
         day_cases_log = []
         case_results = {}
@@ -509,15 +476,15 @@ def evaluate_person_relations(person_name: str, event_file: str,
         day_input_errors = []
         events_active = []
         day_aborted = False
-        # 同日一致性状态: {(person_id, 归一化关系称谓)} —— 当天早前事件
-        # 已判为身份冲突(UNEXPLAINED)的事实,约束后续事件的判定
+
+
         day_conflicts = set()
         for pe, cases, earlier, case_errors in plan:
             eid = str(pe["event"]["event_id"])
-            # 已按事务提交的输入错误事件是终止状态,续跑不再重复处理
+
             if resume_mode and (date, eid) in input_error_events:
                 continue
-            # 输入错误随日事务提交(errors.jsonl + input_error_events)
+
             day_input_errors.extend(case_errors)
             if not cases:
                 continue
@@ -527,15 +494,15 @@ def evaluate_person_relations(person_name: str, event_file: str,
                 continue
             events_active.append((pe, active))
             day_cases_log.extend(active)
-            # 选择器: 单事件请求(当前事件 + 较早来源事件正文)
+
             try:
                 items = selector.select_event(
                     owner, date, day_library, pe["event"], active,
                     [o["event"] for o in earlier], meta(date),
                     day_conflicts=day_conflicts)
             except BudgetExceeded:
-                # 预算耗尽: 本次请求未发出,当日中止且不提交,
-                # 运行终止(后续走汇总与 manifest 收尾)
+
+
                 budget_exhausted = True
                 day_aborted = True
                 break
@@ -547,7 +514,7 @@ def evaluate_person_relations(person_name: str, event_file: str,
             for c in active:
                 it = by_case.get(c["case_id"])
                 if it is None:
-                    # 校验已保证覆盖,理论不可达
+
                     store.append_jsonl("errors.jsonl", {
                         **meta(date), "error_type": "model_output_error",
                         "case_ids": [c["case_id"]],
@@ -572,8 +539,8 @@ def evaluate_person_relations(person_name: str, event_file: str,
                     "observed_relation": c["observed_relation"],
                     "unknown_fields": it.get("unknown_fields") or [],
                 }
-                # 本事件的身份冲突事实进入同日一致性状态,约束
-                # 后续事件: 相同人物 + 相同称谓不得降级为 KEEP
+
+
                 if route == ROUTE_UNEXPLAINED:
                     for pid in (it.get("matched_person_id"),
                                 it.get("conflicting_person_id")):
@@ -585,8 +552,8 @@ def evaluate_person_relations(person_name: str, event_file: str,
                         and c["event_origin"] == "source":
                     day_keep_ids.append(it["matched_person_id"])
                 if writer_eligible and c["event_origin"] == "source":
-                    # 证据绑定: 解析 Selector 证据事件的完整正文
-                    # (当前事件 + 较早来源事件),随写入案例交给 Writer
+
+
                     evidence_bodies = {
                         str(pe["event"]["event_id"]): pe["event"]}
                     for o in earlier:
@@ -626,12 +593,12 @@ def evaluate_person_relations(person_name: str, event_file: str,
                     break
                 day_patches.extend(patches)
         if day_aborted:
-            # 当日中止: 状态未推进,事务未提交,可 resume
+
             break
         if not events_active and not day_input_errors:
-            # 该日事件全部已完成(续跑)或无案例: 不重复提交
+
             continue
-        # 日末统一提交(与重放顺序一致: 补丁先于当日 KEEP)
+
         applied, rejected = _apply_patches(store, date, day_library,
                                            day_patches, meta(date))
         if rejected:
@@ -645,7 +612,7 @@ def evaluate_person_relations(person_name: str, event_file: str,
         _commit_day(store, date, meta(date), events_active, case_results,
                     applied, day_input_errors, is_warmup)
 
-    # 最终关系库 = 初始库 + 已提交更新日志 + 已提交 KEEP 重放(确定性)
+
     final_updates = _load_updates(store, signature)
     final_keep = _load_keep_events(store, signature)
     final_library = rebuild_library_from_updates(initial_library,
@@ -663,17 +630,12 @@ def evaluate_person_relations(person_name: str, event_file: str,
             "budget_exhausted": budget_exhausted}
 
 
-# ── 补丁应用与日级事务 ──────────────────────────────────────────────────
-
 def _apply_patches(store, date, library, patches, meta):
-    """应用合法补丁(同日同 candidate_key 新增合并;冲突拒绝并记录)
 
-    全批原子性: 任一补丁被拒 → 返回 rejected 非空,本批已应用的
-    补丁不写入更新日志(当日中止,resume 从干净状态重试)。
-    """
+
     applied = []
     rejected = []
-    # 合并同日新增: 同 name 的 add 合并为一个补丁
+
     merged_adds = {}
     for p in patches:
         if p.get("operation") != "add":
@@ -701,8 +663,8 @@ def _apply_patches(store, date, library, patches, meta):
             merged_adds[name] = dict(p)
             merged_adds[name]["source_case_ids"] = list(
                 p["source_case_ids"])
-    # 合并同日相同目标的重复 update: 归一化后字段相同 → 只提交一次,
-    # 合并证据与 source_case_ids(同日前序事件的相同扩展不重复计数)
+
+
     def _norm_values(vals, use_tag_normalize=False):
         out = set()
         for v in vals or []:
@@ -774,11 +736,8 @@ def _apply_patches(store, date, library, patches, meta):
 
 def _commit_day(store, date, meta, events_active, case_results,
                 applied_patches, input_errors, warmup):
-    """
-    日级事务提交: 输入错误终止状态 → 事件结果 → 案例日志 → unknown
-    清单 → commit marker。更新日志已由 _apply_patches 写入;marker
-    最后写入,续跑只重放已提交事务。
-    """
+
+
     for err in input_errors:
         store.append_jsonl("input_error_events.jsonl", {
             **meta, "event_id": str(err["event_id"]),
@@ -858,7 +817,7 @@ def _rebuild_fresh(initial_library):
 
 
 def _write_manifest(store, manifest: dict):
-    """manifest 内容未变时跳过写入(空 resume 不改变任何产物)"""
+
     path = store._path("run_manifest.json")
 
     def comparable(m):
@@ -874,8 +833,6 @@ def _write_manifest(store, manifest: dict):
             return
     store.write_json("run_manifest.json", manifest)
 
-
-# ── 汇总(全部指标由已提交产物权威重算)───────────────────────────────────
 
 def _build_summary(person, store, initial_library, final_library,
                    opts, signature, budget_exhausted=False):
@@ -914,12 +871,7 @@ def _build_summary(person, store, initial_library, final_library,
     rate = (conform / (conform + nonconform)
             if conform + nonconform else None)
 
-    # 过程指标由已提交产物重算(续跑不重置、不重复);
-    # 按 warmup 拆分: 目标区间 / warm-up / 总计。真实请求次数含修复、
-    # 截断与失败调用,按 call_id 逐条统计:
-    # selector_calls / writer_calls = 全部真实请求;
-    # *_repair_calls = phase == "repair" 的协议修复轮;
-    # transport_retries = usage.retries 之和(网络/服务端内部重试)。
+
     def _metric_bucket(events_bucket, updates_bucket, traces_bucket,
                        errors_bucket, input_errors_count):
         add_patches = [u for u in updates_bucket
@@ -983,9 +935,8 @@ def _build_summary(person, store, initial_library, final_library,
     warmup_traces = [t for t in traces if t.get("warmup")]
     target_errors = [e for e in errors if not e.get("warmup")]
     warmup_errors = [e for e in errors if e.get("warmup")]
-    # 输入错误按事务化的 input_error_events.jsonl 权威统计(事件级、
-    # 随日事务回滚,不受 errors.jsonl 诊断残留影响);无日期的时间解析
-    # 错误(仅首跑写入 errors.jsonl)并入目标区间。
+
+
     ie_records = _read_jsonl(store, "input_error_events.jsonl", signature)
     target_ie = sum(1 for r in ie_records if not r.get("warmup"))
     warmup_ie = sum(1 for r in ie_records if r.get("warmup"))
@@ -1033,8 +984,6 @@ def _build_summary(person, store, initial_library, final_library,
         "final_relation_count": len(final_library["records"]),
     }
 
-
-# ── dry-run 估算(与生产共用同一规划函数)─────────────────────────────────
 
 def _dry_run_estimate(prompts, owner, process_dates, warmup_days, by_day,
                       library, persona, opts) -> dict:

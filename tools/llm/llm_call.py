@@ -1,13 +1,4 @@
-"""LLM 调用工具。
-
-参考 LifeBench 主仓库 src/lifebench/utils/llm_call.py 实现，保留其核心约定：
-OpenAI 兼容接口、配置文件驱动、线程安全单例客户端、token 用量统计、
-可选去除 <think> 内容；去掉了主仓库依赖的 locale 本地化逻辑，便于独立运行。
-
-配置读取顺序：config/config.json（本地，含密钥，不入库）>
-config/config.example.json；环境变量 LLM_API_KEY / LLM_BASE_URL /
-LLM_DEFAULT_MODEL / LLM_REASON_MODEL 可覆盖同名配置项。
-"""
+"""This module calls language models."""
 
 from __future__ import annotations
 
@@ -21,7 +12,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
-if TYPE_CHECKING:  # 仅类型检查时导入，模块导入不要求已安装 openai
+if TYPE_CHECKING:
     from openai import OpenAI
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -50,10 +41,8 @@ _client_lock = threading.Lock()
 
 
 def get_client() -> OpenAI:
-    """返回全局唯一的 OpenAI 客户端实例（线程安全），避免连接与 SSL FD 泄漏。
 
-    凭据只在第一次真正需要调用模型时检查；仅导入本模块不需要密钥。
-    """
+
     global _client
     if _client is None:
         with _client_lock:
@@ -64,7 +53,7 @@ def get_client() -> OpenAI:
                         "中填写，或设置环境变量 LLM_API_KEY")
                 try:
                     from openai import OpenAI
-                except ImportError as exc:  # pragma: no cover
+                except ImportError as exc:
                     raise RuntimeError(
                         "缺少 openai 依赖，请先安装 requirements.txt") from exc
                 _client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
@@ -72,27 +61,24 @@ def get_client() -> OpenAI:
 
 
 def reset_client() -> None:
-    """关闭并清空全局客户端（主要供测试隔离使用）。"""
+
     global _client
     with _client_lock:
         _client = None
 
 
 def _strip_think_text(text: str) -> str:
-    """无条件去除文本中的 <think>...</think> 内容。"""
+
     return re.sub(r"<think>[\s\S]*?</think>", "", text).strip()
 
 
 def strip_think_content(text: str) -> str:
-    """按配置去除文本中的 <think>...</think> 内容。"""
+
     if not STRIP_THINK:
         return text
     return _strip_think_text(text)
 
 
-# ==================== Token 统计 ====================
-# 可选：设置环境变量 LIFEBENCH_EVAL_TOKEN_DIR 后，每次调用都会把本进程累计
-# 用量增量写入该目录下的 token_<pid>.json，便于多进程运行时聚合。
 _token_usage_lock = threading.Lock()
 _token_usage = {
     "prompt_tokens": 0,
@@ -119,7 +105,7 @@ def _get_token_dump_path() -> str | None:
 
 
 def _flush_token_usage_locked() -> None:
-    """在已持有 _token_usage_lock 的前提下，原子写入本进程的用量快照。"""
+
     path = _get_token_dump_path()
     if not path:
         return
@@ -136,7 +122,7 @@ def _flush_token_usage_locked() -> None:
 
 
 def _record_usage(response) -> None:
-    """从一次 chat.completions 响应中提取并累计 token 用量。"""
+
     usage = getattr(response, "usage", None)
     if usage is None:
         return
@@ -179,13 +165,13 @@ def _record_usage(response) -> None:
 
 
 def get_token_usage() -> dict:
-    """返回当前进程累计的 token 用量快照（线程安全）。"""
+
     with _token_usage_lock:
         return json.loads(json.dumps(_token_usage))
 
 
 def reset_token_usage() -> None:
-    """清空当前进程累计的 token 用量。"""
+
     global _token_usage
     with _token_usage_lock:
         _token_usage = {
@@ -209,17 +195,9 @@ def _flush_on_exit() -> None:
 atexit.register(_flush_on_exit)
 
 
-# ==================== 调用接口 ====================
-
 @dataclass
 class ChatCompletionResult:
-    """一次 chat.completions 调用的完整适配结果。
 
-    - content: 原始文本内容（默认不做 strip_think 改写）
-    - model_returned: 服务端返回的模型名
-    - finish_reason: stop / length 等
-    - usage: prompt/completion/total 与缓存命中 token 统计
-    """
 
     content: str
     model_returned: str | None
@@ -242,7 +220,7 @@ def _usage_to_dict(usage) -> dict | None:
     if hasattr(usage, "model_dump"):
         try:
             raw = usage.model_dump()
-        except Exception:  # pragma: no cover - 兼容不同 SDK 版本
+        except Exception:
             raw = None
     elif isinstance(usage, dict):
         raw = dict(usage)
@@ -270,14 +248,8 @@ def chat_completion(
     sdk_max_retries: int | None = None,
     strip_think: bool = False,
 ) -> ChatCompletionResult:
-    """完整消息接口：接收 system/user/assistant 序列并返回可适配的原始结果。
 
-    与 ``llm_call`` 的便捷接口不同，这里默认不改写原始 content；
-    调用方如需去除 ``<think>`` 内容，显式传 ``strip_think=True``。
 
-    ``sdk_max_retries`` 用于按调用关闭 SDK 内部隐式重试。旧评估适配器
-    需要保证一次逻辑调用只对应一次 HTTP 请求，因此传入 0。
-    """
     messages = list(messages)
     model = model or DEFAULT_MODEL
     kwargs: dict[str, Any] = {
@@ -328,40 +300,33 @@ def _chat(prompt: str, context: str, model: str, json_mode: bool = False) -> str
         model=model,
         response_format={"type": "json_object"} if json_mode else None,
     )
-    # 高层便捷接口保持原行为：是否去除 <think> 由 strip_think 配置决定。
+
     return strip_think_content(result.content)
 
 
 def llm_call(prompt: str, context: str = DEFAULT_CONTEXT) -> str:
-    """调用默认聊天模型（不保留对话历史）。"""
+
     return _chat(prompt, context, DEFAULT_MODEL)
 
 
 def llm_call_reason(prompt: str, context: str = DEFAULT_CONTEXT) -> str:
-    """调用推理模型（不保留对话历史）。"""
+
     return _chat(prompt, context, REASON_MODEL)
 
 
 def llm_call_j(prompt: str, context: str = DEFAULT_CONTEXT) -> str:
-    """调用默认聊天模型，要求返回 JSON 字符串（不保留对话历史）。"""
+
     return _chat(prompt, context, DEFAULT_MODEL, json_mode=True)
 
 
 def llm_call_reason_j(prompt: str, context: str = DEFAULT_CONTEXT) -> str:
-    """调用推理模型，要求返回 JSON 字符串（不保留对话历史）。"""
+
     return _chat(prompt, context, REASON_MODEL, json_mode=True)
 
 
 def llm_agent(messages, tools, dispatch, model: str | None = None, max_turns: int = 12):
-    """带 function calling 的 agent 循环：执行工具直到模型不再请求工具。
 
-    :param messages: 对话消息列表（与 chat.completions 的 messages 一致）
-    :param tools: OpenAI function-calling 的 tools 列表
-    :param dispatch: callable(tool_name, args_dict) -> str | dict | list
-    :param model: 覆盖默认模型；缺省用 DEFAULT_MODEL
-    :param max_turns: 工具循环最大轮数，防止失控
-    :return: 模型最终文本内容；超轮数未收敛时返回 None
-    """
+
     client = get_client()
     model = model or DEFAULT_MODEL
     transcript = list(messages)

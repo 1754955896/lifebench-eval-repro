@@ -1,9 +1,5 @@
-"""旧时空逻辑校验（Legacy）统一入口与 CLI。
+"""This module runs the evaluation pipeline."""
 
-以 ``logic_run_new.py`` 当前有效链路为基础，移除了顶层执行副作用；
-地图能力经 ``tools.geo``、模型能力经 ``tools.llm``。本方法保留历史
-统计公式与已知限制，不宣称修复既有算法口径。
-"""
 from __future__ import annotations
 
 import argparse
@@ -110,11 +106,8 @@ def _run_person(name, person_dir, person_out, opts, client, geo_client,
 
 def evaluate(data_dir, output_dir, *, options=None, client=None,
              geo_client=None, relation_client=None, persons=None) -> dict:
-    """评估单个人物或数据集目录下的旧时空逻辑。
 
-    ``client`` 为旧 ``Deepseek.ask(prompt)`` 形状的假对象（测试注入）；
-    ``geo_client`` 为提供 ``geocode``/``route`` 的假对象（测试注入）。
-    """
+
     opts = resolve_method_options(METHOD_NAME, DEFAULT_OPTIONS, options)
     opts["scoring_methods"] = select_scores(opts.get("scoring_methods"))
     person_dirs = discover_persons(data_dir, REQUIRED_FILES)

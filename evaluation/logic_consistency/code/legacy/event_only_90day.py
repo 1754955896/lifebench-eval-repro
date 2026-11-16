@@ -1,8 +1,5 @@
-"""Compare event_consistency_rate on the same 90 source days for two datasets.
+"""This module runs event consistency evaluation."""
 
-Run from the repository root with ``python -m evaluation.logic_consistency.code.legacy.event_only_90day``.
-Only DeepSeek is used; this script does not call geocoding or route APIs.
-"""
 from __future__ import annotations
 
 import argparse
@@ -50,7 +47,7 @@ def load_days(path: Path) -> dict[str, list[dict]]:
 
 
 def sample_days(common: list[str], n: int, seed: int) -> list[str]:
-    """Month-stratified, reproducible sample with near-proportional quotas."""
+
     if len(common) < n:
         raise ValueError(f"Only {len(common)} shared days; need {n}")
     groups = defaultdict(list)
@@ -79,7 +76,7 @@ def ask_retry(client: Deepseek, prompt: str, attempts: int = 3) -> str:
 
 
 def extract(client: Deepseek, source_day: str, story: list[dict]) -> list[dict]:
-    # The legacy extraction prompt expects the original date-tagged event list.
+
     response = ask_retry(client, EVENT_PROMPT.format(str({source_day: story})))
     match = re.search(r"<events>(.*?)</events>", response, re.S | re.I)
     if not match:
@@ -141,7 +138,7 @@ def assess(client: Deepseek, row: dict, days: dict[str, list[dict]]) -> dict:
 
 def evaluate_version(label: str, days: dict[str, list[dict]], selected: list[str],
                      client: Deepseek, workers: int, output: Path) -> dict:
-    """Append durable per-day records; resume skips completed source days."""
+
     output.mkdir(parents=True, exist_ok=True)
     records_dir = output / label / "days"
     records_dir.mkdir(parents=True, exist_ok=True)

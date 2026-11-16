@@ -1,4 +1,5 @@
-"""Compare six-domain time allocation for the three Feng Haoran datasets."""
+"""This module runs a time use comparison."""
+
 from __future__ import annotations
 
 import argparse
@@ -55,7 +56,7 @@ def make_plan(args):
     if min(args.max_workers, args.attempts, args.timeout, args.max_output_tokens) <= 0:
         raise ValueError("Workers, attempts, timeout and output tokens must be positive")
     plans = {}
-    # Check all inputs before sending any requests. Load full sources for midnight context.
+
     for name in NAMES:
         folder = getattr(args, name + "_dir").resolve()
         if not (folder / "daily_event.json").is_file():
@@ -133,7 +134,7 @@ def markdown(report):
 
 
 def add_sleep_locally(args, plans, output):
-    """Transfer validated recorded allocations by segment content, not shifted IDs."""
+
     source = args.reuse_results_dir.resolve()
     if args.sleep_policy != "night-gap":
         raise ValueError("--reuse-results-dir requires --sleep-policy night-gap")
@@ -146,7 +147,7 @@ def add_sleep_locally(args, plans, output):
     groups, daily, destinations = {}, {}, {}
     def segment_key(segment):
         return json.dumps({k: v for k, v in segment.items() if k != "segment_id"}, sort_keys=True, ensure_ascii=False)
-    # Validate every group before writing any output. No model calls in this path.
+
     for name in NAMES:
         folder = Path(plans[name]["folder"])
         old_person = source / name / folder.name
@@ -238,7 +239,7 @@ def run(args, *, client=None):
             metrics_path = Path(entry["metrics_path"])
             metrics = read_json(metrics_path)
             groups[name] = metrics
-            # Never use stale daily_results after an input/signature/configuration error.
+
             if "category_distribution" in metrics:
                 daily[name] = read_json(metrics_path.parent / "daily_results.json")
             errors = [metrics.get("error") or ""] + [f["error"] for f in metrics.get("failed_days", [])]

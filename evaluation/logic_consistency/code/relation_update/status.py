@@ -1,4 +1,5 @@
-"""关系评估运行完整性判定（CLI 退出码与 metrics.status 共用）。"""
+"""This module reports evaluation status."""
+
 from __future__ import annotations
 
 import json
@@ -9,9 +10,8 @@ _ERROR_TYPES = {"api_error", "model_output_error", "output_truncated",
 
 
 def run_complete(out_dir: str, signature: dict) -> bool:
-    """只认当前签名：存在未完成事件且未被后续成功结果解决的运行错误
-    → False。patch_rejected 与 api/model 错误同样按受影响事件判断。
-    """
+
+
     path = os.path.join(out_dir, "errors.jsonl")
     if not os.path.exists(path):
         return True

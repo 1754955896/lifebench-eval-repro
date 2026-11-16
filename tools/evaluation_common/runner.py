@@ -1,8 +1,5 @@
-"""方法入口共用的小工具：输出目录、metrics 落盘、批量人物编排。
+"""This module coordinates evaluation runs."""
 
-不建设注册器或调度框架，只提供各方法 ``method.py`` 共用的少量 I/O 与
-状态汇总函数。
-"""
 from __future__ import annotations
 
 import os
@@ -22,11 +19,8 @@ def write_metrics(output_dir: str, metrics: dict, name: str = "metrics.json") ->
 
 
 def run_over_persons(persons, output_dir, run_one):
-    """对 ``[(name, person_dir), ...]`` 逐个运行 ``run_one``。
 
-    ``run_one(name, person_dir, person_output_dir)`` 返回 dict（可含
-    ``status``、``dry_run``、``metrics``、``artifacts``）。返回批量汇总。
-    """
+
     ensure_output_dir(output_dir)
     entries = []
     failures = []
@@ -35,7 +29,7 @@ def run_over_persons(persons, output_dir, run_one):
         ensure_output_dir(person_out)
         try:
             result = run_one(name, person_dir, person_out)
-        except Exception as exc:  # 技术错误不生成语义标签
+        except Exception as exc:
             entries.append({
                 "person": name,
                 "status": "error",

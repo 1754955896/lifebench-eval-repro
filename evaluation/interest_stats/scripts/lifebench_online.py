@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-"""Evaluate LifeBench interest evolution with a DeepSeek-powered extractor.
-
-This is an OmniBehavior-inspired reproduction of the analysis described in
-Section 3.3 of the paper, not official OmniBehavior code. The paper compares
-OmniBehavior and LoCoMo by extracting interest categories from interactions and
-computing 1 - Jaccard between category sets on consecutive days.
-
-The script intentionally uses only Python's standard library. It talks to the
-DeepSeek OpenAI-compatible chat-completions endpoint directly, so it can run
-without importing the rest of LifeBench or the ``openai`` package.
-"""
+"""This module generates interest drift results."""
 
 from __future__ import annotations
 
@@ -38,9 +27,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_CONFIG = REPO_ROOT / "config/config.json"
 PROMPT_VERSION = "lifebench-interest-v1"
 
-# A closed taxonomy is essential: without it, lexical variants would make
-# Jaccard drift incomparable across days. ``None`` is excluded from interest
-# sets and captures routine events that do not reveal a stable preference.
+
 INTEREST_CATEGORIES: Mapping[str, str] = {
     "Sports & Fitness": "sports, exercise, training, outdoor fitness",
     "Arts & Culture": "art, music, literature, photography, crafts, museums",
@@ -67,7 +54,7 @@ PRINT_LOCK = threading.Lock()
 
 
 class EvaluationError(RuntimeError):
-    """Raised when input or model output cannot satisfy the evaluation contract."""
+    pass
 
 
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
@@ -406,11 +393,8 @@ def deepseek_chat_json(
 
 
 def normalize_keywords(raw: Any) -> Tuple[List[str], Optional[Dict[str, Any]]]:
-    """Repair auxiliary keywords without changing interest signal/category.
 
-    Keywords are used for display counts, never for the daily category-set
-    Jaccard metric. Preserve the original value whenever cleanup is needed.
-    """
+
     values = [raw] if isinstance(raw, str) else raw if isinstance(raw, list) else []
     cleaned = list(dict.fromkeys(value.strip() for value in values
                                  if isinstance(value, str) and value.strip()))[:3]
@@ -478,8 +462,8 @@ def extract_batch(
     max_retries: int,
     verbose: bool,
 ) -> Tuple[List[Dict[str, Any]], Dict[str, int]]:
-    # Schema failures are retried as well as transport failures because JSON mode
-    # guarantees syntax, not adherence to our event-level contract.
+
+
     last_error: Optional[BaseException] = None
     for attempt in range(1, max_retries + 1):
         try:
@@ -542,7 +526,7 @@ def calculate_drift_series(daily_sets: Mapping[str, Iterable[str]]) -> Tuple[Lis
     series: List[Dict[str, Any]] = []
     skipped_empty_pairs = 0
     for previous, current in zip(dates, dates[1:]):
-        # Only actual calendar-consecutive days implement the paper's stated metric.
+
         if (dt.date.fromisoformat(current) - dt.date.fromisoformat(previous)).days != 1:
             continue
         left, right = sorted(set(daily_sets[previous])), sorted(set(daily_sets[current]))
@@ -597,7 +581,7 @@ def build_report(
             daily_interest_counts[event["date"]][result["category"]] += 1
             keyword_counts.update(result["keywords"])
         else:
-            # Preserve all event dates so pairs with one empty interest day are visible.
+
             daily_interest_counts[event["date"]]
         detailed.append(
             {

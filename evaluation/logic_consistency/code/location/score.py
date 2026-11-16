@@ -1,5 +1,4 @@
-"""Successful location checks divided by successes plus suspected errors."""
-
+"""This module calculates evaluation scores."""
 
 def score(counts: dict[str, int]) -> float | None:
     correct = counts.get("地点验证成功", 0)

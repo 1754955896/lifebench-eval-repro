@@ -1,9 +1,5 @@
-"""Run unchanged legacy event/person checkers on the same 90 days, without maps.
+"""This module runs event and person consistency evaluation."""
 
-This is a thin orchestration entry point. It uses the original prompts, response
-parsers, EventAnalyzeProcess and RelationAnalyzeProcessor without changing them.
-The original event window and log-rate semantics are intentionally preserved.
-"""
 from __future__ import annotations
 
 import argparse
@@ -40,7 +36,7 @@ def load_calendar(person_dir: Path, selected: list[str]) -> dict[str, Task]:
 
 def extract_legacy(client: Deepseek, task: Task, prompt: PromptMessage,
                    tag: str) -> list:
-    # The regexes below are copied from the old APIExtractProcessor.run_task.
+
     response = client.ask(prompt.write_prompt(task.event))
     if tag == "events":
         text = re.search(r"<events>(.*?)</events>", response, re.S).group(1).strip()

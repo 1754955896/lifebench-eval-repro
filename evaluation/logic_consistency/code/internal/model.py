@@ -1,8 +1,5 @@
-"""旧时空校验的模型适配：保留原 ``Deepseek.ask(prompt)`` 调用形状。
+"""This module connects the evaluation model."""
 
-底层只经 ``tools.llm.chat_completion``；凭据与 client 生命周期由共享
-工具管理，不在本方法内创建 OpenAI 客户端或硬编码密钥。
-"""
 from __future__ import annotations
 
 from tools.llm import chat_completion
@@ -15,7 +12,7 @@ SYSTEM_PROMPT = (
 
 
 class Deepseek:
-    """兼容旧调用方的文本模型适配器。"""
+
 
     def __init__(self, model: str = "deepseek-chat", completion_fn=None):
         self.model = model

@@ -1,4 +1,4 @@
-"""Run the dynamic relation evaluator and expose its relation rate as a score."""
+"""This module calculates evaluation scores."""
 
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ def score(final_labels: dict[str, int]) -> float | None:
 
 def run(person: str, person_dir: str, output_dir: str, options: dict,
         client=None) -> dict:
-    """Run the source relation_update pipeline for one person."""
+
     opts = resolve_method_options("relation_update", DEFAULT_OPTIONS)
     opts.update({
         "start_date": options.get("start_date"),

@@ -1,1 +1,1 @@
-"""Six-domain daily time-use analysis."""
+"""Defines the time use package."""

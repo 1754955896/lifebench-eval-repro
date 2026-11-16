@@ -1,4 +1,4 @@
-"""Reproduce full-dataset Beijing trajectory descriptive statistics."""
+"""This module generates a geolocation summary table."""
 
 from __future__ import annotations
 

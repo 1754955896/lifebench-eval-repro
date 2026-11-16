@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-"""Recompute saved interest drift results from the provided data."""
+"""This module runs the evaluation."""
 
 from method.recompute import main
 

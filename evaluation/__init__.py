@@ -1,1 +1,1 @@
-"""数据评估方法集合：每个子目录实现一种评估方法，详见 README.md。"""
+"""Defines the evaluation package."""

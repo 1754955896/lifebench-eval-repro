@@ -1,8 +1,5 @@
-"""Deterministic interval accounting and LLM allocation validation.
+"""This module provides time use calculations."""
 
-Six domains and the minor-activity convention originate in the historical
-LifeBench utils/time_use_analysis.py (904aef9; removed in 9ce92d8).
-"""
 from __future__ import annotations
 
 from collections import defaultdict
@@ -47,11 +44,8 @@ def read_interval(value):
 
 
 def prepare_days(events, *, start_date=None, end_date=None, sleep_policy="none"):
-    """Split all intervals at midnight; exclude overlapping portions explicitly.
 
-    night-gap is a hypothesis: only 18:00--next 12:00 gaps between consecutive
-    days are eligible, capped at 16h. It never fills missing calendar days.
-    """
+
     if sleep_policy not in ("none", "night-gap"):
         raise ValueError("sleep_policy must be none or night-gap")
     if not isinstance(events, list) or not events:
@@ -85,7 +79,7 @@ def prepare_days(events, *, start_date=None, end_date=None, sleep_policy="none")
     if not intervals:
         raise ValueError("No positive parseable time intervals")
     if sleep_policy == "night-gap":
-        # Merge all covered spans first: sleep never duplicates explicit intervals.
+
         spans = []
         for item in sorted(intervals, key=lambda x: x["start"]):
             if spans and item["start"] <= spans[-1][1]:
@@ -203,7 +197,7 @@ def summarize_day(prepared, allocations):
 
 
 def aggregate_days(results, *, requested_days):
-    """All successful days form the mean denominator, including category zeros."""
+
     distribution = {}
     total = sum(sum(v["total_minutes"] for v in d["categories"].values()) for d in results.values())
     for category in CATEGORIES:

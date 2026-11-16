@@ -1,1 +1,1 @@
-"""Person relationship consistency score."""
+"""Defines the logic consistency package."""

@@ -1,1 +1,1 @@
-"""Location truth score."""
+"""Defines the logic consistency package."""

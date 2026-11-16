@@ -1,10 +1,5 @@
-"""旧时空逻辑校验的无副作用封装。
+"""This module coordinates evaluation runs."""
 
-以源仓库 ``logic_run_new.py`` 的当前有效链路为基础：把顶层脚本改写为
-``run_logic_check(...)`` 函数，保留原队列/处理器/离散标签，地图能力
-经 ``tools.geo``、模型能力经 ``tools.llm``。本方法明确为 legacy 兼容
-迁移，不宣称修正历史算法口径。
-"""
 from __future__ import annotations
 
 import json
@@ -43,7 +38,7 @@ PROMPT_DEFAULTS = {
 
 _REQUIRED_PROMPTS = tuple(PROMPT_DEFAULTS)
 
-# 处理器使用类属性共享状态；每次运行前重置，避免同进程多次运行时串台。
+
 _PROCESSOR_STATE = (
     ("ExtractProcessor", ("extract_apis", "locations_prompt",
                           "events_prompt", "people_prompt")),
@@ -82,12 +77,8 @@ def _location_text(location):
 
 
 def adapt_daily_event(data) -> dict:
-    """把 ``daily_event.json`` 适配为旧逻辑使用的按日事件格式。
 
-    旧格式: ``{"date": [{date: [{interval: {description, location}}]}]}``。
-    已符合旧格式的输入原样返回。跨日事件按开始日期归属（与源数据
-    生成方式一致）。无法解析 date 的输入记录为适配诊断。
-    """
+
     if isinstance(data, dict) and isinstance(data.get("date"), list) and (
             not data["date"] or isinstance(data["date"][0], dict)):
         return data
@@ -120,14 +111,14 @@ def adapt_daily_event(data) -> dict:
                     "location": location,
                 }
             })
-    # EventMessage expects each item to be a dict date -> list.
+
     adapted = {"date": [{d: by_date[d]} for d in sorted(by_date)]}
     adapted["adaptation_diagnostics"] = diagnostics
     return adapted
 
 
 def adapt_persona(persona: dict) -> dict:
-    """补齐旧逻辑必需字段，保留原始画像内容。"""
+
     if not isinstance(persona, dict):
         raise ValueError("persona 必须是 JSON 对象")
     adapted = dict(persona)
@@ -166,7 +157,7 @@ def _monitor(logger, extracter, api_extracter_caller, analyzer,
              gaode_mid_stage_queue, analyze_paths_queue,
              deepseek_paths_queue, deepseek_paths_caller_queue,
              deadline: float):
-    """原主监控循环；增加超时保护，避免线程异常后无限等待。"""
+
     while True:
         if time.time() > deadline:
             raise TimeoutError("旧时空校验处理超时，可能存在处理器线程异常")
@@ -236,25 +227,21 @@ def _monitor(logger, extracter, api_extracter_caller, analyzer,
                                                                             stop_condition_2 = True
             if stop_condition_1 and stop_condition_2:
                 break
-        except Exception as exc:  # 保持源实现的兜底退出，但记录原因
+        except Exception as exc:
             logger.exception("监控循环异常退出: %s", exc)
             break
 
 
 def extract_queue_empty(extracter):
-    """辅助: 提取队列由调用方闭包传入更直观，此函数保留可读性。"""
+
     return extracter.task_queue.empty()
 
 
 def run_logic_check(person_file, event_file, output_dir, *,
                     start_date=None, end_date=None, options=None,
                     llm=None, geo_client=None, dry_run=False) -> dict:
-    """执行单个人物的旧时空逻辑校验。
 
-    ``llm`` 与 ``geo_client`` 仅供离线测试注入；生产分别使用
-    ``Deepseek`` 与 ``tools.geo``。``dry_run=True`` 只构造任务并返回
-    计划，不调用模型/地图、不写产物。
-    """
+
     options = dict(options or {})
     with open(person_file, "r", encoding="utf-8") as f:
         persona_raw = json.load(f)
@@ -398,8 +385,8 @@ def run_logic_check(person_file, event_file, output_dir, *,
     log_summary = summarize_log(os.path.join(output_dir, "logic.log"))
     metrics = {
         "method": METHOD_NAME,
-        # 源实现会跳过范围内没有事件数据的日期并继续；缺失日期只作
-        # 诊断信息，不把合法空档视为技术失败。
+
+
         "status": "complete",
         "person": personaM.origin_message.get("name"),
         "date_range": [start_date, end_date],

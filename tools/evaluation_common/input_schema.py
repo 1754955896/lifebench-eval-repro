@@ -1,27 +1,22 @@
-"""共享输入 schema：lineage 角色、时间段、daily_event/persona/event_tree 校验。
+"""This module validates evaluation inputs."""
 
-从源仓库 ``analyze/noise_schema.py`` 抽出的通用输入部分；v1/v2 各自的
-模型响应协议校验留在对应方法包内，避免把某一方法的协议混入共享层。
-"""
 from __future__ import annotations
 
 from dataclasses import dataclass
 
-# ── lineage 角色（daily_event 每条事件的来源身份）──────────────────────
 
-ROLE_NOISE_TARGET = "noise_target"          # atomic_id == []
-ROLE_SOURCE_RESOLVED = "source_resolved"    # 非空 atomic_id 全部可在大纲解析
-ROLE_SOURCE_PARTIAL = "source_partial"      # 非空 atomic_id 部分可解析
-ROLE_SOURCE_UNRESOLVED = "source_unresolved"  # 非空 atomic_id 全部不可解析
-ROLE_INVALID_LINEAGE = "invalid_lineage"    # atomic_id 缺失 / null / 非列表 / 含空串
-ROLE_CROSS_DAY_CONTEXT = "cross_day_context"  # 跨日噪声在非归属日的角色
+ROLE_NOISE_TARGET = "noise_target"
+ROLE_SOURCE_RESOLVED = "source_resolved"
+ROLE_SOURCE_PARTIAL = "source_partial"
+ROLE_SOURCE_UNRESOLVED = "source_unresolved"
+ROLE_INVALID_LINEAGE = "invalid_lineage"
+ROLE_CROSS_DAY_CONTEXT = "cross_day_context"
 
 LINEAGE_ROLES = frozenset({
     ROLE_NOISE_TARGET, ROLE_SOURCE_RESOLVED, ROLE_SOURCE_PARTIAL,
     ROLE_SOURCE_UNRESOLVED, ROLE_INVALID_LINEAGE, ROLE_CROSS_DAY_CONTEXT,
 })
 
-# ── persona section 固定枚举与字段映射 ─────────────────────────────────
 
 PERSONA_SECTIONS = [
     "identity", "health", "work", "addresses", "lifestyle", "economy",
@@ -50,7 +45,6 @@ PERSONA_SECTION_FIELDS = {
 KNOWN_PERSONA_FIELDS = frozenset(
     f for fs in PERSONA_SECTION_FIELDS.values() for f in fs)
 
-# ── 输入错误编码 ──────────────────────────────────────────────────────
 
 INPUT_ERROR_MISSING_ATOMIC_ID = "MISSING_ATOMIC_ID"
 INPUT_ERROR_NULL_ATOMIC_ID = "NULL_ATOMIC_ID"
@@ -70,20 +64,13 @@ INPUT_ERROR_CODES = frozenset({
     INPUT_ERROR_UNPARSEABLE_DATE,
 })
 
-# ── 解析后的时间段结构 ─────────────────────────────────────────────────
 
 @dataclass(frozen=True)
 class Interval:
-    """一个解析后的时间段。
 
-    - start / end: naive datetime（中国本地民用时间）
-    - start_raw / end_raw: 原始字符串
-    - end_hour_marker: 结束时间原始小时 >= 24（如 24:00、26:15）
-    - implicit_cross_midnight: 同日结束钟点早于开始钟点的隐式跨午夜
-    """
 
-    start: object  # datetime
-    end: object    # datetime
+    start: object
+    end: object
     start_raw: str
     end_raw: str
     end_hour_marker: bool = False
@@ -106,11 +93,9 @@ class Interval:
         }
 
 
-# ── 输入数据 schema 校验 ───────────────────────────────────────────────
-
 @dataclass
 class InputEventCheck:
-    """单条 daily_event 的输入校验结论。"""
+
 
     event_id: object
     errors: list
@@ -118,11 +103,8 @@ class InputEventCheck:
 
 
 def check_daily_event(event) -> InputEventCheck:
-    """校验单条 daily_event 的结构，并给出噪声候选判定。
 
-    只有 ``atomic_id == []`` 是噪声候选；缺失/null/非列表/含空串都是
-    输入错误，而不是"无法解析的来源事件"。
-    """
+
     errors = []
     eid = event.get("event_id") if isinstance(event, dict) else None
     if not isinstance(event, dict):
@@ -156,7 +138,7 @@ def check_daily_event(event) -> InputEventCheck:
 
 
 def check_persona(persona) -> list:
-    """校验 persona.json 顶层结构，返回未映射字段告警。"""
+
     warnings = []
     if not isinstance(persona, dict):
         return ["persona 必须是 JSON 对象"]
@@ -168,7 +150,7 @@ def check_persona(persona) -> list:
 
 
 def check_event_tree(tree) -> list:
-    """校验 event_tree.json 结构并返回告警。"""
+
     warnings = []
     if not isinstance(tree, list):
         return ["event_tree 必须是 JSON 数组"]

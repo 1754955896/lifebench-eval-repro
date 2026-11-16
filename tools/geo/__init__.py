@@ -1,4 +1,4 @@
-"""地理工具包（高德地理编码、POI、路径查询与坐标缓存）。"""
+"""Defines the geographic package."""
 
 from .gaode import (
     GeoError,

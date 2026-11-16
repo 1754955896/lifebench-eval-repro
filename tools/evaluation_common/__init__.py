@@ -1,6 +1,1 @@
-"""评估方法共享层。
-
-只放被多个评估方法使用、或目标规范要求集中管理的代码：
-输入 schema、上下文/时间解析、数据加载、I/O、签名、模型适配与统计指标。
-本包不得依赖任何 ``evaluation.<method>`` 包。
-"""
+"""Defines the shared evaluation package."""

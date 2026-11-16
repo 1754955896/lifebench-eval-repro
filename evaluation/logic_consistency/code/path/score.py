@@ -1,5 +1,4 @@
-"""Preserve the historical path formula, including its known limitations."""
-
+"""This module calculates evaluation scores."""
 
 def score(counts: dict[str, int]) -> float | None:
     success = counts.get("路径查询成功", 0)

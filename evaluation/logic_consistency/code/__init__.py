@@ -1,1 +1,1 @@
-"""Logic consistency engine and independent scoring methods."""
+"""Defines the logic consistency package."""

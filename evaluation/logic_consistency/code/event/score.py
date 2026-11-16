@@ -1,5 +1,4 @@
-"""Correct event arrangements divided by correct plus incorrect arrangements."""
-
+"""This module calculates evaluation scores."""
 
 def score(counts: dict[str, int]) -> float | None:
     correct = counts.get("事件安排正确", 0)

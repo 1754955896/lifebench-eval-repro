@@ -1,4 +1,4 @@
-"""Reproduce the coverage-matched JSD table for Beijing trajectories."""
+"""This module generates a geolocation comparison table."""
 
 from __future__ import annotations
 

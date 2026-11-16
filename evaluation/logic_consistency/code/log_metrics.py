@@ -1,14 +1,5 @@
-"""旧时空校验日志聚合（保留原日志分析脚本的统计口径）。
+"""This module summarizes evaluation logs."""
 
-已知历史限制（不在迁移中静默修正，见 README）：
-
-- 目标日期前后窗口取数偏差保留原实现；
-- 事件疑似错误不计入分母；
-- "路径真实率"沿用历史公式
-  ``(失败 + 成功 - 路径时间错误) / (成功 + 失败)``。
-
-修复这些口径需要独立的语义变更与回归测试，本迁移只做兼容封装。
-"""
 from __future__ import annotations
 
 import re
@@ -30,7 +21,7 @@ DEFAULT_PATTERNS = {
 
 
 def count_log_levels_and_patterns(log_file_path, patterns_dict=None):
-    """统计日志模式出现次数，并累加"时空逻辑错误有X处"。"""
+
     patterns_dict = patterns_dict or DEFAULT_PATTERNS
     pattern_counts = defaultdict(int)
     for key in patterns_dict:
@@ -53,7 +44,7 @@ def count_log_levels_and_patterns(log_file_path, patterns_dict=None):
 
 
 def summarize_log(log_file_path: str) -> dict:
-    """返回模式计数与历史一致率；分母为 0 时率为 None。"""
+
     counts = count_log_levels_and_patterns(log_file_path, DEFAULT_PATTERNS)
     if not counts:
         return {"counts": {}, "rates": {}, "log_file": log_file_path}

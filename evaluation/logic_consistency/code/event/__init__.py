@@ -1,1 +1,1 @@
-"""Event arrangement consistency score."""
+"""Defines the logic consistency package."""

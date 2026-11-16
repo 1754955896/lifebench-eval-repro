@@ -1,1 +1,1 @@
-"""Deterministic interest drift calculations for saved event classifications."""
+"""Defines the interest drift package."""

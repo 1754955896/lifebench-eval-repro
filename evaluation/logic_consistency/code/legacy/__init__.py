@@ -1,1 +1,1 @@
-"""Historical single-metric and two-metric runners."""
+"""Defines the logic consistency package."""

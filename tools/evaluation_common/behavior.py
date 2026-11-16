@@ -1,9 +1,5 @@
-"""行为分析方法的共用编排（照片/SMS 与外部参照对比）。
+"""This module analyzes behavior data."""
 
-六个行为分析共享同一输入形状：单人物数据文件 + ATM 参照文件。
-本模块只负责人物发现、参照文件解析、随机种子与 metrics 落盘，
-具体指标仍由各方法的 engine 计算。
-"""
 from __future__ import annotations
 
 import os
@@ -16,11 +12,8 @@ from tools.evaluation_common.runner import ensure_output_dir, write_metrics
 
 def resolve_reference(options: dict, *, key: str, default_name: str,
                       label: str) -> str:
-    """解析 ATM 参照文件。
 
-    优先级：显式文件参数 > ``atm_root`` 下的默认文件名。
-    缺失时抛出 FileNotFoundError，明确指出缺哪个文件。
-    """
+
     explicit = options.get(key)
     if explicit:
         if not os.path.exists(explicit):
@@ -51,11 +44,8 @@ def evaluate_comparison(
     reference_label="ATM 图像参照",
     run_person,
 ) -> dict:
-    """运行一个“人物文件 vs ATM 参照”行为分析方法。
 
-    ``run_person(input_file, reference_file, person_out, opts)`` 返回
-    engine 结果列表；本函数负责逐人输出 ``metrics.json`` 与根汇总。
-    """
+
     opts = resolve_method_options(method_name, defaults, options)
     persons = discover_persons(data_dir, (person_relative,))
     if not persons:

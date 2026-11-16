@@ -1,4 +1,4 @@
-"""Select independent scores and take their unweighted arithmetic mean."""
+"""This module combines evaluation scores."""
 
 from __future__ import annotations
 

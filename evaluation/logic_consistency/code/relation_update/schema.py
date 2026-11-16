@@ -1,28 +1,10 @@
-"""
-人际关系合理性评估:协议 schema 与校验
+"""This module validates evaluation data."""
 
-方案版本 relation-persona-update-v2。三个独立协议:
-
-- relation-library-v1      动态关系库(程序构造与维护,模型只读)
-- relation-selector-v1     选择器路由输出(匹配对象 + 分支 + 证据 + 理由)
-- relation-writer-v1       受限增量补丁(add/update)
-
-与噪声评估(noise_v2_schema)完全独立,不得混用协议与目录。
-
-异常安全约定: 校验器对任意畸形模型输出(错误类型、嵌套结构)只返回
-校验错误,绝不抛出 TypeError/AttributeError;非字符串集合成员一律先
-判类型再进入集合运算。
-"""
 from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-# ── 版本与常量 ────────────────────────────────────────────────────────
 
-# 编排逻辑语义版本: 任何改变路由语义、更新白名单或标签映射的修改
-# 都必须人工提升该版本;仅修复 bug 或重构时不提升。
-# v2: 新增同日身份冲突一致性校验(day_conflicts)——同一人物 + 同一
-# 关系称谓当日早前已判 UNEXPLAINED 时,后续不得降级 EXISTING_KEEP。
 PIPELINE_VERSION = "relation-persona-update-v2"
 
 LIB_SCHEMA = "relation-library-v1"
@@ -34,7 +16,6 @@ MAX_REASON_CHARS = 200
 MAX_NOTE_CHARS = 200
 MAX_TAG_CHARS = 24
 
-# ── 路由与判定枚举 ─────────────────────────────────────────────────────
 
 ROUTE_EXISTING_KEEP = "EXISTING_KEEP"
 ROUTE_EXISTING_UPDATE = "EXISTING_UPDATE"
@@ -66,7 +47,7 @@ FINAL_LABELS = frozenset({FINAL_CONFORM, FINAL_NONCONFORM,
 VIOLATION_SUDDEN = "SUDDEN_FAMILIAR_PERSON"
 VIOLATION_UNEXPLAINED = "UNEXPLAINED_RELATION_CHANGE"
 
-# 选择器路由 → 案例级判定 / 违规类型 / 是否进入 Writer(仅来源事件)
+
 ROUTE_SEMANTICS = {
     ROUTE_EXISTING_KEEP: (FINAL_CONFORM, None, False),
     ROUTE_EXISTING_UPDATE: (FINAL_CONFORM, None, True),
@@ -78,13 +59,11 @@ ROUTE_SEMANTICS = {
     ROUTE_UNKNOWN: (FINAL_UNKNOWN, None, False),
 }
 
-# 事件级判定(第 9 节): nonconform > unknown > conform > not_applicable
+
 EVENT_LABEL_PRIORITY = (FINAL_NONCONFORM, FINAL_UNKNOWN,
                         FINAL_CONFORM, FINAL_NOT_APPLICABLE)
 
-# ── Writer 白名单 ──────────────────────────────────────────────────────
 
-# update/add 补丁允许的顶层字段
 WRITER_ALLOWED_KEYS = frozenset({
     "source_case_ids", "operation", "target_person_id", "name",
     "aliases_to_add", "relation_tags_to_add", "social_circle",
@@ -95,7 +74,7 @@ WRITER_UNKNOWN_FIELDS_ALLOWED = frozenset({
 })
 WRITER_OPERATIONS = frozenset({"add", "update"})
 
-# 关系标签归一化(程序只做已冻结的同义词归一化,不做模糊合并)
+
 TAG_SYNONYMS = {
     "妈妈": "母亲", "爸爸": "父亲", "好友": "朋友", "闺蜜": "朋友",
     "老师": "导师", "瑜伽教练": "瑜伽老师", "合作伙伴": "合作伙伴",
@@ -105,11 +84,9 @@ TAG_SYNONYMS = {
 
 
 def normalize_tag(tag: str) -> str:
-    """已冻结的同义词归一化(仅映射表内项,其余原样保留)"""
+
     return TAG_SYNONYMS.get(tag, tag)
 
-
-# ── 通用校验工具 ───────────────────────────────────────────────────────
 
 @dataclass
 class RelationValidationResult:
@@ -132,11 +109,9 @@ def _check_nonempty_str(result, base, value, field, max_chars=None) -> bool:
 
 
 def _is_str(value) -> bool:
-    """集合运算前的类型闸门(防 list/dict 等不可哈希值崩溃)"""
+
     return isinstance(value, str)
 
-
-# ── 选择器输出校验 ─────────────────────────────────────────────────────
 
 def validate_selector_response(obj, expected_owner, expected_date,
                                expected_cases: list,
@@ -144,24 +119,8 @@ def validate_selector_response(obj, expected_owner, expected_date,
                                allowed_context: dict,
                                day_conflicts: set | None = None) \
         -> RelationValidationResult:
-    """
-    选择器输出校验(relation-selector-v1)
 
-    - envelope: schema_version / owner / date;
-    - items 与输入 case_id 恰好一一对应(不得遗漏/重复/新增);
-    - matched_person_id / conflicting_person_id 只能引用当前关系库真实 ID;
-    - EXISTING_KEEP/EXISTING_UPDATE 必须给出 matched_person_id;
-    - UNEXPLAINED_RELATION_CHANGE 需给出 matched_person_id 或
-      conflicting_person_id 之一;
-    - 同日一致性: day_conflicts 为 {(person_id, 归一化关系称谓)}——
-      同一人物同一称谓当天早前已判为身份冲突时,后续相同事实不得
-      降级为 EXISTING_KEEP(校验失败触发修复轮);
-    - evidence_event_ids 必须在该案例允许使用的证据范围内;
-    - UNKNOWN 必须列出 unknown_fields;ignore 路由必须给出合法
-      ignore_reason;其他路由 ignore_reason 必须为 null。
 
-    任何畸形字段(错误类型/嵌套结构)只产生校验错误,不抛出异常。
-    """
     result = RelationValidationResult(ok=True)
     if not isinstance(obj, dict):
         result.add("$", "输出必须是 JSON 对象")
@@ -223,9 +182,8 @@ def validate_selector_response(obj, expected_owner, expected_date,
                 and item.get("matched_person_id") is None:
             result.add(f"{base}.matched_person_id",
                        f"{route} 必须给出 matched_person_id")
-        # 同日一致性: 同一人物 + 归一化关系称谓当天早前已判为身份
-        # 冲突(UNEXPLAINED_RELATION_CHANGE)的,后续相同事实不得降级
-        # 为 EXISTING_KEEP;校验失败触发一次协议修复轮。
+
+
         if route == ROUTE_EXISTING_KEEP and day_conflicts \
                 and item.get("matched_person_id") is not None:
             rel = normalize_tag(case.get("observed_relation") or "")
@@ -270,33 +228,14 @@ def validate_selector_response(obj, expected_owner, expected_date,
     return result
 
 
-# ── Writer 输出校验 ─────────────────────────────────────────────────────
-
 def validate_writer_response(obj, expected_owner, expected_date,
                              expected_cases: list,
                              library_person_ids: set,
                              record_names: dict,
                              existing_names: set,
                              existing_aliases: set) -> RelationValidationResult:
-    """
-    Writer 输出校验(relation-writer-v1)
 
-    - patches 仅允许白名单字段,operation ∈ {add, update};
-    - 每个本批写入案例必须恰好被一个补丁覆盖;
-    - 补丁操作必须与 Selector 已确认的路由一致(职责绑定):
-      * EXISTING_UPDATE → operation=update 且 target_person_id 等于
-        该案例的 matched_person_id;
-      * NEW_RELATION → operation=add 且 name 等于该案例人物姓名;
-      * update 的 name 必须与库中正式姓名一致(不得改写姓名);
-    - 证据绑定: evidence_event_ids 必须是对应案例
-      selector_evidence_event_ids 的非空子集(多案例补丁取各案例并集),
-      不得引用 Selector 未采用、Writer 未见过正文的事件;
-    - 未知单值(social_circle)为 null 时必须出现在 unknown_fields;
-    - 标签必须是单一、简短角色(禁止整句/长标签与连接词);
-    - add 的姓名/别名与现有对象冲突时拒绝。
 
-    任何畸形字段(错误类型/嵌套结构)只产生校验错误,不抛出异常。
-    """
     result = RelationValidationResult(ok=True)
     if not isinstance(obj, dict):
         result.add("$", "输出必须是 JSON 对象")
@@ -362,7 +301,7 @@ def validate_writer_response(obj, expected_owner, expected_date,
                 result.add(f"{base}.name",
                            f"update 不得改写正式姓名: "
                            f"{name!r} != {record_names[tid]!r}")
-        # ── 职责绑定: 补丁操作必须与 Selector 路由一致 ──
+
         for cid in sources:
             if not _is_str(cid) or cid not in expected_by_id:
                 continue
@@ -407,7 +346,7 @@ def validate_writer_response(obj, expected_owner, expected_date,
         if isinstance(tags, list):
             for k, tag in enumerate(tags):
                 if not _is_str(tag):
-                    continue  # 非字符串已在上一步记录错误
+                    continue
                 if len(tag) > MAX_TAG_CHARS:
                     result.add(f"{base}.relation_tags_to_add[{k}]",
                                f"标签过长({len(tag)}>{MAX_TAG_CHARS}),"
@@ -427,7 +366,7 @@ def validate_writer_response(obj, expected_owner, expected_date,
                 _is_str(x) and x for x in evidence):
             result.add(f"{base}.evidence_event_ids", "必须是非空字符串数组")
         else:
-            # 证据绑定: 必须是各来源案例 Selector 证据的并集子集
+
             allowed = set()
             for cid in sources:
                 if not _is_str(cid) or cid not in expected_by_id:
@@ -447,17 +386,17 @@ def validate_writer_response(obj, expected_owner, expected_date,
         uf = p.get("unknown_fields")
         if not isinstance(uf, list) or not all(_is_str(x) for x in uf):
             result.add(f"{base}.unknown_fields", "必须是字符串数组")
-            uf = []  # 类型非法时不再参与后续集合运算
+            uf = []
         else:
             illegal_uf = sorted(set(uf) - WRITER_UNKNOWN_FIELDS_ALLOWED)
             if illegal_uf:
                 result.add(f"{base}.unknown_fields",
                            f"非法未知字段: {illegal_uf}")
-        # 未知单值一致性: social_circle 为 null 时必须出现在 unknown_fields
+
         if sc is None and "social_circle" not in uf:
             result.add(f"{base}.unknown_fields",
                        "social_circle 为 null(未知)时必须写入 unknown_fields")
-        # 防编造: 新增姓名/别名与现有对象姓名/别名冲突时拒绝(add 时)
+
         if op == "add" and name_ok:
             if name in existing_names or name in existing_aliases:
                 result.add(f"{base}.name",

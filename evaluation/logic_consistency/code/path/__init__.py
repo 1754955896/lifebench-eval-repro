@@ -1,1 +1,1 @@
-"""Legacy path truth score."""
+"""Defines the logic consistency package."""

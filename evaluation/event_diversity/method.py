@@ -1,10 +1,5 @@
-"""事件类型多样性评估统一入口与 CLI。
+"""This module runs the evaluation."""
 
-统计对象是顶层 ``daily_event.json`` 的 ``type`` 字段，包括来源事件和
-噪声事件；不递归、不按 ``atomic_id`` 筛选。计数前先用
-``labels.normalize_event_type`` 把空格变体与已确认同义写法归一到官方
-九类，随后沿用原有 Shannon 熵、归一化熵、Simpson 与有效类型数公式。
-"""
 from __future__ import annotations
 
 import argparse
@@ -34,12 +29,8 @@ REQUIRED_FILES = ("daily_event.json",)
 
 
 def _type_entries(data):
-    """提取顶层事件的 type，保留原始事件索引。
 
-    返回 ``(entries, diagnostics)``；entry 形如
-    ``{"event_index": i, "raw": value}``，诊断也带 ``event_index``，
-    后续增加 normalized 时不会因跳过无效标签而错位。
-    """
+
     entries = []
     diagnostics = []
     for event_index, item in enumerate(data):
@@ -62,12 +53,8 @@ def _type_entries(data):
 
 
 def analyze_records(data, source: str | None = None) -> dict:
-    """对 daily_event 顶层数组计算类型多样性（先归一化再计数）。
 
-    输入存在无法归一化的标签、空标签、非字符串或缺失 type 时，
-    仍对有效事件计算指标，但状态标记为 ``incomplete`` 并在
-    ``input_diagnostics`` 中逐条保留原始事件索引与原值。
-    """
+
     if not isinstance(data, list) or not data:
         raise ValueError("daily_event 必须是非空 JSON 数组")
 
@@ -144,7 +131,7 @@ def analyze_records(data, source: str | None = None) -> dict:
 
 
 def evaluate_file(file_path, output_dir=None, *, options=None) -> dict:
-    """分析单个 daily_event.json（保留原 diversity.py 的文件入口能力）。"""
+
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     result = analyze_records(data, source=os.path.abspath(file_path))

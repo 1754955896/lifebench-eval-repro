@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-"""Recompute interest drift from saved inputs and event labels.
-
-The original three evaluators used an LLM to assign one category to each
-observation. Their saved ``event_extractions`` are those fixed assignments;
-everything calculated here is deterministic and needs no API or raw dataset.
-"""
+"""This module recomputes saved evaluation results."""
 
 from __future__ import annotations
 
@@ -56,7 +50,7 @@ def summarize(values: list[float]) -> dict:
 
 
 def calculate(events: list[dict], labels: list[dict]) -> dict:
-    """Join by event_id, then calculate daily sets and consecutive-day drift."""
+
     if not isinstance(events, list) or not isinstance(labels, list):
         raise ValueError("Inputs and extractions must be JSON arrays")
     event_ids = [event["event_id"] for event in events]
@@ -83,7 +77,7 @@ def calculate(events: list[dict], labels: list[dict]) -> dict:
         if signal:
             daily_counts[date][category] += 1
         else:
-            daily_counts[date]  # Preserve days with no interest category.
+            daily_counts[date]
 
     profiles = [
         {"date": date, "event_count": daily_events[date],

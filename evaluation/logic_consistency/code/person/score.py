@@ -1,5 +1,4 @@
-"""Correct person relationships divided by correct plus incorrect relations."""
-
+"""This module calculates evaluation scores."""
 
 def score(counts: dict[str, int]) -> float | None:
     correct = counts.get("人物关系正确", 0)
