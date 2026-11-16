@@ -617,7 +617,6 @@ def build_report(
             "unit": "calendar-consecutive day pair",
             "empty_policy": "skip pairs where both category sets are empty; one-empty pairs have drift 1",
             "prompt_version": PROMPT_VERSION,
-            "official_reproduction": False,
         },
         "provenance": {
             "evaluated_events_sha256": sha256_json(list(events)),

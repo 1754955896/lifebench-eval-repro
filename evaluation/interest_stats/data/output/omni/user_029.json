@@ -6,8 +6,7 @@
     "unit": "calendar-consecutive day pair",
     "input_scope": "dated platform behavior records; one record per observation",
     "empty_policy": "skip both-empty pairs; one-empty pairs have drift 1",
-    "prompt_version": "omni-behavior-interest-v1",
-    "official_reproduction": false
+    "prompt_version": "omni-behavior-interest-v1"
   },
   "provenance": {
     "user_id": "user_029",

@@ -6,8 +6,7 @@
     "unit": "calendar-consecutive day pair",
     "input_scope": "timestamped user logs only; dialogue/topics/labels excluded",
     "empty_policy": "skip both-empty pairs; one-empty pairs have drift 1",
-    "prompt_version": "mempal-log-interest-v1",
-    "official_reproduction": false
+    "prompt_version": "mempal-log-interest-v1"
   },
   "provenance": {
     "user_id": "0037",

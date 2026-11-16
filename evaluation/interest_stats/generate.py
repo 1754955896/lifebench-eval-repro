@@ -209,7 +209,6 @@ def build_log_report(events: list[dict], labels: list[dict], dataset: str, sampl
             "input_scope": scope,
             "empty_policy": "skip both-empty pairs; one-empty pairs have drift 1",
             "prompt_version": PROMPT_VERSIONS[dataset],
-            "official_reproduction": False,
         },
         "provenance": {
             "user_id": sample,

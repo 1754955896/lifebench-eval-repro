@@ -5,8 +5,7 @@
     "formula": "1 - |C_t intersection C_(t-1)| / |C_t union C_(t-1)|",
     "unit": "calendar-consecutive day pair",
     "empty_policy": "skip pairs where both category sets are empty; one-empty pairs have drift 1",
-    "prompt_version": "lifebench-interest-v1",
-    "official_reproduction": false
+    "prompt_version": "lifebench-interest-v1"
   },
   "provenance": {
     "evaluated_events_sha256": "6da815a90c46baa30fd406c6c2ecc7477beea03ebe13a9d9c980554b94220b89",
