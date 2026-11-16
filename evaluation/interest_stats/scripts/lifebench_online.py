@@ -210,11 +210,11 @@ def load_runtime_config(path: Path, base_url_override: Optional[str], model_over
         if not isinstance(data, dict):
             raise EvaluationError(f"llm config must be an object: {path}")
 
-    api_key = os.environ.get("DEEPSEEK_API_KEY") or str(data.get("api_key", "")).strip()
-    base_url = base_url_override or os.environ.get("DEEPSEEK_BASE_URL") or str(
+    api_key = os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("LLM_API_KEY") or str(data.get("api_key", "")).strip()
+    base_url = base_url_override or os.environ.get("DEEPSEEK_BASE_URL") or os.environ.get("LLM_BASE_URL") or str(
         data.get("base_url", "https://api.deepseek.com")
     )
-    model = model_override or os.environ.get("DEEPSEEK_MODEL") or str(
+    model = model_override or os.environ.get("DEEPSEEK_MODEL") or os.environ.get("LLM_DEFAULT_MODEL") or str(
         data.get("default_model", "deepseek-v4-flash")
     )
     return {

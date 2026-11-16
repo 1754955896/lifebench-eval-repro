@@ -1,20 +1,39 @@
-# 兴趣漂移评估脚本
+# Interest Drift Evaluation
 
-从仓库根目录运行：
+## Recompute from saved classifications
+
+Run from the repository root:
 
 ```bash
 python evaluation/interest_stats/evaluate.py
 ```
 
-脚本默认读取 `evaluation/interest_stats/data/manifest.json`。清单中的 `normalized_input` 和 `coarse_report` 是相对于 `data/` 的路径：前者提供逐事件记录，后者提供 `event_extractions` 中的逐事件兴趣类别。脚本按 `event_id` 关联两者，计算并核对兴趣漂移指标。整个过程只使用 Python 标准库，不调用模型。
+By default, the script reads `evaluation/interest_stats/data/manifest.json`. Its `normalized_input` and `coarse_report` paths are relative to `data/`: the first file provides event records, and the second provides per-event interest categories in `event_extractions`. The script joins them by `event_id`, recomputes interest drift, and checks the saved metrics. It requires neither a model nor third-party packages.
 
-如需指定另一套同结构的数据目录或保存重算明细：
+To use another directory with the same layout or save recomputation details:
 
 ```bash
 python evaluation/interest_stats/evaluate.py --data-dir PATH_TO_DATA
 python evaluation/interest_stats/evaluate.py --output output/interest_stats/recomputed.json
 ```
 
-`data/input/<dataset>/<sample>.json` 中每条记录至少需要 `event_id` 和 `date`；`data/output/<dataset>/<sample>.json` 中需要同一批事件的 `event_extractions`、`provenance`、`daily_profiles`、`coverage` 和 `interest_drift`，供脚本核对。`data/manifest.json` 为每个样本指定上述两个文件及 `event_count`。
+Each record in `data/input/<dataset>/<sample>.json` needs at least `event_id` and `date`. The corresponding `data/output/<dataset>/<sample>.json` needs `event_extractions`, `provenance`, `daily_profiles`, `coverage`, and `interest_drift`. The manifest lists both files and `event_count` for each sample.
 
-脚本将每天 `interest_signal=true` 的类别去重形成集合，只比较日历上连续的两天，计算 `1 − |交集| / |并集|`。两天集合都为空时跳过；仅一天为空时漂移为 1。逐日漂移保留 6 位小数，再计算个人及数据集层面的汇总值。
+For each day, the script collects unique categories with `interest_signal=true`. It compares consecutive calendar days using `1 - |intersection| / |union|`. It skips pairs where both sets are empty and assigns a drift of 1 when only one set is empty. Daily drift is rounded to six decimal places before per-person and dataset summaries are calculated.
+
+## Generate reports from inputs
+
+`generate.py` reads normalized events in `data/input/`, calls a model to classify interests, and computes the same drift metrics. It uses dataset-specific extraction prompts for `lifebench`, `mempal`, and `omni`. Set `llm.api_key` as described in [Configuration](../../config/README.md), or set `LLM_API_KEY` or `DEEPSEEK_API_KEY`.
+
+```bash
+python -m evaluation.interest_stats.generate --dataset all --dry-run
+python -m evaluation.interest_stats.generate --dataset all
+```
+
+To process one input:
+
+```bash
+python -m evaluation.interest_stats.generate --dataset mempal --sample 0000
+```
+
+New reports go to `output/interest_stats/online/<dataset>/<sample>.json` by default, with cache files in `output/interest_stats/cache/`. Run `--help` for batch size, concurrency, model, and output options. Model-generated classifications and metrics may differ from the saved reports; use the offline command above to verify the saved metrics.

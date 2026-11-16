@@ -1,61 +1,52 @@
-# event_diversity — 事件类型多样性
+# Event Diversity
 
-统计顶层 `daily_event.json` 的 `type` 字段，包括来源事件和噪声事件；
-不递归、不按 `atomic_id` 筛选。
+The script counts the `type` field in top-level `daily_event.json` entries, including source and noise events. It does not recurse or filter by `atomic_id`.
 
-## 官方九类
+## Categories
 
-`Career`、`Education`、`Relationships`、`Family&Living Situation`、
-`Personal Life`、`Finance`、`Health`、`Unexpected Events`、`Other`。
+The nine official categories are `Career`, `Education`, `Relationships`, `Family&Living Situation`, `Personal Life`, `Finance`, `Health`, `Unexpected Events`, and `Other`.
 
-## 计数前归一化
+Before counting, the script trims surrounding whitespace, collapses repeated whitespace, standardizes spacing around `&`, and maps aliases to official names:
 
-```text
-去首尾空白 → 折叠连续空白 → 统一 & 两侧空格 → 官方/别名表映射
-```
-
-别名映射：
-
-| 原始字符串 | 规范结果 |
-|---|---|
+| Input label | Normalized label |
+| --- | --- |
 | `Family & Living Situation` | `Family&Living Situation` |
 | `Family &Living Situation` | `Family&Living Situation` |
 | `Family` | `Family&Living Situation` |
 | `Home&Living Situation` | `Family&Living Situation` |
 
-`K` 按归一化后的类别计数获得。映射只作用于计算，不写回 `daily_event.json`。
+The category count `K` uses normalized labels. Normalization does not modify `daily_event.json`.
 
-## 指标
+## Output fields
 
-- `total_events`：参与计算的有效 type 事件数。
-- `num_types`：归一化后类别数 K。
-- `normalized_entropy`：Shannon 熵 / log(K)。
-- `simpson_index`：1 − Σp²。
-- `effective_num_types`：exp(H)。
-- `type_distribution`：官方类别计数与比例。
-- `raw_type_distribution`：原始字符串频数（核查用）。
-- `normalized_variant_events` / `normalized_variant_labels`：被规范化的
-  事件数与原始标签集合。
-- `variant_events`：逐条审计（`event_index`、`raw`、`normalized`），
-  保留原始事件索引，避免删除无效标签后错位。
-- `invalid_type_event_count` / `input_diagnostics`：未知、空、非字符串与
-  缺失 type 的显式诊断；不把未知标签计作第十类、不默认塞进 `Other`、
-  不静默删除。
+- `total_events`: events with a valid `type` included in the calculation.
+- `num_types`: number of normalized categories, `K`.
+- `normalized_entropy`: Shannon entropy divided by `log(K)`.
+- `simpson_index`: `1 - sum(p^2)`.
+- `effective_num_types`: `exp(H)`.
+- `type_distribution`: counts and proportions for official categories.
+- `raw_type_distribution`: counts for input labels.
+- `normalized_variant_events` and `normalized_variant_labels`: number of normalized events and their original labels.
+- `variant_events`: event index, raw label, and normalized label for each changed event.
+- `invalid_type_event_count` and `input_diagnostics`: unknown, empty, non-string, and missing `type` values. Unknown labels are not counted as an extra category or assigned to `Other`.
 
-## 输入与输出
+## Input and output paths
 
-- `--data-dir`：单人物目录或数据集目录，人物需含 `daily_event.json`。
-- `<output_dir>/<person>/metrics.json`：逐人物指标与输入诊断。
-- `<output_dir>/metrics.json`：逐人物计数与官方类别计数总和（不平均比例）。
+- `--data-dir`: a person directory or dataset directory. Each person needs `daily_event.json`.
+- `<output_dir>/<person>/metrics.json`: per-person metrics and input diagnostics.
+- `<output_dir>/metrics.json`: per-person results and sums of official category counts.
 
-## 运行
+## Run
 
 ```bash
 python -m evaluation.event_diversity.method \
   --data-dir data/lifebench_10people/fenghaoran \
   --output-dir output/event_diversity
+```
 
-# 单文件入口
+For a single file:
+
+```bash
 python -m evaluation.event_diversity.method \
   --file-path data/lifebench_10people/fenghaoran/daily_event.json \
   --output-dir output/event_diversity_single
